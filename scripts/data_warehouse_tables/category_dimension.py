@@ -99,19 +99,13 @@ def collect_twitch_category_data(headers):
     }
     current_category_dim_df, current_ids = get_category_dim_info()
 
-    # Calling api stops after 3 retries, ends programs
-    i = 0
     while True:
         try:
             current_streamed_categories_dict = api_call_loop(url, headers, data, current_ids)
             break
-        except ConnectionError:
-            if i == 3:
-                raise Exception("Could not successfully call API after three attempts")
-            print("Max retries reached, waiting 60s")
-            i += 1
+        except ConnectionError as e:
             data = {"category_id": [], "igdb_id": [],"category_name": []}
-            time.sleep(60)
+            continue
    
     return data, current_category_dim_df, current_streamed_categories_dict
 

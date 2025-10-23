@@ -98,18 +98,13 @@ def get_data_from_API(user_data_dict, user_list):
             "first": 100
         }
 
-        # End program after 3 failed attempts at connecting to API
-        i = 0
         while True:
             try:
                 call_users_endpoint(params, user_data_dict)
                 break
-            except ConnectionError:
-                if i == 3:
-                    raise Exception("Could not connect to API after 3 attempts. Ending program.")
-                else:
-                    print("Could not call API. Trying again.")
-                    i += 1
+            except ConnectionError as e:
+                print(e)
+                continue
 
 
 # Call Twitch's Get User Endpoint to get user data

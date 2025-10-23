@@ -59,25 +59,19 @@ def get_data_from_API(stream_data_dict, category_set):
     # For each category, calls stream api, gets output, then processes the data to be added to stream_data_dict
     for category_id in category_set:
         category_id = int(category_id)
-        i = 0
         while True:
-            if i == 3: # End program after 3 failed attempts
-                 raise Exception("Failed accessing API after attempting 3 times. Ending program.")
-            else:
-                try:
-                    stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list = get_streams(category_id, headers)
-                    stream_data_dict["stream_id"].extend(stream_id_list)
-                    stream_data_dict["user_id"].extend(user_id_list)
-                    stream_data_dict["category_id"].extend(category_id_list)
-                    stream_data_dict["viewer_count"].extend(viewer_count_list)
-                    stream_data_dict["language_id"].extend(language_id_list)
-                    stream_data_dict["user_name"].extend(user_name_list)
-                    break
-                except ConnectionError:
-                    print("Could not access API. Trying again.")
-                    time.sleep(60)
-                    i += 1
-
+            try:
+                stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list = get_streams(category_id, headers)
+                stream_data_dict["stream_id"].extend(stream_id_list)
+                stream_data_dict["user_id"].extend(user_id_list)
+                stream_data_dict["category_id"].extend(category_id_list)
+                stream_data_dict["viewer_count"].extend(viewer_count_list)
+                stream_data_dict["language_id"].extend(language_id_list)
+                stream_data_dict["user_name"].extend(user_name_list)
+                break
+            except ConnectionError as e:
+                print(e)
+                continue
 
         
 

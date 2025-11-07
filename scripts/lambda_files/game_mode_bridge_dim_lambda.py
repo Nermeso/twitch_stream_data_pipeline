@@ -1,13 +1,11 @@
 import os
+import time
 from igdb.wrapper import IGDBWrapper
 import json
 import pandas as pd
-from pathlib import Path
-import time
-
-start = time.time()
-
-repo_root = str(Path(__file__).parents[2])
+import boto3
+import botocore.exceptions
+import awswrangler as wr
 
 
 ############################## SUMMARY ##############################
@@ -63,34 +61,53 @@ def add_data_to_game_mode_bridge(game_mode_data, game_mode_bridge_dict, igdb_cat
             game_mode_bridge_dict["game_mode_id"].append("NA")
 
 
-# Makes IGDB wrapper to interact with IGDB API
-def make_wrapper():
+# Makes IGDB wrapper and gets s3 client
+def get_credentials():
     client_id = os.environ["client_id"]
     access_token = os.environ["access_token"]
     wrapper = IGDBWrapper(client_id, access_token)
+    s3_client = boto3.client('s3')
 
-    return wrapper
+    return wrapper, s3_client
 
 
 # Accesses the game mode bridge dimension
-def access_game_mode_bridge_dimension():
-    game_mode_bridge_dimension_path = repo_root + "/data/dimension_tables/game_mode_bridge_dimension.csv"
+def access_game_mode_bridge_dimension(s3_client):
     try:
-        game_mode_bridge_df = pd.read_csv(game_mode_bridge_dimension_path, keep_default_na=False)
-    except FileNotFoundError:
-        with open(game_mode_bridge_dimension_path, 'w') as f:
-            f.write('category_id,game_mode_id')
+        s3_client.head_object(Bucket='twitchdatapipelineproject', Key="raw/dimension_table/game_mode_bridge_dimension.csv")
+        response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key="raw/dimension_table/game_mode_bridge_dimension.csv")
+        status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+        if status == 200:
+            print(f"Successful S3 get_object response. Status - {status}")
+            current_game_mode_bridge_df = pd.read_csv(response.get("Body"), keep_default_na=False)
+        else:
+            print(f"Unsuccessful S3 get_object response. Status - {status}")
+            exit()
+    except botocore.exceptions.ClientError as e:
+        if e.response['Error']['Code'] == "404": # key does not exist, so we make new csv
+            current_game_mode_bridge_df = pd.DataFrame(columns=["category_id", "game_mode_id"])
+            wr.s3.to_csv(current_game_mode_bridge_df, "s3://twitchdatapipelineproject/raw/dimension_table/game_mode_bridge_dimension.csv", index=False)###################################
+        elif e.response['Error']['Code'] == 403:
+            print("Unauthorized access. Ending program.")
+            exit()
+        else:
+            print("Something else went wrong. Ending program.")
+            exit()
 
-        game_mode_bridge_df = pd.read_csv(game_mode_bridge_dimension_path, keep_default_na=False)
-
-    return game_mode_bridge_df
+    return current_game_mode_bridge_df
 
 
 # Accesses the category dimension
-def access_category_dimension():
-    category_dimension_path = repo_root + "/data/dimension_tables/category_dimension.csv"
-    category_df = pd.read_csv(category_dimension_path, keep_default_na=False)
-
+def access_category_dimension(s3_client):
+    response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key="raw/dimension_table/category_dimension.csv")
+    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+    if status == 200:
+        print(f"Successful S3 get_object response. Status - {status}")
+        category_df = pd.read_csv(response.get("Body"), keep_default_na=False)
+    else:
+        print(f"Unsuccessful S3 get_object response. Status - {status}")
+        exit()
+    
     return category_df
 
 
@@ -103,12 +120,13 @@ def add_new_game_mode_data(wrapper, category_df, game_mode_bridge_dim):
         "game_mode_id": []
     }
 
-    exclude_list = game_mode_bridge_dim["category_id"].tolist()
+    exclude_list = list(set(game_mode_bridge_dim["category_id"].tolist()))
     new_category_df = category_df[~category_df["category_id"].isin(exclude_list)].reset_index()
 
     # One API call accepts max 100 IGDB ids
     # To minimize num of calls made, we make one API call per 100 games
     igdb_category_id_temp = {} # temporarily store what category ids are associated with igdb ids
+
     for i, row in new_category_df.iterrows():
         i += 1
         igdb_id = str(row["igdb_id"])
@@ -127,7 +145,7 @@ def add_new_game_mode_data(wrapper, category_df, game_mode_bridge_dim):
             game_mode_data = get_igdb_game_mode(wrapper, igdb_ids_arg)
             add_data_to_game_mode_bridge(game_mode_data, game_mode_bridge_dict, igdb_category_id_temp)
             igdb_category_id_temp.clear()
-            
+
     return game_mode_bridge_dict
 
 
@@ -136,22 +154,13 @@ def add_new_game_mode_data(wrapper, category_df, game_mode_bridge_dim):
 def process_dim_csv_file(game_mode_bridge_dim, new_game_mode_data_dim):
     new_game_mode_data_dim = pd.DataFrame(new_game_mode_data_dim)
     final_df = pd.concat([game_mode_bridge_dim, new_game_mode_data_dim]).drop_duplicates()
-    game_mode_bridge_dim_path = repo_root + "/data/dimension_tables/game_mode_bridge_dimension.csv"
-    final_df.to_csv(game_mode_bridge_dim_path, index=False)
+    game_mode_bridge_dim_path = "s3://twitchdatapipelineproject/raw/dimension_table/game_mode_bridge_dimension.csv"
+    wr.s3.to_csv(final_df, game_mode_bridge_dim_path, index=False)
 
 
-def main():
-    wrapper = make_wrapper()
-    category_df = access_category_dimension()
-    game_mode_bridge_dim = access_game_mode_bridge_dimension()
+def lambda_handler(event, context):
+    wrapper, s3_client = get_credentials()
+    category_df = access_category_dimension(s3_client)
+    game_mode_bridge_dim = access_game_mode_bridge_dimension(s3_client)
     new_game_mode_data_dim = add_new_game_mode_data(wrapper, category_df, game_mode_bridge_dim)
     process_dim_csv_file(game_mode_bridge_dim, new_game_mode_data_dim)
-
-
-if __name__ == "__main__":
-    main()
-
-
-end = time.time()
-duration = end - start
-print("Duration: " + str(duration))

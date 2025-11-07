@@ -1,4 +1,5 @@
 import os
+import time
 from igdb.wrapper import IGDBWrapper
 import json
 import pandas as pd
@@ -84,8 +85,8 @@ def access_genre_bridge_dimension(s3_client):
             exit()
     except botocore.exceptions.ClientError as e:
         if e.response['Error']['Code'] == "404": # key does not exist, so we make new csv
-            current_genre_bridge_dim_df = pd.DataFrame(columns=["category_id", "genre_id"])
-            wr.s3.to_csv(current_genre_bridge_df, "s3://twitchdatapipelineproject/raw/dimension_table/genre_bridge_dimension.csv", index=False)
+            current_genre_bridge_df = pd.DataFrame(columns=["category_id", "genre_id"])
+            wr.s3.to_csv(current_genre_bridge_df, "s3://twitchdatapipelineproject/raw/dimension_table/genre_bridge_dimension.csv", index=False)###################################
         elif e.response['Error']['Code'] == 403:
             print("Unauthorized access. Ending program.")
             exit()
@@ -125,6 +126,7 @@ def add_new_genre_data(wrapper, category_df, genre_bridge_dim):
     # One API call accepts max 100 IGDB ids
     # To minimize num of calls made, we make one API call per 100 games
     igdb_category_id_temp = {} # temporarily store what category ids are associated with igdb ids
+
     for i, row in new_category_df.iterrows():
         i += 1
         igdb_id = str(row["igdb_id"])
@@ -143,7 +145,7 @@ def add_new_genre_data(wrapper, category_df, genre_bridge_dim):
             genre_data = get_igdb_genre(wrapper, igdb_ids_arg)
             add_data_to_genre_bridge(genre_data, genre_bridge_dict, igdb_category_id_temp)
             igdb_category_id_temp.clear()
-            
+
     return genre_bridge_dict
 
 

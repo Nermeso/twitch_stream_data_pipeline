@@ -21,7 +21,7 @@ repo_root = str(Path(__file__).parents[2])
 # Get locations of most recently collected stream data
 def get_stream_data_paths():
     data_paths = []
-    for filepath in Path("data/dummy_data/fact_table_data").glob('**/*'):
+    for filepath in Path("data/dummy_data/fact_table_data2").glob('**/*'):
         data_paths.append(str(filepath))
 
     return data_paths
@@ -76,29 +76,31 @@ def split_categories_into_groups(weighted_category_df):
     return category_groups, weight_value_groups
 
 
+# Reads file that contains data on typical popular categories and their number of streams
+# Serves as default category weights if recent stream data is not present to make weights for
+def get_default_category_df():
+    default_weights_path = repo_root + "/data/miscellaneous/default_category_weights.csv"
+    df = pd.read_csv(default_weights_path)
+
+    return df
 
 
 def main():
     fact_table_data_paths = get_stream_data_paths()
     curr_streamed_categories = pd.read_csv("data/miscellaneous/curr_streamed_categories.csv")
-    grouped_df = combine_fact_table_data(fact_table_data_paths)
-    weighted_category_df = produce_category_weights(grouped_df, curr_streamed_categories)
-    print(weighted_category_df)
-    category_groups, wvg = split_categories_into_groups(weighted_category_df)
-
-    ########################################
-    # for group in category_groups:
-    #     total_value = 0
-    #     for category_id in group:
-    #         try:
-    #             weight = weighted_category_df[weighted_category_df["category_id"] == category_id]["num_of_streams"].iloc[0]
-    #             total_value += weight
-    #         except IndexError:
-    #             total_value += 1
-    #     print(group)
-    #     print(total_value)
-    #     print()
-    print(wvg)
+    # Category group weights will be based off of most recently collected stream data
+    if len(fact_table_data_paths) != 0:
+        grouped_df = combine_fact_table_data(fact_table_data_paths)
+        weighted_category_df = produce_category_weights(grouped_df, curr_streamed_categories)
+        category_groups, wvg = split_categories_into_groups(weighted_category_df)
+    else: # if no recent stream data collected, weights will be based off of file containing pre-set weight values for categories
+        default_category_df = get_default_category_df()
+        weighted_category_df = produce_category_weights(default_category_df, curr_streamed_categories)
+        category_groups, wvg = split_categories_into_groups(weighted_category_df)
+        print(category_groups)
+        print()
+        print(wvg)
+        
 
 
 

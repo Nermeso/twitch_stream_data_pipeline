@@ -55,18 +55,18 @@ def api_call_loop(url, headers, data, already_exist_ids):
 
             # Adds category to dict containing current streamed categories
             if int(category_id) not in current_streamed_categories_dict["category_id"]:
-                current_streamed_categories_dict["category_id"].append(category_id)
+                current_streamed_categories_dict["category_id"].append(int(category_id))
                 current_streamed_categories_dict["category_name"].append(category_name)  
 
             # Adds category to new category dict if not seen before in category dimension
             if int(category_id) in data["category_id"] or int(category_id) in already_exist_ids: # if category exists already, go to next category
                 continue
-            data["category_id"].append(category_id)
+            data["category_id"].append(int(category_id))
             data["category_name"].append(category_name)
             if igdb_id == "": # IGDB Id may be empty, fill it with NA if the case
                 data["igdb_id"].append("NA")
             else:
-                data["igdb_id"].append(igdb_id)
+                data["igdb_id"].append(int(igdb_id))
 
         # Ends pagination of pages when done
         if len(output["pagination"]) == 0: # if no cursor in pagination, no more pages
@@ -114,7 +114,6 @@ def collect_twitch_category_data(headers):
 # Combines current data of categories with new categories
 def data_to_csv(data_dict, current_dim_df):
     data = pd.DataFrame(data_dict)
-    data["category_id"] = data["category_id"].astype(int)
     final_df = pd.concat([current_dim_df, data]).drop_duplicates() # combines current category data with new
     category_dim_path = repo_root + "/data/dimension_tables/category_dimension.csv"
     final_df.to_csv(category_dim_path, index=False)

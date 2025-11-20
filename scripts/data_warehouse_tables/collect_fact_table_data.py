@@ -50,18 +50,14 @@ def get_time_key():
 
 # Calls Get Stream Twitch API to get stream data for specified categories
 def get_data_from_API(stream_data_dict, category_set):
+    category_runtime = {"category_id": [], "runtime": []}
     headers = get_credentials()
-
-    # category_set = ["21779", "509658"]################### # LOL and Just Chatting
-    # category_set = ["21779"]################### # League of legends
-    # category_set = ["28834"] # Rotmg
-
     # For each category, calls stream api, gets output, then processes the data to be added to stream_data_dict
     for category_id in category_set:
-        category_id = int(category_id)
+        start1 = time.time()
         while True:
             try:
-                stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list = get_streams(category_id, headers)
+                stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list, runtime = get_streams(category_id, headers)
                 stream_data_dict["stream_id"].extend(stream_id_list)
                 stream_data_dict["user_id"].extend(user_id_list)
                 stream_data_dict["category_id"].extend(category_id_list)
@@ -72,6 +68,12 @@ def get_data_from_API(stream_data_dict, category_set):
             except ConnectionError as e:
                 print(e)
                 continue
+        end1 = time.time()
+        duration = end1 - start1
+        category_runtime["category_id"].append(category_id)
+        category_runtime["runtime"].append(duration)
+
+    return category_runtime
 
         
 
@@ -81,6 +83,7 @@ def get_streams(category_id, headers):
     stream_id_list = []; user_id_list = []; category_id_list = []
     viewer_count_list = []; language_id_list = []; user_name_list = []
 
+    start_time = time.time()
     cursor = ""
     while cursor != "end":
         params = {
@@ -106,7 +109,10 @@ def get_streams(category_id, headers):
         else:    
             cursor = output["pagination"]["cursor"]
 
-    return stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list
+    end_time = time.time()
+    runtime = end_time - start_time
+
+    return stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list, runtime
 
 
 # Gets client id and credentials
@@ -147,8 +153,8 @@ def get_category_stream_data(category_set):
         "user_name": []
     }
 
-    # Call Twitch API to get data
-    get_data_from_API(stream_data_dict, category_set)
+    # Call Twitch API to get data for streams and runtime for each category
+    category_runtime = get_data_from_API(stream_data_dict, category_set)
 
     num_of_streams = len(stream_data_dict["stream_id"])
     cur_date_id= get_date_id() # get date id using date dimension
@@ -156,15 +162,17 @@ def get_category_stream_data(category_set):
     stream_data_dict["date_day_id"].extend(num_of_streams * [cur_date_id])
     stream_data_dict["time_of_day_id"].extend(num_of_streams * [cur_time_key])
     stream_df = pd.DataFrame(stream_data_dict).drop_duplicates()
+    category_runtime_df = pd.DataFrame(category_runtime).sort_values(by=['runtime'], ascending=False).drop_duplicates()
 
-    return stream_df
+    return stream_df, category_runtime_df
 
 
 
 def main():
     categories_to_process = get_categories()
-    stream_df = get_category_stream_data(categories_to_process)
+    stream_df, category_runtime_df = get_category_stream_data(categories_to_process)
     stream_df.to_csv(repo_root + "/data/dummy_data/fact_table_data.csv", index=False)
+    category_runtime_df.to_csv(repo_root + "/data/dummy_data/category_runtime_data.csv", index=False)
 
 
 if __name__ == "__main__":

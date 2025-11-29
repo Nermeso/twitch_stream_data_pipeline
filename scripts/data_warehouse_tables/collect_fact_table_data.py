@@ -47,72 +47,37 @@ def get_time_key():
 
     return time_key
 
+#################################################################################################
 
 # Calls Get Stream Twitch API to get stream data for specified categories
-def get_data_from_API(stream_data_dict, category_set):
-    category_runtime = {"category_id": [], "runtime": []}
-    headers = get_credentials()
-    # For each category, calls stream api, gets output, then processes the data to be added to stream_data_dict
-    for category_id in category_set:
-        start1 = time.time()
-        while True:
-            try:
-                stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list, runtime = get_streams(category_id, headers)
-                stream_data_dict["stream_id"].extend(stream_id_list)
-                stream_data_dict["user_id"].extend(user_id_list)
-                stream_data_dict["category_id"].extend(category_id_list)
-                stream_data_dict["viewer_count"].extend(viewer_count_list)
-                stream_data_dict["language_id"].extend(language_id_list)
-                stream_data_dict["user_name"].extend(user_name_list)
-                break
-            except ConnectionError as e:
-                print(e)
-                continue
-        end1 = time.time()
-        duration = end1 - start1
-        category_runtime["category_id"].append(category_id)
-        category_runtime["runtime"].append(duration)
-
-    return category_runtime
-
-        
-
-# Calls the Get Streams endpoint to collect stream data for a specific category
-def get_streams(category_id, headers):
-    url = "https://api.twitch.tv/helix/streams"
-    stream_id_list = []; user_id_list = []; category_id_list = []
-    viewer_count_list = []; language_id_list = []; user_name_list = []
-
-    start_time = time.time()
+def get_data_from_API(stream_data_dict, category_set, headers):
     cursor = ""
     while cursor != "end":
         params = {
-            "game_id": category_id,
+            "game_id": list(category_set),
             "first": 100,
             "after": cursor
         }
-        response = requests.get(url, headers=headers, params=params)
+        # Calls API to get data for 100 categories
+        response = requests.get("https://api.twitch.tv/helix/streams", headers=headers, params=params)
         output = response.json()
+        i = 0
         for stream in output["data"]:
-            if stream["id"] not in stream_id_list:
-                stream_id_list.append(stream["id"])
-                user_id_list.append(stream["user_id"])
-                category_id_list.append(stream["game_id"])
-                viewer_count_list.append(stream["viewer_count"])
-                language_id_list.append(stream["language"])
-                user_name_list.append(stream["user_name"])
-            else: # Do not include repeat streams
-                continue
+            # Adds stream data to stream data dictionary
+            if stream["id"] not in stream_data_dict["stream_id"]:
+                stream_data_dict["stream_id"].append(stream["id"])
+                stream_data_dict["user_id"].append(stream["user_id"])
+                stream_data_dict["category_id"].append(stream["game_id"])
+                stream_data_dict["category_name"].append(stream["game_name"])
+                stream_data_dict["viewer_count"].append(stream["viewer_count"])
+                stream_data_dict["language_id"].append(stream["language"])
+                stream_data_dict["user_name"].append(stream["user_name"])
+
 
         if len(output["pagination"]) == 0: # if no cursor in pagination, no more pages
             cursor = "end"
         else:    
             cursor = output["pagination"]["cursor"]
-
-    end_time = time.time()
-    runtime = end_time - start_time
-
-    return stream_id_list, user_id_list, category_id_list, viewer_count_list, language_id_list, user_name_list, runtime
 
 
 # Gets client id and credentials
@@ -129,7 +94,7 @@ def get_credentials():
 
 # Gets categories this script will be getting stream data for
 def get_categories():
-    categories_path = repo_root + "/data/dummy_data/example_SQS_batch_event_input.json"
+    categories_path = repo_root + "/data/dummy_data/collect_fact_table_data/example_SQS_batch_event_input3.json"
     categories_to_process = []
     with open(categories_path, 'r') as f:
         message_batch = json.load(f)
@@ -140,39 +105,53 @@ def get_categories():
     return set(categories_to_process)
 
 
-# Gets stream data for specified categories
-def get_category_stream_data(category_set):
+# Adds date and time values to data dictionary
+def add_date_time_data(stream_data_dict):
+    cur_date_id= get_date_id() # get date id using date dimension
+    cur_time_key = get_time_key() # gets time key using time dimension
+    num_of_streams = len(stream_data_dict["stream_id"])
+    stream_data_dict["date_day_id"].extend(num_of_streams * [cur_date_id])
+    stream_data_dict["time_of_day_id"].extend(num_of_streams * [cur_time_key])
+
+
+def main():
+    categories_to_process = get_categories()
     stream_data_dict = {
         "stream_id": [],
         "date_day_id": [],
         "time_of_day_id": [],
         "user_id": [],
         "category_id": [],
+        "category_name": [],
         "viewer_count": [],
         "language_id": [],
         "user_name": []
     }
+    headers = get_credentials()
 
-    # Call Twitch API to get data for streams and runtime for each category
-    category_runtime = get_data_from_API(stream_data_dict, category_set)
+    # Calls Twitch's Get Streams API for every 100 categories since 100 is max
+    # Counts as one API request, minimizing API request number to better adhere to rate limits
+    category_set = set()
+    for i, category_id in enumerate(categories_to_process):
+        ith_category = i + 1
+        category_set.add(category_id)
+        # Process categories in batches of 100 while including the last non-100 batch
+        if (ith_category % 100 == 0) or len(categories_to_process) == ith_category:
+            get_data_from_API(stream_data_dict, category_set, headers)
+            category_set = set()
+    
+    # Add date and time values to data
+    add_date_time_data(stream_data_dict)
 
-    num_of_streams = len(stream_data_dict["stream_id"])
-    cur_date_id= get_date_id() # get date id using date dimension
-    cur_time_key = get_time_key() # gets time key
-    stream_data_dict["date_day_id"].extend(num_of_streams * [cur_date_id])
-    stream_data_dict["time_of_day_id"].extend(num_of_streams * [cur_time_key])
+    # Convert stream dict to dataframe
     stream_df = pd.DataFrame(stream_data_dict).drop_duplicates()
-    category_runtime_df = pd.DataFrame(category_runtime).sort_values(by=['runtime'], ascending=False).drop_duplicates()
 
-    return stream_df, category_runtime_df
+    # Group categories to get number of streamers for each one
+    category_popularity_df = stream_df.groupby(["category_id", "category_name"]).size().to_frame(name="num_of_streamers").reset_index().sort_values(by="num_of_streamers", ascending=False)
 
-
-
-def main():
-    categories_to_process = get_categories()
-    stream_df, category_runtime_df = get_category_stream_data(categories_to_process)
-    stream_df.to_csv(repo_root + "/data/dummy_data/fact_table_data.csv", index=False)
-    category_runtime_df.to_csv(repo_root + "/data/dummy_data/category_runtime_data.csv", index=False)
+    # Convert dataframes to CSVs
+    stream_df.to_csv(repo_root + "/data/dummy_data/collect_fact_table_data/fact_table_data.csv", index=False)
+    category_popularity_df.to_csv(repo_root + "/data/dummy_data/collect_fact_table_data/category_popularity_data.csv", index=False)
 
 
 if __name__ == "__main__":

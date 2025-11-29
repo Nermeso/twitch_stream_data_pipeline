@@ -18,44 +18,43 @@ start = time.time()
 repo_root = str(Path(__file__).parents[2])
 
 
-# Get locations of most recently collected stream data
-def get_stream_data_paths():
+# Get locations of most recently collected category popularity data from collectStreamData function
+def get_category_popularity_data_paths():
     data_paths = []
-    for filepath in Path("data/dummy_data/fact_table_data2").glob('**/*'):
+    for filepath in Path("data/dummy_data/category_popularity_temp/").glob('**/*'):
         data_paths.append(str(filepath))
 
     return data_paths
 
 
-# Combines recently created fact table CSVs into one aggregated by category to get total # of streams
-def combine_fact_table_data(fact_table_data_paths):
-    master_df = pd.DataFrame(columns=["stream_id", "date_day_id", "time_of_day_id", "user_id", "category_id", "viewer_count", "language_id", "user_name"])
-    for data_path in fact_table_data_paths:
-        df = pd.read_csv(data_path)
-        master_df = pd.concat([master_df, df])
-    master_df = master_df.drop_duplicates()
-    grouped_df = master_df.groupby('category_id').size().reset_index(name='num_of_streams').sort_values(by='num_of_streams', ascending=False).reset_index(drop=True)
+# Combine different CSVs of category popularity data into one dataframe
+def combine_category_popularity(category_popularity_paths):
+    popularity_df = pd.DataFrame(columns=["category_id", "num_of_streamers"])
+    for path in category_popularity_paths:
+        df_tmp = pd.read_csv(path)
+        popularity_df = pd.concat([popularity_df, df_tmp])
+    popularity_df = popularity_df.drop_duplicates(subset=['category_id'], keep='first').sort_values(by="num_of_streamers", ascending=False)
     
-    return grouped_df
+    return popularity_df
 
     
 
-# Produce dataframe containing currently streamed categories with their number of streams associated with it
-# Categories with no num_of_streams value is given a default value of 1
-def produce_category_weights(grouped_df, curr_streamed_categories):
-    merged_df = pd.merge(curr_streamed_categories, grouped_df, on='category_id', how='left')
-    merged_df['num_of_streams'] = merged_df['num_of_streams'].replace(np.nan, 1)
+# Produce dataframe containing currently streamed categories with default num_of_streams supplanted from default category popularity file
+# Categories with no associated default value will get a value of 1 streamer
+def produce_category_weights(popularity_df, curr_streamed_categories):
+    output_df = pd.concat([curr_streamed_categories, popularity_df], axis=1)
+    output_df = output_df[["category_id", "category_name", "num_of_streamers"]].fillna(1)
     
-    return merged_df
+    return output_df
 
 
-# Split categories into equal groups in terms of their weights (num_of_streams) using greedy algorithm
+# Split categories into equal groups in terms of their number of channels/streamers using greedy algorithm
 def split_categories_into_groups(weighted_category_df):
     category_groups = [[] for _ in range(20)]
     weight_value_groups = [0 for _ in range(20)]
     # Go through each category, then assign it to a group
     for cat_idx, row in weighted_category_df.iterrows():
-        num_of_streams = row['num_of_streams']
+        num_of_streamers = row['num_of_streamers']
         category_id = row["category_id"]
         min_sum = 999999999
         min_idx = -1
@@ -70,14 +69,14 @@ def split_categories_into_groups(weighted_category_df):
             elif group_weight_sum <= min_sum:
                 min_sum = group_weight_sum
                 min_idx = wvg_idx
-        weight_value_groups[min_idx] += num_of_streams
+        weight_value_groups[min_idx] += num_of_streamers
         category_groups[min_idx].append(category_id)
+
         
     return category_groups, weight_value_groups
 
 
-# Reads file that contains data on typical popular categories and their number of streams
-# Serves as default category weights if recent stream data is not present to make weights for
+# Reads file that contains data default num_of_streamers we will use if recent stream popularity data is not present
 def get_default_category_df():
     default_weights_path = repo_root + "/data/miscellaneous/default_category_weights.csv"
     df = pd.read_csv(default_weights_path)
@@ -85,22 +84,33 @@ def get_default_category_df():
     return df
 
 
+# Merges current streamed categories with most recently streamed categories with streamer number data
+# Categories with no associated value gets a default number of channels of 1
+def merge_current_categories(popularity_df, curr_streamed_categories):
+    merged_df = pd.merge(curr_streamed_categories, popularity_df, on="category_id", how='left')
+    merged_df['num_of_streamers'] = merged_df['num_of_streamers'].replace(np.nan, 1)
+
+    return merged_df
+
+
+
 def main():
-    fact_table_data_paths = get_stream_data_paths()
+    category_popularity_paths = get_category_popularity_data_paths()
     curr_streamed_categories = pd.read_csv("data/miscellaneous/curr_streamed_categories.csv")
     # Category group weights will be based off of most recently collected stream data
-    if len(fact_table_data_paths) != 0:
-        grouped_df = combine_fact_table_data(fact_table_data_paths)
-        weighted_category_df = produce_category_weights(grouped_df, curr_streamed_categories)
+    if len(category_popularity_paths) != 0:
+        popularity_df = combine_category_popularity(category_popularity_paths)
+        weighted_category_df = merge_current_categories(popularity_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)
-    else: # if no recent stream data collected, weights will be based off of file containing pre-set weight values for categories
+    else: # if no recent stream data collected, weights will be based off of file containing category number of streamers
         default_category_df = get_default_category_df()
         weighted_category_df = produce_category_weights(default_category_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)
-        print(category_groups)
-        print()
-        print(wvg)
-        
+
+    print(category_groups)
+    print()
+    print(wvg)
+
 
 
 

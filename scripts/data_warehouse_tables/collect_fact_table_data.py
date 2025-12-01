@@ -61,7 +61,6 @@ def get_data_from_API(stream_data_dict, category_set, headers):
         # Calls API to get data for 100 categories
         response = requests.get("https://api.twitch.tv/helix/streams", headers=headers, params=params)
         output = response.json()
-        i = 0
         for stream in output["data"]:
             # Adds stream data to stream data dictionary
             if stream["id"] not in stream_data_dict["stream_id"]:
@@ -94,7 +93,7 @@ def get_credentials():
 
 # Gets categories this script will be getting stream data for
 def get_categories():
-    categories_path = repo_root + "/data/dummy_data/collect_fact_table_data/example_SQS_batch_event_input3.json"
+    categories_path = repo_root + "/data/miscellaneous/example_SQS_batch_event_input.json"
     categories_to_process = []
     with open(categories_path, 'r') as f:
         message_batch = json.load(f)
@@ -147,11 +146,15 @@ def main():
     stream_df = pd.DataFrame(stream_data_dict).drop_duplicates()
 
     # Group categories to get number of streamers for each one
-    category_popularity_df = stream_df.groupby(["category_id", "category_name"]).size().to_frame(name="num_of_streamers").reset_index().sort_values(by="num_of_streamers", ascending=False)
+    category_popularity_df = stream_df.groupby(["category_id"], as_index=False).agg(
+                                        category_id=('category_id', 'first'),
+                                        category_name=('category_name', 'first'),
+                                        num_of_streamers=('stream_id', 'count')
+                                   ).sort_values(by="num_of_streamers", ascending=False)
 
     # Convert dataframes to CSVs
-    stream_df.to_csv(repo_root + "/data/dummy_data/collect_fact_table_data/fact_table_data.csv", index=False)
-    category_popularity_df.to_csv(repo_root + "/data/dummy_data/collect_fact_table_data/category_popularity_data.csv", index=False)
+    stream_df.to_csv(repo_root + "/data/fact_table_data/recent_stream_data/fact_table_data1.csv", index=False)
+    category_popularity_df.to_csv(repo_root + "/data/fact_table_data/recent_category_popularity_data/category_popularity_data1.csv", index=False)
 
 
 if __name__ == "__main__":

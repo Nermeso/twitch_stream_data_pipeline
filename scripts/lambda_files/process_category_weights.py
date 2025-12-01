@@ -18,7 +18,7 @@ import numpy as np
 # Get locations of most recently collected category popularity data from collectStreamData function
 def get_category_popularity_data_paths(s3_client):
     data_paths = []
-    response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix="raw/fact_table/recent_category_popularity_data/")
+    response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix="raw/recent_category_popularity_data/")
     if "Contents" in response:
         for obj in response["Contents"]:
             if obj["Key"].endswith(".csv"):

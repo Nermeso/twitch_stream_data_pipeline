@@ -171,8 +171,8 @@ def lambda_handler(event, context):
                                    ).sort_values(by="num_of_streamers", ascending=False)
         
         # Convert dataframes to CSVs and upload to S3
-        wr.s3.to_csv(stream_df, f"s3://twitchdatapipelineproject/raw/fact_table/recent_stream_data/fact_table_data_{func_ID}.csv", index=False)
-        wr.s3.to_csv(category_popularity_df, f"s3://twitchdatapipelineproject/raw/recent_category_popularity_data/{date_id}_{time_key}/category_popularity_data_{date_id}_{time_key}_{func_ID}.csv", index=False)
+        wr.s3.to_csv(stream_df, f"s3://twitchdatapipelineproject/raw/fact_table/{date_id}_{time_key}/stream_data_{date_id}_{time_key}_{func_ID}.csv", index=False)
+        wr.s3.to_csv(category_popularity_df, f"s3://twitchdatapipelineproject/raw/recent_category_popularity_data/category_popularity_data_{date_id}_{time_key}_{func_ID}.csv", index=False)
 
       
         end = time.time()

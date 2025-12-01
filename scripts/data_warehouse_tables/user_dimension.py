@@ -37,7 +37,9 @@ def get_credentials():
 # Get the users who we will get more info on through the API
 def get_users():
     users_list = []
-    for filepath in Path("data/fact_table_data/recent_stream_data/").glob('**/*'):
+    # Lambda file would only read files in folder of a specific time
+    # ex: 20251201_1515 meaning would only read files in folder of stream data collected on December 1, 2025, at 3:15 PM
+    for filepath in Path("data/fact_table_data/20251201_1515/").glob('**/*'):
         df_tmp = pd.read_csv(filepath)
         new_users = df_tmp["user_id"].tolist()
         users_list.extend(new_users)

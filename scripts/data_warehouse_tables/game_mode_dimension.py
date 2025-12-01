@@ -47,7 +47,7 @@ def get_game_mode_data(wrapper):
 
 # Converts API call's json output to csv for dimension table
 def json_to_csv(data):
-    game_dimension_path = repo_root + "/data/data_warehouse/game_mode_dimension.csv"
+    game_dimension_path = repo_root + "/data/dimension_tables/game_mode_dimension.csv"
 
     with open(game_dimension_path, 'w') as f:
         f.write('game_mode_id,game_mode_name\n')

@@ -74,7 +74,7 @@ def make_wrapper():
 
 # Accesses the genre  bridge dimension
 def access_genre_bridge_dimension():
-    genre_bridge_dimension_path = repo_root + "/data/data_warehouse/genre_bridge_dimension.csv"
+    genre_bridge_dimension_path = repo_root + "/data/dimension_tables/genre_bridge_dimension.csv"
     try:
         genre_bridge_df = pd.read_csv(genre_bridge_dimension_path, keep_default_na=False)
     except FileNotFoundError:
@@ -88,7 +88,7 @@ def access_genre_bridge_dimension():
 
 # Accesses the category dimension
 def access_category_dimension():
-    category_dimension_path = repo_root + "/data/data_warehouse/category_dimension.csv"
+    category_dimension_path = repo_root + "/data/dimension_tables/category_dimension.csv"
     category_df = pd.read_csv(category_dimension_path, keep_default_na=False)
 
     return category_df
@@ -136,7 +136,7 @@ def add_new_genre_data(wrapper, category_df, genre_bridge_dim):
 def process_dim_csv_file(genre_bridge_dim, new_genre_data_dim):
     new_genre_data_dim = pd.DataFrame(new_genre_data_dim)
     final_df = pd.concat([genre_bridge_dim, new_genre_data_dim]).drop_duplicates()
-    genre_bridge_dim_path = repo_root + "/data/data_warehouse/genre_bridge_dimension.csv"
+    genre_bridge_dim_path = repo_root + "/data/dimension_tables/genre_bridge_dimension.csv"
     final_df.to_csv(genre_bridge_dim_path, index=False)
 
 

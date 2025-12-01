@@ -116,6 +116,8 @@ def add_date_time_data(s3_client, stream_data_dict):
     stream_data_dict["date_day_id"].extend(num_of_streams * [cur_date_id])
     stream_data_dict["time_of_day_id"].extend(num_of_streams * [cur_time_key])
 
+    return cur_date_id, cur_time_key
+
 
 def lambda_handler(event, context):
     if event:
@@ -155,7 +157,7 @@ def lambda_handler(event, context):
                 category_set = set()
 
         # Add date and time values to data
-        add_date_time_data(s3_client, stream_data_dict)
+        date_id, time_key = add_date_time_data(s3_client, stream_data_dict)
 
         # Convert stream dict to dataframe
         stream_df = pd.DataFrame(stream_data_dict).drop_duplicates()
@@ -170,7 +172,7 @@ def lambda_handler(event, context):
         
         # Convert dataframes to CSVs and upload to S3
         wr.s3.to_csv(stream_df, f"s3://twitchdatapipelineproject/raw/fact_table/recent_stream_data/fact_table_data_{func_ID}.csv", index=False)
-        wr.s3.to_csv(category_popularity_df, f"s3://twitchdatapipelineproject/raw/fact_table/recent_category_popularity_data/category_popularity_data_{func_ID}.csv", index=False)
+        wr.s3.to_csv(category_popularity_df, f"s3://twitchdatapipelineproject/raw/recent_category_popularity_data/{date_id}_{time_key}/category_popularity_data_{date_id}_{time_key}_{func_ID}.csv", index=False)
 
       
         end = time.time()

@@ -59,7 +59,13 @@ def get_data_from_API(stream_data_dict, category_set, headers):
             "after": cursor
         }
         # Calls API to get data for 100 categories
-        response = requests.get("https://api.twitch.tv/helix/streams", headers=headers, params=params)
+        while True:
+            try:
+                response = requests.get("https://api.twitch.tv/helix/streams", headers=headers, params=params)
+                break
+            except ConnectionError:
+                continue
+        
         output = response.json()
         for stream in output["data"]:
             # Adds stream data to stream data dictionary
@@ -112,6 +118,8 @@ def add_date_time_data(stream_data_dict):
     stream_data_dict["date_day_id"].extend(num_of_streams * [cur_date_id])
     stream_data_dict["time_of_day_id"].extend(num_of_streams * [cur_time_key])
 
+    return cur_date_id, cur_time_key
+
 
 def main():
     categories_to_process = get_categories()
@@ -140,7 +148,7 @@ def main():
             category_set = set()
     
     # Add date and time values to data
-    add_date_time_data(stream_data_dict)
+    date_id, time_key = add_date_time_data(stream_data_dict)
 
     # Convert stream dict to dataframe
     stream_df = pd.DataFrame(stream_data_dict).drop_duplicates()
@@ -153,8 +161,14 @@ def main():
                                    ).sort_values(by="num_of_streamers", ascending=False)
 
     # Convert dataframes to CSVs
-    stream_df.to_csv(repo_root + "/data/fact_table_data/recent_stream_data/fact_table_data1.csv", index=False)
-    category_popularity_df.to_csv(repo_root + "/data/fact_table_data/recent_category_popularity_data/category_popularity_data1.csv", index=False)
+    stream_data_file = f"data/fact_table_data/{date_id}_{time_key}/stream_data_{date_id}_{time_key}.csv"
+    stream_data_path = Path(stream_data_file)
+    category_popularity_data_file = f"data/recent_category_popularity_data/category_popularity_data_{date_id}_{time_key}.csv"
+    category_popularity_data_path = Path(category_popularity_data_file)
+    stream_data_path.parent.mkdir(parents=True, exist_ok=True)
+    category_popularity_data_path.parent.mkdir(parents=True, exist_ok=True)
+    stream_df.to_csv(stream_data_path, index=False)
+    category_popularity_df.to_csv(category_popularity_data_path, index=False)
 
 
 if __name__ == "__main__":

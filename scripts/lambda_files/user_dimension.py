@@ -5,6 +5,7 @@ from pathlib import Path
 import time
 import json
 import ast
+import boto3
 
 start = time.time()
 
@@ -37,6 +38,7 @@ def get_credentials():
 # Get the users who we will get more info on through the API
 def get_users():
     users_list = []
+    response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix="raw/fact_table/recent_category_popularity_data/")
     for filepath in Path("data/fact_table_data/recent_stream_data/").glob('**/*'):
         df_tmp = pd.read_csv(filepath)
         new_users = df_tmp["user_id"].tolist()
@@ -122,7 +124,8 @@ def call_users_endpoint(params, user_data_dict):
 
 
 def main():
-    user_list = get_users()
+    s3_client = boto3.client('s3')
+    user_list = get_users(s3_client)
     current_users, current_user_dim_df = get_current_user_dim() # get current users we have data for
     new_users = get_only_new_users(user_list, current_users) # Returns user ids of users not in user dimension yet
 

@@ -46,7 +46,7 @@ def get_IGDB_genre_data(wrapper):
 
 # Converts API call's json output to csv for dimension table
 def json_to_csv(data):
-    genre_dimension_path = repo_root + "/data/data_warehouse/genre_dimension.csv"
+    genre_dimension_path = repo_root + "/data/dimension_tables/genre_dimension.csv"
 
     with open(genre_dimension_path, 'w') as f:
         f.write('genre_id,genre_name\n')

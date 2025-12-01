@@ -84,7 +84,6 @@ def split_categories_into_groups(weighted_category_df):
                 min_idx = wvg_idx
         weight_value_groups[min_idx] += num_of_streamers
         category_groups[min_idx].append(category_id)
-
         
     return category_groups, weight_value_groups
 
@@ -135,7 +134,7 @@ def lambda_handler(event, context):
 
     # Category group weights will be based off of most recently collected stream data
     if len(category_popularity_paths) != 0:
-        popularity_df = combine_category_popularity(category_popularity_paths)
+        popularity_df = combine_category_popularity(category_popularity_paths, s3_client)
         weighted_category_df = merge_current_categories(popularity_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)
     else: # if no recent stream data collected, weights will be based off of file containing category popularity
@@ -149,4 +148,11 @@ def lambda_handler(event, context):
 
     # Sends groups of categories as messages to categoryGroupWeights SQS queue
     send_SQS_messages(category_groups)
+
+    print("Weight Value Groups: ")
+    print(wvg)
+    print()
+    print("Category Groups: ")
+    for group in category_groups:
+        print(group)
 

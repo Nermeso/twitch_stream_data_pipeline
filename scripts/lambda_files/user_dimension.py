@@ -36,7 +36,7 @@ def get_credentials():
 
 
 # Get the users who we will get more info on through the API
-def get_users():
+def get_users(s3_client):
     users_list = []
     response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix="raw/fact_table/recent_category_popularity_data/")
     for filepath in Path("data/fact_table_data/recent_stream_data/").glob('**/*'):

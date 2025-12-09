@@ -6,6 +6,7 @@ import time
 import awswrangler as wr
 from requests.exceptions import ConnectionError
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import pandas as pd
 
 
@@ -23,7 +24,7 @@ def get_date_id(s3_client):
     if status == 200:
         print(f"Successful S3 get_object response. Status - {status}")
         date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-    current_date = datetime.today()
+    current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     date_id = date_df[date_df["OurDate"] == str(current_date.date())].iloc[0, 0]
    
     return str(date_id)
@@ -36,7 +37,7 @@ def get_time_key(s3_client):
     if status == 200:
         print(f"Successful S3 get_object response. Status - {status}")
         time_of_day_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-    cur_date = datetime.today()
+    cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     minimum_diff = 1000
     time_key = ""
     for row in time_of_day_df.iterrows():

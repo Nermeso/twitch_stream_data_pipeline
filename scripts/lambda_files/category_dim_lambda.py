@@ -3,8 +3,8 @@ import requests
 import pandas as pd
 import time
 import boto3
-import botocore.exceptions
 import awswrangler as wr
+import json
 
 
 ###################### SUMMARY #####################
@@ -17,40 +17,39 @@ import awswrangler as wr
 ####################################################
 
 
-
 # Creates dataframe of current category dimension and creates list of category ids in that dim
 def get_category_dim_info(s3_client):
-    try:
-        s3_client.head_object(Bucket='twitchdatapipelineproject', Key="raw/dimension_table/category_dimension.csv")
-        response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key="raw/dimension_table/category_dimension.csv")
-        status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+    category_dim_exist = False
+    category_dim_path = ""
+    response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix="raw/dimension_table/")
+
+    # Check to see if category dimension exists currently
+    if "Contents" in response:
+        for obj in response["Contents"]:
+            if obj["Key"].endswith("category_dimension.csv"):
+                category_dim_exist = True
+                category_dim_path = obj["Key"]
+
+    if category_dim_exist is False: # create category dimension if does not exist
+        current_category_dim_df = pd.DataFrame(columns=["category_id", "igdb_id", "category_name"])
+        wr.s3.to_csv(current_category_dim_df, "s3://twitchdatapipelineproject/raw/dimension_table/category_dimension.csv", index=False)
+        curr_categories = []
+    else: # if exists, read it and get the current categories we have info on already
+        response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key=category_dim_path)
+        status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
-            print(f"Successful S3 get_object response. Status - {status}")
-            current_category_dim_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-            current_ids = current_category_dim_df["category_id"].tolist()
-        else:
-            print(f"Unsuccessful S3 get_object response. Status - {status}")
-            exit()
-    except botocore.exceptions.ClientError as e:
-        if e.response['Error']['Code'] == "404": # key does not exist, so we make new csv
-            current_category_dim_df = pd.DataFrame(columns=["category_id", "igdb_id", "category_name"])
-            wr.s3.to_csv(current_category_dim_df, "s3://twitchdatapipelineproject/raw/dimension_table/category_dimension.csv", index=False)
-            current_ids = []
-        elif e.response['Error']['Code'] == 403:
-            print("Unauthorized access. Ending program.")
-            exit()
-        else:
-            print("Something else went wrong. Ending program.")
-            exit()
-    
-    return current_category_dim_df, current_ids
+            print(f"Successful S3 get_object response for the category dimension. Status - {status}")
+            current_category_dim_df = pd.read_csv(response.get("Body"), keep_default_na = False)
+            curr_categories = current_category_dim_df["category_id"].tolist()
+
+    return curr_categories, current_category_dim_df
 
 
 # Iteratively call get top games api to get current games that have at least one streamer to do two things:
 # Gets all categories that are currently being streamed
 # Get all categories that are not present in the category dimension and to add to it
-def api_call_loop(url, headers, data, already_exist_ids):
-    current_streamed_categories_dict = {"category_id": [], "category_name": []}
+def call_API_get_category_data(headers, new_category_data_dict, curr_streamed_categories_dict, already_exist_ids):
+    url = "https://api.twitch.tv/helix/games/top"
     cursor = ""
     while cursor != "done":
         params = {
@@ -58,34 +57,48 @@ def api_call_loop(url, headers, data, already_exist_ids):
             "after": cursor
         }
         response = requests.get(url, headers=headers, params=params)
-        output = response.json()
-        for category in output["data"]:
-            category_id = category["id"]
-            category_name = category["name"]
-            igdb_id = category["igdb_id"]
+        API_output = response.json()
 
-            # Adds category to dict containing current streamed categories
-            if int(category_id) not in current_streamed_categories_dict["category_id"]:
-                current_streamed_categories_dict["category_id"].append(int(category_id))
-                current_streamed_categories_dict["category_name"].append(category_name)  
-
-            # Adds category to new category dict if not seen before in category dimension
-            if int(category_id) in data["category_id"] or int(category_id) in already_exist_ids: # if category exists already, go to next category
-                continue
-            data["category_id"].append(int(category_id))
-            data["category_name"].append(category_name)
-            if igdb_id == "": # IGDB Id may be empty, fill it with NA if the case
-                data["igdb_id"].append("NA")
-            else:
-                data["igdb_id"].append(int(igdb_id))
+        if response.status_code == 200:
+            process_API_data(API_output, curr_streamed_categories_dict, already_exist_ids, new_category_data_dict)      
+        elif response.status_code == 429:
+            print("Rate limit exceeded. Retrying in 20 seconds")
+            time.sleep(20)
+            continue
+        else:
+            print(f"Error: {response.status_code}")
+            print(API_output)
+            exit()
 
         # Ends pagination of pages when done
-        if len(output["pagination"]) == 0: # if no cursor in pagination, no more pages
+        if len(API_output["pagination"]) == 0: # if no cursor in pagination, no more pages
             cursor = "done"
         else:    
-            cursor = output["pagination"]["cursor"]
+            cursor = API_output["pagination"]["cursor"]
 
-    return current_streamed_categories_dict
+
+# Gets data on currently streamed categories and adds categories not seen before to dict to be later processed
+def process_API_data(API_output, curr_streamed_categories_dict, already_exist_ids, new_category_data_dict):
+    for category in API_output["data"]:
+        category_id = category["id"]
+        category_name = category["name"]
+        igdb_id = category["igdb_id"]
+
+        # Adds category to dict containing current streamed categories
+        if int(category_id) not in curr_streamed_categories_dict["category_id"]:
+            curr_streamed_categories_dict["category_id"].append(int(category_id))
+            curr_streamed_categories_dict["category_name"].append(category_name)  
+
+        # Adds category to new category dict if not seen before in category dimension
+        if int(category_id) in new_category_data_dict["category_id"] or int(category_id) in already_exist_ids: # if category exists already, go to next category
+            continue
+        else: # category not seen before, so we add it
+            new_category_data_dict["category_id"].append(int(category_id))
+            new_category_data_dict["category_name"].append(category_name)
+            if igdb_id == "": # IGDB Id may be empty, fill it with NA if the case
+                new_category_data_dict["igdb_id"].append("NA")
+            else:
+                new_category_data_dict["igdb_id"].append(int(igdb_id))
 
 
 # Gets client id and credentials
@@ -103,49 +116,59 @@ def get_credentials():
     return headers, s3_client
 
 
-# Call Twitch top games API preiodically to collect game info
-def collect_twitch_category_data(headers, s3_client):
-    url = "https://api.twitch.tv/helix/games/top"
-    data = {
+
+# Converts new category data to dataframe, adds it on to current category dimension, then uploads to s3
+def add_new_category_data_to_csv(new_category_data_dict, current_category_dim_df):
+    new_category_df = pd.DataFrame(new_category_data_dict) # converts dictionary of new category data to dataframe
+    final_df = pd.concat([current_category_dim_df, new_category_df]).drop_duplicates() # combines current category data with new
+    wr.s3.to_csv(final_df, 's3://twitchdatapipelineproject/raw/dimension_table/category_dimension.csv', index=False)
+
+
+# Converts dictionary of currently streamed categories to CSV
+def curr_streamed_categories_to_csv(curr_streamed_categories_dict):
+    df = pd.DataFrame(curr_streamed_categories_dict)
+    wr.s3.to_csv(df, 's3://twitchdatapipelineproject/raw/other/current_streamed_categories.csv', index=False)
+
+
+def lambda_handler(event, context):
+    start = time.time()
+    headers, s3_client = get_credentials()
+
+    # Reads current category dimension and gets current categories we have info on already
+    curr_categories, current_category_dim_df = get_category_dim_info(s3_client)
+
+    new_category_data_dict = {
         "category_id": [],
         "igdb_id": [],
         "category_name": []
     }
 
-    current_category_dim_df, current_ids = get_category_dim_info(s3_client)
+    curr_streamed_categories_dict = {
+        "category_id": [],
+        "category_name": []
+    }
 
-    while True:
-        try:
-            current_streamed_categories_dict = api_call_loop(url, headers, data, current_ids)
-            break
-        except ConnectionError as e:
-            data = {"category_id": [], "igdb_id": [],"category_name": []}
-            continue        
+    # Calls Get Top Games API to get data on currently streamed categories
+    # and potential new categories we have not recorded info on yet
+    call_API_get_category_data(headers, new_category_data_dict, curr_streamed_categories_dict, curr_categories)
 
-    # current_category_dim_df = top_games_api_call_loop(url, headers, data, s3_client)
+    # Adds new category data to current dimension then uploads it to S3
+    add_new_category_data_to_csv(new_category_data_dict, current_category_dim_df)
 
-    return data, current_category_dim_df, current_streamed_categories_dict
+    # Convert current streamed categories dict to CSV then uploads to S3
+    curr_streamed_categories_to_csv(curr_streamed_categories_dict)
 
+    # Invokes another lambda to upload data to postgres db
+    # lambdaClient = boto3.client('lambda')
+    # response = lambdaClient.invoke(
+    #     FunctionName='arn:aws:lambda:us-west-1:484743883065:function:testing',
+    #     InvocationType='Event',
+    #     Payload=json.dumps(new_category_data_dict)
+    # )
 
-# Converts dictionary of category data to csv
-def data_to_csv(data_dict, current_dim_df):
-    data = pd.DataFrame(data_dict) # converts dictionary of data to dataframe
-    final_df = pd.concat([current_dim_df, data]).drop_duplicates() # combines current category data with new
-    wr.s3.to_csv(final_df, 's3://twitchdatapipelineproject/raw/dimension_table/category_dimension.csv', index=False)
+    end = time.time()
+    print("Duration: " + str(end - start))
 
-    return
+    
 
-
-# Converts dictionary of currently streamed categories to CSV
-def curr_streamed_categories_to_csv(current_streamed_categories_dict):
-    df = pd.DataFrame(current_streamed_categories_dict)
-    wr.s3.to_csv(df, 's3://twitchdatapipelineproject/raw/other/current_streamed_categories.csv', index=False)
-
-
-
-def lambda_handler(event, context):
-    headers, s3_client = get_credentials()
-    new_category_data_dict, current_dim_df, current_streamed_categories_dict = collect_twitch_category_data(headers, s3_client)
-    data_to_csv(new_category_data_dict, current_dim_df)
-    curr_streamed_categories_to_csv(current_streamed_categories_dict)
 

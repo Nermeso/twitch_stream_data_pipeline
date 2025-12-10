@@ -1,4 +1,4 @@
-date_id,OurDate,Date_MMDDYYYY,Day_of_Week,Month,Day,Year,Month_Name,MonthAbbrev,Year_YY
+day_date_id,the_date,date_MMDDYYYY,day_of_week,month,day,year,month_name,month_abbrev,year_YY
 20250101,2025-01-01,01/01/2025,Wednesday,01,01,2025,January,JAN,25
 20250102,2025-01-02,01/02/2025,Thursday,01,02,2025,January,JAN,25
 20250103,2025-01-03,01/03/2025,Friday,01,03,2025,January,JAN,25

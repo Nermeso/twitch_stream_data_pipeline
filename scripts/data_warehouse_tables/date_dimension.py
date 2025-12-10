@@ -45,7 +45,7 @@ def main():
                 except ValueError:
                     continue
 
-    date_dimension_table = pd.DataFrame(dateResultList,columns=["date_id","OurDate","Date_MMDDYYYY","Day_of_Week","Month","Day","Year","Month_Name","MonthAbbrev","Year_YY"])
+    date_dimension_table = pd.DataFrame(dateResultList,columns=["day_date_id","the_date","date_MMDDYYYY","day_of_week","month","day","year","month_name","month_abbrev","year_YY"])
     date_dimension_path = repo_root + "/data/dimension_tables/date_dimension.csv"
     date_dimension_table.to_csv(date_dimension_path ,index=False)
 

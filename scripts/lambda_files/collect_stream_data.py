@@ -22,10 +22,10 @@ def get_date_id(s3_client):
     response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key="raw/dimension_table/date_dimension.csv")
     status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
     if status == 200:
-        print(f"Successful S3 get_object response. Status - {status}")
+        print(f"Successful S3 get_object response for date dimension. Status - {status}")
         date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
     current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    date_id = date_df[date_df["OurDate"] == str(current_date.date())].iloc[0, 0]
+    date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
    
     return str(date_id)
 
@@ -35,7 +35,7 @@ def get_time_key(s3_client):
     response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key="raw/dimension_table/time_of_day_dimension.csv")
     status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
     if status == 200:
-        print(f"Successful S3 get_object response. Status - {status}")
+        print(f"Successful S3 get_object response for time of day dimension. Status - {status}")
         time_of_day_df = pd.read_csv(response.get("Body"), keep_default_na=False)
     cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     minimum_diff = 1000
@@ -46,7 +46,7 @@ def get_time_key(s3_client):
         diff = abs((cur_date - date_time_compare).total_seconds())
         if diff < minimum_diff:
             minimum_diff = diff
-            time_key = row[1]["time_key"]
+            time_key = row[1]["time_of_day_id"]
 
     return time_key
 
@@ -75,10 +75,8 @@ def get_data_from_API(stream_data_dict, category_set, headers):
                 stream_data_dict["stream_id"].append(stream["id"])
                 stream_data_dict["user_id"].append(stream["user_id"])
                 stream_data_dict["category_id"].append(stream["game_id"])
-                stream_data_dict["category_name"].append(stream["game_name"])
                 stream_data_dict["viewer_count"].append(stream["viewer_count"])
                 stream_data_dict["language_id"].append(stream["language"])
-                stream_data_dict["user_name"].append(stream["user_name"])
 
         if len(output["pagination"]) == 0: # if no cursor in pagination, no more pages
             cursor = "end"
@@ -132,10 +130,8 @@ def lambda_handler(event, context):
             "time_of_day_id": [],
             "user_id": [],
             "category_id": [],
-            "category_name": [],
             "viewer_count": [],
             "language_id": [],
-            "user_name": []
         }
 
         # Delete messages so even if lambda function fails, it will not be processed
@@ -167,7 +163,6 @@ def lambda_handler(event, context):
         # Group categories to get number of streamers for each one
         category_popularity_df = stream_df.groupby(["category_id"], as_index=False).agg(
                                         category_id=('category_id', 'first'),
-                                        category_name=('category_name', 'first'),
                                         num_of_streamers=('stream_id', 'count')
                                    ).sort_values(by="num_of_streamers", ascending=False)
         

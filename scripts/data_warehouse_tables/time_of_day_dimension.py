@@ -19,7 +19,7 @@ def create_time_key(data):
         for time_num in range(0, 60, 15):
             minute = str(time_num).zfill(2)
             time_key = hour + minute
-            data["time_key"].append(time_key)
+            data["time_of_day_id"].append(time_key)
 
 
 # Creates time_24h attribute
@@ -97,7 +97,7 @@ def create_time_of_day_data(data):
 
 def main():
     data = {
-        "time_key": [],
+        "time_of_day_id": [],
         "time_24h": [],
         "time_12h": [],
         "hour": [],

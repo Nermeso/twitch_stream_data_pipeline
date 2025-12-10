@@ -1,4 +1,4 @@
-time_key,time_24h,time_12h,hour,minute,AM_PM,part_of_day
+time_of_day_id,time_24h,time_12h,hour,minute,AM_PM,part_of_day
 0000,00:00,12:00 AM,0,0,AM,night
 0015,00:15,12:15 AM,0,15,AM,night
 0030,00:30,12:30 AM,0,30,AM,night

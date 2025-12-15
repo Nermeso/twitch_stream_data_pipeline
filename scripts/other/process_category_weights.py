@@ -21,7 +21,7 @@ repo_root = str(Path(__file__).parents[2])
 # Get locations of most recently collected category popularity data from collectStreamData function
 def get_category_popularity_data_paths():
     data_paths = []
-    for filepath in Path("data/dummy_data/category_popularity_temp/").glob('**/*'):
+    for filepath in Path("data/recent_category_popularity_data/").glob('**/*'):
         data_paths.append(str(filepath))
 
     return data_paths
@@ -102,7 +102,7 @@ def main():
         popularity_df = combine_category_popularity(category_popularity_paths)
         weighted_category_df = merge_current_categories(popularity_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)
-    else: # if no recent stream data collected, weights will be based off of file containing category number of streamers
+    else: # if no recent stream data collected, weights will be based off of file containing default category number of streamers
         default_category_df = get_default_category_df()
         weighted_category_df = produce_category_weights(default_category_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)

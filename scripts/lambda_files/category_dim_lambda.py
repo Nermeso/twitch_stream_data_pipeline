@@ -101,20 +101,17 @@ def process_API_data(API_output, curr_streamed_categories_dict, already_exist_id
                 new_category_data_dict["igdb_id"].append(int(igdb_id))
 
 
-# Gets client id and credentials
+# Returns S3 Client and Twitch API credentials
 def get_credentials():
     client_id = os.environ["client_id"]
     access_token = os.environ["access_token"]
+    s3_client = boto3.client('s3')
     headers = {
         "Authorization": f"Bearer {access_token}",
         "Client-Id": f"{client_id}"
     }
-    s3_client = boto3.client(
-        's3'
-    )
 
     return headers, s3_client
-
 
 
 # Converts new category data to dataframe, adds it on to current category dimension, then uploads to s3
@@ -158,16 +155,27 @@ def lambda_handler(event, context):
     # Convert current streamed categories dict to CSV then uploads to S3
     curr_streamed_categories_to_csv(curr_streamed_categories_dict)
 
+    event_payload = {
+                        "table_name": "categories",
+                        "data": new_category_data_dict
+                    }
+
     # Invokes another lambda to upload data to postgres db
-    # lambdaClient = boto3.client('lambda')
-    # response = lambdaClient.invoke(
-    #     FunctionName='arn:aws:lambda:us-west-1:484743883065:function:testing',
-    #     InvocationType='Event',
-    #     Payload=json.dumps(new_category_data_dict)
-    # )
+    lambdaClient = boto3.client('lambda')
+    response = lambdaClient.invoke(
+        FunctionName='arn:aws:lambda:us-west-1:484743883065:function:insertDatatoDB',
+        InvocationType='Event',
+        Payload=json.dumps(event_payload)
+    )
 
     end = time.time()
     print("Duration: " + str(end - start))
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Successful program end!')
+    }
+
 
     
 

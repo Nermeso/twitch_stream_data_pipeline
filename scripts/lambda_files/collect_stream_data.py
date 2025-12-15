@@ -130,8 +130,8 @@ def lambda_handler(event, context):
             "time_of_day_id": [],
             "user_id": [],
             "category_id": [],
-            "viewer_count": [],
             "language_id": [],
+            "viewer_count": []
         }
 
         # Delete messages so even if lambda function fails, it will not be processed
@@ -159,7 +159,6 @@ def lambda_handler(event, context):
         # Convert stream dict to dataframe
         stream_df = pd.DataFrame(stream_data_dict).drop_duplicates()
 
-        # Group categories to get number of streamers for each one
         # Group categories to get number of streamers for each one
         category_popularity_df = stream_df.groupby(["category_id"], as_index=False).agg(
                                         category_id=('category_id', 'first'),

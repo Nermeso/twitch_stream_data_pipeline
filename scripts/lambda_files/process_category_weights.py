@@ -49,7 +49,7 @@ def get_curr_streamed_categories(s3_client):
     else:
         print(f"Unsuccessful S3 get_object response. Status - {status}")
     
-    return curr_streamed_categories
+    return curr_streamed_categories.iloc
 
     
 # Produce dataframe containing currently streamed categories with default num_of_streams supplanted from default category popularity file

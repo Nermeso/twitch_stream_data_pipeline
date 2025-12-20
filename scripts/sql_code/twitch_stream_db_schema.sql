@@ -55,7 +55,7 @@ CREATE TABLE "game_mode_bridge" (
 );
 
 CREATE TABLE "languages" (
-  "language_id" varchar(2) PRIMARY KEY,
+  "language_id" varchar PRIMARY KEY,
   "language_name" varchar
 );
 
@@ -65,6 +65,6 @@ CREATE TABLE "streams" (
   "time_of_day_id" varchar(4) REFERENCES time_of_day(time_of_day_id),
   "user_id" varchar REFERENCES users(user_id),
   "category_id" varchar REFERENCES categories(category_id),
-  "language_id" varchar(2) REFERENCES languages(language_id),
+  "language_id" varchar REFERENCES languages(language_id),
   "viewer_count" int NOT NULL
 );

@@ -1,5 +1,3 @@
-import os
-import requests
 import pandas as pd
 from pathlib import Path
 import time
@@ -47,11 +45,13 @@ def produce_category_weights(popularity_df, curr_streamed_categories):
     
     return output_df
 
+###################################################################################################################
+
 
 # Split categories into equal groups in terms of their number of channels/streamers using greedy algorithm
-def split_categories_into_groups(weighted_category_df):
-    category_groups = [[] for _ in range(20)]
-    weight_value_groups = [0 for _ in range(20)]
+def split_categories_into_groups(weighted_category_df): 
+    category_groups = [[] for _ in range(25)]
+    weight_value_groups = [0 for _ in range(25)]
     # Go through each category, then assign it to a group
     for cat_idx, row in weighted_category_df.iterrows():
         num_of_streamers = row['num_of_streamers']
@@ -60,19 +60,18 @@ def split_categories_into_groups(weighted_category_df):
         min_idx = -1
         # Iterate through each weight value group to see which one is suitable for category
         for wvg_idx, group_weight_sum in enumerate(weight_value_groups):
-            # weight group has no category yet, automatically add it
-            if group_weight_sum == 0:
-                min_sum = group_weight_sum
+            if group_weight_sum + num_of_streamers <= 7000:  # If end group weight sum is 7000 or less, add it first
                 min_idx = wvg_idx
                 break
-            # aim for category to be assigned to group with the lowest total summed weight
-            elif group_weight_sum <= min_sum:
+            elif group_weight_sum == 0:   # weight group has no category yet, automatically add it
+                min_idx = wvg_idx
+                break
+            elif group_weight_sum <= min_sum:  # if all groups don't have a group weight sum of 0 or would be more than 7000, start adding to smallest weight value groups
                 min_sum = group_weight_sum
                 min_idx = wvg_idx
         weight_value_groups[min_idx] += num_of_streamers
         category_groups[min_idx].append(category_id)
 
-        
     return category_groups, weight_value_groups
 
 
@@ -80,6 +79,7 @@ def split_categories_into_groups(weighted_category_df):
 def get_default_category_df():
     default_weights_path = repo_root + "/data/miscellaneous/default_category_weights.csv"
     df = pd.read_csv(default_weights_path)
+    print(type(df))
 
     return df
 
@@ -93,23 +93,29 @@ def merge_current_categories(popularity_df, curr_streamed_categories):
     return merged_df
 
 
-
 def main():
-    category_popularity_paths = get_category_popularity_data_paths()
+    category_popularity_paths = get_category_popularity_data_paths() ############################
     curr_streamed_categories = pd.read_csv("data/miscellaneous/curr_streamed_categories.csv")
     # Category group weights will be based off of most recently collected stream data
-    if len(category_popularity_paths) != 0:
+    if len(category_popularity_paths) != 0 and False:
         popularity_df = combine_category_popularity(category_popularity_paths)
         weighted_category_df = merge_current_categories(popularity_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)
     else: # if no recent stream data collected, weights will be based off of file containing default category number of streamers
         default_category_df = get_default_category_df()
+        print(";skdfj;akjdfo;i2")
+        print(curr_streamed_categories)
+        print(default_category_df)
         weighted_category_df = produce_category_weights(default_category_df, curr_streamed_categories)
         category_groups, wvg = split_categories_into_groups(weighted_category_df)
 
-    print(category_groups)
+
+    # print(category_groups)
     print()
     print(wvg)
+    print()
+    print(sum(wvg))
+
 
 
 

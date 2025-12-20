@@ -155,9 +155,14 @@ def lambda_handler(event, context):
     # Convert current streamed categories dict to CSV then uploads to S3
     curr_streamed_categories_to_csv(curr_streamed_categories_dict)
 
+    # Create temporary CSV of new streamed categories to be uploaded to Postgres
+    new_category_df = pd.DataFrame(new_category_data_dict)
+    new_category_data_path = "s3://twitchdatapipelineproject/raw/other/new_data_temp/new_category_data.csv"
+    wr.s3.to_csv(new_category_df, new_category_data_path, index=False) # Upload category data CSV to S3
+
     event_payload = {
                         "table_name": "categories",
-                        "data": new_category_data_dict
+                        "new_data_path": new_category_data_path
                     }
 
     # Invokes another lambda to upload data to postgres db

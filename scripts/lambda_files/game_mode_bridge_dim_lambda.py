@@ -163,4 +163,28 @@ def lambda_handler(event, context):
     category_df = access_category_dimension(s3_client)
     game_mode_bridge_dim = access_game_mode_bridge_dimension(s3_client)
     new_game_mode_data_dim = add_new_game_mode_data(wrapper, category_df, game_mode_bridge_dim)
+
+    # Create temporary CSV of new category genres to be uploaded to Postgres
+    new_category_game_mode_df = pd.DataFrame(new_game_mode_data_dim)
+    new_category_game_mode_path = "s3://twitchdatapipelineproject/raw/other/new_data_temp/new_category_game_modes.csv"
+
+    # Upload CSV to S3
     process_dim_csv_file(game_mode_bridge_dim, new_game_mode_data_dim)
+
+    event_payload = {
+                        "table_name": "game_mode_bridge",
+                        "new_data_path": new_category_game_mode_path
+                    }
+
+    # Invokes another lambda to upload data to postgres db
+    lambdaClient = boto3.client('lambda')
+    response = lambdaClient.invoke(
+        FunctionName='arn:aws:lambda:us-west-1:484743883065:function:insertDatatoDB',
+        InvocationType='Event',
+        Payload=json.dumps(event_payload)
+    )
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Successful program end!')
+    }

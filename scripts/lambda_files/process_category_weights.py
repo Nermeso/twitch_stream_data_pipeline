@@ -1,9 +1,5 @@
-import os
-import requests
 import boto3
 import pandas as pd
-from pathlib import Path
-import time
 import numpy as np
 
 ############################################## SUMMARY ##############################################
@@ -49,7 +45,7 @@ def get_curr_streamed_categories(s3_client):
     else:
         print(f"Unsuccessful S3 get_object response. Status - {status}")
     
-    return curr_streamed_categories.iloc
+    return curr_streamed_categories
 
     
 # Produce dataframe containing currently streamed categories with default num_of_streams supplanted from default category popularity file
@@ -62,9 +58,9 @@ def produce_category_weights(popularity_df, curr_streamed_categories):
 
 
 # Split categories into equal groups in terms of their number of channels/streamers using greedy algorithm
-def split_categories_into_groups(weighted_category_df):
-    category_groups = [[] for _ in range(20)]
-    weight_value_groups = [0 for _ in range(20)]
+def split_categories_into_groups(weighted_category_df): 
+    category_groups = [[] for _ in range(25)]
+    weight_value_groups = [0 for _ in range(25)]
     # Go through each category, then assign it to a group
     for cat_idx, row in weighted_category_df.iterrows():
         num_of_streamers = row['num_of_streamers']
@@ -73,18 +69,18 @@ def split_categories_into_groups(weighted_category_df):
         min_idx = -1
         # Iterate through each weight value group to see which one is suitable for category
         for wvg_idx, group_weight_sum in enumerate(weight_value_groups):
-            # weight group has no category yet, automatically add it
-            if group_weight_sum == 0:
-                min_sum = group_weight_sum
+            if group_weight_sum + num_of_streamers <= 7000:  # If end group weight sum is 7000 or less, add it first
                 min_idx = wvg_idx
                 break
-            # aim for category to be assigned to group with the lowest total summed weight
-            elif group_weight_sum <= min_sum:
+            elif group_weight_sum == 0:   # weight group has no category yet, automatically add it
+                min_idx = wvg_idx
+                break
+            elif group_weight_sum <= min_sum:  # if all groups don't have a group weight sum of 0 or would be more than 7000, start adding to smallest weight value groups
                 min_sum = group_weight_sum
                 min_idx = wvg_idx
         weight_value_groups[min_idx] += num_of_streamers
         category_groups[min_idx].append(category_id)
-        
+
     return category_groups, weight_value_groups
 
 
@@ -147,12 +143,13 @@ def lambda_handler(event, context):
         s3_client.delete_object(Bucket="twitchdatapipelineproject", Key=path)
 
     # Sends groups of categories as messages to categoryGroupWeights SQS queue
-    send_SQS_messages(category_groups)
+    final_category_groups = [group for group in category_groups if len(group) != 0]
+    send_SQS_messages(final_category_groups) 
 
     print("Weight Value Groups: ")
     print(wvg)
     print()
     print("Category Groups: ")
-    for group in category_groups:
+    for group in final_category_groups:
         print(group)
 

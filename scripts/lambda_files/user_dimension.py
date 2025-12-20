@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 import time
 import boto3
 import awswrangler as wr
+import json
 
 
 ###################################### SUMMARY ######################################
@@ -28,6 +29,7 @@ def get_credentials():
 
     return headers
 
+
 # Gets date id associated with most recently collected stream data
 def get_date_id(s3_client):
     response = s3_client.get_object(Bucket="twitchdatapipelineproject", Key="raw/dimension_table/date_dimension.csv")
@@ -37,7 +39,7 @@ def get_date_id(s3_client):
         date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
     current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     current_date = current_date - timedelta(minutes=7) # Subtract 7 minutes from current time since that time will be associated with most recently collected stream data, this script runs 7 minutes after recent stream data collection
-    date_id = date_df[date_df["OurDate"] == str(current_date.date())].iloc[0, 0]
+    date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
    
     return str(date_id)
 
@@ -59,7 +61,7 @@ def get_time_key(s3_client):
         diff = abs((cur_date - date_time_compare).total_seconds())
         if diff < minimum_diff:
             minimum_diff = diff
-            time_key = row[1]["time_key"]
+            time_key = row[1]["time_of_day_id"]
 
     return time_key
 
@@ -67,9 +69,11 @@ def get_time_key(s3_client):
 # Get the users who we will get more info on through the API
 def get_users(s3_client, date_id, time_key):
     users_list = []
-    #################### DEAL WITH THIS IF ERROR ########################
-    response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix=f"raw/fact_table/{str(date_id)}_{str(time_key)}/")
-    #################### DEAL WITH THIS IF ERROR ########################
+    folder_path = f"raw/fact_table/{str(date_id)}_{str(time_key)}/"  
+    response = s3_client.list_objects_v2(Bucket="twitchdatapipelineproject", Delimiter='/', Prefix=folder_path)
+    
+    # Folder for most recently collected stream data exists, get user data from it
+    # If nothing is there, return empty users list
     if "Contents" in response:
         for obj in response["Contents"]:
             if obj["Key"].endswith(".csv"):
@@ -164,10 +168,8 @@ def get_user_data(user_list):
                 print(f"Error: {response.status_code}")
                 print(output)
                 exit()
-
-    df = pd.DataFrame(user_data_dict)
     
-    return df
+    return user_data_dict
 
 
 def lambda_handler(event, context):
@@ -176,22 +178,51 @@ def lambda_handler(event, context):
     s3_client = boto3.client('s3')
     date_id = get_date_id(s3_client)
     time_key = get_time_key(s3_client)
-    user_list = get_users(s3_client, date_id, time_key)
+    user_list = get_users(s3_client, date_id, time_key) # get all users present in recently collected stream data
+
+    # End program early if no new users to get data on
+    if len(user_list) == 0:
+        print("No new users to get data on")
+        return {
+            'statusCode': 200,
+            'body': "No new users to get data on."
+        }
+
     current_users, current_user_dim_df = get_current_user_dim(s3_client) # get current users we have data for
     new_users = get_only_new_users(user_list, current_users) # Returns user ids of users not in user dimension yet
-
-    start2 = time.time()
-    user_dim_df = get_user_data(new_users) # call api to get data for new users
-    end2 = time.time()
-    print("Calling API Duration: " + str(end2 - start2))
-
+    user_data_dict = get_user_data(new_users) # call api to get data for new users
+    user_dim_df = pd.DataFrame(user_data_dict) # convert user data to dataframe
     new_df = pd.concat([current_user_dim_df, user_dim_df]).drop_duplicates()
     new_df["user_id"] = new_df["user_id"].astype(int) # prevents user_id from becoming float
 
-    # Upload CSV to S3
+    # Create temporary CSV of new user data to be uploaded to Postgres
+    new_user_data_df = pd.DataFrame(user_data_dict)
+    new_user_data_path = "s3://twitchdatapipelineproject/raw/other/new_data_temp/new_user_data.csv"
+    wr.s3.to_csv(new_user_data_df, new_user_data_path, index=False) # Upload user data CSV to S3
+
+    # Upload user data CSV to S3
     wr.s3.to_csv(new_df, "s3://twitchdatapipelineproject/raw/dimension_table/user_dimension.csv", index=False)
+
+    event_payload = {
+                        "table_name": "users",
+                        "new_data_path": new_user_data_path
+                    }
+
+    # Invokes another lambda to upload data to postgres db
+    lambdaClient = boto3.client('lambda')
+    response = lambdaClient.invoke(
+        FunctionName='arn:aws:lambda:us-west-1:484743883065:function:insertDatatoDB',
+        InvocationType='Event',
+        Payload=json.dumps(event_payload)
+    )
 
     end = time.time()
     print("Duration: " + str(end - start))
+
+    return {
+        'statusCode': 200,
+        'body': "Success"
+    }
+
 
 

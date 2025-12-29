@@ -59,7 +59,7 @@ def main():
     }
 
     # Write the raw genre data to json file
-    file_path = f"data/twitch_project_raw_layer/raw_genres_data/raw_genres_data_{day_date_id}.json"
+    file_path = f"data/twitch_project_raw_layer/raw_genres_data/raw_genres_data.json"
     with open(file_path, 'w') as json_file:
         json.dump(raw_genre_data, json_file, indent=4)
 

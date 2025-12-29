@@ -106,7 +106,7 @@ def main():
         "part_of_day": []
     }
     time_of_day_df = create_time_of_day_data(data)
-    time_of_day_dimension_path = repo_root + "/data/dimension_tables/time_of_day_dimension.csv"
+    time_of_day_dimension_path = repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv"
     time_of_day_df.to_csv(time_of_day_dimension_path, index=False)
 
 

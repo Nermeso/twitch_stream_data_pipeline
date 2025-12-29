@@ -34,7 +34,7 @@ def get_credentials():
 # Gets current date id based of date when script is executed
 def get_day_date_id():
     # Gets date id
-    date_dim_path = repo_root + "/data/dimension_tables/date_dimension.csv"
+    date_dim_path = repo_root + "/data/twitch_project_raw_layer/raw_day_dates_data/raw_day_dates_data.csv"
     date_df = pd.read_csv(date_dim_path)
     current_date = datetime.today()
     day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
@@ -44,7 +44,7 @@ def get_day_date_id():
 
 # Gets time of day id based off of current time of script execution
 def get_time_of_day_id():
-    time_of_day_df = pd.read_csv(repo_root + "/data/dimension_tables/time_of_day_dimension.csv")
+    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv")
     cur_date = datetime.today()
     minimum_diff = 1000
     time_of_day_id = ""

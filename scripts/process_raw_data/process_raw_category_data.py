@@ -47,15 +47,13 @@ def get_time_of_day_id():
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
-    day_date_id = "20251228" # testing value
-    time_of_day_id = "2100" # testing value
     raw_category_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_categories_data/raw_category_data_{day_date_id}_{time_of_day_id}.json"
 
     # Access raw category data
     with open(raw_category_data_path, 'r') as f:
         category_data = json.load(f)
 
-    category_df = pd.DataFrame(category_data["data"]) # convert to dataframe
+    category_df = pd.DataFrame(category_data["data"]).drop_duplicates() # convert to dataframe
     category_df = category_df.rename(columns = {"id": "category_id", "name": "category_name"}) # rename columns
 
     # Replace empty strings with "NA"

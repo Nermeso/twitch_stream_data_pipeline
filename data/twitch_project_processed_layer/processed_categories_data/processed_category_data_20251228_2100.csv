@@ -300,8 +300,6 @@ category_id,category_name,box_art_url,igdb_id
 509667,Food & Drink,https://static-cdn.jtvnw.net/ttv-boxart/509667-{width}x{height}.jpg,NA
 376500771,Hades II,https://static-cdn.jtvnw.net/ttv-boxart/376500771_IGDB-{width}x{height}.jpg,228525
 11989,StarCraft,https://static-cdn.jtvnw.net/ttv-boxart/11989_IGDB-{width}x{height}.jpg,230
-394568,RimWorld,https://static-cdn.jtvnw.net/ttv-boxart/394568-{width}x{height}.jpg,9789
-376500771,Hades II,https://static-cdn.jtvnw.net/ttv-boxart/376500771_IGDB-{width}x{height}.jpg,228525
 75467,Euro Truck Simulator 2,https://static-cdn.jtvnw.net/ttv-boxart/75467-{width}x{height}.jpg,NA
 497454,Metroid Prime 4: Beyond,https://static-cdn.jtvnw.net/ttv-boxart/497454_IGDB-{width}x{height}.jpg,37136
 1200871695,The Last of Us Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1200871695_IGDB-{width}x{height}.jpg,6036
@@ -400,9 +398,7 @@ category_id,category_name,box_art_url,igdb_id
 511701,Ready or Not,https://static-cdn.jtvnw.net/ttv-boxart/511701_IGDB-{width}x{height}.jpg,28489
 1115993535,Gears of War: Reloaded,https://static-cdn.jtvnw.net/ttv-boxart/1115993535_IGDB-{width}x{height}.jpg,342721
 687129551,Trackmania,https://static-cdn.jtvnw.net/ttv-boxart/687129551_IGDB-{width}x{height}.jpg,133807
-8645,Resident Evil 2,https://static-cdn.jtvnw.net/ttv-boxart/8645_IGDB-{width}x{height}.jpg,880
 23239,Plants vs. Zombies,https://static-cdn.jtvnw.net/ttv-boxart/23239_IGDB-{width}x{height}.jpg,1277
-1115993535,Gears of War: Reloaded,https://static-cdn.jtvnw.net/ttv-boxart/1115993535_IGDB-{width}x{height}.jpg,342721
 24438,MU Online,https://static-cdn.jtvnw.net/ttv-boxart/24438_IGDB-{width}x{height}.jpg,26359
 980422880,Dinoblade,https://static-cdn.jtvnw.net/ttv-boxart/980422880_IGDB-{width}x{height}.jpg,330174
 2133072147,Mir Korabley,https://static-cdn.jtvnw.net/ttv-boxart/2133072147_IGDB-{width}x{height}.jpg,243611
@@ -599,7 +595,6 @@ category_id,category_name,box_art_url,igdb_id
 493997,Super Mario Odyssey,https://static-cdn.jtvnw.net/ttv-boxart/493997_IGDB-{width}x{height}.jpg,26758
 20061,CABAL Online,https://static-cdn.jtvnw.net/ttv-boxart/20061_IGDB-{width}x{height}.jpg,28387
 14805,Metal Gear Solid,https://static-cdn.jtvnw.net/ttv-boxart/14805_IGDB-{width}x{height}.jpg,375
-515881069,Mechabellum,https://static-cdn.jtvnw.net/ttv-boxart/515881069_IGDB-{width}x{height}.jpg,240897
 446808397,Carry The Glass,https://static-cdn.jtvnw.net/ttv-boxart/446808397_IGDB-{width}x{height}.jpg,319399
 24096824,Whiskerwood,https://static-cdn.jtvnw.net/ttv-boxart/24096824_IGDB-{width}x{height}.jpg,309324
 1108193981,Call of Ponchy: Mahjong Warfare,https://static-cdn.jtvnw.net/ttv-boxart/1108193981_IGDB-{width}x{height}.jpg,328375
@@ -999,14 +994,9 @@ category_id,category_name,box_art_url,igdb_id
 5097,Fallout 2,https://static-cdn.jtvnw.net/ttv-boxart/5097_IGDB-{width}x{height}.jpg,14
 1147745783,Inscryption,https://static-cdn.jtvnw.net/ttv-boxart/1147745783_IGDB-{width}x{height}.jpg,139090
 15134,Dungeons & Dragons Online,https://static-cdn.jtvnw.net/ttv-boxart/15134_IGDB-{width}x{height}.jpg,5629
-14543,Pokémon Crystal Version,https://static-cdn.jtvnw.net/ttv-boxart/14543_IGDB-{width}x{height}.jpg,1514
-686116244,MindsEye,https://static-cdn.jtvnw.net/ttv-boxart/686116244_IGDB-{width}x{height}.jpg,320873
-33416,Starsector,https://static-cdn.jtvnw.net/ttv-boxart/33416_IGDB-{width}x{height}.jpg,18349
-1555754930,Out of Ore,https://static-cdn.jtvnw.net/ttv-boxart/1555754930_IGDB-{width}x{height}.jpg,208668
 982010916,Thank Goodness You're Here!,https://static-cdn.jtvnw.net/ttv-boxart/982010916_IGDB-{width}x{height}.jpg,262538
 227689960,Still Wakes the Deep,https://static-cdn.jtvnw.net/ttv-boxart/227689960_IGDB-{width}x{height}.jpg,252837
 418063,FNaF 1,https://static-cdn.jtvnw.net/ttv-boxart/418063_IGDB-{width}x{height}.jpg,8499
-273333352,Assassin's Creed Mirage,https://static-cdn.jtvnw.net/ttv-boxart/273333352_IGDB-{width}x{height}.jpg,215060
 30924,ArcheAge,https://static-cdn.jtvnw.net/ttv-boxart/30924_IGDB-{width}x{height}.jpg,6451
 493826,Dual Universe,https://static-cdn.jtvnw.net/ttv-boxart/493826_IGDB-{width}x{height}.jpg,19548
 30720,The Wolf Among Us,https://static-cdn.jtvnw.net/ttv-boxart/30720_IGDB-{width}x{height}.jpg,2993
@@ -1099,17 +1089,7 @@ category_id,category_name,box_art_url,igdb_id
 422844163,Final Fantasy IV,https://static-cdn.jtvnw.net/ttv-boxart/422844163_IGDB-{width}x{height}.jpg,380634
 498807,X4: Foundations,https://static-cdn.jtvnw.net/ttv-boxart/498807_IGDB-{width}x{height}.jpg,55123
 526905697,Trickcal:Chibi Go,https://static-cdn.jtvnw.net/ttv-boxart/526905697_IGDB-{width}x{height}.jpg,172648
-510578,Mortal Kombat 11,https://static-cdn.jtvnw.net/ttv-boxart/510578_IGDB-{width}x{height}.jpg,112916
-511676,Fling to the Finish,https://static-cdn.jtvnw.net/ttv-boxart/511676_IGDB-{width}x{height}.jpg,116840
-530998549,Coin Pusher World,https://static-cdn.jtvnw.net/ttv-boxart/530998549_IGDB-{width}x{height}.jpg,150004
-497431,Skull and Bones,https://static-cdn.jtvnw.net/ttv-boxart/497431_IGDB-{width}x{height}.jpg,37062
-2133075861,Gaming Late at Night,https://static-cdn.jtvnw.net/ttv-boxart/2133075861_IGDB-{width}x{height}.jpg,177886
-492286,Survive the Nights,https://static-cdn.jtvnw.net/ttv-boxart/492286_IGDB-{width}x{height}.jpg,39279
 450732811,Night Crows,https://static-cdn.jtvnw.net/ttv-boxart/450732811_IGDB-{width}x{height}.jpg,290671
-516801,Tiny Bunny,https://static-cdn.jtvnw.net/ttv-boxart/516801_IGDB-{width}x{height}.jpg,131653
-1832161062,Movie Night,https://static-cdn.jtvnw.net/ttv-boxart/1832161062_IGDB-{width}x{height}.jpg,310560
-1104224177,Mortal Kombat: Legacy Kollection,https://static-cdn.jtvnw.net/ttv-boxart/1104224177_IGDB-{width}x{height}.jpg,347122
-492547,Need for Speed: Payback,https://static-cdn.jtvnw.net/ttv-boxart/492547_IGDB-{width}x{height}.jpg,36662
 463659004,Paranormal Cleanup,https://static-cdn.jtvnw.net/ttv-boxart/463659004_IGDB-{width}x{height}.jpg,235510
 5492,Diablo,https://static-cdn.jtvnw.net/ttv-boxart/5492_IGDB-{width}x{height}.jpg,125
 595487334,Keeper,https://static-cdn.jtvnw.net/ttv-boxart/595487334_IGDB-{width}x{height}.jpg,348217
@@ -1118,11 +1098,9 @@ category_id,category_name,box_art_url,igdb_id
 2058220722,Poppy Playtime,https://static-cdn.jtvnw.net/ttv-boxart/2058220722_IGDB-{width}x{height}.jpg,176057
 737726051,The Thrill of the Fight,https://static-cdn.jtvnw.net/ttv-boxart/737726051_IGDB-{width}x{height}.jpg,174558
 11432,Mario Party 3,https://static-cdn.jtvnw.net/ttv-boxart/11432_IGDB-{width}x{height}.jpg,2329
-32742,Kerbal Space Program,https://static-cdn.jtvnw.net/ttv-boxart/32742_IGDB-{width}x{height}.jpg,3102
 72120714,Deceit 2,https://static-cdn.jtvnw.net/ttv-boxart/72120714_IGDB-{width}x{height}.jpg,239561
 10090,Luigi's Mansion,https://static-cdn.jtvnw.net/ttv-boxart/10090_IGDB-{width}x{height}.jpg,2485
 5975,Shadow of the Colossus,https://static-cdn.jtvnw.net/ttv-boxart/5975_IGDB-{width}x{height}.jpg,2207
-1102857083,Doomsday: Last Survivors,https://static-cdn.jtvnw.net/ttv-boxart/1102857083_IGDB-{width}x{height}.jpg,187739
 1868734282,Kingdom Hearts Re:Chain of Memories,https://static-cdn.jtvnw.net/ttv-boxart/1868734282_IGDB-{width}x{height}.jpg,214986
 1604283682,The Walking Dead: The Telltale Definitive Series - Protector Pack,https://static-cdn.jtvnw.net/ttv-boxart/1604283682_IGDB-{width}x{height}.jpg,117677
 466616113,OTK Games Expo,https://static-cdn.jtvnw.net/ttv-boxart/466616113-{width}x{height}.jpg,NA
@@ -1169,7 +1147,6 @@ category_id,category_name,box_art_url,igdb_id
 66410,The Walking Dead: Season Two,https://static-cdn.jtvnw.net/ttv-boxart/66410_IGDB-{width}x{height}.jpg,3097
 2059413233,Gyakuten Kenji 2,https://static-cdn.jtvnw.net/ttv-boxart/2059413233_IGDB-{width}x{height}.jpg,84972
 280721,Destiny,https://static-cdn.jtvnw.net/ttv-boxart/280721_IGDB-{width}x{height}.jpg,1939
-489201,Titanfall 2,https://static-cdn.jtvnw.net/ttv-boxart/489201_IGDB-{width}x{height}.jpg,17447
 1258270417,The Elder Scrolls V: Skyrim - Anniversary Edition,https://static-cdn.jtvnw.net/ttv-boxart/1258270417_IGDB-{width}x{height}.jpg,165192
 1892955924,RiffTrax: The Game,https://static-cdn.jtvnw.net/ttv-boxart/1892955924_IGDB-{width}x{height}.jpg,194462
 27596,Gears of War 3,https://static-cdn.jtvnw.net/ttv-boxart/27596_IGDB-{width}x{height}.jpg,492
@@ -1200,19 +1177,10 @@ category_id,category_name,box_art_url,igdb_id
 10081,Kingdom Hearts,https://static-cdn.jtvnw.net/ttv-boxart/10081_IGDB-{width}x{height}.jpg,1219
 2141208081,Phantasy Star Online Blue Burst,https://static-cdn.jtvnw.net/ttv-boxart/2141208081_IGDB-{width}x{height}.jpg,51302
 79499989,Absolum,https://static-cdn.jtvnw.net/ttv-boxart/79499989_IGDB-{width}x{height}.jpg,334239
-20501,Mabinogi,https://static-cdn.jtvnw.net/ttv-boxart/20501_IGDB-{width}x{height}.jpg,21492
-1868734282,Kingdom Hearts Re:Chain of Memories,https://static-cdn.jtvnw.net/ttv-boxart/1868734282_IGDB-{width}x{height}.jpg,214986
 497443,Life is Strange: Before the Storm,https://static-cdn.jtvnw.net/ttv-boxart/497443_IGDB-{width}x{height}.jpg,29004
-1951012895,Disney Lorcana Trading Card Game,https://static-cdn.jtvnw.net/ttv-boxart/1951012895-{width}x{height}.jpg,NA
 65721,Nancy Drew,https://static-cdn.jtvnw.net/ttv-boxart/65721_IGDB-{width}x{height}.jpg,80378
-10081,Kingdom Hearts,https://static-cdn.jtvnw.net/ttv-boxart/10081_IGDB-{width}x{height}.jpg,1219
 490500,BlazBlue: Central Fiction,https://static-cdn.jtvnw.net/ttv-boxart/490500_IGDB-{width}x{height}.jpg,11613
-516656,Slapshot: Rebound,https://static-cdn.jtvnw.net/ttv-boxart/516656_IGDB-{width}x{height}.jpg,132909
-497471,A Plague Tale: Innocence,https://static-cdn.jtvnw.net/ttv-boxart/497471_IGDB-{width}x{height}.jpg,27316
-306525394,Surviving Mars: Relaunched,https://static-cdn.jtvnw.net/ttv-boxart/306525394_IGDB-{width}x{height}.jpg,362081
 3802,Nights: Journey of Dreams,https://static-cdn.jtvnw.net/ttv-boxart/3802_IGDB-{width}x{height}.jpg,5074
-512226,World of Warships: Legends,https://static-cdn.jtvnw.net/ttv-boxart/512226_IGDB-{width}x{height}.jpg,107250
-518205,Lost in Random,https://static-cdn.jtvnw.net/ttv-boxart/518205_IGDB-{width}x{height}.jpg,119285
 1186,Trials of Mana,https://static-cdn.jtvnw.net/ttv-boxart/1186_IGDB-{width}x{height}.jpg,11227
 1355624463,Massacre at the Mirage,https://static-cdn.jtvnw.net/ttv-boxart/1355624463_IGDB-{width}x{height}.jpg,288987
 20810,Assassin's Creed II,https://static-cdn.jtvnw.net/ttv-boxart/20810_IGDB-{width}x{height}.jpg,127
@@ -1235,7 +1203,6 @@ category_id,category_name,box_art_url,igdb_id
 513001,Immortals Fenyx Rising,https://static-cdn.jtvnw.net/ttv-boxart/513001_IGDB-{width}x{height}.jpg,119357
 510580,The Outer Worlds,https://static-cdn.jtvnw.net/ttv-boxart/510580_IGDB-{width}x{height}.jpg,113114
 516984,Radio General,https://static-cdn.jtvnw.net/ttv-boxart/516984_IGDB-{width}x{height}.jpg,117643
-633127529,Riders Republic,https://static-cdn.jtvnw.net/ttv-boxart/633127529_IGDB-{width}x{height}.jpg,138766
 757932712,Cryo,https://static-cdn.jtvnw.net/ttv-boxart/757932712_IGDB-{width}x{height}.jpg,374688
 490105,Fran Bow,https://static-cdn.jtvnw.net/ttv-boxart/490105_IGDB-{width}x{height}.jpg,11821
 19858,Star Trek Online,https://static-cdn.jtvnw.net/ttv-boxart/19858_IGDB-{width}x{height}.jpg,7584
@@ -1254,7 +1221,6 @@ category_id,category_name,box_art_url,igdb_id
 40880368,FC MOBILE,https://static-cdn.jtvnw.net/ttv-boxart/40880368_IGDB-{width}x{height}.jpg,262023
 1500238812,King of the Castle,https://static-cdn.jtvnw.net/ttv-boxart/1500238812_IGDB-{width}x{height}.jpg,219196
 948446385,Unicorn Overlord,https://static-cdn.jtvnw.net/ttv-boxart/948446385_IGDB-{width}x{height}.jpg,68353
-2059413233,Gyakuten Kenji 2,https://static-cdn.jtvnw.net/ttv-boxart/2059413233_IGDB-{width}x{height}.jpg,84972
 514974,Battlefield 2042,https://static-cdn.jtvnw.net/ttv-boxart/514974_IGDB-{width}x{height}.jpg,125166
 1173887206,"Warhammer 40,000: Rogue Trader",https://static-cdn.jtvnw.net/ttv-boxart/1173887206_IGDB-{width}x{height}.jpg,203259
 2059463486,Waterpark Simulator,https://static-cdn.jtvnw.net/ttv-boxart/2059463486_IGDB-{width}x{height}.jpg,348648
@@ -1301,17 +1267,12 @@ category_id,category_name,box_art_url,igdb_id
 42682186,The Outer Worlds: Spacer's Choice Edition,https://static-cdn.jtvnw.net/ttv-boxart/42682186_IGDB-{width}x{height}.jpg,239999
 417844199,Persona5: The Phantom X,https://static-cdn.jtvnw.net/ttv-boxart/417844199_IGDB-{width}x{height}.jpg,242315
 582972280,Erenshor,https://static-cdn.jtvnw.net/ttv-boxart/582972280_IGDB-{width}x{height}.jpg,245825
-515619,Pathfinder: Wrath of the Righteous,https://static-cdn.jtvnw.net/ttv-boxart/515619_IGDB-{width}x{height}.jpg,127254
-506442,DOOM Eternal,https://static-cdn.jtvnw.net/ttv-boxart/506442_IGDB-{width}x{height}.jpg,103298
 18775,Mafia II,https://static-cdn.jtvnw.net/ttv-boxart/18775_IGDB-{width}x{height}.jpg,40
 226996866,is this seat taken?,https://static-cdn.jtvnw.net/ttv-boxart/226996866_IGDB-{width}x{height}.jpg,329865
-225471887,BLEACH Rebirth of Souls,https://static-cdn.jtvnw.net/ttv-boxart/225471887_IGDB-{width}x{height}.jpg,307765
 657146372,Terror In The Corn,https://static-cdn.jtvnw.net/ttv-boxart/657146372_IGDB-{width}x{height}.jpg,319649
-451386856,Titan Quest II,https://static-cdn.jtvnw.net/ttv-boxart/451386856_IGDB-{width}x{height}.jpg,261146
 671758193,Strange Antiquities,https://static-cdn.jtvnw.net/ttv-boxart/671758193_IGDB-{width}x{height}.jpg,303010
 496253,Quake Champions,https://static-cdn.jtvnw.net/ttv-boxart/496253_IGDB-{width}x{height}.jpg,19530
 1249600852,Pokémon Shield,https://static-cdn.jtvnw.net/ttv-boxart/1249600852_IGDB-{width}x{height}.jpg,115653
-17324,The Witness,https://static-cdn.jtvnw.net/ttv-boxart/17324_IGDB-{width}x{height}.jpg,5601
 1277094106,Stellar Code,https://static-cdn.jtvnw.net/ttv-boxart/1277094106_IGDB-{width}x{height}.jpg,326775
 1960201900,Asphalt Legends,https://static-cdn.jtvnw.net/ttv-boxart/1960201900_IGDB-{width}x{height}.jpg,23314
 19988,Michigan: Report from Hell,https://static-cdn.jtvnw.net/ttv-boxart/19988_IGDB-{width}x{height}.jpg,26294
@@ -1331,7 +1292,6 @@ category_id,category_name,box_art_url,igdb_id
 19657,Combat Arms,https://static-cdn.jtvnw.net/ttv-boxart/19657_IGDB-{width}x{height}.jpg,18940
 398767002,Clue,https://static-cdn.jtvnw.net/ttv-boxart/398767002_IGDB-{width}x{height}.jpg,113198
 489307,AdVenture Capitalist,https://static-cdn.jtvnw.net/ttv-boxart/489307_IGDB-{width}x{height}.jpg,9591
-1624769103,Ninja Gaiden II Black,https://static-cdn.jtvnw.net/ttv-boxart/1624769103_IGDB-{width}x{height}.jpg,329132
 931541907,Burger,https://static-cdn.jtvnw.net/ttv-boxart/931541907-{width}x{height}.jpg,302367
 19156,Alan Wake,https://static-cdn.jtvnw.net/ttv-boxart/19156_IGDB-{width}x{height}.jpg,1062
 369259,Wolfenstein: The New Order,https://static-cdn.jtvnw.net/ttv-boxart/369259_IGDB-{width}x{height}.jpg,2031
@@ -1339,11 +1299,8 @@ category_id,category_name,box_art_url,igdb_id
 509073,Cube Escape: Paradox,https://static-cdn.jtvnw.net/ttv-boxart/509073_IGDB-{width}x{height}.jpg,100667
 77929096,No Sleep for Kaname Date: From AI - The Somnium Files,https://static-cdn.jtvnw.net/ttv-boxart/77929096_IGDB-{width}x{height}.jpg,337023
 18950,Castle Crashers,https://static-cdn.jtvnw.net/ttv-boxart/18950_IGDB-{width}x{height}.jpg,3153
-516294,Wild Terra 2: New Lands,https://static-cdn.jtvnw.net/ttv-boxart/516294_IGDB-{width}x{height}.jpg,126619
 28200239,Rift of the NecroDancer,https://static-cdn.jtvnw.net/ttv-boxart/28200239_IGDB-{width}x{height}.jpg,214492
 1127100998,Kahoot!,https://static-cdn.jtvnw.net/ttv-boxart/1127100998-{width}x{height}.jpg,NA
-3802,Nights: Journey of Dreams,https://static-cdn.jtvnw.net/ttv-boxart/3802_IGDB-{width}x{height}.jpg,5074
-370537,Amnesia: Memories,https://static-cdn.jtvnw.net/ttv-boxart/370537_IGDB-{width}x{height}.jpg,13199
 39532650,M.U.G.E.N,https://static-cdn.jtvnw.net/ttv-boxart/39532650_IGDB-{width}x{height}.jpg,22850
 489642,Bloodstained: Ritual of the Night,https://static-cdn.jtvnw.net/ttv-boxart/489642_IGDB-{width}x{height}.jpg,10760
 812908663,Paper Mario: The Thousand-Year Door,https://static-cdn.jtvnw.net/ttv-boxart/812908663_IGDB-{width}x{height}.jpg,266690
@@ -1366,7 +1323,6 @@ category_id,category_name,box_art_url,igdb_id
 1573819286,Arctic Eggs,https://static-cdn.jtvnw.net/ttv-boxart/1573819286_IGDB-{width}x{height}.jpg,280931
 500628,Witchfire,https://static-cdn.jtvnw.net/ttv-boxart/500628_IGDB-{width}x{height}.jpg,76880
 27101,Crossfire,https://static-cdn.jtvnw.net/ttv-boxart/27101_IGDB-{width}x{height}.jpg,9739
-561013832,Pokémon Legends: Arceus,https://static-cdn.jtvnw.net/ttv-boxart/561013832_IGDB-{width}x{height}.jpg,144054
 21101,Batman: Arkham Asylum,https://static-cdn.jtvnw.net/ttv-boxart/21101_IGDB-{width}x{height}.jpg,500
 12101,The Legend of Dragoon,https://static-cdn.jtvnw.net/ttv-boxart/12101_IGDB-{width}x{height}.jpg,3140
 488492,Icewind Dale: Enhanced Edition,https://static-cdn.jtvnw.net/ttv-boxart/488492-{width}x{height}.jpg,NA
@@ -1500,41 +1456,23 @@ category_id,category_name,box_art_url,igdb_id
 722491824,DEATH NOTE Killer Within,https://static-cdn.jtvnw.net/ttv-boxart/722491824_IGDB-{width}x{height}.jpg,320363
 976324957,Fears to Fathom: Carson House,https://static-cdn.jtvnw.net/ttv-boxart/976324957_IGDB-{width}x{height}.jpg,215569
 1313258364,Emergency Cleanup Co.,https://static-cdn.jtvnw.net/ttv-boxart/1313258364_IGDB-{width}x{height}.jpg,292956
-1600310041,Grand Theft Auto III: The Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/1600310041_IGDB-{width}x{height}.jpg,178123
-1371351268,La-Mulana,https://static-cdn.jtvnw.net/ttv-boxart/1371351268_IGDB-{width}x{height}.jpg,7936
-12261,Phoenix Wright: Ace Attorney - Justice for All,https://static-cdn.jtvnw.net/ttv-boxart/12261_IGDB-{width}x{height}.jpg,1427
-458900,Digimon Story: Cyber Sleuth,https://static-cdn.jtvnw.net/ttv-boxart/458900_IGDB-{width}x{height}.jpg,15705
 465050362,Wall World 2,https://static-cdn.jtvnw.net/ttv-boxart/465050362_IGDB-{width}x{height}.jpg,335291
-665562457,Bopl Battle,https://static-cdn.jtvnw.net/ttv-boxart/665562457_IGDB-{width}x{height}.jpg,244167
-1134351138,Fruit Mountain,https://static-cdn.jtvnw.net/ttv-boxart/1134351138_IGDB-{width}x{height}.jpg,290677
 492487,Furi,https://static-cdn.jtvnw.net/ttv-boxart/492487_IGDB-{width}x{height}.jpg,17026
 459104,Night in the Woods,https://static-cdn.jtvnw.net/ttv-boxart/459104_IGDB-{width}x{height}.jpg,10148
 1879614167,WASD: The Adventure of Tori,https://static-cdn.jtvnw.net/ttv-boxart/1879614167-{width}x{height}.jpg,358333
 11172,Dark Age of Camelot,https://static-cdn.jtvnw.net/ttv-boxart/11172_IGDB-{width}x{height}.jpg,657
-722491824,DEATH NOTE Killer Within,https://static-cdn.jtvnw.net/ttv-boxart/722491824_IGDB-{width}x{height}.jpg,320363
 22959,Alice: Madness Returns,https://static-cdn.jtvnw.net/ttv-boxart/22959_IGDB-{width}x{height}.jpg,1040
 9664,Conker's Bad Fur Day,https://static-cdn.jtvnw.net/ttv-boxart/9664_IGDB-{width}x{height}.jpg,1286
-2015656787,Get To Work,https://static-cdn.jtvnw.net/ttv-boxart/2015656787_IGDB-{width}x{height}.jpg,322280
-367176203,Ale & Tale Tavern,https://static-cdn.jtvnw.net/ttv-boxart/367176203_IGDB-{width}x{height}.jpg,276233
-2134326347,Heroes of Hammerwatch II,https://static-cdn.jtvnw.net/ttv-boxart/2134326347_IGDB-{width}x{height}.jpg,319818
-509058,Anime Music Quiz,https://static-cdn.jtvnw.net/ttv-boxart/509058_IGDB-{width}x{height}.jpg,131061
 508716,Gods Unchained,https://static-cdn.jtvnw.net/ttv-boxart/508716_IGDB-{width}x{height}.jpg,109087
 3682,Guitar Hero III: Legends of Rock,https://static-cdn.jtvnw.net/ttv-boxart/3682_IGDB-{width}x{height}.jpg,2671
-497103,Life is Strange 2,https://static-cdn.jtvnw.net/ttv-boxart/497103_IGDB-{width}x{height}.jpg,62151
 117521065,Mega Man Battle Network 4: Red Sun,https://static-cdn.jtvnw.net/ttv-boxart/117521065_IGDB-{width}x{height}.jpg,352331
 15387281,Snowbreak: Containment Zone,https://static-cdn.jtvnw.net/ttv-boxart/15387281_IGDB-{width}x{height}.jpg,174608
-6604,Fatal Frame III: The Tormented,https://static-cdn.jtvnw.net/ttv-boxart/6604_IGDB-{width}x{height}.jpg,5107
 1114134903,Metalstorm,https://static-cdn.jtvnw.net/ttv-boxart/1114134903_IGDB-{width}x{height}.jpg,196031
-536426883,Joyville,https://static-cdn.jtvnw.net/ttv-boxart/536426883_IGDB-{width}x{height}.jpg,260104
-2070150953,Destroy All Humans!,https://static-cdn.jtvnw.net/ttv-boxart/2070150953_IGDB-{width}x{height}.jpg,2651
 18114,Mega Man X2,https://static-cdn.jtvnw.net/ttv-boxart/18114_IGDB-{width}x{height}.jpg,1742
-324573,Cookie Clicker,https://static-cdn.jtvnw.net/ttv-boxart/324573_IGDB-{width}x{height}.jpg,3241
 623879571,NBA 2K24,https://static-cdn.jtvnw.net/ttv-boxart/623879571_IGDB-{width}x{height}.jpg,255788
-488635,Naruto Shippuden: Ultimate Ninja Storm 4,https://static-cdn.jtvnw.net/ttv-boxart/488635_IGDB-{width}x{height}.jpg,11059
 52765415,Amanda the Adventurer 3,https://static-cdn.jtvnw.net/ttv-boxart/52765415_IGDB-{width}x{height}.jpg,341815
 1866022859,Is This Game Trying to Kill Me?,https://static-cdn.jtvnw.net/ttv-boxart/1866022859_IGDB-{width}x{height}.jpg,275128
 1803407703,Goodnight Universe,https://static-cdn.jtvnw.net/ttv-boxart/1803407703_IGDB-{width}x{height}.jpg,271129
-513753,THE KING OF FIGHTERS XV,https://static-cdn.jtvnw.net/ttv-boxart/513753_IGDB-{width}x{height}.jpg,113104
 914065119,Sonic Origins,https://static-cdn.jtvnw.net/ttv-boxart/914065119_IGDB-{width}x{height}.jpg,150007
 922931567,"Pokémon: Let's Go, Pikachu!/Eevee!",https://static-cdn.jtvnw.net/ttv-boxart/922931567-{width}x{height}.jpg,NA
 26175,PlanetSide 2,https://static-cdn.jtvnw.net/ttv-boxart/26175_IGDB-{width}x{height}.jpg,1265
@@ -1551,7 +1489,6 @@ category_id,category_name,box_art_url,igdb_id
 11879,Pokémon Colosseum,https://static-cdn.jtvnw.net/ttv-boxart/11879_IGDB-{width}x{height}.jpg,2725
 271501702,Final Fantasy X-2 HD Remaster,https://static-cdn.jtvnw.net/ttv-boxart/271501702_IGDB-{width}x{height}.jpg,21880
 1021622343,The Spell Brigade,https://static-cdn.jtvnw.net/ttv-boxart/1021622343_IGDB-{width}x{height}.jpg,297683
-1215521805,NEEDY STREAMER OVERLOAD,https://static-cdn.jtvnw.net/ttv-boxart/1215521805_IGDB-{width}x{height}.jpg,146564
 510150,Diablo Immortal,https://static-cdn.jtvnw.net/ttv-boxart/510150_IGDB-{width}x{height}.jpg,111651
 1269905984,MX vs ATV: Legends,https://static-cdn.jtvnw.net/ttv-boxart/1269905984_IGDB-{width}x{height}.jpg,171216
 110660262,Monument Valley III,https://static-cdn.jtvnw.net/ttv-boxart/110660262_IGDB-{width}x{height}.jpg,121277
@@ -1573,7 +1510,6 @@ category_id,category_name,box_art_url,igdb_id
 506089309,SIFU,https://static-cdn.jtvnw.net/ttv-boxart/506089309_IGDB-{width}x{height}.jpg,144022
 1525198599,Squirreled Away,https://static-cdn.jtvnw.net/ttv-boxart/1525198599_IGDB-{width}x{height}.jpg,314650
 7542,Mega Man Battle Network,https://static-cdn.jtvnw.net/ttv-boxart/7542_IGDB-{width}x{height}.jpg,1755
-506760,World of Sea Battle,https://static-cdn.jtvnw.net/ttv-boxart/506760_IGDB-{width}x{height}.jpg,59962
 16951,Killer Instinct,https://static-cdn.jtvnw.net/ttv-boxart/16951_IGDB-{width}x{height}.jpg,10354
 1088733153,Sly Cooper and the Thievius Raccoonus,https://static-cdn.jtvnw.net/ttv-boxart/1088733153_IGDB-{width}x{height}.jpg,222125
 18920,Wheelman,https://static-cdn.jtvnw.net/ttv-boxart/18920_IGDB-{width}x{height}.jpg,6638
@@ -1602,28 +1538,18 @@ category_id,category_name,box_art_url,igdb_id
 722824008,An Eggstremely Hard game,https://static-cdn.jtvnw.net/ttv-boxart/722824008_IGDB-{width}x{height}.jpg,378071
 516374,Hardspace: Shipbreaker,https://static-cdn.jtvnw.net/ttv-boxart/516374_IGDB-{width}x{height}.jpg,130216
 868689686,Tomb Raider: Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/868689686_IGDB-{width}x{height}.jpg,19965
-460696,ANTHEM,https://static-cdn.jtvnw.net/ttv-boxart/460696_IGDB-{width}x{height}.jpg,36950
 1492488443,Sunkenland,https://static-cdn.jtvnw.net/ttv-boxart/1492488443_IGDB-{width}x{height}.jpg,213475
 8570120,Metroid Prime Remastered,https://static-cdn.jtvnw.net/ttv-boxart/8570120_IGDB-{width}x{height}.jpg,236663
-160028919,Hooked on You: A Dead by Daylight Dating Sim,https://static-cdn.jtvnw.net/ttv-boxart/160028919_IGDB-{width}x{height}.jpg,202141
 506468,Nioh 2,https://static-cdn.jtvnw.net/ttv-boxart/506468_IGDB-{width}x{height}.jpg,103330
-1088478699,Easy Delivery Co.,https://static-cdn.jtvnw.net/ttv-boxart/1088478699_IGDB-{width}x{height}.jpg,330673
-1903183564,Toaster Arena,https://static-cdn.jtvnw.net/ttv-boxart/1903183564_IGDB-{width}x{height}.jpg,235579
 11065,Castlevania: Aria of Sorrow,https://static-cdn.jtvnw.net/ttv-boxart/11065_IGDB-{width}x{height}.jpg,1134
-623879571,NBA 2K24,https://static-cdn.jtvnw.net/ttv-boxart/623879571_IGDB-{width}x{height}.jpg,255788
-488844,Devil May Cry 3: Dante's Awakening - Special Edition,https://static-cdn.jtvnw.net/ttv-boxart/488844_IGDB-{width}x{height}.jpg,20545
 460160,Fatal Frame: Maiden of Black Water,https://static-cdn.jtvnw.net/ttv-boxart/460160_IGDB-{width}x{height}.jpg,51149
 17794,Shadow the Hedgehog,https://static-cdn.jtvnw.net/ttv-boxart/17794_IGDB-{width}x{height}.jpg,4105
-494710,Wasteland 3,https://static-cdn.jtvnw.net/ttv-boxart/494710_IGDB-{width}x{height}.jpg,24863
-936279805,Forgive Me Father,https://static-cdn.jtvnw.net/ttv-boxart/936279805_IGDB-{width}x{height}.jpg,165479
 6756,Crash Bandicoot,https://static-cdn.jtvnw.net/ttv-boxart/6756_IGDB-{width}x{height}.jpg,1185
 31875,The Legend of Heroes: Trails in the Sky SC,https://static-cdn.jtvnw.net/ttv-boxart/31875_IGDB-{width}x{height}.jpg,16665
-1274531553,The Dark Pictures Anthology: House of Ashes,https://static-cdn.jtvnw.net/ttv-boxart/1274531553_IGDB-{width}x{height}.jpg,140617
 844474088,Boxes: Lost Fragments,https://static-cdn.jtvnw.net/ttv-boxart/844474088_IGDB-{width}x{height}.jpg,219729
 137166123,Revenge of the Savage Planet,https://static-cdn.jtvnw.net/ttv-boxart/137166123_IGDB-{width}x{height}.jpg,314243
 374711699,Muse Dash,https://static-cdn.jtvnw.net/ttv-boxart/374711699_IGDB-{width}x{height}.jpg,86316
 91628704,Dorfromantik,https://static-cdn.jtvnw.net/ttv-boxart/91628704_IGDB-{width}x{height}.jpg,134799
-489534,Outward,https://static-cdn.jtvnw.net/ttv-boxart/489534_IGDB-{width}x{height}.jpg,22778
 1956841871,Batman: Return to Arkham - Arkham City,https://static-cdn.jtvnw.net/ttv-boxart/1956841871_IGDB-{width}x{height}.jpg,203435
 242006940,Backroom Company,https://static-cdn.jtvnw.net/ttv-boxart/242006940_IGDB-{width}x{height}.jpg,309554
 492810,Five Nights at Freddy's: Sister Location,https://static-cdn.jtvnw.net/ttv-boxart/492810_IGDB-{width}x{height}.jpg,19320
@@ -1634,7 +1560,6 @@ category_id,category_name,box_art_url,igdb_id
 2123932614,Murders on the Yangtze River,https://static-cdn.jtvnw.net/ttv-boxart/2123932614_IGDB-{width}x{height}.jpg,201417
 1143024882,Plants vs. Zombies: Replanted,https://static-cdn.jtvnw.net/ttv-boxart/1143024882_IGDB-{width}x{height}.jpg,358529
 1892146801,Hi-Fi RUSH,https://static-cdn.jtvnw.net/ttv-boxart/1892146801_IGDB-{width}x{height}.jpg,233585
-18920,Wheelman,https://static-cdn.jtvnw.net/ttv-boxart/18920_IGDB-{width}x{height}.jpg,6638
 493835,Sally Face,https://static-cdn.jtvnw.net/ttv-boxart/493835_IGDB-{width}x{height}.jpg,26580
 493037,Overcooked!,https://static-cdn.jtvnw.net/ttv-boxart/493037_IGDB-{width}x{height}.jpg,18433
 327448890,Tempus Triad,https://static-cdn.jtvnw.net/ttv-boxart/327448890_IGDB-{width}x{height}.jpg,309915
@@ -1643,10 +1568,8 @@ category_id,category_name,box_art_url,igdb_id
 12790,Zoids: Battle Legends,https://static-cdn.jtvnw.net/ttv-boxart/12790_IGDB-{width}x{height}.jpg,10629
 6511,Halo 2,https://static-cdn.jtvnw.net/ttv-boxart/6511_IGDB-{width}x{height}.jpg,986
 31742,Awesomenauts,https://static-cdn.jtvnw.net/ttv-boxart/31742_IGDB-{width}x{height}.jpg,1281
-1745202732,FIFA 23,https://static-cdn.jtvnw.net/ttv-boxart/1745202732_IGDB-{width}x{height}.jpg,205780
 467499896,Dragon Quest III HD-2D Remake,https://static-cdn.jtvnw.net/ttv-boxart/467499896_IGDB-{width}x{height}.jpg,149980
 2028160567,Full Metal Schoolgirl,https://static-cdn.jtvnw.net/ttv-boxart/2028160567_IGDB-{width}x{height}.jpg,352205
-493280,Rec Room,https://static-cdn.jtvnw.net/ttv-boxart/493280_IGDB-{width}x{height}.jpg,32617
 6657,Pokémon Stadium,https://static-cdn.jtvnw.net/ttv-boxart/6657_IGDB-{width}x{height}.jpg,2289
 494840,RollerCoaster Tycoon Classic,https://static-cdn.jtvnw.net/ttv-boxart/494840_IGDB-{width}x{height}.jpg,26589
 458641,Uncharted 4: A Thief's End,https://static-cdn.jtvnw.net/ttv-boxart/458641_IGDB-{width}x{height}.jpg,7331
@@ -1664,17 +1587,14 @@ category_id,category_name,box_art_url,igdb_id
 513769,The Last Spell,https://static-cdn.jtvnw.net/ttv-boxart/513769_IGDB-{width}x{height}.jpg,121501
 346698353,Ranch Farm and Store Simulator,https://static-cdn.jtvnw.net/ttv-boxart/346698353_IGDB-{width}x{height}.jpg,347572
 490465,ELEX,https://static-cdn.jtvnw.net/ttv-boxart/490465_IGDB-{width}x{height}.jpg,11567
-508716,Gods Unchained,https://static-cdn.jtvnw.net/ttv-boxart/508716_IGDB-{width}x{height}.jpg,109087
 164168115,Warface: Clutch,https://static-cdn.jtvnw.net/ttv-boxart/164168115_IGDB-{width}x{height}.jpg,284415
 796855109,"YEAH! YOU WANT ""THOSE GAMES,"" RIGHT? SO HERE YOU GO! NOW, LET'S SEE YOU CLEAR THEM!",https://static-cdn.jtvnw.net/ttv-boxart/796855109_IGDB-{width}x{height}.jpg,257267
-7542,Mega Man Battle Network,https://static-cdn.jtvnw.net/ttv-boxart/7542_IGDB-{width}x{height}.jpg,1755
 497572,Gold Mining Simulator,https://static-cdn.jtvnw.net/ttv-boxart/497572_IGDB-{width}x{height}.jpg,39755
 14286,Sly 2: Band of Thieves,https://static-cdn.jtvnw.net/ttv-boxart/14286_IGDB-{width}x{height}.jpg,1799
 513433,Jet Lancer,https://static-cdn.jtvnw.net/ttv-boxart/513433_IGDB-{width}x{height}.jpg,113836
 497697,Last Day on Earth: Survival,https://static-cdn.jtvnw.net/ttv-boxart/497697_IGDB-{width}x{height}.jpg,44076
 492164,"Hot Dogs, Horseshoes & Hand Grenades",https://static-cdn.jtvnw.net/ttv-boxart/492164_IGDB-{width}x{height}.jpg,18984
 119545921,Broken Sword: Shadow of the Templars Reforged,https://static-cdn.jtvnw.net/ttv-boxart/119545921_IGDB-{width}x{height}.jpg,262651
-1134351138,Fruit Mountain,https://static-cdn.jtvnw.net/ttv-boxart/1134351138_IGDB-{width}x{height}.jpg,290677
 369590,Super Mario 3D World,https://static-cdn.jtvnw.net/ttv-boxart/369590_IGDB-{width}x{height}.jpg,2180
 2066,Dragon Warrior VII,https://static-cdn.jtvnw.net/ttv-boxart/2066_IGDB-{width}x{height}.jpg,1818
 67474,Drakensang Online,https://static-cdn.jtvnw.net/ttv-boxart/67474_IGDB-{width}x{height}.jpg,8772
@@ -1696,22 +1616,16 @@ category_id,category_name,box_art_url,igdb_id
 4375,Kingdom Hearts II,https://static-cdn.jtvnw.net/ttv-boxart/4375_IGDB-{width}x{height}.jpg,1221
 414822821,Sid Meier's Civilization VII,https://static-cdn.jtvnw.net/ttv-boxart/414822821_IGDB-{width}x{height}.jpg,305006
 1814881863,Bluey: The Videogame,https://static-cdn.jtvnw.net/ttv-boxart/1814881863_IGDB-{width}x{height}.jpg,257332
-490345,Fallout Shelter,https://static-cdn.jtvnw.net/ttv-boxart/490345_IGDB-{width}x{height}.jpg,11119
 1679324192,God of War,https://static-cdn.jtvnw.net/ttv-boxart/1679324192_IGDB-{width}x{height}.jpg,117883
 604531278,Dragon Warrior II,https://static-cdn.jtvnw.net/ttv-boxart/604531278_IGDB-{width}x{height}.jpg,205592
 1795804476,Spyro: Year of the Dragon,https://static-cdn.jtvnw.net/ttv-boxart/1795804476_IGDB-{width}x{height}.jpg,142243
 27921,Dragon Age II,https://static-cdn.jtvnw.net/ttv-boxart/27921_IGDB-{width}x{height}.jpg,78
 1642325524,Paper Mario: The Thousand-Year Door,https://static-cdn.jtvnw.net/ttv-boxart/1642325524_IGDB-{width}x{height}.jpg,328663
 66001,JESUS II,https://static-cdn.jtvnw.net/ttv-boxart/66001_IGDB-{width}x{height}.jpg,65057
-493597,New World: Aeternum,https://static-cdn.jtvnw.net/ttv-boxart/493597_IGDB-{width}x{height}.jpg,24654
 8242,FINAL FANTASY X-2,https://static-cdn.jtvnw.net/ttv-boxart/8242_IGDB-{width}x{height}.jpg,413
-1002561360,Revenge On Gold Diggers,https://static-cdn.jtvnw.net/ttv-boxart/1002561360_IGDB-{width}x{height}.jpg,372482
 22168,Shin Megami Tensei: Devil Survivor,https://static-cdn.jtvnw.net/ttv-boxart/22168_IGDB-{width}x{height}.jpg,6884
 16079015,Suikoden II HD Remaster: Dunan Unification War,https://static-cdn.jtvnw.net/ttv-boxart/16079015_IGDB-{width}x{height}.jpg,328111
-242006940,Backroom Company,https://static-cdn.jtvnw.net/ttv-boxart/242006940_IGDB-{width}x{height}.jpg,309554
 12206,ToeJam & Earl,https://static-cdn.jtvnw.net/ttv-boxart/12206_IGDB-{width}x{height}.jpg,8389
-490345,Fallout Shelter,https://static-cdn.jtvnw.net/ttv-boxart/490345_IGDB-{width}x{height}.jpg,11119
-505980,Stoneshard,https://static-cdn.jtvnw.net/ttv-boxart/505980_IGDB-{width}x{height}.jpg,28649
 1274156090,Dungeons of Aether,https://static-cdn.jtvnw.net/ttv-boxart/1274156090_IGDB-{width}x{height}.jpg,195068
 1294676827,Home_0,https://static-cdn.jtvnw.net/ttv-boxart/1294676827_IGDB-{width}x{height}.jpg,325661
 2060761195,Illusion Carnival,https://static-cdn.jtvnw.net/ttv-boxart/2060761195_IGDB-{width}x{height}.jpg,290888
@@ -1719,26 +1633,19 @@ category_id,category_name,box_art_url,igdb_id
 31908,LEGO City Undercover,https://static-cdn.jtvnw.net/ttv-boxart/31908_IGDB-{width}x{height}.jpg,2177
 1027255885,Ace Attorney Investigations 2: Prosecutor's Gambit,https://static-cdn.jtvnw.net/ttv-boxart/1027255885_IGDB-{width}x{height}.jpg,307145
 509128,Dead Frontier 2,https://static-cdn.jtvnw.net/ttv-boxart/509128_IGDB-{width}x{height}.jpg,87776
-310427916,Waterpark Simulator,https://static-cdn.jtvnw.net/ttv-boxart/310427916_IGDB-{width}x{height}.jpg,151019
 497411,Forza Motorsport 7,https://static-cdn.jtvnw.net/ttv-boxart/497411_IGDB-{width}x{height}.jpg,36872
-604531278,Dragon Warrior II,https://static-cdn.jtvnw.net/ttv-boxart/604531278_IGDB-{width}x{height}.jpg,205592
 1821414279,Restaurats,https://static-cdn.jtvnw.net/ttv-boxart/1821414279_IGDB-{width}x{height}.jpg,302654
-850490686,Pokémon Showdown,https://static-cdn.jtvnw.net/ttv-boxart/850490686_IGDB-{width}x{height}.jpg,87797
 2090299883,"Cozy Keep: Farm, Craft, Manage",https://static-cdn.jtvnw.net/ttv-boxart/2090299883_IGDB-{width}x{height}.jpg,271208
 33530,Fate/Extra CCC,https://static-cdn.jtvnw.net/ttv-boxart/33530_IGDB-{width}x{height}.jpg,12504
-517542,Pixel Strike 3D,https://static-cdn.jtvnw.net/ttv-boxart/517542_IGDB-{width}x{height}.jpg,88331
 1965562480,Chess,https://static-cdn.jtvnw.net/ttv-boxart/1965562480-{width}x{height}.jpg,247071
 519192,Tormented Souls,https://static-cdn.jtvnw.net/ttv-boxart/519192_IGDB-{width}x{height}.jpg,138569
 1846136589,Silent Still II,https://static-cdn.jtvnw.net/ttv-boxart/1846136589_IGDB-{width}x{height}.jpg,357117
-414822821,Sid Meier's Civilization VII,https://static-cdn.jtvnw.net/ttv-boxart/414822821_IGDB-{width}x{height}.jpg,305006
 493069,Totally Accurate Battle Simulator,https://static-cdn.jtvnw.net/ttv-boxart/493069_IGDB-{width}x{height}.jpg,21642
 1985871933,Metal Slug Tactics,https://static-cdn.jtvnw.net/ttv-boxart/1985871933_IGDB-{width}x{height}.jpg,152062
 1889057295,Muck,https://static-cdn.jtvnw.net/ttv-boxart/1889057295_IGDB-{width}x{height}.jpg,148397
 332885450,OCTOPATH TRAVELER II,https://static-cdn.jtvnw.net/ttv-boxart/332885450_IGDB-{width}x{height}.jpg,217554
-264365784,Assassin's Creed II,https://static-cdn.jtvnw.net/ttv-boxart/264365784_IGDB-{width}x{height}.jpg,221822
 460041,Borderlands: The Pre-Sequel,https://static-cdn.jtvnw.net/ttv-boxart/460041_IGDB-{width}x{height}.jpg,6032
 804395556,Copycat,https://static-cdn.jtvnw.net/ttv-boxart/804395556_IGDB-{width}x{height}.jpg,171650
-105169862,Farthest Frontier,https://static-cdn.jtvnw.net/ttv-boxart/105169862_IGDB-{width}x{height}.jpg,142688
 518876,Avowed,https://static-cdn.jtvnw.net/ttv-boxart/518876_IGDB-{width}x{height}.jpg,135994
 493036,Worms W.M.D,https://static-cdn.jtvnw.net/ttv-boxart/493036_IGDB-{width}x{height}.jpg,19696
 414371447,Chef Life: A Restaurant Simulator,https://static-cdn.jtvnw.net/ttv-boxart/414371447_IGDB-{width}x{height}.jpg,191698
@@ -1746,13 +1653,11 @@ category_id,category_name,box_art_url,igdb_id
 1250647518,Sniper Elite: Resistance,https://static-cdn.jtvnw.net/ttv-boxart/1250647518_IGDB-{width}x{height}.jpg,314238
 276369854,NFL Football,https://static-cdn.jtvnw.net/ttv-boxart/276369854-{width}x{height}.jpg,175899
 133897,"Papers, Please",https://static-cdn.jtvnw.net/ttv-boxart/133897_IGDB-{width}x{height}.jpg,2935
-519336,Super Lesbian Animal RPG,https://static-cdn.jtvnw.net/ttv-boxart/519336_IGDB-{width}x{height}.jpg,138659
 110748,Dragon's Dogma: Dark Arisen,https://static-cdn.jtvnw.net/ttv-boxart/110748_IGDB-{width}x{height}.jpg,16300
 4392,F.E.A.R.,https://static-cdn.jtvnw.net/ttv-boxart/4392_IGDB-{width}x{height}.jpg,517
 1750373461,La Vie en Rose,https://static-cdn.jtvnw.net/ttv-boxart/1750373461-{width}x{height}.jpg,183071
 503968,One Deck Dungeon,https://static-cdn.jtvnw.net/ttv-boxart/503968_IGDB-{width}x{height}.jpg,88006
 207973137,Tobla: Divine Path,https://static-cdn.jtvnw.net/ttv-boxart/207973137_IGDB-{width}x{height}.jpg,279132
-1492488443,Sunkenland,https://static-cdn.jtvnw.net/ttv-boxart/1492488443_IGDB-{width}x{height}.jpg,213475
 689180014,Midori no Kaori,https://static-cdn.jtvnw.net/ttv-boxart/689180014_IGDB-{width}x{height}.jpg,295421
 492354,Fire Emblem Heroes,https://static-cdn.jtvnw.net/ttv-boxart/492354_IGDB-{width}x{height}.jpg,26841
 512984,Ghostwire: Tokyo,https://static-cdn.jtvnw.net/ttv-boxart/512984_IGDB-{width}x{height}.jpg,119308
@@ -1793,35 +1698,18 @@ category_id,category_name,box_art_url,igdb_id
 17717,Breath of Fire III,https://static-cdn.jtvnw.net/ttv-boxart/17717_IGDB-{width}x{height}.jpg,18055
 1270,Rubik's Cube,https://static-cdn.jtvnw.net/ttv-boxart/1270_IGDB-{width}x{height}.jpg,71210
 492287,Prominence Poker,https://static-cdn.jtvnw.net/ttv-boxart/492287_IGDB-{width}x{height}.jpg,23214
-4375,Kingdom Hearts II,https://static-cdn.jtvnw.net/ttv-boxart/4375_IGDB-{width}x{height}.jpg,1221
 23533,Holy Diver,https://static-cdn.jtvnw.net/ttv-boxart/23533_IGDB-{width}x{height}.jpg,19110
 29918,Warface,https://static-cdn.jtvnw.net/ttv-boxart/29918_IGDB-{width}x{height}.jpg,1912
 34135,God of War: Ascension,https://static-cdn.jtvnw.net/ttv-boxart/34135_IGDB-{width}x{height}.jpg,1291
 1269486009,Alone in the Dark,https://static-cdn.jtvnw.net/ttv-boxart/1269486009_IGDB-{width}x{height}.jpg,213237
-164168115,Warface: Clutch,https://static-cdn.jtvnw.net/ttv-boxart/164168115_IGDB-{width}x{height}.jpg,284415
 1248698972,Super Mario Galaxy,https://static-cdn.jtvnw.net/ttv-boxart/1248698972_IGDB-{width}x{height}.jpg,366899
 518238,Potionomics,https://static-cdn.jtvnw.net/ttv-boxart/518238_IGDB-{width}x{height}.jpg,75994
 1055720961,beatmania IIDX INFINITAS,https://static-cdn.jtvnw.net/ttv-boxart/1055720961_IGDB-{width}x{height}.jpg,143204
 1864374139,Nightingale,https://static-cdn.jtvnw.net/ttv-boxart/1864374139_IGDB-{width}x{height}.jpg,185249
-17717,Breath of Fire III,https://static-cdn.jtvnw.net/ttv-boxart/17717_IGDB-{width}x{height}.jpg,18055
-514456,Assemble With Care,https://static-cdn.jtvnw.net/ttv-boxart/514456_IGDB-{width}x{height}.jpg,117008
-414371447,Chef Life: A Restaurant Simulator,https://static-cdn.jtvnw.net/ttv-boxart/414371447_IGDB-{width}x{height}.jpg,191698
-514207,The Dark Pictures Anthology: Little Hope,https://static-cdn.jtvnw.net/ttv-boxart/514207_IGDB-{width}x{height}.jpg,122120
-519192,Tormented Souls,https://static-cdn.jtvnw.net/ttv-boxart/519192_IGDB-{width}x{height}.jpg,138569
 489308483,Way of the Hunter,https://static-cdn.jtvnw.net/ttv-boxart/489308483_IGDB-{width}x{height}.jpg,198388
-1674286069,Fire Emblem Fates: Conquest,https://static-cdn.jtvnw.net/ttv-boxart/1674286069_IGDB-{width}x{height}.jpg,21863
 313468,Death Road to Canada,https://static-cdn.jtvnw.net/ttv-boxart/313468_IGDB-{width}x{height}.jpg,21634
-487237675,Call of the Wild: The Angler,https://static-cdn.jtvnw.net/ttv-boxart/487237675_IGDB-{width}x{height}.jpg,205775
-1269486009,Alone in the Dark,https://static-cdn.jtvnw.net/ttv-boxart/1269486009_IGDB-{width}x{height}.jpg,213237
-19419,S.T.A.L.K.E.R.: Clear Sky,https://static-cdn.jtvnw.net/ttv-boxart/19419_IGDB-{width}x{height}.jpg,4840
-11045,.hack//Mutation,https://static-cdn.jtvnw.net/ttv-boxart/11045_IGDB-{width}x{height}.jpg,11808
 491376,Scattergories,https://static-cdn.jtvnw.net/ttv-boxart/491376_IGDB-{width}x{height}.jpg,58937
-403925635,Daggerheart,https://static-cdn.jtvnw.net/ttv-boxart/403925635_IGDB-{width}x{height}.jpg,360419
 1181932941,Demeo x Dungeons & Dragons: Battlemarked,https://static-cdn.jtvnw.net/ttv-boxart/1181932941_IGDB-{width}x{height}.jpg,346959
-461410,Hellblade: Senua's Sacrifice,https://static-cdn.jtvnw.net/ttv-boxart/461410_IGDB-{width}x{height}.jpg,7603
-942317893,Supermarket Together,https://static-cdn.jtvnw.net/ttv-boxart/942317893_IGDB-{width}x{height}.jpg,311540
-1642325524,Paper Mario: The Thousand-Year Door,https://static-cdn.jtvnw.net/ttv-boxart/1642325524_IGDB-{width}x{height}.jpg,328663
-212029556,Metroid Dread,https://static-cdn.jtvnw.net/ttv-boxart/212029556_IGDB-{width}x{height}.jpg,15698
 16864,Carmageddon,https://static-cdn.jtvnw.net/ttv-boxart/16864_IGDB-{width}x{height}.jpg,626
 2010603021,In Silence,https://static-cdn.jtvnw.net/ttv-boxart/2010603021_IGDB-{width}x{height}.jpg,140038
 1433665303,Two Point Museum,https://static-cdn.jtvnw.net/ttv-boxart/1433665303_IGDB-{width}x{height}.jpg,313595
@@ -1834,7 +1722,6 @@ category_id,category_name,box_art_url,igdb_id
 2087546181,Blacksmith of the Sand Kingdom,https://static-cdn.jtvnw.net/ttv-boxart/2087546181_IGDB-{width}x{height}.jpg,142258
 1986835154,Yakuza Kiwami 2,https://static-cdn.jtvnw.net/ttv-boxart/1986835154_IGDB-{width}x{height}.jpg,55090
 18958,Dragon Age™: Origins,https://static-cdn.jtvnw.net/ttv-boxart/18958_IGDB-{width}x{height}.jpg,76
-489136,Rock Band 4,https://static-cdn.jtvnw.net/ttv-boxart/489136_IGDB-{width}x{height}.jpg,10128
 1289290574,Blood Typers,https://static-cdn.jtvnw.net/ttv-boxart/1289290574_IGDB-{width}x{height}.jpg,298445
 497432,TUNIC,https://static-cdn.jtvnw.net/ttv-boxart/497432_IGDB-{width}x{height}.jpg,23733
 1454243467,The Legend of Heroes: Trails through Daybreak 2,https://static-cdn.jtvnw.net/ttv-boxart/1454243467_IGDB-{width}x{height}.jpg,185864
@@ -1847,9 +1734,7 @@ category_id,category_name,box_art_url,igdb_id
 411135266,Stella Sora,https://static-cdn.jtvnw.net/ttv-boxart/411135266_IGDB-{width}x{height}.jpg,326127
 1924563761,Mafia: Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/1924563761_IGDB-{width}x{height}.jpg,134070
 1865070091,Watch TV,https://static-cdn.jtvnw.net/ttv-boxart/1865070091-{width}x{height}.jpg,179315
-118198,Assassin's Creed IV Black Flag,https://static-cdn.jtvnw.net/ttv-boxart/118198_IGDB-{width}x{height}.jpg,1970
 26476,TERA,https://static-cdn.jtvnw.net/ttv-boxart/26476_IGDB-{width}x{height}.jpg,7533
-1982955044,Storage Hunter Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1982955044_IGDB-{width}x{height}.jpg,317979
 1143077752,Let's School,https://static-cdn.jtvnw.net/ttv-boxart/1143077752_IGDB-{width}x{height}.jpg,231547
 1192189185,Level Devil,https://static-cdn.jtvnw.net/ttv-boxart/1192189185_IGDB-{width}x{height}.jpg,279687
 512058,Unrailed!,https://static-cdn.jtvnw.net/ttv-boxart/512058_IGDB-{width}x{height}.jpg,115201
@@ -1880,7 +1765,6 @@ category_id,category_name,box_art_url,igdb_id
 1405525287,Farlands,https://static-cdn.jtvnw.net/ttv-boxart/1405525287_IGDB-{width}x{height}.jpg,236859
 801121736,Blade & Soul NEO,https://static-cdn.jtvnw.net/ttv-boxart/801121736_IGDB-{width}x{height}.jpg,333270
 8676,Mega Man X,https://static-cdn.jtvnw.net/ttv-boxart/8676_IGDB-{width}x{height}.jpg,1741
-493389,Dead Rising 4,https://static-cdn.jtvnw.net/ttv-boxart/493389_IGDB-{width}x{height}.jpg,19521
 1630174498,SULFUR,https://static-cdn.jtvnw.net/ttv-boxart/1630174498_IGDB-{width}x{height}.jpg,233970
 518188,New Pokémon Snap,https://static-cdn.jtvnw.net/ttv-boxart/518188_IGDB-{width}x{height}.jpg,135142
 17010,EverQuest II,https://static-cdn.jtvnw.net/ttv-boxart/17010_IGDB-{width}x{height}.jpg,18293
@@ -1899,15 +1783,7 @@ category_id,category_name,box_art_url,igdb_id
 488488,Monster Strike,https://static-cdn.jtvnw.net/ttv-boxart/488488_IGDB-{width}x{height}.jpg,19166
 20357,Uncharted 2: Among Thieves,https://static-cdn.jtvnw.net/ttv-boxart/20357_IGDB-{width}x{height}.jpg,565
 1824567799,HARVESTELLA,https://static-cdn.jtvnw.net/ttv-boxart/1824567799_IGDB-{width}x{height}.jpg,206818
-504371622,Monster Train 2,https://static-cdn.jtvnw.net/ttv-boxart/504371622_IGDB-{width}x{height}.jpg,332273
-4176,Team Fortress Classic,https://static-cdn.jtvnw.net/ttv-boxart/4176_IGDB-{width}x{height}.jpg,6359
-535849236,Days Gone Remastered,https://static-cdn.jtvnw.net/ttv-boxart/535849236_IGDB-{width}x{height}.jpg,331206
-518188,New Pokémon Snap,https://static-cdn.jtvnw.net/ttv-boxart/518188_IGDB-{width}x{height}.jpg,135142
 460695,Mass Effect: Andromeda,https://static-cdn.jtvnw.net/ttv-boxart/460695_IGDB-{width}x{height}.jpg,7349
-771260796,Christmas Night,https://static-cdn.jtvnw.net/ttv-boxart/771260796_IGDB-{width}x{height}.jpg,236804
-26956,The Last Story,https://static-cdn.jtvnw.net/ttv-boxart/26956_IGDB-{width}x{height}.jpg,4966
-951160620,GOALS,https://static-cdn.jtvnw.net/ttv-boxart/951160620_IGDB-{width}x{height}.jpg,289602
-488488,Monster Strike,https://static-cdn.jtvnw.net/ttv-boxart/488488_IGDB-{width}x{height}.jpg,19166
 1754564141,Crab Champions,https://static-cdn.jtvnw.net/ttv-boxart/1754564141_IGDB-{width}x{height}.jpg,133379
 18489,Bomberman Generation,https://static-cdn.jtvnw.net/ttv-boxart/18489_IGDB-{width}x{height}.jpg,3832
 1808565595,The Casting of Frank Stone,https://static-cdn.jtvnw.net/ttv-boxart/1808565595_IGDB-{width}x{height}.jpg,279635
@@ -1929,9 +1805,6 @@ category_id,category_name,box_art_url,igdb_id
 490905,Devil Daggers,https://static-cdn.jtvnw.net/ttv-boxart/490905_IGDB-{width}x{height}.jpg,18081
 464823362,Fisher Online,https://static-cdn.jtvnw.net/ttv-boxart/464823362_IGDB-{width}x{height}.jpg,174441
 417721,Kantai Collection,https://static-cdn.jtvnw.net/ttv-boxart/417721_IGDB-{width}x{height}.jpg,12737
-1924563761,Mafia: Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/1924563761_IGDB-{width}x{height}.jpg,134070
-511364607,Turbo Overkill,https://static-cdn.jtvnw.net/ttv-boxart/511364607_IGDB-{width}x{height}.jpg,172024
-1097401568,The Midnight Walk,https://static-cdn.jtvnw.net/ttv-boxart/1097401568_IGDB-{width}x{height}.jpg,317621
 1144809661,Inside the Backrooms,https://static-cdn.jtvnw.net/ttv-boxart/1144809661_IGDB-{width}x{height}.jpg,201506
 543795917,Doki Doki Literature Club Plus!,https://static-cdn.jtvnw.net/ttv-boxart/543795917_IGDB-{width}x{height}.jpg,152122
 514055,Survivalist: Invisible Strain,https://static-cdn.jtvnw.net/ttv-boxart/514055_IGDB-{width}x{height}.jpg,117233
@@ -1940,7 +1813,6 @@ category_id,category_name,box_art_url,igdb_id
 401050785,Watch Party,https://static-cdn.jtvnw.net/ttv-boxart/401050785-{width}x{height}.jpg,340131
 25319,Sonic the Hedgehog 4: Episode I,https://static-cdn.jtvnw.net/ttv-boxart/25319_IGDB-{width}x{height}.jpg,9473
 1945861843,Assassin's Creed III Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1945861843_IGDB-{width}x{height}.jpg,109532
-67474,Drakensang Online,https://static-cdn.jtvnw.net/ttv-boxart/67474_IGDB-{width}x{height}.jpg,8772
 1322168367,Watcher of Realms,https://static-cdn.jtvnw.net/ttv-boxart/1322168367_IGDB-{width}x{height}.jpg,256475
 4815,Mega Man,https://static-cdn.jtvnw.net/ttv-boxart/4815_IGDB-{width}x{height}.jpg,1714
 639334765,The Case of the Golden Idol,https://static-cdn.jtvnw.net/ttv-boxart/639334765_IGDB-{width}x{height}.jpg,166722
@@ -1999,22 +1871,10 @@ category_id,category_name,box_art_url,igdb_id
 2025163961,Monster Rancher 2 DX,https://static-cdn.jtvnw.net/ttv-boxart/2025163961_IGDB-{width}x{height}.jpg,184783
 1184012414,Resonite,https://static-cdn.jtvnw.net/ttv-boxart/1184012414_IGDB-{width}x{height}.jpg,269473
 1780220882,Unreal Tournament,https://static-cdn.jtvnw.net/ttv-boxart/1780220882-{width}x{height}.jpg,272
-29036,The Sims Medieval,https://static-cdn.jtvnw.net/ttv-boxart/29036_IGDB-{width}x{height}.jpg,10632
-43678559,Secret Lab Cleaner,https://static-cdn.jtvnw.net/ttv-boxart/43678559-{width}x{height}.jpg,372881
 514457,Love Live! School Idol Festival All Stars,https://static-cdn.jtvnw.net/ttv-boxart/514457_IGDB-{width}x{height}.jpg,122640
 939555737,Star Trucker,https://static-cdn.jtvnw.net/ttv-boxart/939555737_IGDB-{width}x{height}.jpg,252787
 1431587018,The Roottrees Are Dead,https://static-cdn.jtvnw.net/ttv-boxart/1431587018_IGDB-{width}x{height}.jpg,288983
-1952473995,INTO THE PIT,https://static-cdn.jtvnw.net/ttv-boxart/1952473995_IGDB-{width}x{height}.jpg,165318
-511364607,Turbo Overkill,https://static-cdn.jtvnw.net/ttv-boxart/511364607_IGDB-{width}x{height}.jpg,172024
-1322168367,Watcher of Realms,https://static-cdn.jtvnw.net/ttv-boxart/1322168367_IGDB-{width}x{height}.jpg,256475
-1460845372,Nitroglycerine!,https://static-cdn.jtvnw.net/ttv-boxart/1460845372_IGDB-{width}x{height}.jpg,373362
-1596773279,Realm of the Mad God Exalt,https://static-cdn.jtvnw.net/ttv-boxart/1596773279_IGDB-{width}x{height}.jpg,276933
-388680027,100 Rooms,https://static-cdn.jtvnw.net/ttv-boxart/388680027-{width}x{height}.jpg,283038
-1435199522,I Don't Fall,https://static-cdn.jtvnw.net/ttv-boxart/1435199522_IGDB-{width}x{height}.jpg,301709
-1438847651,Rainbow Step,https://static-cdn.jtvnw.net/ttv-boxart/1438847651_IGDB-{width}x{height}.jpg,67929
 511780,Workers & Resources: Soviet Republic,https://static-cdn.jtvnw.net/ttv-boxart/511780_IGDB-{width}x{height}.jpg,103065
-517109,Beyond All Reason,https://static-cdn.jtvnw.net/ttv-boxart/517109_IGDB-{width}x{height}.jpg,133655
-1097401568,The Midnight Walk,https://static-cdn.jtvnw.net/ttv-boxart/1097401568_IGDB-{width}x{height}.jpg,317621
 490919,FAR CRY PRIMAL,https://static-cdn.jtvnw.net/ttv-boxart/490919_IGDB-{width}x{height}.jpg,13182
 1540019723,Five Nights at Freddy's: Help Wanted 2,https://static-cdn.jtvnw.net/ttv-boxart/1540019723_IGDB-{width}x{height}.jpg,250627
 7241750,Casino Roulette: Roulettist,https://static-cdn.jtvnw.net/ttv-boxart/7241750_IGDB-{width}x{height}.jpg,369427
@@ -2022,7 +1882,6 @@ category_id,category_name,box_art_url,igdb_id
 518814,Wobbly Life,https://static-cdn.jtvnw.net/ttv-boxart/518814_IGDB-{width}x{height}.jpg,133344
 1192093612,Castle Crashers Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1192093612_IGDB-{width}x{height}.jpg,20880
 6167,Grand Theft Auto: Liberty City Stories,https://static-cdn.jtvnw.net/ttv-boxart/6167_IGDB-{width}x{height}.jpg,3263
-512987,LEGO Star Wars: The Skywalker Saga,https://static-cdn.jtvnw.net/ttv-boxart/512987_IGDB-{width}x{height}.jpg,119305
 1898305923,Arizona Sunshine Remake,https://static-cdn.jtvnw.net/ttv-boxart/1898305923_IGDB-{width}x{height}.jpg,313768
 2711,Assassin's Creed,https://static-cdn.jtvnw.net/ttv-boxart/2711_IGDB-{width}x{height}.jpg,128
 987334443,Silent Hill: The Short Message,https://static-cdn.jtvnw.net/ttv-boxart/987334443_IGDB-{width}x{height}.jpg,218744
@@ -2042,7 +1901,6 @@ category_id,category_name,box_art_url,igdb_id
 356609813,Kirka.io,https://static-cdn.jtvnw.net/ttv-boxart/356609813_IGDB-{width}x{height}.jpg,152476
 509588,"Good Pizza, Great Pizza",https://static-cdn.jtvnw.net/ttv-boxart/509588_IGDB-{width}x{height}.jpg,87367
 495364,Golf Clash,https://static-cdn.jtvnw.net/ttv-boxart/495364_IGDB-{width}x{height}.jpg,56902
-1293419931,Alan Wake Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1293419931_IGDB-{width}x{height}.jpg,167611
 503018,With Your Destiny,https://static-cdn.jtvnw.net/ttv-boxart/503018_IGDB-{width}x{height}.jpg,90317
 12273,N,https://static-cdn.jtvnw.net/ttv-boxart/12273_IGDB-{width}x{height}.jpg,8748
 506409,Gears Tactics,https://static-cdn.jtvnw.net/ttv-boxart/506409_IGDB-{width}x{height}.jpg,103291
@@ -2069,7 +1927,6 @@ category_id,category_name,box_art_url,igdb_id
 515621883,Soulstone Survivors,https://static-cdn.jtvnw.net/ttv-boxart/515621883_IGDB-{width}x{height}.jpg,210585
 12830,Soul Blazer,https://static-cdn.jtvnw.net/ttv-boxart/12830_IGDB-{width}x{height}.jpg,11616
 1137736106,Main Sequence,https://static-cdn.jtvnw.net/ttv-boxart/1137736106_IGDB-{width}x{height}.jpg,371514
-2143844298,BioShock 2 Remastered,https://static-cdn.jtvnw.net/ttv-boxart/2143844298_IGDB-{width}x{height}.jpg,34294
 1743731766,Math is Horror,https://static-cdn.jtvnw.net/ttv-boxart/1743731766-{width}x{height}.jpg,278542
 490373,Dreams,https://static-cdn.jtvnw.net/ttv-boxart/490373_IGDB-{width}x{height}.jpg,11155
 3123,Barbie,https://static-cdn.jtvnw.net/ttv-boxart/3123_IGDB-{width}x{height}.jpg,3308
@@ -2099,59 +1956,23 @@ category_id,category_name,box_art_url,igdb_id
 12078,Sonic Adventure DX: Director's Cut,https://static-cdn.jtvnw.net/ttv-boxart/12078_IGDB-{width}x{height}.jpg,23695
 727515478,Mortal Kombat XL,https://static-cdn.jtvnw.net/ttv-boxart/727515478_IGDB-{width}x{height}.jpg,18150
 518711,EA Sports UFC 4,https://static-cdn.jtvnw.net/ttv-boxart/518711_IGDB-{width}x{height}.jpg,136560
-1137736106,Main Sequence,https://static-cdn.jtvnw.net/ttv-boxart/1137736106_IGDB-{width}x{height}.jpg,371514
 2031365572,Teenage Mutant Ninja Turtles: Splintered Fate,https://static-cdn.jtvnw.net/ttv-boxart/2031365572_IGDB-{width}x{height}.jpg,248582
-727515478,Mortal Kombat XL,https://static-cdn.jtvnw.net/ttv-boxart/727515478_IGDB-{width}x{height}.jpg,18150
-1230556872,Digimon Super Rumble,https://static-cdn.jtvnw.net/ttv-boxart/1230556872_IGDB-{width}x{height}.jpg,202964
-641312858,Anomalous Coffee Machine 2,https://static-cdn.jtvnw.net/ttv-boxart/641312858_IGDB-{width}x{height}.jpg,359627
 687646796,of the Devil,https://static-cdn.jtvnw.net/ttv-boxart/687646796_IGDB-{width}x{height}.jpg,234801
 866287127,Welcome to Elderfield,https://static-cdn.jtvnw.net/ttv-boxart/866287127_IGDB-{width}x{height}.jpg,319629
 2056595466,Lunar 2: Eternal Blue Complete,https://static-cdn.jtvnw.net/ttv-boxart/2056595466_IGDB-{width}x{height}.jpg,328114
-10710,Counter-Strike 1.6,https://static-cdn.jtvnw.net/ttv-boxart/10710-{width}x{height}.jpg,NA
 5160,Saints Row,https://static-cdn.jtvnw.net/ttv-boxart/5160_IGDB-{width}x{height}.jpg,825
-30639,Skullgirls,https://static-cdn.jtvnw.net/ttv-boxart/30639_IGDB-{width}x{height}.jpg,9425
-1681462442,Jurassic World Evolution 2,https://static-cdn.jtvnw.net/ttv-boxart/1681462442_IGDB-{width}x{height}.jpg,152064
-899185268,We Love Katamari REROLL+ Royal Reverie,https://static-cdn.jtvnw.net/ttv-boxart/899185268_IGDB-{width}x{height}.jpg,228463
-1743731766,Math is Horror,https://static-cdn.jtvnw.net/ttv-boxart/1743731766-{width}x{height}.jpg,278542
 16580,Command & Conquer: Red Alert 2,https://static-cdn.jtvnw.net/ttv-boxart/16580_IGDB-{width}x{height}.jpg,245
-489413,The Four Kings Casino and Slots,https://static-cdn.jtvnw.net/ttv-boxart/489413_IGDB-{width}x{height}.jpg,16797
-495364,Golf Clash,https://static-cdn.jtvnw.net/ttv-boxart/495364_IGDB-{width}x{height}.jpg,56902
 2673,Psychonauts,https://static-cdn.jtvnw.net/ttv-boxart/2673_IGDB-{width}x{height}.jpg,1339
-12273,N,https://static-cdn.jtvnw.net/ttv-boxart/12273_IGDB-{width}x{height}.jpg,8748
-1540019723,Five Nights at Freddy's: Help Wanted 2,https://static-cdn.jtvnw.net/ttv-boxart/1540019723_IGDB-{width}x{height}.jpg,250627
-68018,Elsword,https://static-cdn.jtvnw.net/ttv-boxart/68018_IGDB-{width}x{height}.jpg,19133
-24203,Halo: Reach,https://static-cdn.jtvnw.net/ttv-boxart/24203_IGDB-{width}x{height}.jpg,990
 6187,Portal,https://static-cdn.jtvnw.net/ttv-boxart/6187_IGDB-{width}x{height}.jpg,71
-987334443,Silent Hill: The Short Message,https://static-cdn.jtvnw.net/ttv-boxart/987334443_IGDB-{width}x{height}.jpg,218744
 1634922922,.hack//G.U. Vol. 2: Reminisce HD,https://static-cdn.jtvnw.net/ttv-boxart/1634922922_IGDB-{width}x{height}.jpg,182462
-502442,Hugs & Cuddles,https://static-cdn.jtvnw.net/ttv-boxart/502442-{width}x{height}.jpg,82206
 23893,Might & Magic: Clash of Heroes,https://static-cdn.jtvnw.net/ttv-boxart/23893_IGDB-{width}x{height}.jpg,1889
 8905,Batman Returns,https://static-cdn.jtvnw.net/ttv-boxart/8905_IGDB-{width}x{height}.jpg,4379
-1095658527,Beast Unleashed,https://static-cdn.jtvnw.net/ttv-boxart/1095658527_IGDB-{width}x{height}.jpg,349460
-506384,Just Cause 4,https://static-cdn.jtvnw.net/ttv-boxart/506384_IGDB-{width}x{height}.jpg,103261
-512983,DEATHLOOP,https://static-cdn.jtvnw.net/ttv-boxart/512983_IGDB-{width}x{height}.jpg,113598
-1464746370,Trash,https://static-cdn.jtvnw.net/ttv-boxart/1464746370_IGDB-{width}x{height}.jpg,156925
-489243,LEGO Ninjago: Shadow of Ronin,https://static-cdn.jtvnw.net/ttv-boxart/489243_IGDB-{width}x{height}.jpg,19006
-1326592751,Atelier Ryza 3: Alchemist of the End & the Secret Key DX,https://static-cdn.jtvnw.net/ttv-boxart/1326592751_IGDB-{width}x{height}.jpg,359427
-511780,Workers & Resources: Soviet Republic,https://static-cdn.jtvnw.net/ttv-boxart/511780_IGDB-{width}x{height}.jpg,103065
-1639504976,Squirrel with a Gun,https://static-cdn.jtvnw.net/ttv-boxart/1639504976_IGDB-{width}x{height}.jpg,213473
-349240454,Games for Stream!,https://static-cdn.jtvnw.net/ttv-boxart/349240454_IGDB-{width}x{height}.jpg,266856
-1192093612,Castle Crashers Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1192093612_IGDB-{width}x{height}.jpg,20880
 460649,Splatoon,https://static-cdn.jtvnw.net/ttv-boxart/460649_IGDB-{width}x{height}.jpg,7335
 694304289,Chuxie,https://static-cdn.jtvnw.net/ttv-boxart/694304289_IGDB-{width}x{height}.jpg,308857
-961856383,Drop Pockets,https://static-cdn.jtvnw.net/ttv-boxart/961856383_IGDB-{width}x{height}.jpg,309147
 1926286425,Dolls Nest,https://static-cdn.jtvnw.net/ttv-boxart/1926286425_IGDB-{width}x{height}.jpg,286376
-12078,Sonic Adventure DX: Director's Cut,https://static-cdn.jtvnw.net/ttv-boxart/12078_IGDB-{width}x{height}.jpg,23695
-1419045868,Portal,https://static-cdn.jtvnw.net/ttv-boxart/1419045868_IGDB-{width}x{height}.jpg,311949
 245885780,Mamon King,https://static-cdn.jtvnw.net/ttv-boxart/245885780_IGDB-{width}x{height}.jpg,375641
-2105826178,Choo-Choo Charles,https://static-cdn.jtvnw.net/ttv-boxart/2105826178_IGDB-{width}x{height}.jpg,173432
-1657670363,Dragon Ball: The Breakers,https://static-cdn.jtvnw.net/ttv-boxart/1657670363_IGDB-{width}x{height}.jpg,182179
 3329,Indiana Jones and the Fate of Atlantis,https://static-cdn.jtvnw.net/ttv-boxart/3329_IGDB-{width}x{height}.jpg,184
-370369,Bravely Default,https://static-cdn.jtvnw.net/ttv-boxart/370369_IGDB-{width}x{height}.jpg,4700
-66402,Battlefield 4,https://static-cdn.jtvnw.net/ttv-boxart/66402_IGDB-{width}x{height}.jpg,1979
 489611,Need for Speed,https://static-cdn.jtvnw.net/ttv-boxart/489611_IGDB-{width}x{height}.jpg,10965
-1548985796,Metroid: Zero Mission,https://static-cdn.jtvnw.net/ttv-boxart/1548985796_IGDB-{width}x{height}.jpg,1107
-518711,EA Sports UFC 4,https://static-cdn.jtvnw.net/ttv-boxart/518711_IGDB-{width}x{height}.jpg,136560
 2787,Phantasy Star Online Episode I & II,https://static-cdn.jtvnw.net/ttv-boxart/2787_IGDB-{width}x{height}.jpg,9890
 15062,Vampire: The Masquerade - Bloodlines,https://static-cdn.jtvnw.net/ttv-boxart/15062_IGDB-{width}x{height}.jpg,11
 486610138,Luto,https://static-cdn.jtvnw.net/ttv-boxart/486610138_IGDB-{width}x{height}.jpg,150241
@@ -2199,7 +2020,6 @@ category_id,category_name,box_art_url,igdb_id
 12189,Unreal Tournament 2004,https://static-cdn.jtvnw.net/ttv-boxart/12189_IGDB-{width}x{height}.jpg,927
 1736914392,FINAL FANTASY VIII Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1736914392_IGDB-{width}x{height}.jpg,119374
 118204,Murdered: Soul Suspect,https://static-cdn.jtvnw.net/ttv-boxart/118204_IGDB-{width}x{height}.jpg,3188
-470560304,The Inn-Sanity,https://static-cdn.jtvnw.net/ttv-boxart/470560304_IGDB-{width}x{height}.jpg,279266
 197722329,BRAVELY DEFAULT FLYING FAIRY HD Remaster,https://static-cdn.jtvnw.net/ttv-boxart/197722329_IGDB-{width}x{height}.jpg,338083
 6959,Eco,https://static-cdn.jtvnw.net/ttv-boxart/6959_IGDB-{width}x{height}.jpg,34939
 459279,Entrepreneur,https://static-cdn.jtvnw.net/ttv-boxart/459279-{width}x{height}.jpg,62296
@@ -2207,17 +2027,13 @@ category_id,category_name,box_art_url,igdb_id
 490130,Minecraft: Story Mode,https://static-cdn.jtvnw.net/ttv-boxart/490130_IGDB-{width}x{height}.jpg,8339
 1585949885,Aliens: Fireteam Elite,https://static-cdn.jtvnw.net/ttv-boxart/1585949885_IGDB-{width}x{height}.jpg,144153
 290075012,Sword of Justice,https://static-cdn.jtvnw.net/ttv-boxart/290075012_IGDB-{width}x{height}.jpg,283391
-511728,Gravity Circuit,https://static-cdn.jtvnw.net/ttv-boxart/511728_IGDB-{width}x{height}.jpg,106534
 512701575,Hard Time III,https://static-cdn.jtvnw.net/ttv-boxart/512701575_IGDB-{width}x{height}.jpg,310923
-517403,The Ascent,https://static-cdn.jtvnw.net/ttv-boxart/517403_IGDB-{width}x{height}.jpg,133307
 1897867524,Car Mechanic Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1897867524_IGDB-{width}x{height}.jpg,115392
 313189,Sven Co-op,https://static-cdn.jtvnw.net/ttv-boxart/313189_IGDB-{width}x{height}.jpg,80332
 518088,In Sound Mind,https://static-cdn.jtvnw.net/ttv-boxart/518088_IGDB-{width}x{height}.jpg,121084
 509677,"Warhammer 40,000: Mechanicus",https://static-cdn.jtvnw.net/ttv-boxart/509677_IGDB-{width}x{height}.jpg,88461
 694090535,Religion Inc.,https://static-cdn.jtvnw.net/ttv-boxart/694090535_IGDB-{width}x{height}.jpg,159425
-65899,Gears of War: Judgment,https://static-cdn.jtvnw.net/ttv-boxart/65899_IGDB-{width}x{height}.jpg,1319
 742908474,Error Loop,https://static-cdn.jtvnw.net/ttv-boxart/742908474_IGDB-{width}x{height}.jpg,329948
-1705,Dark Cloud,https://static-cdn.jtvnw.net/ttv-boxart/1705_IGDB-{width}x{height}.jpg,1214
 488607,Assassin's Creed Syndicate,https://static-cdn.jtvnw.net/ttv-boxart/488607_IGDB-{width}x{height}.jpg,8263
 1849108195,The Devil Within: Satgat,https://static-cdn.jtvnw.net/ttv-boxart/1849108195_IGDB-{width}x{height}.jpg,213423
 1856757409,Super Mario Bros. Dimensions Deluxe,https://static-cdn.jtvnw.net/ttv-boxart/1856757409_IGDB-{width}x{height}.jpg,356137
@@ -2227,30 +2043,22 @@ category_id,category_name,box_art_url,igdb_id
 1919145068,Lunacid,https://static-cdn.jtvnw.net/ttv-boxart/1919145068_IGDB-{width}x{height}.jpg,192291
 15583,Populous: The Beginning,https://static-cdn.jtvnw.net/ttv-boxart/15583_IGDB-{width}x{height}.jpg,5525
 156034788,The WereCleaner,https://static-cdn.jtvnw.net/ttv-boxart/156034788_IGDB-{width}x{height}.jpg,288623
-975815975,Of Ash and Steel,https://static-cdn.jtvnw.net/ttv-boxart/975815975_IGDB-{width}x{height}.jpg,322389
 10895,Professor Layton and the Curious Village,https://static-cdn.jtvnw.net/ttv-boxart/10895_IGDB-{width}x{height}.jpg,1397
-504199,Battlefield V,https://static-cdn.jtvnw.net/ttv-boxart/504199_IGDB-{width}x{height}.jpg,83728
 33692,Amnesia: A Machine for Pigs,https://static-cdn.jtvnw.net/ttv-boxart/33692_IGDB-{width}x{height}.jpg,1882
-1861219798,Twisted Gallery,https://static-cdn.jtvnw.net/ttv-boxart/1861219798_IGDB-{width}x{height}.jpg,357614
-497383,Passpartout: The Starving Artist,https://static-cdn.jtvnw.net/ttv-boxart/497383_IGDB-{width}x{height}.jpg,25214
 2014138189,FINAL FANTASY III,https://static-cdn.jtvnw.net/ttv-boxart/2014138189_IGDB-{width}x{height}.jpg,393
 1665988616,GigaBash,https://static-cdn.jtvnw.net/ttv-boxart/1665988616_IGDB-{width}x{height}.jpg,136977
 896117537,Whisper of the House,https://static-cdn.jtvnw.net/ttv-boxart/896117537_IGDB-{width}x{height}.jpg,312555
 31080,Bingo,https://static-cdn.jtvnw.net/ttv-boxart/31080-{width}x{height}.jpg,86064
 1941987062,Sketchy's Contract,https://static-cdn.jtvnw.net/ttv-boxart/1941987062_IGDB-{width}x{height}.jpg,288082
-496853,Star Wars: Galaxy of Heroes,https://static-cdn.jtvnw.net/ttv-boxart/496853_IGDB-{width}x{height}.jpg,19577
 1421633446,RAIDOU Remastered: The Mystery of the Soulless Army,https://static-cdn.jtvnw.net/ttv-boxart/1421633446_IGDB-{width}x{height}.jpg,337024
-1736914392,FINAL FANTASY VIII Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1736914392_IGDB-{width}x{height}.jpg,119374
 554140890,Hail to the Rainbow,https://static-cdn.jtvnw.net/ttv-boxart/554140890_IGDB-{width}x{height}.jpg,239786
 7830,Age of Empires III,https://static-cdn.jtvnw.net/ttv-boxart/7830-{width}x{height}.jpg,299
 11912,Pokémon XD: Gale of Darkness,https://static-cdn.jtvnw.net/ttv-boxart/11912_IGDB-{width}x{height}.jpg,2724
 1575120516,Horizon Call of the Mountain,https://static-cdn.jtvnw.net/ttv-boxart/1575120516_IGDB-{width}x{height}.jpg,186309
-1903182640,SWORN,https://static-cdn.jtvnw.net/ttv-boxart/1903182640_IGDB-{width}x{height}.jpg,291948
 13959,Ratchet & Clank Future: Tools of Destruction,https://static-cdn.jtvnw.net/ttv-boxart/13959_IGDB-{width}x{height}.jpg,1792
 1129937420,How Many Dudes,https://static-cdn.jtvnw.net/ttv-boxart/1129937420_IGDB-{width}x{height}.jpg,369765
 11705,Super Paper Mario,https://static-cdn.jtvnw.net/ttv-boxart/11705_IGDB-{width}x{height}.jpg,2191
 503986,Heroes of Hammerwatch,https://static-cdn.jtvnw.net/ttv-boxart/503986_IGDB-{width}x{height}.jpg,75100
-496941,News Tycoon,https://static-cdn.jtvnw.net/ttv-boxart/496941_IGDB-{width}x{height}.jpg,29738
 1552599420,Camping Simulator: The Squad,https://static-cdn.jtvnw.net/ttv-boxart/1552599420_IGDB-{width}x{height}.jpg,150072
 1072212406,The Joker's Game,https://static-cdn.jtvnw.net/ttv-boxart/1072212406_IGDB-{width}x{height}.jpg,347809
 1942870634,Goat Simulator 3,https://static-cdn.jtvnw.net/ttv-boxart/1942870634_IGDB-{width}x{height}.jpg,204360
@@ -2258,15 +2066,10 @@ category_id,category_name,box_art_url,igdb_id
 508798,Warhammer,https://static-cdn.jtvnw.net/ttv-boxart/508798-{width}x{height}.jpg,NA
 2209,Pikmin,https://static-cdn.jtvnw.net/ttv-boxart/2209_IGDB-{width}x{height}.jpg,2239
 511020,DEMON'S TILT,https://static-cdn.jtvnw.net/ttv-boxart/511020_IGDB-{width}x{height}.jpg,106363
-1397353533,Great God Grove,https://static-cdn.jtvnw.net/ttv-boxart/1397353533_IGDB-{width}x{height}.jpg,247082
-1119,Baten Kaitos Origins,https://static-cdn.jtvnw.net/ttv-boxart/1119_IGDB-{width}x{height}.jpg,3796
 1830323152,Five Nights at Freddy's: In Real Time,https://static-cdn.jtvnw.net/ttv-boxart/1830323152_IGDB-{width}x{height}.jpg,281777
 489069,We Happy Few,https://static-cdn.jtvnw.net/ttv-boxart/489069_IGDB-{width}x{height}.jpg,9182
-1096718806,Filtration,https://static-cdn.jtvnw.net/ttv-boxart/1096718806-{width}x{height}.jpg,372429
 1654731614,SIDE EFFECTS,https://static-cdn.jtvnw.net/ttv-boxart/1654731614-{width}x{height}.jpg,364621
 510877,UBOAT,https://static-cdn.jtvnw.net/ttv-boxart/510877_IGDB-{width}x{height}.jpg,32283
-2787,Phantasy Star Online Episode I & II,https://static-cdn.jtvnw.net/ttv-boxart/2787_IGDB-{width}x{height}.jpg,9890
-15062,Vampire: The Masquerade - Bloodlines,https://static-cdn.jtvnw.net/ttv-boxart/15062_IGDB-{width}x{height}.jpg,11
 1534003294,Void War,https://static-cdn.jtvnw.net/ttv-boxart/1534003294_IGDB-{width}x{height}.jpg,291212
 238361926,Angeline Era,https://static-cdn.jtvnw.net/ttv-boxart/238361926_IGDB-{width}x{height}.jpg,252768
 490887,Star Wars Battlefront,https://static-cdn.jtvnw.net/ttv-boxart/490887_IGDB-{width}x{height}.jpg,2113
@@ -2276,57 +2079,34 @@ category_id,category_name,box_art_url,igdb_id
 1643,Gex,https://static-cdn.jtvnw.net/ttv-boxart/1643_IGDB-{width}x{height}.jpg,4309
 491032618,Playing Games,https://static-cdn.jtvnw.net/ttv-boxart/491032618-{width}x{height}.jpg,216576
 1635903945,Late Homework,https://static-cdn.jtvnw.net/ttv-boxart/1635903945_IGDB-{width}x{height}.jpg,313188
-2015567149,ConversationalRumblings,https://static-cdn.jtvnw.net/ttv-boxart/2015567149_IGDB-{width}x{height}.jpg,300340
 791896472,Moonstone Island,https://static-cdn.jtvnw.net/ttv-boxart/791896472_IGDB-{width}x{height}.jpg,196769
-22349,Sam & Max: Beyond Time and Space,https://static-cdn.jtvnw.net/ttv-boxart/22349_IGDB-{width}x{height}.jpg,854
 497883,My Time at Portia,https://static-cdn.jtvnw.net/ttv-boxart/497883_IGDB-{width}x{height}.jpg,43165
 10775,S.T.A.L.K.E.R.: Shadow of Chernobyl,https://static-cdn.jtvnw.net/ttv-boxart/10775_IGDB-{width}x{height}.jpg,320
 18070083,Soul Hackers 2,https://static-cdn.jtvnw.net/ttv-boxart/18070083_IGDB-{width}x{height}.jpg,191738
-65802,NBA 2K13,https://static-cdn.jtvnw.net/ttv-boxart/65802_IGDB-{width}x{height}.jpg,5058
 12415,Star Wars: Episode I - Racer,https://static-cdn.jtvnw.net/ttv-boxart/12415_IGDB-{width}x{height}.jpg,154
 65663,Company of Heroes 2,https://static-cdn.jtvnw.net/ttv-boxart/65663_IGDB-{width}x{height}.jpg,1369
-1872074204,FOUNDRY,https://static-cdn.jtvnw.net/ttv-boxart/1872074204_IGDB-{width}x{height}.jpg,139150
 26315408,Rayman Legends,https://static-cdn.jtvnw.net/ttv-boxart/26315408_IGDB-{width}x{height}.jpg,193359
 369345,Lords of the Fallen,https://static-cdn.jtvnw.net/ttv-boxart/369345_IGDB-{width}x{height}.jpg,4847
 10209,LEGO Star Wars: The Complete Saga,https://static-cdn.jtvnw.net/ttv-boxart/10209_IGDB-{width}x{height}.jpg,2682
-242859128,Super Mario RPG,https://static-cdn.jtvnw.net/ttv-boxart/242859128_IGDB-{width}x{height}.jpg,254327
-4230,Ratchet & Clank: Going Commando,https://static-cdn.jtvnw.net/ttv-boxart/4230_IGDB-{width}x{height}.jpg,1770
-7658,Mario Party 8,https://static-cdn.jtvnw.net/ttv-boxart/7658_IGDB-{width}x{height}.jpg,2193
 1142111160,Warcraft II: Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1142111160_IGDB-{width}x{height}.jpg,322109
 1528763908,Pokémon Red Version,https://static-cdn.jtvnw.net/ttv-boxart/1528763908_IGDB-{width}x{height}.jpg,1561
-979918349,Expedition: Into Darkness,https://static-cdn.jtvnw.net/ttv-boxart/979918349_IGDB-{width}x{height}.jpg,324300
 510586,Far Cry New Dawn,https://static-cdn.jtvnw.net/ttv-boxart/510586_IGDB-{width}x{height}.jpg,113111
 1695104761,L.A. Noire,https://static-cdn.jtvnw.net/ttv-boxart/1695104761_IGDB-{width}x{height}.jpg,59849
 496321134,Kirby and the Forgotten Land,https://static-cdn.jtvnw.net/ttv-boxart/496321134_IGDB-{width}x{height}.jpg,172427
 369207202,Pool Blitz,https://static-cdn.jtvnw.net/ttv-boxart/369207202_IGDB-{width}x{height}.jpg,250103
-509677,"Warhammer 40,000: Mechanicus",https://static-cdn.jtvnw.net/ttv-boxart/509677_IGDB-{width}x{height}.jpg,88461
-1830323152,Five Nights at Freddy's: In Real Time,https://static-cdn.jtvnw.net/ttv-boxart/1830323152_IGDB-{width}x{height}.jpg,281777
-18070083,Soul Hackers 2,https://static-cdn.jtvnw.net/ttv-boxart/18070083_IGDB-{width}x{height}.jpg,191738
 500552,Freddy Fazbear's Pizzeria Simulator,https://static-cdn.jtvnw.net/ttv-boxart/500552_IGDB-{width}x{height}.jpg,76725
-510586,Far Cry New Dawn,https://static-cdn.jtvnw.net/ttv-boxart/510586_IGDB-{width}x{height}.jpg,113111
 1568318442,Shogun Showdown,https://static-cdn.jtvnw.net/ttv-boxart/1568318442_IGDB-{width}x{height}.jpg,208533
-694090535,Religion Inc.,https://static-cdn.jtvnw.net/ttv-boxart/694090535_IGDB-{width}x{height}.jpg,159425
-1635903945,Late Homework,https://static-cdn.jtvnw.net/ttv-boxart/1635903945_IGDB-{width}x{height}.jpg,313188
-1116745944,Baldur's Gate II: Enhanced Edition,https://static-cdn.jtvnw.net/ttv-boxart/1116745944_IGDB-{width}x{height}.jpg,5613
 2021334265,Project Motor Racing,https://static-cdn.jtvnw.net/ttv-boxart/2021334265_IGDB-{width}x{height}.jpg,342092
 1729500129,Lunar: Silver Star Story Complete,https://static-cdn.jtvnw.net/ttv-boxart/1729500129_IGDB-{width}x{height}.jpg,328113
-238361926,Angeline Era,https://static-cdn.jtvnw.net/ttv-boxart/238361926_IGDB-{width}x{height}.jpg,252768
-1552599420,Camping Simulator: The Squad,https://static-cdn.jtvnw.net/ttv-boxart/1552599420_IGDB-{width}x{height}.jpg,150072
-369207202,Pool Blitz,https://static-cdn.jtvnw.net/ttv-boxart/369207202_IGDB-{width}x{height}.jpg,250103
 423064480,Fallout Equestria: Remains,https://static-cdn.jtvnw.net/ttv-boxart/423064480_IGDB-{width}x{height}.jpg,177387
-504921,Dragon Ball Legends,https://static-cdn.jtvnw.net/ttv-boxart/504921_IGDB-{width}x{height}.jpg,95014
 1547266159,Ship of Fools,https://static-cdn.jtvnw.net/ttv-boxart/1547266159_IGDB-{width}x{height}.jpg,194741
 695642082,CAPTURED,https://static-cdn.jtvnw.net/ttv-boxart/695642082_IGDB-{width}x{height}.jpg,312193
-10895,Professor Layton and the Curious Village,https://static-cdn.jtvnw.net/ttv-boxart/10895_IGDB-{width}x{height}.jpg,1397
 95222265,Drug Dealer: Schedule I,https://static-cdn.jtvnw.net/ttv-boxart/95222265-{width}x{height}.jpg,370790
-499677,FAITH,https://static-cdn.jtvnw.net/ttv-boxart/499677_IGDB-{width}x{height}.jpg,84197
-496321134,Kirby and the Forgotten Land,https://static-cdn.jtvnw.net/ttv-boxart/496321134_IGDB-{width}x{height}.jpg,172427
 1227893925,BONELAB,https://static-cdn.jtvnw.net/ttv-boxart/1227893925_IGDB-{width}x{height}.jpg,198230
 805842275,Myth of Empires,https://static-cdn.jtvnw.net/ttv-boxart/805842275-{width}x{height}.jpg,143628
 1723109546,The Glitched Attraction,https://static-cdn.jtvnw.net/ttv-boxart/1723109546_IGDB-{width}x{height}.jpg,221852
 6573,Super Bomberman 3,https://static-cdn.jtvnw.net/ttv-boxart/6573_IGDB-{width}x{height}.jpg,18618
 1575341350,Get Rich or Die Gaming,https://static-cdn.jtvnw.net/ttv-boxart/1575341350_IGDB-{width}x{height}.jpg,34627
-2120024362,Uno,https://static-cdn.jtvnw.net/ttv-boxart/2120024362_IGDB-{width}x{height}.jpg,165365
 1478044090,Mega Man,https://static-cdn.jtvnw.net/ttv-boxart/1478044090_IGDB-{width}x{height}.jpg,236703
 143541,Dungeon Defenders II,https://static-cdn.jtvnw.net/ttv-boxart/143541_IGDB-{width}x{height}.jpg,3202
 1055,Fire Emblem: The Sacred Stones,https://static-cdn.jtvnw.net/ttv-boxart/1055_IGDB-{width}x{height}.jpg,1440
@@ -2341,7 +2121,6 @@ category_id,category_name,box_art_url,igdb_id
 880737455,Cabin Crew Life Simulator,https://static-cdn.jtvnw.net/ttv-boxart/880737455_IGDB-{width}x{height}.jpg,302423
 460646,Woolfe: The Red Hood Diaries,https://static-cdn.jtvnw.net/ttv-boxart/460646_IGDB-{width}x{height}.jpg,11647
 870905192,Yakuza 3 Remastered,https://static-cdn.jtvnw.net/ttv-boxart/870905192_IGDB-{width}x{height}.jpg,103015
-156034788,The WereCleaner,https://static-cdn.jtvnw.net/ttv-boxart/156034788_IGDB-{width}x{height}.jpg,288623
 2139792844,Two Worlds II HD,https://static-cdn.jtvnw.net/ttv-boxart/2139792844_IGDB-{width}x{height}.jpg,53865
 69,Crash Bandicoot: The Wrath of Cortex,https://static-cdn.jtvnw.net/ttv-boxart/69_IGDB-{width}x{height}.jpg,1188
 496504,Digimon Story: Cyber Sleuth - Hacker's Memory,https://static-cdn.jtvnw.net/ttv-boxart/496504_IGDB-{width}x{height}.jpg,27920
@@ -2368,7 +2147,6 @@ category_id,category_name,box_art_url,igdb_id
 15442,Shin Megami Tensei: Nocturne,https://static-cdn.jtvnw.net/ttv-boxart/15442_IGDB-{width}x{height}.jpg,9669
 497527,Doki Doki Literature Club!,https://static-cdn.jtvnw.net/ttv-boxart/497527_IGDB-{width}x{height}.jpg,55935
 19973,Peggle,https://static-cdn.jtvnw.net/ttv-boxart/19973_IGDB-{width}x{height}.jpg,3751
-1129937420,How Many Dudes,https://static-cdn.jtvnw.net/ttv-boxart/1129937420_IGDB-{width}x{height}.jpg,369765
 515667,Bunny Park,https://static-cdn.jtvnw.net/ttv-boxart/515667_IGDB-{width}x{height}.jpg,127749
 858457321,Landscapes,https://static-cdn.jtvnw.net/ttv-boxart/858457321_IGDB-{width}x{height}.jpg,90390
 482978077,Advance Wars,https://static-cdn.jtvnw.net/ttv-boxart/482978077_IGDB-{width}x{height}.jpg,236813
@@ -2391,7 +2169,6 @@ category_id,category_name,box_art_url,igdb_id
 3279,Mortal Kombat II,https://static-cdn.jtvnw.net/ttv-boxart/3279_IGDB-{width}x{height}.jpg,1619
 847929177,The Binding of Isaac: Rebirth,https://static-cdn.jtvnw.net/ttv-boxart/847929177_IGDB-{width}x{height}.jpg,7789
 1559845263,Town to City,https://static-cdn.jtvnw.net/ttv-boxart/1559845263_IGDB-{width}x{height}.jpg,329736
-518088,In Sound Mind,https://static-cdn.jtvnw.net/ttv-boxart/518088_IGDB-{width}x{height}.jpg,121084
 496098,Fire Pro Wrestling World,https://static-cdn.jtvnw.net/ttv-boxart/496098_IGDB-{width}x{height}.jpg,27547
 13630,GTR 2: FIA GT Racing Game,https://static-cdn.jtvnw.net/ttv-boxart/13630_IGDB-{width}x{height}.jpg,737
 2108477062,Beyond Citadel,https://static-cdn.jtvnw.net/ttv-boxart/2108477062_IGDB-{width}x{height}.jpg,322842
@@ -2510,7 +2287,6 @@ category_id,category_name,box_art_url,igdb_id
 18833,Super Smash Bros. Brawl,https://static-cdn.jtvnw.net/ttv-boxart/18833_IGDB-{width}x{height}.jpg,1628
 1055340724,Netherworld Covenant,https://static-cdn.jtvnw.net/ttv-boxart/1055340724_IGDB-{width}x{height}.jpg,317973
 458729,UNO & Friends,https://static-cdn.jtvnw.net/ttv-boxart/458729_IGDB-{width}x{height}.jpg,28711
-65663,Company of Heroes 2,https://static-cdn.jtvnw.net/ttv-boxart/65663_IGDB-{width}x{height}.jpg,1369
 369316,NosTale,https://static-cdn.jtvnw.net/ttv-boxart/369316_IGDB-{width}x{height}.jpg,55220
 2084697325,Pneumata,https://static-cdn.jtvnw.net/ttv-boxart/2084697325_IGDB-{width}x{height}.jpg,223183
 112197812,Shipwrecked 64,https://static-cdn.jtvnw.net/ttv-boxart/112197812_IGDB-{width}x{height}.jpg,284041
@@ -2566,7 +2342,6 @@ category_id,category_name,box_art_url,igdb_id
 1722556704,Elevator,https://static-cdn.jtvnw.net/ttv-boxart/1722556704_IGDB-{width}x{height}.jpg,381897
 126243,Valkyria Chronicles 3: Extra Edition,https://static-cdn.jtvnw.net/ttv-boxart/126243_IGDB-{width}x{height}.jpg,38466
 415126,The Dark Mod,https://static-cdn.jtvnw.net/ttv-boxart/415126_IGDB-{width}x{height}.jpg,50344
-7830,Age of Empires III,https://static-cdn.jtvnw.net/ttv-boxart/7830-{width}x{height}.jpg,299
 1582968846,Computer Stocks & Bonds,https://static-cdn.jtvnw.net/ttv-boxart/1582968846_IGDB-{width}x{height}.jpg,21926
 512968,Zombie Army 4: Dead War,https://static-cdn.jtvnw.net/ttv-boxart/512968_IGDB-{width}x{height}.jpg,119234
 228404111,Konaste Gitadora,https://static-cdn.jtvnw.net/ttv-boxart/228404111_IGDB-{width}x{height}.jpg,154842
@@ -2699,53 +2474,15 @@ category_id,category_name,box_art_url,igdb_id
 506104,Madden NFL 19,https://static-cdn.jtvnw.net/ttv-boxart/506104_IGDB-{width}x{height}.jpg,102122
 10373,GAMES Interactive,https://static-cdn.jtvnw.net/ttv-boxart/10373-{width}x{height}.jpg,79678
 967669008,Forex Trading Master: Simulator,https://static-cdn.jtvnw.net/ttv-boxart/967669008-{width}x{height}.jpg,111000
-519545,Hyrule Warriors: Age of Calamity,https://static-cdn.jtvnw.net/ttv-boxart/519545_IGDB-{width}x{height}.jpg,138343
-982171215,Perfect World,https://static-cdn.jtvnw.net/ttv-boxart/982171215_IGDB-{width}x{height}.jpg,302776
 492778073,Call of Duty: Vanguard,https://static-cdn.jtvnw.net/ttv-boxart/492778073-{width}x{height}.jpg,165067
-12870,Mega Man 2,https://static-cdn.jtvnw.net/ttv-boxart/12870_IGDB-{width}x{height}.jpg,1715
-879648744,Wordle,https://static-cdn.jtvnw.net/ttv-boxart/879648744_IGDB-{width}x{height}.jpg,150086
-5406,The Legend of Zelda: Oracle of Seasons,https://static-cdn.jtvnw.net/ttv-boxart/5406_IGDB-{width}x{height}.jpg,1032
-512354,Others,https://static-cdn.jtvnw.net/ttv-boxart/512354-{width}x{height}.jpg,125933
 942536337,Brown Dust II,https://static-cdn.jtvnw.net/ttv-boxart/942536337_IGDB-{width}x{height}.jpg,196549
-102379163,Umineko When They Cry: Question Arcs,https://static-cdn.jtvnw.net/ttv-boxart/102379163_IGDB-{width}x{height}.jpg,124948
-1903254088,Halo 2: Anniversary,https://static-cdn.jtvnw.net/ttv-boxart/1903254088_IGDB-{width}x{height}.jpg,125009
-518022,Astro's Playroom,https://static-cdn.jtvnw.net/ttv-boxart/518022_IGDB-{width}x{height}.jpg,134597
-1924764236,Century: Age of Ashes,https://static-cdn.jtvnw.net/ttv-boxart/1924764236_IGDB-{width}x{height}.jpg,141536
-512345,Persona 5 Strikers,https://static-cdn.jtvnw.net/ttv-boxart/512345_IGDB-{width}x{height}.jpg,117731
 1462834331,Soulmask,https://static-cdn.jtvnw.net/ttv-boxart/1462834331_IGDB-{width}x{height}.jpg,272600
 1290134935,One-Eyed Likho,https://static-cdn.jtvnw.net/ttv-boxart/1290134935_IGDB-{width}x{height}.jpg,250955
 1183847148,Pawafuru Puroyakyu 2024-2025,https://static-cdn.jtvnw.net/ttv-boxart/1183847148_IGDB-{width}x{height}.jpg,287890
-493877,Sonic Mania,https://static-cdn.jtvnw.net/ttv-boxart/493877_IGDB-{width}x{height}.jpg,21062
-570278441,Aliens: Dark Descent,https://static-cdn.jtvnw.net/ttv-boxart/570278441_IGDB-{width}x{height}.jpg,204354
-77837,WGT Golf,https://static-cdn.jtvnw.net/ttv-boxart/77837_IGDB-{width}x{height}.jpg,64369
-126243,Valkyria Chronicles 3: Extra Edition,https://static-cdn.jtvnw.net/ttv-boxart/126243_IGDB-{width}x{height}.jpg,38466
-16229,musika,https://static-cdn.jtvnw.net/ttv-boxart/16229_IGDB-{width}x{height}.jpg,94641
-164328073,Trilogy of the Moon,https://static-cdn.jtvnw.net/ttv-boxart/164328073_IGDB-{width}x{height}.jpg,339795
-228404111,Konaste Gitadora,https://static-cdn.jtvnw.net/ttv-boxart/228404111_IGDB-{width}x{height}.jpg,154842
-28296,Sonic Colors,https://static-cdn.jtvnw.net/ttv-boxart/28296_IGDB-{width}x{height}.jpg,2267
-826169635,Advance Wars by Web,https://static-cdn.jtvnw.net/ttv-boxart/826169635_IGDB-{width}x{height}.jpg,251128
-1521500257,UNDERTALE YELLOW,https://static-cdn.jtvnw.net/ttv-boxart/1521500257_IGDB-{width}x{height}.jpg,136482
-7994,Final Fantasy Tactics Advance,https://static-cdn.jtvnw.net/ttv-boxart/7994_IGDB-{width}x{height}.jpg,414
-94884,Hotline Miami 2: Wrong Number,https://static-cdn.jtvnw.net/ttv-boxart/94884_IGDB-{width}x{height}.jpg,2126
-1839534381,You've Got a Package,https://static-cdn.jtvnw.net/ttv-boxart/1839534381_IGDB-{width}x{height}.jpg,372203
-1722556704,Elevator,https://static-cdn.jtvnw.net/ttv-boxart/1722556704_IGDB-{width}x{height}.jpg,381897
 369261,Need for Speed: Rivals,https://static-cdn.jtvnw.net/ttv-boxart/369261_IGDB-{width}x{height}.jpg,2074
 36289489,The Killing Antidote,https://static-cdn.jtvnw.net/ttv-boxart/36289489_IGDB-{width}x{height}.jpg,287004
-461246,The Walking Dead: A New Frontier,https://static-cdn.jtvnw.net/ttv-boxart/461246_IGDB-{width}x{height}.jpg,19000
 1335182317,My Little Pony,https://static-cdn.jtvnw.net/ttv-boxart/1335182317-{width}x{height}.jpg,206776
-470283302,Ys II Chronicles+,https://static-cdn.jtvnw.net/ttv-boxart/470283302_IGDB-{width}x{height}.jpg,146074
-1666420060,Scars Above,https://static-cdn.jtvnw.net/ttv-boxart/1666420060_IGDB-{width}x{height}.jpg,152074
-550,Tales of Destiny II,https://static-cdn.jtvnw.net/ttv-boxart/550_IGDB-{width}x{height}.jpg,1202
-1017537377,Sker Ritual,https://static-cdn.jtvnw.net/ttv-boxart/1017537377_IGDB-{width}x{height}.jpg,182116
 2715,The Lord of the Rings: The Third Age,https://static-cdn.jtvnw.net/ttv-boxart/2715_IGDB-{width}x{height}.jpg,6500
-490543,Dragon Quest Builders,https://static-cdn.jtvnw.net/ttv-boxart/490543_IGDB-{width}x{height}.jpg,24069
-1204237869,Sleep Stream,https://static-cdn.jtvnw.net/ttv-boxart/1204237869_IGDB-{width}x{height}.jpg,306339
-1579552694,Borderlands: Game of the Year Enhanced,https://static-cdn.jtvnw.net/ttv-boxart/1579552694_IGDB-{width}x{height}.jpg,118993
-370345,SpeedRunners,https://static-cdn.jtvnw.net/ttv-boxart/370345_IGDB-{width}x{height}.jpg,9527
-474808523,Ignited Entry,https://static-cdn.jtvnw.net/ttv-boxart/474808523_IGDB-{width}x{height}.jpg,316514
-511666,F.I.S.T.: Forged In Shadow Torch,https://static-cdn.jtvnw.net/ttv-boxart/511666_IGDB-{width}x{height}.jpg,115851
-2102443800,MANIAC,https://static-cdn.jtvnw.net/ttv-boxart/2102443800_IGDB-{width}x{height}.jpg,226373
-11386,Metal Gear Solid 2: Sons of Liberty,https://static-cdn.jtvnw.net/ttv-boxart/11386_IGDB-{width}x{height}.jpg,376
 1322318463,GODBREAKERS,https://static-cdn.jtvnw.net/ttv-boxart/1322318463_IGDB-{width}x{height}.jpg,358248
 497156,Lottery Simulator,https://static-cdn.jtvnw.net/ttv-boxart/497156-{width}x{height}.jpg,56056
 581950248,SaGa: Scarlet Grace,https://static-cdn.jtvnw.net/ttv-boxart/581950248_IGDB-{width}x{height}.jpg,23981
@@ -2775,7 +2512,6 @@ category_id,category_name,box_art_url,igdb_id
 314949715,SAEKO: Giantess Dating Sim,https://static-cdn.jtvnw.net/ttv-boxart/314949715_IGDB-{width}x{height}.jpg,258823
 1529684516,METAL EDEN,https://static-cdn.jtvnw.net/ttv-boxart/1529684516_IGDB-{width}x{height}.jpg,331214
 1081645532,The Path into the Abyss,https://static-cdn.jtvnw.net/ttv-boxart/1081645532_IGDB-{width}x{height}.jpg,305088
-32939,Rush: A Disney Pixar Adventure,https://static-cdn.jtvnw.net/ttv-boxart/32939_IGDB-{width}x{height}.jpg,55072
 3151,Tournament Poker,https://static-cdn.jtvnw.net/ttv-boxart/3151-{width}x{height}.jpg,85974
 581142585,Schwarzwald,https://static-cdn.jtvnw.net/ttv-boxart/581142585_IGDB-{width}x{height}.jpg,223331
 1623691774,Disappearance: Takeshi. You were right. That Abandoned Village is Too Bad,https://static-cdn.jtvnw.net/ttv-boxart/1623691774_IGDB-{width}x{height}.jpg,283096
@@ -3001,141 +2737,56 @@ category_id,category_name,box_art_url,igdb_id
 120262637,Cafe Owner Simulator,https://static-cdn.jtvnw.net/ttv-boxart/120262637_IGDB-{width}x{height}.jpg,191851
 9747,The King of Fighters '98,https://static-cdn.jtvnw.net/ttv-boxart/9747_IGDB-{width}x{height}.jpg,15429
 31410,Assassin's Creed Revelations,https://static-cdn.jtvnw.net/ttv-boxart/31410_IGDB-{width}x{height}.jpg,537
-1016442748,MLB The Show 23,https://static-cdn.jtvnw.net/ttv-boxart/1016442748_IGDB-{width}x{height}.jpg,230593
-15593,Warzone 2100,https://static-cdn.jtvnw.net/ttv-boxart/15593_IGDB-{width}x{height}.jpg,51297
-488137,Sorcery!,https://static-cdn.jtvnw.net/ttv-boxart/488137_IGDB-{width}x{height}.jpg,88541
-10953,Day Trader,https://static-cdn.jtvnw.net/ttv-boxart/10953_IGDB-{width}x{height}.jpg,70144
-4162,Donkey Kong Country 3: Dixie Kong's Double Trouble!,https://static-cdn.jtvnw.net/ttv-boxart/4162_IGDB-{width}x{height}.jpg,1094
-242996276,Backrooms Society,https://static-cdn.jtvnw.net/ttv-boxart/242996276_IGDB-{width}x{height}.jpg,245870
 506229,CrossFire: Legends,https://static-cdn.jtvnw.net/ttv-boxart/506229_IGDB-{width}x{height}.jpg,102759
 1264165526,Mamon King,https://static-cdn.jtvnw.net/ttv-boxart/1264165526-{width}x{height}.jpg,376237
 1728081276,Ninja Must Die,https://static-cdn.jtvnw.net/ttv-boxart/1728081276_IGDB-{width}x{height}.jpg,143069
-476449,Dead or Alive 5: Last Round,https://static-cdn.jtvnw.net/ttv-boxart/476449_IGDB-{width}x{height}.jpg,8211
-509614,Spellbreak,https://static-cdn.jtvnw.net/ttv-boxart/509614_IGDB-{width}x{height}.jpg,112870
 493813,Dusk,https://static-cdn.jtvnw.net/ttv-boxart/493813_IGDB-{width}x{height}.jpg,25260
-488619199,Retro Arcade Classics,https://static-cdn.jtvnw.net/ttv-boxart/488619199-{width}x{height}.jpg,209194
 500560,Mega Man 11,https://static-cdn.jtvnw.net/ttv-boxart/500560_IGDB-{width}x{height}.jpg,76723
 499871,Players Unknown Battle Grand,https://static-cdn.jtvnw.net/ttv-boxart/499871-{width}x{height}.jpg,77523
-497659,Derail Valley,https://static-cdn.jtvnw.net/ttv-boxart/497659_IGDB-{width}x{height}.jpg,29564
-1273821465,Fish Tank Live,https://static-cdn.jtvnw.net/ttv-boxart/1273821465-{width}x{height}.jpg,230849
-126291,Killzone: Shadow Fall,https://static-cdn.jtvnw.net/ttv-boxart/126291_IGDB-{width}x{height}.jpg,1937
-210,Fire Emblem: Path of Radiance,https://static-cdn.jtvnw.net/ttv-boxart/210_IGDB-{width}x{height}.jpg,1441
-725952850,shapez 2,https://static-cdn.jtvnw.net/ttv-boxart/725952850_IGDB-{width}x{height}.jpg,225512
 1515436595,Shadowrun: Hong Kong - Extended Edition,https://static-cdn.jtvnw.net/ttv-boxart/1515436595_IGDB-{width}x{height}.jpg,35842
-51243450,Battlebots,https://static-cdn.jtvnw.net/ttv-boxart/51243450-{width}x{height}.jpg,198698
 510204,Thief Simulator,https://static-cdn.jtvnw.net/ttv-boxart/510204_IGDB-{width}x{height}.jpg,61616
-519272,The Infected,https://static-cdn.jtvnw.net/ttv-boxart/519272_IGDB-{width}x{height}.jpg,138726
-1997284924,A Quiet Place: The Road Ahead,https://static-cdn.jtvnw.net/ttv-boxart/1997284924_IGDB-{width}x{height}.jpg,294453
 490344,Roulette,https://static-cdn.jtvnw.net/ttv-boxart/490344-{width}x{height}.jpg,11521
-1671910388,Pokengine,https://static-cdn.jtvnw.net/ttv-boxart/1671910388_IGDB-{width}x{height}.jpg,250670
-240958737,Random Thing Game,https://static-cdn.jtvnw.net/ttv-boxart/240958737-{width}x{height}.jpg,236278
 495563,Project CARS 2,https://static-cdn.jtvnw.net/ttv-boxart/495563_IGDB-{width}x{height}.jpg,26709
-994483101,Cramped Room of Death,https://static-cdn.jtvnw.net/ttv-boxart/994483101_IGDB-{width}x{height}.jpg,139616
-505788,Monster Sanctuary,https://static-cdn.jtvnw.net/ttv-boxart/505788_IGDB-{width}x{height}.jpg,89594
 1262582393,Kirby's Return to Dream Land Deluxe,https://static-cdn.jtvnw.net/ttv-boxart/1262582393_IGDB-{width}x{height}.jpg,217565
-725221275,SaGa Frontier Remastered,https://static-cdn.jtvnw.net/ttv-boxart/725221275_IGDB-{width}x{height}.jpg,141281
-1224519187,Legends of Dragaea: Idle Dungeons,https://static-cdn.jtvnw.net/ttv-boxart/1224519187_IGDB-{width}x{height}.jpg,295264
-506434,Sable,https://static-cdn.jtvnw.net/ttv-boxart/506434_IGDB-{width}x{height}.jpg,79995
-1971733739,Phigros,https://static-cdn.jtvnw.net/ttv-boxart/1971733739_IGDB-{width}x{height}.jpg,139534
-515605,BLUE PROTOCOL,https://static-cdn.jtvnw.net/ttv-boxart/515605_IGDB-{width}x{height}.jpg,120206
 490757,BATTLETECH,https://static-cdn.jtvnw.net/ttv-boxart/490757_IGDB-{width}x{height}.jpg,18279
 23880,Hitman: Absolution,https://static-cdn.jtvnw.net/ttv-boxart/23880_IGDB-{width}x{height}.jpg,530
 843932211,Letherfall,https://static-cdn.jtvnw.net/ttv-boxart/843932211_IGDB-{width}x{height}.jpg,373540
-226075320,Oxygen,https://static-cdn.jtvnw.net/ttv-boxart/226075320_IGDB-{width}x{height}.jpg,217442
-506017,Neopets Browser,https://static-cdn.jtvnw.net/ttv-boxart/506017_IGDB-{width}x{height}.jpg,131370
 311442593,PARANORMASIGHT: The Seven Mysteries of Honjo,https://static-cdn.jtvnw.net/ttv-boxart/311442593_IGDB-{width}x{height}.jpg,236694
 28587,Animal Crossing: New Leaf,https://static-cdn.jtvnw.net/ttv-boxart/28587_IGDB-{width}x{height}.jpg,2687
 548794627,Stormgate,https://static-cdn.jtvnw.net/ttv-boxart/548794627_IGDB-{width}x{height}.jpg,204358
-19535,Kingdom Hearts 358/2 Days,https://static-cdn.jtvnw.net/ttv-boxart/19535_IGDB-{width}x{height}.jpg,1223
-1419480843,Gakuen iDOLM@STER,https://static-cdn.jtvnw.net/ttv-boxart/1419480843_IGDB-{width}x{height}.jpg,300789
-370316,Asphalt 8: Airborne,https://static-cdn.jtvnw.net/ttv-boxart/370316_IGDB-{width}x{height}.jpg,23306
-1307789945,Rift Wizard 2,https://static-cdn.jtvnw.net/ttv-boxart/1307789945_IGDB-{width}x{height}.jpg,270936
 489409,Monster Hunter Stories,https://static-cdn.jtvnw.net/ttv-boxart/489409_IGDB-{width}x{height}.jpg,9692
 600660315,MONOPOLY Madness,https://static-cdn.jtvnw.net/ttv-boxart/600660315_IGDB-{width}x{height}.jpg,178279
 11125,Baldur's Gate: Dark Alliance II,https://static-cdn.jtvnw.net/ttv-boxart/11125_IGDB-{width}x{height}.jpg,84
 5416,Futurama,https://static-cdn.jtvnw.net/ttv-boxart/5416_IGDB-{width}x{height}.jpg,5822
 1798919967,Nature,https://static-cdn.jtvnw.net/ttv-boxart/1798919967-{width}x{height}.jpg,227591
-1388256667,PUBG: Black Budget,https://static-cdn.jtvnw.net/ttv-boxart/1388256667_IGDB-{width}x{height}.jpg,370112
 1198379037,Cuisineer,https://static-cdn.jtvnw.net/ttv-boxart/1198379037_IGDB-{width}x{height}.jpg,211330
 174553474,F1 23,https://static-cdn.jtvnw.net/ttv-boxart/174553474_IGDB-{width}x{height}.jpg,240558
 1052116685,Morse Code,https://static-cdn.jtvnw.net/ttv-boxart/1052116685-{width}x{height}.jpg,103677
 65867,Divinity: Original Sin,https://static-cdn.jtvnw.net/ttv-boxart/65867_IGDB-{width}x{height}.jpg,5082
 493926,Final Fantasy XII: The Zodiac Age,https://static-cdn.jtvnw.net/ttv-boxart/493926_IGDB-{width}x{height}.jpg,19455
 924025573,Windblown,https://static-cdn.jtvnw.net/ttv-boxart/924025573_IGDB-{width}x{height}.jpg,279617
-21063,Saw,https://static-cdn.jtvnw.net/ttv-boxart/21063_IGDB-{width}x{height}.jpg,7176
-519300,Lacuna,https://static-cdn.jtvnw.net/ttv-boxart/519300_IGDB-{width}x{height}.jpg,138733
-18756,Fable II,https://static-cdn.jtvnw.net/ttv-boxart/18756_IGDB-{width}x{height}.jpg,522
-33929,Midnight Mysteries 4: Haunted Houdini,https://static-cdn.jtvnw.net/ttv-boxart/33929_IGDB-{width}x{height}.jpg,10548
-17343,Company of Heroes,https://static-cdn.jtvnw.net/ttv-boxart/17343_IGDB-{width}x{height}.jpg,654
 498644,Yoku's Island Express,https://static-cdn.jtvnw.net/ttv-boxart/498644_IGDB-{width}x{height}.jpg,27367
 26552,Spec Ops: The Line,https://static-cdn.jtvnw.net/ttv-boxart/26552_IGDB-{width}x{height}.jpg,1377
-1016595934,Dread Flats,https://static-cdn.jtvnw.net/ttv-boxart/1016595934_IGDB-{width}x{height}.jpg,351690
 28490,Driver: San Francisco,https://static-cdn.jtvnw.net/ttv-boxart/28490_IGDB-{width}x{height}.jpg,554
-1137871106,Capcom Fighting Collection,https://static-cdn.jtvnw.net/ttv-boxart/1137871106_IGDB-{width}x{height}.jpg,191745
 1713352997,Staffer Case,https://static-cdn.jtvnw.net/ttv-boxart/1713352997_IGDB-{width}x{height}.jpg,215713
-772421245,NBA 2K23,https://static-cdn.jtvnw.net/ttv-boxart/772421245_IGDB-{width}x{height}.jpg,207393
 503932,Last Epoch,https://static-cdn.jtvnw.net/ttv-boxart/503932_IGDB-{width}x{height}.jpg,95118
 769325385,Sonic,https://static-cdn.jtvnw.net/ttv-boxart/769325385-{width}x{height}.jpg,198585
-306488725,Wallace and Gromit in Project Zoo,https://static-cdn.jtvnw.net/ttv-boxart/306488725_IGDB-{width}x{height}.jpg,2728
-18772,LEGO Indiana Jones: The Original Adventures,https://static-cdn.jtvnw.net/ttv-boxart/18772_IGDB-{width}x{height}.jpg,189
-1674138128,Goofy Gorillas,https://static-cdn.jtvnw.net/ttv-boxart/1674138128_IGDB-{width}x{height}.jpg,276667
-1960933622,Creepy Shift: House For Sale,https://static-cdn.jtvnw.net/ttv-boxart/1960933622_IGDB-{width}x{height}.jpg,334639
-914160858,Money Simulator: Brokeville,https://static-cdn.jtvnw.net/ttv-boxart/914160858-{width}x{height}.jpg,379601
 388385521,Dragon Quest III: Soshite Densetsu he...,https://static-cdn.jtvnw.net/ttv-boxart/388385521_IGDB-{width}x{height}.jpg,144651
 29719,Un Juego de Huevos,https://static-cdn.jtvnw.net/ttv-boxart/29719_IGDB-{width}x{height}.jpg,81390
-751507360,Politics and War,https://static-cdn.jtvnw.net/ttv-boxart/751507360-{width}x{height}.jpg,74269
-4597,ADVENTURES OF LOLO,https://static-cdn.jtvnw.net/ttv-boxart/4597_IGDB-{width}x{height}.jpg,3662
 1064909817,SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated,https://static-cdn.jtvnw.net/ttv-boxart/1064909817_IGDB-{width}x{height}.jpg,119239
-14439,Mortal Kombat,https://static-cdn.jtvnw.net/ttv-boxart/14439_IGDB-{width}x{height}.jpg,1618
-23961,The Last Guardian,https://static-cdn.jtvnw.net/ttv-boxart/23961_IGDB-{width}x{height}.jpg,117
 3412,Grand Theft Auto III,https://static-cdn.jtvnw.net/ttv-boxart/3412_IGDB-{width}x{height}.jpg,730
 2129609820,Galaxy Burger,https://static-cdn.jtvnw.net/ttv-boxart/2129609820_IGDB-{width}x{height}.jpg,295134
-501574,Another Eden,https://static-cdn.jtvnw.net/ttv-boxart/501574_IGDB-{width}x{height}.jpg,27055
-510577,Skater XL,https://static-cdn.jtvnw.net/ttv-boxart/510577_IGDB-{width}x{height}.jpg,113175
-12065,Yakuza 2,https://static-cdn.jtvnw.net/ttv-boxart/12065_IGDB-{width}x{height}.jpg,2060
-215269611,Chef RPG,https://static-cdn.jtvnw.net/ttv-boxart/215269611_IGDB-{width}x{height}.jpg,191154
 14371,Overlord,https://static-cdn.jtvnw.net/ttv-boxart/14371_IGDB-{width}x{height}.jpg,44
-503456,Aimlabs,https://static-cdn.jtvnw.net/ttv-boxart/503456_IGDB-{width}x{height}.jpg,67902
 145787409,UNDECEMBER,https://static-cdn.jtvnw.net/ttv-boxart/145787409_IGDB-{width}x{height}.jpg,175015
 1805135588,Pokémon Mystery Dungeon: Rescue Team DX,https://static-cdn.jtvnw.net/ttv-boxart/1805135588_IGDB-{width}x{height}.jpg,128069
-718432095,UG,https://static-cdn.jtvnw.net/ttv-boxart/718432095_IGDB-{width}x{height}.jpg,370848
-12065,Yakuza 2,https://static-cdn.jtvnw.net/ttv-boxart/12065_IGDB-{width}x{height}.jpg,2060
 349626339,Terra Invicta,https://static-cdn.jtvnw.net/ttv-boxart/349626339_IGDB-{width}x{height}.jpg,124042
 876847164,MARIKINonline4,https://static-cdn.jtvnw.net/ttv-boxart/876847164_IGDB-{width}x{height}.jpg,288351
-14371,Overlord,https://static-cdn.jtvnw.net/ttv-boxart/14371_IGDB-{width}x{height}.jpg,44
-488619199,Retro Arcade Classics,https://static-cdn.jtvnw.net/ttv-boxart/488619199-{width}x{height}.jpg,209194
-509506,Shell Shockers,https://static-cdn.jtvnw.net/ttv-boxart/509506_IGDB-{width}x{height}.jpg,111890
-506229,CrossFire: Legends,https://static-cdn.jtvnw.net/ttv-boxart/506229_IGDB-{width}x{height}.jpg,102759
-874527712,The Sinking City Remastered,https://static-cdn.jtvnw.net/ttv-boxart/874527712_IGDB-{width}x{height}.jpg,343363
-290357958,Crash Bandicoot: Warped,https://static-cdn.jtvnw.net/ttv-boxart/290357958_IGDB-{width}x{height}.jpg,135451
 922613020,Tactical Assault VR,https://static-cdn.jtvnw.net/ttv-boxart/922613020_IGDB-{width}x{height}.jpg,242021
-231347984,Date Tseries,https://static-cdn.jtvnw.net/ttv-boxart/231347984-{width}x{height}.jpg,326521
-22594,Disgaea 2: Dark Hero Days,https://static-cdn.jtvnw.net/ttv-boxart/22594_IGDB-{width}x{height}.jpg,21851
 498160,The Joy of Creation,https://static-cdn.jtvnw.net/ttv-boxart/498160-{width}x{height}.jpg,NA
 509065,Secret Neighbor,https://static-cdn.jtvnw.net/ttv-boxart/509065_IGDB-{width}x{height}.jpg,103295
-5951,Super Monkey Ball Deluxe,https://static-cdn.jtvnw.net/ttv-boxart/5951_IGDB-{width}x{height}.jpg,2929
-33830,Total War: Shogun 2 - Fall of the Samurai,https://static-cdn.jtvnw.net/ttv-boxart/33830_IGDB-{width}x{height}.jpg,15155
-1636551023,Yeeps 2.0,https://static-cdn.jtvnw.net/ttv-boxart/1636551023_IGDB-{width}x{height}.jpg,304187
-509705,Today is my Birthday,https://static-cdn.jtvnw.net/ttv-boxart/509705_IGDB-{width}x{height}.jpg,112266
 987277565,Stronghold: Crusader - Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/987277565_IGDB-{width}x{height}.jpg,328611
-500621,Bayonetta 3,https://static-cdn.jtvnw.net/ttv-boxart/500621_IGDB-{width}x{height}.jpg,76888
-507007,MX Simulator,https://static-cdn.jtvnw.net/ttv-boxart/507007_IGDB-{width}x{height}.jpg,21182
-1960933622,Creepy Shift: House For Sale,https://static-cdn.jtvnw.net/ttv-boxart/1960933622_IGDB-{width}x{height}.jpg,334639
 514620,My Hero One's Justice 2,https://static-cdn.jtvnw.net/ttv-boxart/514620_IGDB-{width}x{height}.jpg,122599
-1208208142,Puck,https://static-cdn.jtvnw.net/ttv-boxart/1208208142_IGDB-{width}x{height}.jpg,327768
-1264165526,Mamon King,https://static-cdn.jtvnw.net/ttv-boxart/1264165526-{width}x{height}.jpg,376237
 759925620,Heart of the Machine,https://static-cdn.jtvnw.net/ttv-boxart/759925620_IGDB-{width}x{height}.jpg,217017
-581142585,Schwarzwald,https://static-cdn.jtvnw.net/ttv-boxart/581142585_IGDB-{width}x{height}.jpg,223331
-2026542716,Kemono Teatime,https://static-cdn.jtvnw.net/ttv-boxart/2026542716_IGDB-{width}x{height}.jpg,284066
-86186541,Cooking,https://static-cdn.jtvnw.net/ttv-boxart/86186541-{width}x{height}.jpg,314874
-18772,LEGO Indiana Jones: The Original Adventures,https://static-cdn.jtvnw.net/ttv-boxart/18772_IGDB-{width}x{height}.jpg,189
-842995836,Diamond Painting,https://static-cdn.jtvnw.net/ttv-boxart/842995836_IGDB-{width}x{height}.jpg,365872
-1322318463,GODBREAKERS,https://static-cdn.jtvnw.net/ttv-boxart/1322318463_IGDB-{width}x{height}.jpg,358248
-1515436595,Shadowrun: Hong Kong - Extended Edition,https://static-cdn.jtvnw.net/ttv-boxart/1515436595_IGDB-{width}x{height}.jpg,35842
-5416,Futurama,https://static-cdn.jtvnw.net/ttv-boxart/5416_IGDB-{width}x{height}.jpg,5822
-120262637,Cafe Owner Simulator,https://static-cdn.jtvnw.net/ttv-boxart/120262637_IGDB-{width}x{height}.jpg,191851
-490344,Roulette,https://static-cdn.jtvnw.net/ttv-boxart/490344-{width}x{height}.jpg,11521
-946942782,iBLiS,https://static-cdn.jtvnw.net/ttv-boxart/946942782_IGDB-{width}x{height}.jpg,145861
 739179365,The Invincible,https://static-cdn.jtvnw.net/ttv-boxart/739179365_IGDB-{width}x{height}.jpg,138906
 928209989,The Bus,https://static-cdn.jtvnw.net/ttv-boxart/928209989_IGDB-{width}x{height}.jpg,143887
 220177395,Echo VR,https://static-cdn.jtvnw.net/ttv-boxart/220177395_IGDB-{width}x{height}.jpg,141378
@@ -3199,7 +2850,6 @@ category_id,category_name,box_art_url,igdb_id
 459138204,Lost Eidolons,https://static-cdn.jtvnw.net/ttv-boxart/459138204_IGDB-{width}x{height}.jpg,145148
 2125330172,VALORANT Mobile,https://static-cdn.jtvnw.net/ttv-boxart/2125330172_IGDB-{width}x{height}.jpg,174596
 369554,2K Drive,https://static-cdn.jtvnw.net/ttv-boxart/369554-{width}x{height}.jpg,22192
-1244,The Beast Within: A Gabriel Knight Mystery,https://static-cdn.jtvnw.net/ttv-boxart/1244_IGDB-{width}x{height}.jpg,1251
 1924027539,Dragon Quest VI: Maboroshi no Daichi,https://static-cdn.jtvnw.net/ttv-boxart/1924027539_IGDB-{width}x{height}.jpg,145497
 1770646834,Moonlight Sculptor: Darkgamer,https://static-cdn.jtvnw.net/ttv-boxart/1770646834_IGDB-{width}x{height}.jpg,262581
 211951555,fd6827d2-6771-11ed-9022-0242ac120002,https://static-cdn.jtvnw.net/ttv-boxart/211951555-{width}x{height}.jpg,NA
@@ -3214,13 +2864,11 @@ category_id,category_name,box_art_url,igdb_id
 459458,Sonic Boom: Rise of Lyric,https://static-cdn.jtvnw.net/ttv-boxart/459458_IGDB-{width}x{height}.jpg,5322
 882115055,Room 42,https://static-cdn.jtvnw.net/ttv-boxart/882115055-{width}x{height}.jpg,68493
 994999662,Snow Plow Truck,https://static-cdn.jtvnw.net/ttv-boxart/994999662-{width}x{height}.jpg,101488
-5892,Portugal 1111,https://static-cdn.jtvnw.net/ttv-boxart/5892_IGDB-{width}x{height}.jpg,94365
 6438,Midnight Club 3: DUB Edition Remix,https://static-cdn.jtvnw.net/ttv-boxart/6438_IGDB-{width}x{height}.jpg,22583
 1978068952,Chorus of Carcosa,https://static-cdn.jtvnw.net/ttv-boxart/1978068952_IGDB-{width}x{height}.jpg,315958
 2132194487,Squaredle,https://static-cdn.jtvnw.net/ttv-boxart/2132194487_IGDB-{width}x{height}.jpg,213881
 179074551,Shin Megami Tensei III: Nocturne - HD Remaster,https://static-cdn.jtvnw.net/ttv-boxart/179074551_IGDB-{width}x{height}.jpg,337718
 832958780,BAR,https://static-cdn.jtvnw.net/ttv-boxart/832958780-{width}x{height}.jpg,295367
-545789340,Cup Heroes,https://static-cdn.jtvnw.net/ttv-boxart/545789340_IGDB-{width}x{height}.jpg,330120
 458132,ChatChat,https://static-cdn.jtvnw.net/ttv-boxart/458132_IGDB-{width}x{height}.jpg,80226
 867264357,ANTHEM#9,https://static-cdn.jtvnw.net/ttv-boxart/867264357_IGDB-{width}x{height}.jpg,276853
 1026790489,Toad's Typical Day,https://static-cdn.jtvnw.net/ttv-boxart/1026790489-{width}x{height}.jpg,322107
@@ -3245,12 +2893,10 @@ category_id,category_name,box_art_url,igdb_id
 370379,Chroma Squad,https://static-cdn.jtvnw.net/ttv-boxart/370379_IGDB-{width}x{height}.jpg,9046
 488942,Trivial Pursuit Live!,https://static-cdn.jtvnw.net/ttv-boxart/488942_IGDB-{width}x{height}.jpg,11290
 19020,LEGO Batman: The Videogame,https://static-cdn.jtvnw.net/ttv-boxart/19020_IGDB-{width}x{height}.jpg,2738
-15866,BioShock,https://static-cdn.jtvnw.net/ttv-boxart/15866_IGDB-{width}x{height}.jpg,20
 28081,God of War: Ghost of Sparta,https://static-cdn.jtvnw.net/ttv-boxart/28081_IGDB-{width}x{height}.jpg,550
 1544517229,Super Mario Bros. 2,https://static-cdn.jtvnw.net/ttv-boxart/1544517229_IGDB-{width}x{height}.jpg,222098
 1023950301,HumanitZ,https://static-cdn.jtvnw.net/ttv-boxart/1023950301_IGDB-{width}x{height}.jpg,172722
 2047299620,Sanity Loops,https://static-cdn.jtvnw.net/ttv-boxart/2047299620_IGDB-{width}x{height}.jpg,347960
-1420882308,Liminal City,https://static-cdn.jtvnw.net/ttv-boxart/1420882308_IGDB-{width}x{height}.jpg,346366
 502961,JAILBREAK,https://static-cdn.jtvnw.net/ttv-boxart/502961-{width}x{height}.jpg,81986
 9287,Pokémon Ruby/Sapphire,https://static-cdn.jtvnw.net/ttv-boxart/9287-{width}x{height}.jpg,NA
 18674,Midnight Club II,https://static-cdn.jtvnw.net/ttv-boxart/18674_IGDB-{width}x{height}.jpg,4631
@@ -3281,7 +2927,6 @@ category_id,category_name,box_art_url,igdb_id
 417984,Mountain,https://static-cdn.jtvnw.net/ttv-boxart/417984_IGDB-{width}x{height}.jpg,11736
 18955,Need for Speed: Undercover,https://static-cdn.jtvnw.net/ttv-boxart/18955_IGDB-{width}x{height}.jpg,101
 328956119,Truck & Logistics Simulator,https://static-cdn.jtvnw.net/ttv-boxart/328956119_IGDB-{width}x{height}.jpg,129757
-1154929982,Bots Are Stupid,https://static-cdn.jtvnw.net/ttv-boxart/1154929982_IGDB-{width}x{height}.jpg,151103
 460308244,Lotsa Slots,https://static-cdn.jtvnw.net/ttv-boxart/460308244_IGDB-{width}x{height}.jpg,336443
 10502,Dr. Robotnik's Mean Bean Machine,https://static-cdn.jtvnw.net/ttv-boxart/10502-{width}x{height}.jpg,NA
 517868,Freshly Frosted,https://static-cdn.jtvnw.net/ttv-boxart/517868_IGDB-{width}x{height}.jpg,117697
@@ -3308,7 +2953,6 @@ category_id,category_name,box_art_url,igdb_id
 1838595458,Prince of Persia HD,https://static-cdn.jtvnw.net/ttv-boxart/1838595458_IGDB-{width}x{height}.jpg,327769
 1075742836,Informaticus,https://static-cdn.jtvnw.net/ttv-boxart/1075742836_IGDB-{width}x{height}.jpg,343876
 491392,Startup Company,https://static-cdn.jtvnw.net/ttv-boxart/491392_IGDB-{width}x{height}.jpg,29173
-255874048,Railway Empire 2,https://static-cdn.jtvnw.net/ttv-boxart/255874048_IGDB-{width}x{height}.jpg,215138
 1264082964,Flyff Universe,https://static-cdn.jtvnw.net/ttv-boxart/1264082964_IGDB-{width}x{height}.jpg,210014
 185837347,Pokémon Silver Version,https://static-cdn.jtvnw.net/ttv-boxart/185837347_IGDB-{width}x{height}.jpg,1513
 498483,BIOMUTANT,https://static-cdn.jtvnw.net/ttv-boxart/498483_IGDB-{width}x{height}.jpg,54842
@@ -3343,15 +2987,12 @@ category_id,category_name,box_art_url,igdb_id
 233340434,Nature Escapes 2,https://static-cdn.jtvnw.net/ttv-boxart/233340434_IGDB-{width}x{height}.jpg,235182
 60757934,Yuppie Psycho: Executive Edition,https://static-cdn.jtvnw.net/ttv-boxart/60757934_IGDB-{width}x{height}.jpg,147268
 1930997879,Driving in Traffic,https://static-cdn.jtvnw.net/ttv-boxart/1930997879-{width}x{height}.jpg,107061
-512527,Idle Miner Tycoon,https://static-cdn.jtvnw.net/ttv-boxart/512527_IGDB-{width}x{height}.jpg,87052
 417866,Project Ion,https://static-cdn.jtvnw.net/ttv-boxart/417866_IGDB-{width}x{height}.jpg,62550
-500941,Abandon Ship,https://static-cdn.jtvnw.net/ttv-boxart/500941_IGDB-{width}x{height}.jpg,30647
 4901,Dragon Ball Z: Buu's Fury,https://static-cdn.jtvnw.net/ttv-boxart/4901_IGDB-{width}x{height}.jpg,19835
 216020981,Stranger of Paradise: Final Fantasy Origin,https://static-cdn.jtvnw.net/ttv-boxart/216020981_IGDB-{width}x{height}.jpg,152250
 370350,People Weekly: 20 Amazing Years of Pop Culture,https://static-cdn.jtvnw.net/ttv-boxart/370350-{width}x{height}.jpg,81613
 509208,Touhou Luna Nights,https://static-cdn.jtvnw.net/ttv-boxart/509208_IGDB-{width}x{height}.jpg,105447
 1483794920,Dune: Imperium,https://static-cdn.jtvnw.net/ttv-boxart/1483794920_IGDB-{width}x{height}.jpg,263201
-26966,Soul,https://static-cdn.jtvnw.net/ttv-boxart/26966_IGDB-{width}x{height}.jpg,76174
 890777775,Wasteland 2: Director's Cut,https://static-cdn.jtvnw.net/ttv-boxart/890777775_IGDB-{width}x{height}.jpg,20046
 509230,Young Souls,https://static-cdn.jtvnw.net/ttv-boxart/509230_IGDB-{width}x{height}.jpg,106857
 2,Hyperballoid Deluxe: Survival Pack,https://static-cdn.jtvnw.net/ttv-boxart/2_IGDB-{width}x{height}.jpg,130846
@@ -3363,7 +3004,6 @@ category_id,category_name,box_art_url,igdb_id
 664363218,Combat Mission: Barbarossa to Berlin,https://static-cdn.jtvnw.net/ttv-boxart/664363218_IGDB-{width}x{height}.jpg,52516
 1850902624,Arc,https://static-cdn.jtvnw.net/ttv-boxart/1850902624-{width}x{height}.jpg,182772
 1389092631,Better Mart Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1389092631_IGDB-{width}x{height}.jpg,332148
-9287,Pokémon Ruby/Sapphire,https://static-cdn.jtvnw.net/ttv-boxart/9287-{width}x{height}.jpg,NA
 1808969818,Warsaken,https://static-cdn.jtvnw.net/ttv-boxart/1808969818_IGDB-{width}x{height}.jpg,218843
 506337,LevelHead,https://static-cdn.jtvnw.net/ttv-boxart/506337_IGDB-{width}x{height}.jpg,101245
 492828,Dragon Quest Monsters: Joker 3,https://static-cdn.jtvnw.net/ttv-boxart/492828_IGDB-{width}x{height}.jpg,24057
@@ -3380,7 +3020,6 @@ category_id,category_name,box_art_url,igdb_id
 34100,Chivalry: Medieval Warfare,https://static-cdn.jtvnw.net/ttv-boxart/34100_IGDB-{width}x{height}.jpg,2358
 21630,Fullmetal Alchemist and the Broken Angel,https://static-cdn.jtvnw.net/ttv-boxart/21630_IGDB-{width}x{height}.jpg,19071
 1259308450,Resident Evil: Revelations,https://static-cdn.jtvnw.net/ttv-boxart/1259308450_IGDB-{width}x{height}.jpg,150045
-1763797224,RoboQuest,https://static-cdn.jtvnw.net/ttv-boxart/1763797224_IGDB-{width}x{height}.jpg,199912
 23307,Resonance of Fate,https://static-cdn.jtvnw.net/ttv-boxart/23307_IGDB-{width}x{height}.jpg,7159
 1828814242,Super Monkey Ball: Banana Mania,https://static-cdn.jtvnw.net/ttv-boxart/1828814242_IGDB-{width}x{height}.jpg,152355
 559403262,Roguebook,https://static-cdn.jtvnw.net/ttv-boxart/559403262_IGDB-{width}x{height}.jpg,119249
@@ -3397,37 +3036,26 @@ category_id,category_name,box_art_url,igdb_id
 231206857,Forsaken Frontiers,https://static-cdn.jtvnw.net/ttv-boxart/231206857_IGDB-{width}x{height}.jpg,288820
 1883279835,Oppidum,https://static-cdn.jtvnw.net/ttv-boxart/1883279835_IGDB-{width}x{height}.jpg,256927
 8050,GAMES Interactive 2,https://static-cdn.jtvnw.net/ttv-boxart/8050_IGDB-{width}x{height}.jpg,96506
-33734,Pokémon Black/White Version 2,https://static-cdn.jtvnw.net/ttv-boxart/33734-{width}x{height}.jpg,NA
-18955,Need for Speed: Undercover,https://static-cdn.jtvnw.net/ttv-boxart/18955_IGDB-{width}x{height}.jpg,101
 66273,Akazukin Cha-cha,https://static-cdn.jtvnw.net/ttv-boxart/66273_IGDB-{width}x{height}.jpg,15887
 257440126,Draw,https://static-cdn.jtvnw.net/ttv-boxart/257440126_IGDB-{width}x{height}.jpg,258014
 517959,Anthology of Fear,https://static-cdn.jtvnw.net/ttv-boxart/517959_IGDB-{width}x{height}.jpg,120686
 490005,Camera Obscura,https://static-cdn.jtvnw.net/ttv-boxart/490005_IGDB-{width}x{height}.jpg,26662
 921590112,Fushigi no Dungeon: Fuurai no Shiren 2 - Oni Shuurai! Shiren-jou!,https://static-cdn.jtvnw.net/ttv-boxart/921590112_IGDB-{width}x{height}.jpg,67376
 17661,Oddworld: Abe's Exoddus,https://static-cdn.jtvnw.net/ttv-boxart/17661_IGDB-{width}x{height}.jpg,1000
-96316807,Geopolitics,https://static-cdn.jtvnw.net/ttv-boxart/96316807-{width}x{height}.jpg,181229
 514071,HUMANKIND,https://static-cdn.jtvnw.net/ttv-boxart/514071_IGDB-{width}x{height}.jpg,121731
 2136274773,Painting Workshop,https://static-cdn.jtvnw.net/ttv-boxart/2136274773-{width}x{height}.jpg,85327
 529477659,ff,https://static-cdn.jtvnw.net/ttv-boxart/529477659-{width}x{height}.jpg,122660
-147933132,Harry Potter: Quidditch Champions,https://static-cdn.jtvnw.net/ttv-boxart/147933132_IGDB-{width}x{height}.jpg,246166
-1595471721,CS2D,https://static-cdn.jtvnw.net/ttv-boxart/1595471721-{width}x{height}.jpg,180339
-12446,Mega Man X: Command Mission,https://static-cdn.jtvnw.net/ttv-boxart/12446_IGDB-{width}x{height}.jpg,1751
 1243708703,The Thrill of the Fight 2,https://static-cdn.jtvnw.net/ttv-boxart/1243708703_IGDB-{width}x{height}.jpg,329856
-782322359,Forza Motorsport,https://static-cdn.jtvnw.net/ttv-boxart/782322359_IGDB-{width}x{height}.jpg,78511
 1197133103,Syberia: Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1197133103_IGDB-{width}x{height}.jpg,344050
 1357034851,Sniper Killer,https://static-cdn.jtvnw.net/ttv-boxart/1357034851_IGDB-{width}x{height}.jpg,249933
-1741699785,MotoGP 24,https://static-cdn.jtvnw.net/ttv-boxart/1741699785_IGDB-{width}x{height}.jpg,291932
 1529560085,So to Speak,https://static-cdn.jtvnw.net/ttv-boxart/1529560085_IGDB-{width}x{height}.jpg,199463
 405215881,eBaseball Pawafuru Puroyakyu 2022,https://static-cdn.jtvnw.net/ttv-boxart/405215881_IGDB-{width}x{height}.jpg,187105
 1915,Fable: The Lost Chapters,https://static-cdn.jtvnw.net/ttv-boxart/1915_IGDB-{width}x{height}.jpg,694
-1752187038,Mech Arena,https://static-cdn.jtvnw.net/ttv-boxart/1752187038_IGDB-{width}x{height}.jpg,254093
-369306,NBA 2K14,https://static-cdn.jtvnw.net/ttv-boxart/369306_IGDB-{width}x{height}.jpg,5329
 1602252593,Truck Simulator 25: American Driver,https://static-cdn.jtvnw.net/ttv-boxart/1602252593_IGDB-{width}x{height}.jpg,325790
 502377,Total War: Three Kingdoms,https://static-cdn.jtvnw.net/ttv-boxart/502377_IGDB-{width}x{height}.jpg,80961
 1956,Bridge,https://static-cdn.jtvnw.net/ttv-boxart/1956_IGDB-{width}x{height}.jpg,131267
 872847859,Meow,https://static-cdn.jtvnw.net/ttv-boxart/872847859_IGDB-{width}x{height}.jpg,334677
 476002612,PS5 Simulator,https://static-cdn.jtvnw.net/ttv-boxart/476002612_IGDB-{width}x{height}.jpg,177149
-23734,Ocean Scenes,https://static-cdn.jtvnw.net/ttv-boxart/23734_IGDB-{width}x{height}.jpg,68538
 19507,Metal Gear Online,https://static-cdn.jtvnw.net/ttv-boxart/19507_IGDB-{width}x{height}.jpg,7367
 1741692078,Disney Illusion Island,https://static-cdn.jtvnw.net/ttv-boxart/1741692078_IGDB-{width}x{height}.jpg,216278
 1372637785,Left for Dead,https://static-cdn.jtvnw.net/ttv-boxart/1372637785-{width}x{height}.jpg,233399
@@ -3441,7 +3069,6 @@ category_id,category_name,box_art_url,igdb_id
 105451,Game Dev Tycoon,https://static-cdn.jtvnw.net/ttv-boxart/105451_IGDB-{width}x{height}.jpg,2599
 5123,No More Heroes,https://static-cdn.jtvnw.net/ttv-boxart/5123_IGDB-{width}x{height}.jpg,2272
 499420,Earth Defense Force: Iron Rain,https://static-cdn.jtvnw.net/ttv-boxart/499420_IGDB-{width}x{height}.jpg,68286
-10470,Electronica,https://static-cdn.jtvnw.net/ttv-boxart/10470-{width}x{height}.jpg,94497
 1545335010,Marvel Puzzle Quest,https://static-cdn.jtvnw.net/ttv-boxart/1545335010_IGDB-{width}x{height}.jpg,7084
 4469,Looney Tunes,https://static-cdn.jtvnw.net/ttv-boxart/4469_IGDB-{width}x{height}.jpg,8133
 511627,I hate this game,https://static-cdn.jtvnw.net/ttv-boxart/511627_IGDB-{width}x{height}.jpg,114278
@@ -3451,7 +3078,6 @@ category_id,category_name,box_art_url,igdb_id
 50,Nederland,https://static-cdn.jtvnw.net/ttv-boxart/50-{width}x{height}.jpg,57013
 497798,GraalOnline Era,https://static-cdn.jtvnw.net/ttv-boxart/497798_IGDB-{width}x{height}.jpg,55842
 476442,Dragon Quest Heroes: The World Tree's Woe and the Blight Below,https://static-cdn.jtvnw.net/ttv-boxart/476442_IGDB-{width}x{height}.jpg,9214
-460070,Mimesis Online,https://static-cdn.jtvnw.net/ttv-boxart/460070-{width}x{height}.jpg,23453
 123196015,SkyTime,https://static-cdn.jtvnw.net/ttv-boxart/123196015_IGDB-{width}x{height}.jpg,31794
 370378,City Car Driving,https://static-cdn.jtvnw.net/ttv-boxart/370378_IGDB-{width}x{height}.jpg,25714
 1122801725,The Escape: Together,https://static-cdn.jtvnw.net/ttv-boxart/1122801725_IGDB-{width}x{height}.jpg,230906
@@ -3459,11 +3085,8 @@ category_id,category_name,box_art_url,igdb_id
 518204,FIFA 21,https://static-cdn.jtvnw.net/ttv-boxart/518204_IGDB-{width}x{height}.jpg,134101
 24399,Mirror's Edge Catalyst,https://static-cdn.jtvnw.net/ttv-boxart/24399_IGDB-{width}x{height}.jpg,2112
 4157,Medal of Honor: Allied Assault,https://static-cdn.jtvnw.net/ttv-boxart/4157_IGDB-{width}x{height}.jpg,326
-976530622,Ragnarok M: Classic,https://static-cdn.jtvnw.net/ttv-boxart/976530622_IGDB-{width}x{height}.jpg,334425
 745937462,Tea Talk,https://static-cdn.jtvnw.net/ttv-boxart/745937462_IGDB-{width}x{height}.jpg,298198
 637617244,Baldur's Gate: Enhanced Edition,https://static-cdn.jtvnw.net/ttv-boxart/637617244_IGDB-{width}x{height}.jpg,1880
-1848487811,Apex,https://static-cdn.jtvnw.net/ttv-boxart/1848487811_IGDB-{width}x{height}.jpg,5728
-1578086254,Hoa,https://static-cdn.jtvnw.net/ttv-boxart/1578086254_IGDB-{width}x{height}.jpg,136981
 1405032928,Achilles: Legends Untold,https://static-cdn.jtvnw.net/ttv-boxart/1405032928_IGDB-{width}x{height}.jpg,160293
 2042120989,Strayed,https://static-cdn.jtvnw.net/ttv-boxart/2042120989_IGDB-{width}x{height}.jpg,248912
 152885349,BACKROOMS,https://static-cdn.jtvnw.net/ttv-boxart/152885349_IGDB-{width}x{height}.jpg,179336
@@ -3471,8 +3094,6 @@ category_id,category_name,box_art_url,igdb_id
 854029180,Business Inc.,https://static-cdn.jtvnw.net/ttv-boxart/854029180-{width}x{height}.jpg,106026
 29068,Sudden Attack,https://static-cdn.jtvnw.net/ttv-boxart/29068_IGDB-{width}x{height}.jpg,66463
 700550196,Smashy Road: Arena,https://static-cdn.jtvnw.net/ttv-boxart/700550196_IGDB-{width}x{height}.jpg,86948
-928209989,The Bus,https://static-cdn.jtvnw.net/ttv-boxart/928209989_IGDB-{width}x{height}.jpg,143887
-461508,Mordheim: City of the Damned,https://static-cdn.jtvnw.net/ttv-boxart/461508_IGDB-{width}x{height}.jpg,8209
 10963,Godzilla: Unleashed,https://static-cdn.jtvnw.net/ttv-boxart/10963_IGDB-{width}x{height}.jpg,4891
 1137292380,Boo Men,https://static-cdn.jtvnw.net/ttv-boxart/1137292380_IGDB-{width}x{height}.jpg,201498
 1246071024,Capybara Go!,https://static-cdn.jtvnw.net/ttv-boxart/1246071024_IGDB-{width}x{height}.jpg,318448
@@ -3480,11 +3101,8 @@ category_id,category_name,box_art_url,igdb_id
 369385,N++,https://static-cdn.jtvnw.net/ttv-boxart/369385_IGDB-{width}x{height}.jpg,8750
 853092205,Squidward Neighbor. Sponge Revenge of Bob,https://static-cdn.jtvnw.net/ttv-boxart/853092205-{width}x{height}.jpg,100791
 12582,Screamer,https://static-cdn.jtvnw.net/ttv-boxart/12582_IGDB-{width}x{height}.jpg,7140
-911342291,Open Country,https://static-cdn.jtvnw.net/ttv-boxart/911342291-{width}x{height}.jpg,144412
 1459,Metroid Prime 2: Echoes,https://static-cdn.jtvnw.net/ttv-boxart/1459_IGDB-{width}x{height}.jpg,1108
-1389092631,Better Mart Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1389092631_IGDB-{width}x{height}.jpg,332148
 736979598,Menace from the Deep,https://static-cdn.jtvnw.net/ttv-boxart/736979598_IGDB-{width}x{height}.jpg,276632
-1483794920,Dune: Imperium,https://static-cdn.jtvnw.net/ttv-boxart/1483794920_IGDB-{width}x{height}.jpg,263201
 500409,Knives Out,https://static-cdn.jtvnw.net/ttv-boxart/500409_IGDB-{width}x{height}.jpg,77776
 517331,Neighborhood Watch,https://static-cdn.jtvnw.net/ttv-boxart/517331-{width}x{height}.jpg,133484
 547081459,Conversations We Have In My Head,https://static-cdn.jtvnw.net/ttv-boxart/547081459_IGDB-{width}x{height}.jpg,181750
@@ -3493,21 +3111,15 @@ category_id,category_name,box_art_url,igdb_id
 10113,Cloning Clyde,https://static-cdn.jtvnw.net/ttv-boxart/10113_IGDB-{width}x{height}.jpg,15083
 995720898,God Of War (2005),https://static-cdn.jtvnw.net/ttv-boxart/995720898-{width}x{height}.jpg,NA
 22428,Fez,https://static-cdn.jtvnw.net/ttv-boxart/22428_IGDB-{width}x{height}.jpg,1991
-417866,Project Ion,https://static-cdn.jtvnw.net/ttv-boxart/417866_IGDB-{width}x{height}.jpg,62550
 515830,Mad Streets,https://static-cdn.jtvnw.net/ttv-boxart/515830_IGDB-{width}x{height}.jpg,130517
 519012,RIDE 4,https://static-cdn.jtvnw.net/ttv-boxart/519012_IGDB-{width}x{height}.jpg,133922
 19729,Dragon Quest IX: Sentinels of the Starry Skies,https://static-cdn.jtvnw.net/ttv-boxart/19729_IGDB-{width}x{height}.jpg,1820
 1005,Street Fighter II': Champion Edition,https://static-cdn.jtvnw.net/ttv-boxart/1005_IGDB-{width}x{height}.jpg,39496
-811670766,SpongeBob SquarePants: The Cosmic Shake,https://static-cdn.jtvnw.net/ttv-boxart/811670766_IGDB-{width}x{height}.jpg,171219
-2132194487,Squaredle,https://static-cdn.jtvnw.net/ttv-boxart/2132194487_IGDB-{width}x{height}.jpg,213881
-106683386,Trader Life Simulator,https://static-cdn.jtvnw.net/ttv-boxart/106683386_IGDB-{width}x{height}.jpg,143666
 133423,Sniper Elite III,https://static-cdn.jtvnw.net/ttv-boxart/133423_IGDB-{width}x{height}.jpg,8366
 12365,Gamino,https://static-cdn.jtvnw.net/ttv-boxart/12365-{width}x{height}.jpg,94551
 956456373,SONIC RUSH RERUN,https://static-cdn.jtvnw.net/ttv-boxart/956456373_IGDB-{width}x{height}.jpg,365772
 126292,inFAMOUS: Second Son,https://static-cdn.jtvnw.net/ttv-boxart/126292_IGDB-{width}x{height}.jpg,1941
-489608,FIFA 16,https://static-cdn.jtvnw.net/ttv-boxart/489608_IGDB-{width}x{height}.jpg,11071
 638551656,Doom,https://static-cdn.jtvnw.net/ttv-boxart/638551656_IGDB-{width}x{height}.jpg,313161
-853092205,Squidward Neighbor. Sponge Revenge of Bob,https://static-cdn.jtvnw.net/ttv-boxart/853092205-{width}x{height}.jpg,100791
 489545,Ancestors: The Humankind Odyssey,https://static-cdn.jtvnw.net/ttv-boxart/489545_IGDB-{width}x{height}.jpg,10032
 709292565,PUMPKIN PANIC,https://static-cdn.jtvnw.net/ttv-boxart/709292565_IGDB-{width}x{height}.jpg,257329
 460639,The Talos Principle,https://static-cdn.jtvnw.net/ttv-boxart/460639_IGDB-{width}x{height}.jpg,7386
@@ -3517,10 +3129,7 @@ category_id,category_name,box_art_url,igdb_id
 323283900,cell,https://static-cdn.jtvnw.net/ttv-boxart/323283900_IGDB-{width}x{height}.jpg,86632
 508375,Quaver,https://static-cdn.jtvnw.net/ttv-boxart/508375_IGDB-{width}x{height}.jpg,109068
 1067194382,Parisian Brasserie Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1067194382_IGDB-{width}x{height}.jpg,326380
-517959,Anthology of Fear,https://static-cdn.jtvnw.net/ttv-boxart/517959_IGDB-{width}x{height}.jpg,120686
 46287501,DMZ,https://static-cdn.jtvnw.net/ttv-boxart/46287501-{width}x{height}.jpg,275542
-493066,Pro Evolution Soccer 2017,https://static-cdn.jtvnw.net/ttv-boxart/493066_IGDB-{width}x{height}.jpg,22753
-489836,Popeye,https://static-cdn.jtvnw.net/ttv-boxart/489836_IGDB-{width}x{height}.jpg,38310
 18104,Kirby's Dream Land,https://static-cdn.jtvnw.net/ttv-boxart/18104_IGDB-{width}x{height}.jpg,1063
 1961718812,SCP Containment Breach,https://static-cdn.jtvnw.net/ttv-boxart/1961718812_IGDB-{width}x{height}.jpg,242403
 978058451,Dreamcore,https://static-cdn.jtvnw.net/ttv-boxart/978058451_IGDB-{width}x{height}.jpg,253474
@@ -3534,21 +3143,12 @@ category_id,category_name,box_art_url,igdb_id
 783,Metal Slug,https://static-cdn.jtvnw.net/ttv-boxart/783_IGDB-{width}x{height}.jpg,1404
 506686,Exhibition,https://static-cdn.jtvnw.net/ttv-boxart/506686-{width}x{height}.jpg,60014
 16553,Supreme Commander: Forged Alliance,https://static-cdn.jtvnw.net/ttv-boxart/16553_IGDB-{width}x{height}.jpg,888
-459480,Toy Story 3: The Video Game,https://static-cdn.jtvnw.net/ttv-boxart/459480_IGDB-{width}x{height}.jpg,5240
-138583,Shovel Knight,https://static-cdn.jtvnw.net/ttv-boxart/138583_IGDB-{width}x{height}.jpg,7444
-494807,Labyrinth of Refrain: Coven of Dusk,https://static-cdn.jtvnw.net/ttv-boxart/494807_IGDB-{width}x{height}.jpg,13062
-872742502,Relaxing Waves,https://static-cdn.jtvnw.net/ttv-boxart/872742502-{width}x{height}.jpg,104502
 1389224614,Oxide: Survival Island,https://static-cdn.jtvnw.net/ttv-boxart/1389224614_IGDB-{width}x{height}.jpg,330539
-489326,Castle,https://static-cdn.jtvnw.net/ttv-boxart/489326_IGDB-{width}x{height}.jpg,10074
 657649007,The Legend of Zelda: Ocarina of Time 3D,https://static-cdn.jtvnw.net/ttv-boxart/657649007_IGDB-{width}x{height}.jpg,1039
 512031,Sword Art Online: Alicization Lycoris,https://static-cdn.jtvnw.net/ttv-boxart/512031_IGDB-{width}x{height}.jpg,116805
 320813,Closers,https://static-cdn.jtvnw.net/ttv-boxart/320813_IGDB-{width}x{height}.jpg,55076
 2062936506,Dueling Nexus,https://static-cdn.jtvnw.net/ttv-boxart/2062936506_IGDB-{width}x{height}.jpg,140072
 3948,Delta Force,https://static-cdn.jtvnw.net/ttv-boxart/3948_IGDB-{width}x{height}.jpg,666
-2067535713,Kokoro Kitchen,https://static-cdn.jtvnw.net/ttv-boxart/2067535713_IGDB-{width}x{height}.jpg,334463
-1709063552,UNCURSED,https://static-cdn.jtvnw.net/ttv-boxart/1709063552_IGDB-{width}x{height}.jpg,331985
-4157,Medal of Honor: Allied Assault,https://static-cdn.jtvnw.net/ttv-boxart/4157_IGDB-{width}x{height}.jpg,326
-1266352245,Ferocious,https://static-cdn.jtvnw.net/ttv-boxart/1266352245_IGDB-{width}x{height}.jpg,152017
 661253513,Minesweeper Online,https://static-cdn.jtvnw.net/ttv-boxart/661253513_IGDB-{width}x{height}.jpg,271398
 3907,Clue,https://static-cdn.jtvnw.net/ttv-boxart/3907_IGDB-{width}x{height}.jpg,4380
 112933,Surgeon Simulator 2013,https://static-cdn.jtvnw.net/ttv-boxart/112933_IGDB-{width}x{height}.jpg,2974
@@ -3566,17 +3166,10 @@ category_id,category_name,box_art_url,igdb_id
 126326,OSP Entertainment Complete Archive,https://static-cdn.jtvnw.net/ttv-boxart/126326-{width}x{height}.jpg,63792
 925609232,Gym Class VR,https://static-cdn.jtvnw.net/ttv-boxart/925609232_IGDB-{width}x{height}.jpg,143458
 490356,Shenmue III,https://static-cdn.jtvnw.net/ttv-boxart/490356_IGDB-{width}x{height}.jpg,11542
-257440126,Draw,https://static-cdn.jtvnw.net/ttv-boxart/257440126_IGDB-{width}x{height}.jpg,258014
-700550196,Smashy Road: Arena,https://static-cdn.jtvnw.net/ttv-boxart/700550196_IGDB-{width}x{height}.jpg,86948
 1804964602,Garten of Banban,https://static-cdn.jtvnw.net/ttv-boxart/1804964602_IGDB-{width}x{height}.jpg,230468
-1197133103,Syberia: Remastered,https://static-cdn.jtvnw.net/ttv-boxart/1197133103_IGDB-{width}x{height}.jpg,344050
-50,Nederland,https://static-cdn.jtvnw.net/ttv-boxart/50-{width}x{height}.jpg,57013
 646084693,"Warhammer 40,000: Battlesector",https://static-cdn.jtvnw.net/ttv-boxart/646084693_IGDB-{width}x{height}.jpg,143424
-759904815,Wayfinder,https://static-cdn.jtvnw.net/ttv-boxart/759904815_IGDB-{width}x{height}.jpg,228532
 15285,Sport Sport,https://static-cdn.jtvnw.net/ttv-boxart/15285-{width}x{height}.jpg,92893
 970878943,Miniland Adventure,https://static-cdn.jtvnw.net/ttv-boxart/970878943-{width}x{height}.jpg,283256
-1529560085,So to Speak,https://static-cdn.jtvnw.net/ttv-boxart/1529560085_IGDB-{width}x{height}.jpg,199463
-10502,Dr. Robotnik's Mean Bean Machine,https://static-cdn.jtvnw.net/ttv-boxart/10502-{width}x{height}.jpg,NA
 649991126,Bō,https://static-cdn.jtvnw.net/ttv-boxart/649991126_IGDB-{width}x{height}.jpg,154161
 26367,Allods Online,https://static-cdn.jtvnw.net/ttv-boxart/26367_IGDB-{width}x{height}.jpg,13157
 197488739,Eternights,https://static-cdn.jtvnw.net/ttv-boxart/197488739_IGDB-{width}x{height}.jpg,203367
@@ -3585,126 +3178,75 @@ category_id,category_name,box_art_url,igdb_id
 326793505,Indigo Park,https://static-cdn.jtvnw.net/ttv-boxart/326793505_IGDB-{width}x{height}.jpg,257835
 489904,Total War: Warhammer,https://static-cdn.jtvnw.net/ttv-boxart/489904_IGDB-{width}x{height}.jpg,9898
 977505124,Cookies Must Die,https://static-cdn.jtvnw.net/ttv-boxart/977505124_IGDB-{width}x{height}.jpg,132117
-388203550,O,https://static-cdn.jtvnw.net/ttv-boxart/388203550-{width}x{height}.jpg,83720
 1555134795,Pokémon Revolution Online,https://static-cdn.jtvnw.net/ttv-boxart/1555134795_IGDB-{width}x{height}.jpg,129561
 354298281,Poker Club,https://static-cdn.jtvnw.net/ttv-boxart/354298281_IGDB-{width}x{height}.jpg,138204
-2109314477,Lonely Mountains: Snow Riders,https://static-cdn.jtvnw.net/ttv-boxart/2109314477_IGDB-{width}x{height}.jpg,313812
 5468,Chiller,https://static-cdn.jtvnw.net/ttv-boxart/5468_IGDB-{width}x{height}.jpg,11727
 497985,Lineage M,https://static-cdn.jtvnw.net/ttv-boxart/497985_IGDB-{width}x{height}.jpg,78248
 478467,Vainglory,https://static-cdn.jtvnw.net/ttv-boxart/478467_IGDB-{width}x{height}.jpg,13174
-1357034851,Sniper Killer,https://static-cdn.jtvnw.net/ttv-boxart/1357034851_IGDB-{width}x{height}.jpg,249933
 7934,Crash Bandicoot 2: Cortex Strikes Back,https://static-cdn.jtvnw.net/ttv-boxart/7934_IGDB-{width}x{height}.jpg,1186
 223284882,Super 80s World,https://static-cdn.jtvnw.net/ttv-boxart/223284882_IGDB-{width}x{height}.jpg,116013
 106587080,Limbo,https://static-cdn.jtvnw.net/ttv-boxart/106587080_IGDB-{width}x{height}.jpg,202299
 1351579283,Mass Effect 2,https://static-cdn.jtvnw.net/ttv-boxart/1351579283_IGDB-{width}x{height}.jpg,245113
 1062834287,Archipelago,https://static-cdn.jtvnw.net/ttv-boxart/1062834287_IGDB-{width}x{height}.jpg,187171
 396618229,Crabs!,https://static-cdn.jtvnw.net/ttv-boxart/396618229_IGDB-{width}x{height}.jpg,179118
-469848814,Fernbus Coach Simulator,https://static-cdn.jtvnw.net/ttv-boxart/469848814_IGDB-{width}x{height}.jpg,33896
 7276,Rogue Galaxy,https://static-cdn.jtvnw.net/ttv-boxart/7276_IGDB-{width}x{height}.jpg,11292
 591225141,Emprise,https://static-cdn.jtvnw.net/ttv-boxart/591225141-{width}x{height}.jpg,237171
-1690221315,Pokémon Black Version 2,https://static-cdn.jtvnw.net/ttv-boxart/1690221315_IGDB-{width}x{height}.jpg,8284
-18510,Myth II: Soulblighter,https://static-cdn.jtvnw.net/ttv-boxart/18510_IGDB-{width}x{height}.jpg,799
-1243708703,The Thrill of the Fight 2,https://static-cdn.jtvnw.net/ttv-boxart/1243708703_IGDB-{width}x{height}.jpg,329856
-498386,Block Strike,https://static-cdn.jtvnw.net/ttv-boxart/498386_IGDB-{width}x{height}.jpg,28898
 753610273,NFL Pro Era II,https://static-cdn.jtvnw.net/ttv-boxart/753610273_IGDB-{width}x{height}.jpg,266797
-4157,Medal of Honor: Allied Assault,https://static-cdn.jtvnw.net/ttv-boxart/4157_IGDB-{width}x{height}.jpg,326
-1137292380,Boo Men,https://static-cdn.jtvnw.net/ttv-boxart/1137292380_IGDB-{width}x{height}.jpg,201498
-6438,Midnight Club 3: DUB Edition Remix,https://static-cdn.jtvnw.net/ttv-boxart/6438_IGDB-{width}x{height}.jpg,22583
-370379,Chroma Squad,https://static-cdn.jtvnw.net/ttv-boxart/370379_IGDB-{width}x{height}.jpg,9046
-126326,OSP Entertainment Complete Archive,https://static-cdn.jtvnw.net/ttv-boxart/126326-{width}x{height}.jpg,63792
 481479297,ROBOBEAT,https://static-cdn.jtvnw.net/ttv-boxart/481479297_IGDB-{width}x{height}.jpg,192534
 6607,Tony Hawk's American Wasteland,https://static-cdn.jtvnw.net/ttv-boxart/6607_IGDB-{width}x{height}.jpg,7219
 494899,Kingdoms and Castles,https://static-cdn.jtvnw.net/ttv-boxart/494899_IGDB-{width}x{height}.jpg,26651
 416178942,RFS: Real Flight Simulator,https://static-cdn.jtvnw.net/ttv-boxart/416178942-{width}x{height}.jpg,144649
 578047105,Shooter,https://static-cdn.jtvnw.net/ttv-boxart/578047105-{width}x{height}.jpg,359367
-66273,Akazukin Cha-cha,https://static-cdn.jtvnw.net/ttv-boxart/66273_IGDB-{width}x{height}.jpg,15887
-516564,Punishing: Gray Raven,https://static-cdn.jtvnw.net/ttv-boxart/516564_IGDB-{width}x{height}.jpg,132185
-11598,Icarus: Sanctuary of the Gods,https://static-cdn.jtvnw.net/ttv-boxart/11598_IGDB-{width}x{height}.jpg,69768
 509185,Sniper Ghost Warrior Contracts,https://static-cdn.jtvnw.net/ttv-boxart/509185_IGDB-{width}x{height}.jpg,107155
 1828260747,Buried,https://static-cdn.jtvnw.net/ttv-boxart/1828260747_IGDB-{width}x{height}.jpg,272235
 2010534912,Book of Demons: HELLCARD,https://static-cdn.jtvnw.net/ttv-boxart/2010534912_IGDB-{width}x{height}.jpg,127193
-369554,2K Drive,https://static-cdn.jtvnw.net/ttv-boxart/369554-{width}x{height}.jpg,22192
-19020,LEGO Batman: The Videogame,https://static-cdn.jtvnw.net/ttv-boxart/19020_IGDB-{width}x{height}.jpg,2738
-890777775,Wasteland 2: Director's Cut,https://static-cdn.jtvnw.net/ttv-boxart/890777775_IGDB-{width}x{height}.jpg,20046
-4469,Looney Tunes,https://static-cdn.jtvnw.net/ttv-boxart/4469_IGDB-{width}x{height}.jpg,8133
 5511,Progress Quest,https://static-cdn.jtvnw.net/ttv-boxart/5511_IGDB-{width}x{height}.jpg,94363
-1259308450,Resident Evil: Revelations,https://static-cdn.jtvnw.net/ttv-boxart/1259308450_IGDB-{width}x{height}.jpg,150045
 1138083028,Dungeons of Hinterberg,https://static-cdn.jtvnw.net/ttv-boxart/1138083028_IGDB-{width}x{height}.jpg,146917
 512999,Empire of Sin,https://static-cdn.jtvnw.net/ttv-boxart/512999_IGDB-{width}x{height}.jpg,119386
 559934641,River City Girls 2,https://static-cdn.jtvnw.net/ttv-boxart/559934641_IGDB-{width}x{height}.jpg,152321
 17500,Monster Rancher 2,https://static-cdn.jtvnw.net/ttv-boxart/17500_IGDB-{width}x{height}.jpg,4106
 506862,Cape,https://static-cdn.jtvnw.net/ttv-boxart/506862-{width}x{height}.jpg,59713
 161713365,PVZ Fusion,https://static-cdn.jtvnw.net/ttv-boxart/161713365_IGDB-{width}x{height}.jpg,371703
-493884,Riverbond,https://static-cdn.jtvnw.net/ttv-boxart/493884_IGDB-{width}x{height}.jpg,57420
 1433833018,Hero's Adventure: Road to Passion,https://static-cdn.jtvnw.net/ttv-boxart/1433833018_IGDB-{width}x{height}.jpg,275459
 1924769596,Knockout City,https://static-cdn.jtvnw.net/ttv-boxart/1924769596-{width}x{height}.jpg,143615
-397033090,We are definitely the baddies,https://static-cdn.jtvnw.net/ttv-boxart/397033090_IGDB-{width}x{height}.jpg,200975
 740574587,Video Game,https://static-cdn.jtvnw.net/ttv-boxart/740574587_IGDB-{width}x{height}.jpg,288493
 493401,Duke Nukem 3D: 20th Anniversary World Tour,https://static-cdn.jtvnw.net/ttv-boxart/493401_IGDB-{width}x{height}.jpg,23596
-12446,Mega Man X: Command Mission,https://static-cdn.jtvnw.net/ttv-boxart/12446_IGDB-{width}x{height}.jpg,1751
-565,Animal,https://static-cdn.jtvnw.net/ttv-boxart/565_IGDB-{width}x{height}.jpg,2309
 1757,Heroes of Might and Magic V,https://static-cdn.jtvnw.net/ttv-boxart/1757_IGDB-{width}x{height}.jpg,370
 5368,NASCAR Racing 2003 Season,https://static-cdn.jtvnw.net/ttv-boxart/5368_IGDB-{width}x{height}.jpg,804
 725224091,Tales Beyond The Tomb: Route 86,https://static-cdn.jtvnw.net/ttv-boxart/725224091_IGDB-{width}x{height}.jpg,362327
 20919,Navy Field,https://static-cdn.jtvnw.net/ttv-boxart/20919_IGDB-{width}x{height}.jpg,55462
-112933,Surgeon Simulator 2013,https://static-cdn.jtvnw.net/ttv-boxart/112933_IGDB-{width}x{height}.jpg,2974
-13732,Table Tennis,https://static-cdn.jtvnw.net/ttv-boxart/13732_IGDB-{width}x{height}.jpg,11500
-956456373,SONIC RUSH RERUN,https://static-cdn.jtvnw.net/ttv-boxart/956456373_IGDB-{width}x{height}.jpg,365772
 498434,Azur Lane,https://static-cdn.jtvnw.net/ttv-boxart/498434_IGDB-{width}x{height}.jpg,70708
-1297192479,Assassin's Creed Brotherhood,https://static-cdn.jtvnw.net/ttv-boxart/1297192479_IGDB-{width}x{height}.jpg,221823
 777274027,LGBT BATTLEGROUNDS,https://static-cdn.jtvnw.net/ttv-boxart/777274027-{width}x{height}.jpg,103633
 2846,Alone in the Dark,https://static-cdn.jtvnw.net/ttv-boxart/2846_IGDB-{width}x{height}.jpg,1956
 516690,Counter:Side,https://static-cdn.jtvnw.net/ttv-boxart/516690_IGDB-{width}x{height}.jpg,132648
 17150,Fighting Force 2,https://static-cdn.jtvnw.net/ttv-boxart/17150_IGDB-{width}x{height}.jpg,11615
-1763797224,RoboQuest,https://static-cdn.jtvnw.net/ttv-boxart/1763797224_IGDB-{width}x{height}.jpg,199912
-518597,Going Medieval,https://static-cdn.jtvnw.net/ttv-boxart/518597_IGDB-{width}x{height}.jpg,115555
-459138204,Lost Eidolons,https://static-cdn.jtvnw.net/ttv-boxart/459138204_IGDB-{width}x{height}.jpg,145148
-24537180,The Streamer Awards,https://static-cdn.jtvnw.net/ttv-boxart/24537180-{width}x{height}.jpg,NA
 17158,Cultures,https://static-cdn.jtvnw.net/ttv-boxart/17158_IGDB-{width}x{height}.jpg,11379
 2001336087,Void Collections,https://static-cdn.jtvnw.net/ttv-boxart/2001336087_IGDB-{width}x{height}.jpg,349730
 449419839,Ricochet Squad,https://static-cdn.jtvnw.net/ttv-boxart/449419839_IGDB-{width}x{height}.jpg,364403
-925609232,Gym Class VR,https://static-cdn.jtvnw.net/ttv-boxart/925609232_IGDB-{width}x{height}.jpg,143458
 9024,NBA 2K7,https://static-cdn.jtvnw.net/ttv-boxart/9024_IGDB-{width}x{height}.jpg,8836
-506337,LevelHead,https://static-cdn.jtvnw.net/ttv-boxart/506337_IGDB-{width}x{height}.jpg,101245
-405215881,eBaseball Pawafuru Puroyakyu 2022,https://static-cdn.jtvnw.net/ttv-boxart/405215881_IGDB-{width}x{height}.jpg,187105
 1341661422,Mage and Monsters II,https://static-cdn.jtvnw.net/ttv-boxart/1341661422_IGDB-{width}x{height}.jpg,258330
 18884,Gears of War 2,https://static-cdn.jtvnw.net/ttv-boxart/18884_IGDB-{width}x{height}.jpg,548
 13049,Tales of the Abyss,https://static-cdn.jtvnw.net/ttv-boxart/13049_IGDB-{width}x{height}.jpg,1207
 84835,DarkOrbit: Reloaded,https://static-cdn.jtvnw.net/ttv-boxart/84835_IGDB-{width}x{height}.jpg,23808
 30475,FINAL FANTASY XIII-2,https://static-cdn.jtvnw.net/ttv-boxart/30475_IGDB-{width}x{height}.jpg,384
-478467,Vainglory,https://static-cdn.jtvnw.net/ttv-boxart/478467_IGDB-{width}x{height}.jpg,13174
-995720898,God Of War (2005),https://static-cdn.jtvnw.net/ttv-boxart/995720898-{width}x{height}.jpg,NA
-516728,Super Mega Baseball 3,https://static-cdn.jtvnw.net/ttv-boxart/516728_IGDB-{width}x{height}.jpg,131946
 8083,Adventure Series,https://static-cdn.jtvnw.net/ttv-boxart/8083-{width}x{height}.jpg,80367
 1506110656,Casino Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1506110656_IGDB-{width}x{height}.jpg,297944
-1788892117,Five Nights at Freddy's: Rewritten - 87',https://static-cdn.jtvnw.net/ttv-boxart/1788892117_IGDB-{width}x{height}.jpg,239963
 1829295323,Do Not Press the Red Button,https://static-cdn.jtvnw.net/ttv-boxart/1829295323_IGDB-{width}x{height}.jpg,88105
 513889,NASCAR Heat 4,https://static-cdn.jtvnw.net/ttv-boxart/513889_IGDB-{width}x{height}.jpg,120487
-545811535,Chiikawa Phone,https://static-cdn.jtvnw.net/ttv-boxart/545811535_IGDB-{width}x{height}.jpg,327681
 497485,Cold Waters,https://static-cdn.jtvnw.net/ttv-boxart/497485_IGDB-{width}x{height}.jpg,24815
-539102438,Watch Your Plastic Duck,https://static-cdn.jtvnw.net/ttv-boxart/539102438_IGDB-{width}x{height}.jpg,218659
-976530622,Ragnarok M: Classic,https://static-cdn.jtvnw.net/ttv-boxart/976530622_IGDB-{width}x{height}.jpg,334425
 25256,Ōkamiden,https://static-cdn.jtvnw.net/ttv-boxart/25256_IGDB-{width}x{height}.jpg,16618
 1363661410,Immortals of Aveum,https://static-cdn.jtvnw.net/ttv-boxart/1363661410_IGDB-{width}x{height}.jpg,228531
-867264357,ANTHEM#9,https://static-cdn.jtvnw.net/ttv-boxart/867264357_IGDB-{width}x{height}.jpg,276853
-782322359,Forza Motorsport,https://static-cdn.jtvnw.net/ttv-boxart/782322359_IGDB-{width}x{height}.jpg,78511
 260774925,Ship Graveyard Simulator 2,https://static-cdn.jtvnw.net/ttv-boxart/260774925_IGDB-{width}x{height}.jpg,225984
-1357034851,Sniper Killer,https://static-cdn.jtvnw.net/ttv-boxart/1357034851_IGDB-{width}x{height}.jpg,249933
 513072,Dominos,https://static-cdn.jtvnw.net/ttv-boxart/513072_IGDB-{width}x{height}.jpg,88431
 1610224,Capybara Hot Tub,https://static-cdn.jtvnw.net/ttv-boxart/1610224-{width}x{height}.jpg,349066
-2141530229,Fallout 4 VR,https://static-cdn.jtvnw.net/ttv-boxart/2141530229_IGDB-{width}x{height}.jpg,27922
 2053635265,Dungeons & Lesbians,https://static-cdn.jtvnw.net/ttv-boxart/2053635265_IGDB-{width}x{height}.jpg,134554
 502448,Peace and Love,https://static-cdn.jtvnw.net/ttv-boxart/502448-{width}x{height}.jpg,82213
-832958780,BAR,https://static-cdn.jtvnw.net/ttv-boxart/832958780-{width}x{height}.jpg,295367
 1808330168,SONIC THE HEDGEHOG,https://static-cdn.jtvnw.net/ttv-boxart/1808330168_IGDB-{width}x{height}.jpg,316900
 1488315469,Finnish Cottage Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1488315469_IGDB-{width}x{height}.jpg,319559
 923845665,NMDC,https://static-cdn.jtvnw.net/ttv-boxart/923845665_IGDB-{width}x{height}.jpg,199584
 511882,Rise of Kingdoms,https://static-cdn.jtvnw.net/ttv-boxart/511882_IGDB-{width}x{height}.jpg,113201
-1803513930,Horse Race,https://static-cdn.jtvnw.net/ttv-boxart/1803513930_IGDB-{width}x{height}.jpg,202001
 1270322937,Rocket League Sideswipe,https://static-cdn.jtvnw.net/ttv-boxart/1270322937-{width}x{height}.jpg,144983
-637617244,Baldur's Gate: Enhanced Edition,https://static-cdn.jtvnw.net/ttv-boxart/637617244_IGDB-{width}x{height}.jpg,1880
 368861147,Obesity Simulator,https://static-cdn.jtvnw.net/ttv-boxart/368861147-{width}x{height}.jpg,264705
-2114339342,Super Auto Pets,https://static-cdn.jtvnw.net/ttv-boxart/2114339342_IGDB-{width}x{height}.jpg,146641
 295498815,Pokémon Masters EX,https://static-cdn.jtvnw.net/ttv-boxart/295498815_IGDB-{width}x{height}.jpg,144248
 246195072,Sly 3: Honor Among Thieves,https://static-cdn.jtvnw.net/ttv-boxart/246195072_IGDB-{width}x{height}.jpg,222127
 1722376710,SpiderHeck,https://static-cdn.jtvnw.net/ttv-boxart/1722376710_IGDB-{width}x{height}.jpg,137073
@@ -3714,59 +3256,38 @@ category_id,category_name,box_art_url,igdb_id
 313185,The LEGO Movie Videogame,https://static-cdn.jtvnw.net/ttv-boxart/313185_IGDB-{width}x{height}.jpg,4845
 332448970,Chill Out,https://static-cdn.jtvnw.net/ttv-boxart/332448970-{width}x{height}.jpg,105696
 108763890,DNF Duel,https://static-cdn.jtvnw.net/ttv-boxart/108763890_IGDB-{width}x{height}.jpg,142063
-518020,Sackboy: A Big Adventure,https://static-cdn.jtvnw.net/ttv-boxart/518020_IGDB-{width}x{height}.jpg,134585
 1646904797,Murder House,https://static-cdn.jtvnw.net/ttv-boxart/1646904797_IGDB-{width}x{height}.jpg,135763
-328956119,Truck & Logistics Simulator,https://static-cdn.jtvnw.net/ttv-boxart/328956119_IGDB-{width}x{height}.jpg,129757
 845000496,Animalia Survival,https://static-cdn.jtvnw.net/ttv-boxart/845000496_IGDB-{width}x{height}.jpg,167832
 505375,Dark Devotion,https://static-cdn.jtvnw.net/ttv-boxart/505375_IGDB-{width}x{height}.jpg,68582
-1137292380,Boo Men,https://static-cdn.jtvnw.net/ttv-boxart/1137292380_IGDB-{width}x{height}.jpg,201498
 26992,Mass Effect 3,https://static-cdn.jtvnw.net/ttv-boxart/26992_IGDB-{width}x{height}.jpg,75
 6685,Neo Bomberman,https://static-cdn.jtvnw.net/ttv-boxart/6685_IGDB-{width}x{height}.jpg,39463
 513789,Scribble It!,https://static-cdn.jtvnw.net/ttv-boxart/513789_IGDB-{width}x{height}.jpg,120649
 500603,Ymir,https://static-cdn.jtvnw.net/ttv-boxart/500603_IGDB-{width}x{height}.jpg,50092
-1317595182,Nioh Remastered: Complete Edition,https://static-cdn.jtvnw.net/ttv-boxart/1317595182_IGDB-{width}x{height}.jpg,143349
-1459,Metroid Prime 2: Echoes,https://static-cdn.jtvnw.net/ttv-boxart/1459_IGDB-{width}x{height}.jpg,1108
-1498108698,SLEEP AWAKE,https://static-cdn.jtvnw.net/ttv-boxart/1498108698_IGDB-{width}x{height}.jpg,305012
 18446,Snooker,https://static-cdn.jtvnw.net/ttv-boxart/18446_IGDB-{width}x{height}.jpg,79490
 118195,The Room,https://static-cdn.jtvnw.net/ttv-boxart/118195_IGDB-{width}x{height}.jpg,8468
 541051476,Five Nights at Freddy's 3,https://static-cdn.jtvnw.net/ttv-boxart/541051476_IGDB-{width}x{height}.jpg,312229
 1692203012,Kindergarten 3,https://static-cdn.jtvnw.net/ttv-boxart/1692203012_IGDB-{width}x{height}.jpg,300328
-405215881,eBaseball Pawafuru Puroyakyu 2022,https://static-cdn.jtvnw.net/ttv-boxart/405215881_IGDB-{width}x{height}.jpg,187105
 1547339150,Surf,https://static-cdn.jtvnw.net/ttv-boxart/1547339150_IGDB-{width}x{height}.jpg,249620
 1982820182,Ghost Trick: Phantom Detective,https://static-cdn.jtvnw.net/ttv-boxart/1982820182_IGDB-{width}x{height}.jpg,236660
 962571700,Stocks,https://static-cdn.jtvnw.net/ttv-boxart/962571700-{width}x{height}.jpg,364990
-19729,Dragon Quest IX: Sentinels of the Starry Skies,https://static-cdn.jtvnw.net/ttv-boxart/19729_IGDB-{width}x{height}.jpg,1820
 1865647616,DDTank,https://static-cdn.jtvnw.net/ttv-boxart/1865647616_IGDB-{width}x{height}.jpg,146050
-179074551,Shin Megami Tensei III: Nocturne - HD Remaster,https://static-cdn.jtvnw.net/ttv-boxart/179074551_IGDB-{width}x{height}.jpg,337718
 8149,Stronghold 2,https://static-cdn.jtvnw.net/ttv-boxart/8149_IGDB-{width}x{height}.jpg,9460
-6438,Midnight Club 3: DUB Edition Remix,https://static-cdn.jtvnw.net/ttv-boxart/6438_IGDB-{width}x{height}.jpg,22583
 293214008,Zombie Survival Game Online,https://static-cdn.jtvnw.net/ttv-boxart/293214008_IGDB-{width}x{height}.jpg,253658
-591225141,Emprise,https://static-cdn.jtvnw.net/ttv-boxart/591225141-{width}x{height}.jpg,237171
-529477659,ff,https://static-cdn.jtvnw.net/ttv-boxart/529477659-{width}x{height}.jpg,122660
 1455596748,Paleo Pines,https://static-cdn.jtvnw.net/ttv-boxart/1455596748_IGDB-{width}x{height}.jpg,133454
 682754513,SWORN,https://static-cdn.jtvnw.net/ttv-boxart/682754513_IGDB-{width}x{height}.jpg,118074
 13299,Fire Emblem: Radiant Dawn,https://static-cdn.jtvnw.net/ttv-boxart/13299_IGDB-{width}x{height}.jpg,1442
-511850,Saint Seiya: Awakening,https://static-cdn.jtvnw.net/ttv-boxart/511850_IGDB-{width}x{height}.jpg,122667
-753610273,NFL Pro Era II,https://static-cdn.jtvnw.net/ttv-boxart/753610273_IGDB-{width}x{height}.jpg,266797
-22428,Fez,https://static-cdn.jtvnw.net/ttv-boxart/22428_IGDB-{width}x{height}.jpg,1991
 17258312,Planes,https://static-cdn.jtvnw.net/ttv-boxart/17258312_IGDB-{width}x{height}.jpg,262093
 979364069,TIEBREAK,https://static-cdn.jtvnw.net/ttv-boxart/979364069_IGDB-{width}x{height}.jpg,241244
-490354,Gears of War: Ultimate Edition,https://static-cdn.jtvnw.net/ttv-boxart/490354_IGDB-{width}x{height}.jpg,16605
 1271,The Colour of Magic,https://static-cdn.jtvnw.net/ttv-boxart/1271-{width}x{height}.jpg,13508
 1666023148,ENA: Dream BBQ,https://static-cdn.jtvnw.net/ttv-boxart/1666023148_IGDB-{width}x{height}.jpg,172496
-895744517,Snoot Game,https://static-cdn.jtvnw.net/ttv-boxart/895744517_IGDB-{width}x{height}.jpg,225989
 512448,Valor's Reach,https://static-cdn.jtvnw.net/ttv-boxart/512448-{width}x{height}.jpg,123148
-921590112,Fushigi no Dungeon: Fuurai no Shiren 2 - Oni Shuurai! Shiren-jou!,https://static-cdn.jtvnw.net/ttv-boxart/921590112_IGDB-{width}x{height}.jpg,67376
 410350844,Astro Colony,https://static-cdn.jtvnw.net/ttv-boxart/410350844_IGDB-{width}x{height}.jpg,154626
 886884423,NHL 24,https://static-cdn.jtvnw.net/ttv-boxart/886884423_IGDB-{width}x{height}.jpg,261413
-1122801725,The Escape: Together,https://static-cdn.jtvnw.net/ttv-boxart/1122801725_IGDB-{width}x{height}.jpg,230906
 267622555,Dungeon ni Seisoku Da!,https://static-cdn.jtvnw.net/ttv-boxart/267622555-{width}x{height}.jpg,381695
 18957,Just Cause 2,https://static-cdn.jtvnw.net/ttv-boxart/18957_IGDB-{width}x{height}.jpg,558
 492935,Drawful 2,https://static-cdn.jtvnw.net/ttv-boxart/492935_IGDB-{width}x{height}.jpg,19083
 654518380,Henry Stickmin: Fleeing the Complex,https://static-cdn.jtvnw.net/ttv-boxart/654518380_IGDB-{width}x{height}.jpg,145664
-1770646834,Moonlight Sculptor: Darkgamer,https://static-cdn.jtvnw.net/ttv-boxart/1770646834_IGDB-{width}x{height}.jpg,262581
 744545757,Im Bann Der Dunklen Jagd,https://static-cdn.jtvnw.net/ttv-boxart/744545757_IGDB-{width}x{height}.jpg,324674
-161713365,PVZ Fusion,https://static-cdn.jtvnw.net/ttv-boxart/161713365_IGDB-{width}x{height}.jpg,371703
 29448,Tekken Tag Tournament 2,https://static-cdn.jtvnw.net/ttv-boxart/29448_IGDB-{width}x{height}.jpg,1238
 20508,Soldier Front,https://static-cdn.jtvnw.net/ttv-boxart/20508_IGDB-{width}x{height}.jpg,72854
 1993889306,Glider,https://static-cdn.jtvnw.net/ttv-boxart/1993889306-{width}x{height}.jpg,88366
@@ -3774,20 +3295,14 @@ category_id,category_name,box_art_url,igdb_id
 6973,Gradius III,https://static-cdn.jtvnw.net/ttv-boxart/6973_IGDB-{width}x{height}.jpg,1481
 79664757,UNDAWN,https://static-cdn.jtvnw.net/ttv-boxart/79664757_IGDB-{width}x{height}.jpg,175001
 506406,NBA Live 19,https://static-cdn.jtvnw.net/ttv-boxart/506406_IGDB-{width}x{height}.jpg,103275
-499420,Earth Defense Force: Iron Rain,https://static-cdn.jtvnw.net/ttv-boxart/499420_IGDB-{width}x{height}.jpg,68286
 489794,Yu-Gi-Oh! Legacy of the Duelist,https://static-cdn.jtvnw.net/ttv-boxart/489794_IGDB-{width}x{height}.jpg,20043
 76747837,Atelier Yumia: The Alchemist of Memories & the Envisioned Land,https://static-cdn.jtvnw.net/ttv-boxart/76747837_IGDB-{width}x{height}.jpg,314943
 493588,Styx: Shards of Darkness,https://static-cdn.jtvnw.net/ttv-boxart/493588_IGDB-{width}x{height}.jpg,13554
-13049,Tales of the Abyss,https://static-cdn.jtvnw.net/ttv-boxart/13049_IGDB-{width}x{height}.jpg,1207
 2127741554,Nature,https://static-cdn.jtvnw.net/ttv-boxart/2127741554_IGDB-{width}x{height}.jpg,186939
 493167,Onward,https://static-cdn.jtvnw.net/ttv-boxart/493167_IGDB-{width}x{height}.jpg,27575
-370378,City Car Driving,https://static-cdn.jtvnw.net/ttv-boxart/370378_IGDB-{width}x{height}.jpg,25714
-490512,Lost Lands: Dark Overlord,https://static-cdn.jtvnw.net/ttv-boxart/490512_IGDB-{width}x{height}.jpg,35078
 782188327,Firefighter Simulator 911: Car Fire Truck Driver,https://static-cdn.jtvnw.net/ttv-boxart/782188327_IGDB-{width}x{height}.jpg,258255
 1914294032,Love Love School Days,https://static-cdn.jtvnw.net/ttv-boxart/1914294032_IGDB-{width}x{height}.jpg,212174
 1774510513,Pizza Tower,https://static-cdn.jtvnw.net/ttv-boxart/1774510513_IGDB-{width}x{height}.jpg,135818
-476442,Dragon Quest Heroes: The World Tree's Woe and the Blight Below,https://static-cdn.jtvnw.net/ttv-boxart/476442_IGDB-{width}x{height}.jpg,9214
-50925173,Talk To Me,https://static-cdn.jtvnw.net/ttv-boxart/50925173_IGDB-{width}x{height}.jpg,134586
 19329,"Warhammer 40,000: Dawn of War II",https://static-cdn.jtvnw.net/ttv-boxart/19329_IGDB-{width}x{height}.jpg,466
 488564,Just Cause 3,https://static-cdn.jtvnw.net/ttv-boxart/488564_IGDB-{width}x{height}.jpg,8187
 1774444308,A Gentlemen's Dispute,https://static-cdn.jtvnw.net/ttv-boxart/1774444308_IGDB-{width}x{height}.jpg,311503
@@ -3801,62 +3316,42 @@ category_id,category_name,box_art_url,igdb_id
 499831,Forager,https://static-cdn.jtvnw.net/ttv-boxart/499831_IGDB-{width}x{height}.jpg,25580
 16400,Ys ORIGIN,https://static-cdn.jtvnw.net/ttv-boxart/16400_IGDB-{width}x{height}.jpg,10949
 1434739173,Blood Line: A Rebel Moon Game,https://static-cdn.jtvnw.net/ttv-boxart/1434739173_IGDB-{width}x{height}.jpg,355906
-416178942,RFS: Real Flight Simulator,https://static-cdn.jtvnw.net/ttv-boxart/416178942-{width}x{height}.jpg,144649
-519012,RIDE 4,https://static-cdn.jtvnw.net/ttv-boxart/519012_IGDB-{width}x{height}.jpg,133922
-2050572298,Trek to Yomi,https://static-cdn.jtvnw.net/ttv-boxart/2050572298_IGDB-{width}x{height}.jpg,152203
 746769395,"Diapers, Please!",https://static-cdn.jtvnw.net/ttv-boxart/746769395-{width}x{height}.jpg,334546
 11738,Darkwatch,https://static-cdn.jtvnw.net/ttv-boxart/11738_IGDB-{width}x{height}.jpg,5808
 799416640,MechWarrior 5: Clans,https://static-cdn.jtvnw.net/ttv-boxart/799416640_IGDB-{width}x{height}.jpg,267011
 1735714125,Fur Fun,https://static-cdn.jtvnw.net/ttv-boxart/1735714125_IGDB-{width}x{height}.jpg,29544
-7673,Mario Party 6,https://static-cdn.jtvnw.net/ttv-boxart/7673_IGDB-{width}x{height}.jpg,2333
 258824392,Flipping is Hard,https://static-cdn.jtvnw.net/ttv-boxart/258824392_IGDB-{width}x{height}.jpg,351111
-7050,American Truck,https://static-cdn.jtvnw.net/ttv-boxart/7050-{width}x{height}.jpg,94398
 11804720,Enterprise,https://static-cdn.jtvnw.net/ttv-boxart/11804720-{width}x{height}.jpg,245485
 21238,Pico Pico,https://static-cdn.jtvnw.net/ttv-boxart/21238-{width}x{height}.jpg,118991
 2055262203,GUNDAM BREAKER 4,https://static-cdn.jtvnw.net/ttv-boxart/2055262203_IGDB-{width}x{height}.jpg,287853
-1005,Street Fighter II': Champion Edition,https://static-cdn.jtvnw.net/ttv-boxart/1005_IGDB-{width}x{height}.jpg,39496
 216316552,Warzone,https://static-cdn.jtvnw.net/ttv-boxart/216316552_IGDB-{width}x{height}.jpg,354851
 513000,No More Heroes III,https://static-cdn.jtvnw.net/ttv-boxart/513000_IGDB-{width}x{height}.jpg,119387
 516914,Rogue Legacy 2,https://static-cdn.jtvnw.net/ttv-boxart/516914_IGDB-{width}x{height}.jpg,132058
-995720898,God Of War (2005),https://static-cdn.jtvnw.net/ttv-boxart/995720898-{width}x{height}.jpg,NA
-872847859,Meow,https://static-cdn.jtvnw.net/ttv-boxart/872847859_IGDB-{width}x{height}.jpg,334677
 496048,Shakedown: Hawaii,https://static-cdn.jtvnw.net/ttv-boxart/496048_IGDB-{width}x{height}.jpg,14694
 7883,Wolfenstein: Enemy Territory,https://static-cdn.jtvnw.net/ttv-boxart/7883_IGDB-{width}x{height}.jpg,2987
 433493784,Warborne: Above Ashes,https://static-cdn.jtvnw.net/ttv-boxart/433493784_IGDB-{width}x{height}.jpg,333102
 700227369,Viaje De Palabra,https://static-cdn.jtvnw.net/ttv-boxart/700227369-{width}x{height}.jpg,103745
 515449,Black Book,https://static-cdn.jtvnw.net/ttv-boxart/515449_IGDB-{width}x{height}.jpg,121894
-782384346,Samba de Amigo: Party Central,https://static-cdn.jtvnw.net/ttv-boxart/782384346_IGDB-{width}x{height}.jpg,236658
 1565834559,Dragon Warrior,https://static-cdn.jtvnw.net/ttv-boxart/1565834559_IGDB-{width}x{height}.jpg,205229
-25256,Ōkamiden,https://static-cdn.jtvnw.net/ttv-boxart/25256_IGDB-{width}x{height}.jpg,16618
-1808330168,SONIC THE HEDGEHOG,https://static-cdn.jtvnw.net/ttv-boxart/1808330168_IGDB-{width}x{height}.jpg,316900
 1578360216,Dogs,https://static-cdn.jtvnw.net/ttv-boxart/1578360216_IGDB-{width}x{height}.jpg,311240
 1411785674,Among Ashes,https://static-cdn.jtvnw.net/ttv-boxart/1411785674_IGDB-{width}x{height}.jpg,258510
 557609183,Rocket Science,https://static-cdn.jtvnw.net/ttv-boxart/557609183_IGDB-{width}x{height}.jpg,232417
 14846,DND,https://static-cdn.jtvnw.net/ttv-boxart/14846_IGDB-{width}x{height}.jpg,2888
 514426,Terminator: Resistance,https://static-cdn.jtvnw.net/ttv-boxart/514426_IGDB-{width}x{height}.jpg,122611
-517868,Freshly Frosted,https://static-cdn.jtvnw.net/ttv-boxart/517868_IGDB-{width}x{height}.jpg,117697
 119674052,CookieRun: Tower of Adventures,https://static-cdn.jtvnw.net/ttv-boxart/119674052_IGDB-{width}x{height}.jpg,198316
-745937462,Tea Talk,https://static-cdn.jtvnw.net/ttv-boxart/745937462_IGDB-{width}x{height}.jpg,298198
 499986,Weed Shop 2,https://static-cdn.jtvnw.net/ttv-boxart/499986_IGDB-{width}x{height}.jpg,28907
 240,Tales of Phantasia,https://static-cdn.jtvnw.net/ttv-boxart/240_IGDB-{width}x{height}.jpg,1200
 516769,Filament,https://static-cdn.jtvnw.net/ttv-boxart/516769_IGDB-{width}x{height}.jpg,121885
 450,Delta Force: Black Hawk Down,https://static-cdn.jtvnw.net/ttv-boxart/450_IGDB-{width}x{height}.jpg,5812
-18884,Gears of War 2,https://static-cdn.jtvnw.net/ttv-boxart/18884_IGDB-{width}x{height}.jpg,548
 1604702426,22 Dayz,https://static-cdn.jtvnw.net/ttv-boxart/1604702426-{width}x{height}.jpg,328158
-994999662,Snow Plow Truck,https://static-cdn.jtvnw.net/ttv-boxart/994999662-{width}x{height}.jpg,101488
-637977280,CashGrab: Refunded,https://static-cdn.jtvnw.net/ttv-boxart/637977280_IGDB-{width}x{height}.jpg,350952
 512786,Pokémon Sleep,https://static-cdn.jtvnw.net/ttv-boxart/512786_IGDB-{width}x{height}.jpg,123089
-123196015,SkyTime,https://static-cdn.jtvnw.net/ttv-boxart/123196015_IGDB-{width}x{height}.jpg,31794
 2028350281,Shadow Gambit: The Cursed Crew,https://static-cdn.jtvnw.net/ttv-boxart/2028350281_IGDB-{width}x{height}.jpg,233307
 933203405,Sonic Dream Team,https://static-cdn.jtvnw.net/ttv-boxart/933203405_IGDB-{width}x{height}.jpg,274840
 560237920,Horror Game Collection,https://static-cdn.jtvnw.net/ttv-boxart/560237920-{width}x{height}.jpg,184595
 26547,Sleeping Dogs,https://static-cdn.jtvnw.net/ttv-boxart/26547_IGDB-{width}x{height}.jpg,1267
-882115055,Room 42,https://static-cdn.jtvnw.net/ttv-boxart/882115055-{width}x{height}.jpg,68493
 7151,Dogs Playing Poker,https://static-cdn.jtvnw.net/ttv-boxart/7151-{width}x{height}.jpg,80045
-518597,Going Medieval,https://static-cdn.jtvnw.net/ttv-boxart/518597_IGDB-{width}x{height}.jpg,115555
 2097043667,Cash Cleaner Simulator,https://static-cdn.jtvnw.net/ttv-boxart/2097043667_IGDB-{width}x{height}.jpg,297943
 637565409,Fear the Spotlight,https://static-cdn.jtvnw.net/ttv-boxart/637565409_IGDB-{width}x{height}.jpg,199130
-369385,N++,https://static-cdn.jtvnw.net/ttv-boxart/369385_IGDB-{width}x{height}.jpg,8750
 2598,Tribes 2,https://static-cdn.jtvnw.net/ttv-boxart/2598_IGDB-{width}x{height}.jpg,922
 491169,Who's Your Daddy,https://static-cdn.jtvnw.net/ttv-boxart/491169_IGDB-{width}x{height}.jpg,15746
 512160,Tribes of Midgard,https://static-cdn.jtvnw.net/ttv-boxart/512160_IGDB-{width}x{height}.jpg,120619
@@ -3866,9 +3361,7 @@ category_id,category_name,box_art_url,igdb_id
 1866271276,Familiar,https://static-cdn.jtvnw.net/ttv-boxart/1866271276_IGDB-{width}x{height}.jpg,196570
 497387,BLACKSAD: Under the Skin,https://static-cdn.jtvnw.net/ttv-boxart/497387_IGDB-{width}x{height}.jpg,55984
 2115882958,Reading Fun,https://static-cdn.jtvnw.net/ttv-boxart/2115882958-{width}x{height}.jpg,44360
-17661,Oddworld: Abe's Exoddus,https://static-cdn.jtvnw.net/ttv-boxart/17661_IGDB-{width}x{height}.jpg,1000
 349818321,Angry Video Game Nerd 8-bit,https://static-cdn.jtvnw.net/ttv-boxart/349818321_IGDB-{width}x{height}.jpg,329179
-2146546832,The Last Monday,https://static-cdn.jtvnw.net/ttv-boxart/2146546832_IGDB-{width}x{height}.jpg,232740
 1188830433,Miitopia: Casting Call,https://static-cdn.jtvnw.net/ttv-boxart/1188830433_IGDB-{width}x{height}.jpg,147844
 305534059,KAISERPUNK,https://static-cdn.jtvnw.net/ttv-boxart/305534059_IGDB-{width}x{height}.jpg,276655
 1881083535,Dead Island: Riptide - Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/1881083535_IGDB-{width}x{height}.jpg,24311
@@ -3879,31 +3372,24 @@ category_id,category_name,box_art_url,igdb_id
 450518812,Security Guard,https://static-cdn.jtvnw.net/ttv-boxart/450518812_IGDB-{width}x{height}.jpg,167565
 29733,Evil Dead: The Game,https://static-cdn.jtvnw.net/ttv-boxart/29733_IGDB-{width}x{height}.jpg,66308
 1936295306,Garena Free Fire MAX,https://static-cdn.jtvnw.net/ttv-boxart/1936295306_IGDB-{width}x{height}.jpg,149972
-6607,Tony Hawk's American Wasteland,https://static-cdn.jtvnw.net/ttv-boxart/6607_IGDB-{width}x{height}.jpg,7219
-458132,ChatChat,https://static-cdn.jtvnw.net/ttv-boxart/458132_IGDB-{width}x{height}.jpg,80226
 6324,Harvest Moon: Back to Nature,https://static-cdn.jtvnw.net/ttv-boxart/6324_IGDB-{width}x{height}.jpg,3380
 519075,Northern Lights,https://static-cdn.jtvnw.net/ttv-boxart/519075_IGDB-{width}x{height}.jpg,114840
 67475,LIGHTNING RETURNS: FINAL FANTASY XIII,https://static-cdn.jtvnw.net/ttv-boxart/67475_IGDB-{width}x{height}.jpg,2449
 24393,NBA Live 10,https://static-cdn.jtvnw.net/ttv-boxart/24393_IGDB-{width}x{height}.jpg,7107
 303134951,Card Shop Simulator Multiplayer,https://static-cdn.jtvnw.net/ttv-boxart/303134951_IGDB-{width}x{height}.jpg,346816
-30475,FINAL FANTASY XIII-2,https://static-cdn.jtvnw.net/ttv-boxart/30475_IGDB-{width}x{height}.jpg,384
 369562,Sunset Overdrive,https://static-cdn.jtvnw.net/ttv-boxart/369562_IGDB-{width}x{height}.jpg,3247
 15265,Fuzion Frenzy,https://static-cdn.jtvnw.net/ttv-boxart/15265_IGDB-{width}x{height}.jpg,5842
 1879354110,The Game Awards,https://static-cdn.jtvnw.net/ttv-boxart/1879354110-{width}x{height}.jpg,NA
 1244418676,Winning Post 10 2025,https://static-cdn.jtvnw.net/ttv-boxart/1244418676_IGDB-{width}x{height}.jpg,322840
 458778,Tales from the Borderlands,https://static-cdn.jtvnw.net/ttv-boxart/458778_IGDB-{width}x{height}.jpg,6707
-491775,Pathfinder Adventures,https://static-cdn.jtvnw.net/ttv-boxart/491775_IGDB-{width}x{height}.jpg,36611
 31238,Dead Rising 2: Off the Record,https://static-cdn.jtvnw.net/ttv-boxart/31238_IGDB-{width}x{height}.jpg,5924
 976777994,YAPYAP,https://static-cdn.jtvnw.net/ttv-boxart/976777994_IGDB-{width}x{height}.jpg,363307
 878337698,World War Legion,https://static-cdn.jtvnw.net/ttv-boxart/878337698_IGDB-{width}x{height}.jpg,365590
-7276,Rogue Galaxy,https://static-cdn.jtvnw.net/ttv-boxart/7276_IGDB-{width}x{height}.jpg,11292
-498434,Azur Lane,https://static-cdn.jtvnw.net/ttv-boxart/498434_IGDB-{width}x{height}.jpg,70708
 1117578222,Garden,https://static-cdn.jtvnw.net/ttv-boxart/1117578222_IGDB-{width}x{height}.jpg,249417
 496142,Pavlov VR,https://static-cdn.jtvnw.net/ttv-boxart/496142_IGDB-{width}x{height}.jpg,30548
 10979,The Legend of Zelda,https://static-cdn.jtvnw.net/ttv-boxart/10979_IGDB-{width}x{height}.jpg,1022
 499346,Zoo Tycoon: Ultimate Animal Collection,https://static-cdn.jtvnw.net/ttv-boxart/499346_IGDB-{width}x{height}.jpg,74712
 485080528,Ultimate Sheep Raccoon,https://static-cdn.jtvnw.net/ttv-boxart/485080528_IGDB-{width}x{height}.jpg,325276
-1026790489,Toad's Typical Day,https://static-cdn.jtvnw.net/ttv-boxart/1026790489-{width}x{height}.jpg,322107
 2098006574,Metal Gear Solid 3: Snake Eater - HD Edition,https://static-cdn.jtvnw.net/ttv-boxart/2098006574_IGDB-{width}x{height}.jpg,99821
 1810411787,NINJA GAIDEN: Ragebound,https://static-cdn.jtvnw.net/ttv-boxart/1810411787_IGDB-{width}x{height}.jpg,325580
 29814,Tester Phase One,https://static-cdn.jtvnw.net/ttv-boxart/29814-{width}x{height}.jpg,98809
@@ -3914,80 +3400,50 @@ category_id,category_name,box_art_url,igdb_id
 2092908941,Bronzebeard's Tavern,https://static-cdn.jtvnw.net/ttv-boxart/2092908941_IGDB-{width}x{height}.jpg,258955
 1761680265,Japanese Drag Racing,https://static-cdn.jtvnw.net/ttv-boxart/1761680265_IGDB-{width}x{height}.jpg,174004
 6895,Alone in the Dark 3,https://static-cdn.jtvnw.net/ttv-boxart/6895_IGDB-{width}x{height}.jpg,1959
-21548,BASIC Programming,https://static-cdn.jtvnw.net/ttv-boxart/21548_IGDB-{width}x{height}.jpg,54794
 337032217,Alien: Rogue Incursion,https://static-cdn.jtvnw.net/ttv-boxart/337032217_IGDB-{width}x{height}.jpg,299582
 1621885485,Last Train Home,https://static-cdn.jtvnw.net/ttv-boxart/1621885485_IGDB-{width}x{height}.jpg,252869
-1363661410,Immortals of Aveum,https://static-cdn.jtvnw.net/ttv-boxart/1363661410_IGDB-{width}x{height}.jpg,228531
-488942,Trivial Pursuit Live!,https://static-cdn.jtvnw.net/ttv-boxart/488942_IGDB-{width}x{height}.jpg,11290
-498859,MORDHAU,https://static-cdn.jtvnw.net/ttv-boxart/498859_IGDB-{width}x{height}.jpg,27729
 1952699919,Deep Rock Galactic: Survivor,https://static-cdn.jtvnw.net/ttv-boxart/1952699919_IGDB-{width}x{height}.jpg,240556
 21757,Dragon Quest Monsters: Caravan Heart,https://static-cdn.jtvnw.net/ttv-boxart/21757_IGDB-{width}x{height}.jpg,6388
 1006188213,Ciudad del Mar,https://static-cdn.jtvnw.net/ttv-boxart/1006188213_IGDB-{width}x{height}.jpg,186045
 1908275215,Portal Balls,https://static-cdn.jtvnw.net/ttv-boxart/1908275215_IGDB-{width}x{height}.jpg,325880
 1277738947,Sephiria,https://static-cdn.jtvnw.net/ttv-boxart/1277738947_IGDB-{width}x{height}.jpg,278379
-13565,Crash Twinsanity,https://static-cdn.jtvnw.net/ttv-boxart/13565_IGDB-{width}x{height}.jpg,1189
 1556973034,Ocean,https://static-cdn.jtvnw.net/ttv-boxart/1556973034-{width}x{height}.jpg,179433
-449419839,Ricochet Squad,https://static-cdn.jtvnw.net/ttv-boxart/449419839_IGDB-{width}x{height}.jpg,364403
-1757,Heroes of Might and Magic V,https://static-cdn.jtvnw.net/ttv-boxart/1757_IGDB-{width}x{height}.jpg,370
-2047299620,Sanity Loops,https://static-cdn.jtvnw.net/ttv-boxart/2047299620_IGDB-{width}x{height}.jpg,347960
 610838819,Pioneers of Pagonia,https://static-cdn.jtvnw.net/ttv-boxart/610838819_IGDB-{width}x{height}.jpg,237457
 21495,"Warhammer 40,000: Space Marine",https://static-cdn.jtvnw.net/ttv-boxart/21495_IGDB-{width}x{height}.jpg,578
-509185,Sniper Ghost Warrior Contracts,https://static-cdn.jtvnw.net/ttv-boxart/509185_IGDB-{width}x{height}.jpg,107155
-1969007352,Basketball,https://static-cdn.jtvnw.net/ttv-boxart/1969007352_IGDB-{width}x{height}.jpg,287290
 12004,DmC: Devil May Cry,https://static-cdn.jtvnw.net/ttv-boxart/12004_IGDB-{width}x{height}.jpg,1254
-1956,Bridge,https://static-cdn.jtvnw.net/ttv-boxart/1956_IGDB-{width}x{height}.jpg,131267
 1174671315,Until Then,https://static-cdn.jtvnw.net/ttv-boxart/1174671315_IGDB-{width}x{height}.jpg,134165
 494117,Carmageddon: Max Damage,https://static-cdn.jtvnw.net/ttv-boxart/494117_IGDB-{width}x{height}.jpg,18075
 1986391370,Planet of Lana,https://static-cdn.jtvnw.net/ttv-boxart/1986391370_IGDB-{width}x{height}.jpg,152071
 658335417,Out of Time,https://static-cdn.jtvnw.net/ttv-boxart/658335417_IGDB-{width}x{height}.jpg,356712
-740574587,Video Game,https://static-cdn.jtvnw.net/ttv-boxart/740574587_IGDB-{width}x{height}.jpg,288493
 1331071587,Scary Baboon,https://static-cdn.jtvnw.net/ttv-boxart/1331071587_IGDB-{width}x{height}.jpg,338667
-17500,Monster Rancher 2,https://static-cdn.jtvnw.net/ttv-boxart/17500_IGDB-{width}x{height}.jpg,4106
 490063,Dragon's Dogma Online,https://static-cdn.jtvnw.net/ttv-boxart/490063_IGDB-{width}x{height}.jpg,26985
 27449,SpyParty,https://static-cdn.jtvnw.net/ttv-boxart/27449_IGDB-{width}x{height}.jpg,9598
-500409,Knives Out,https://static-cdn.jtvnw.net/ttv-boxart/500409_IGDB-{width}x{height}.jpg,77776
 492738,Unravel Two,https://static-cdn.jtvnw.net/ttv-boxart/492738_IGDB-{width}x{height}.jpg,19241
 1926459265,Lofi Hip Hop Worlds to Study in,https://static-cdn.jtvnw.net/ttv-boxart/1926459265_IGDB-{width}x{height}.jpg,203207
-513366,ONE PIECE: PIRATE WARRIORS 4,https://static-cdn.jtvnw.net/ttv-boxart/513366_IGDB-{width}x{height}.jpg,120436
 14081,Sly Cooper and the Thievius Raccoonus,https://static-cdn.jtvnw.net/ttv-boxart/14081_IGDB-{width}x{height}.jpg,1798
 10767,Fallout: A Post Nuclear Role Playing Game,https://static-cdn.jtvnw.net/ttv-boxart/10767_IGDB-{width}x{height}.jpg,13
 11547,Might and Magic III: Isles of Terra,https://static-cdn.jtvnw.net/ttv-boxart/11547_IGDB-{width}x{height}.jpg,7735
-2846,Alone in the Dark,https://static-cdn.jtvnw.net/ttv-boxart/2846_IGDB-{width}x{height}.jpg,1956
-2132650309,Stacklands,https://static-cdn.jtvnw.net/ttv-boxart/2132650309_IGDB-{width}x{height}.jpg,196230
-10963,Godzilla: Unleashed,https://static-cdn.jtvnw.net/ttv-boxart/10963_IGDB-{width}x{height}.jpg,4891
-1023950301,HumanitZ,https://static-cdn.jtvnw.net/ttv-boxart/1023950301_IGDB-{width}x{height}.jpg,172722
 20355,LEGO Universe,https://static-cdn.jtvnw.net/ttv-boxart/20355_IGDB-{width}x{height}.jpg,21092
 503478,Mario Kart Tour,https://static-cdn.jtvnw.net/ttv-boxart/503478_IGDB-{width}x{height}.jpg,85663
 569869366,Trivia,https://static-cdn.jtvnw.net/ttv-boxart/569869366_IGDB-{width}x{height}.jpg,110820
 2098262252,"GuGu Pizza: Delivering Pizza to the Space Station? Boss, This is Just Not Right!",https://static-cdn.jtvnw.net/ttv-boxart/2098262252_IGDB-{width}x{height}.jpg,328947
 1823834229,Trading Simulator,https://static-cdn.jtvnw.net/ttv-boxart/1823834229-{width}x{height}.jpg,290421
-32617,Worms: Ultimate Mayhem,https://static-cdn.jtvnw.net/ttv-boxart/32617_IGDB-{width}x{height}.jpg,9333
 476404,Hexcells Infinite,https://static-cdn.jtvnw.net/ttv-boxart/476404_IGDB-{width}x{height}.jpg,11061
 514190,Plants vs. Zombies: Battle for Neighborville,https://static-cdn.jtvnw.net/ttv-boxart/514190_IGDB-{width}x{height}.jpg,121618
-131874387,Flex City,https://static-cdn.jtvnw.net/ttv-boxart/131874387_IGDB-{width}x{height}.jpg,358973
-1829295323,Do Not Press the Red Button,https://static-cdn.jtvnw.net/ttv-boxart/1829295323_IGDB-{width}x{height}.jpg,88105
 1208584884,PUBG Mobile Lite,https://static-cdn.jtvnw.net/ttv-boxart/1208584884-{width}x{height}.jpg,124773
 9948,Evolution 2: Far Off Promise,https://static-cdn.jtvnw.net/ttv-boxart/9948_IGDB-{width}x{height}.jpg,45858
-1090941110,Home Street: Dream House Sim,https://static-cdn.jtvnw.net/ttv-boxart/1090941110_IGDB-{width}x{height}.jpg,90555
-505473,Granny,https://static-cdn.jtvnw.net/ttv-boxart/505473_IGDB-{width}x{height}.jpg,87514
 515862,The Walking Dead: Saints & Sinners,https://static-cdn.jtvnw.net/ttv-boxart/515862_IGDB-{width}x{height}.jpg,105416
-513418,Storm Chasers,https://static-cdn.jtvnw.net/ttv-boxart/513418_IGDB-{width}x{height}.jpg,117083
-5368,NASCAR Racing 2003 Season,https://static-cdn.jtvnw.net/ttv-boxart/5368_IGDB-{width}x{height}.jpg,804
 1836629033,GAME,https://static-cdn.jtvnw.net/ttv-boxart/1836629033_IGDB-{width}x{height}.jpg,346610
-1405032928,Achilles: Legends Untold,https://static-cdn.jtvnw.net/ttv-boxart/1405032928_IGDB-{width}x{height}.jpg,160293
 3014,Scrabble,https://static-cdn.jtvnw.net/ttv-boxart/3014-{width}x{height}.jpg,15362
 1281246848,Tales of Vesperia: Definitive Edition,https://static-cdn.jtvnw.net/ttv-boxart/1281246848_IGDB-{width}x{height}.jpg,103286
 747702304,Saints Row: The Third Remastered,https://static-cdn.jtvnw.net/ttv-boxart/747702304_IGDB-{width}x{height}.jpg,132097
 1433520025,Shelldiver,https://static-cdn.jtvnw.net/ttv-boxart/1433520025_IGDB-{width}x{height}.jpg,356430
 333536769,Coin Pusher,https://static-cdn.jtvnw.net/ttv-boxart/333536769_IGDB-{width}x{height}.jpg,95262
-497485,Cold Waters,https://static-cdn.jtvnw.net/ttv-boxart/497485_IGDB-{width}x{height}.jpg,24815
 12788,Contender 2,https://static-cdn.jtvnw.net/ttv-boxart/12788_IGDB-{width}x{height}.jpg,44955
 447215967,Need for Speed Most Wanted U,https://static-cdn.jtvnw.net/ttv-boxart/447215967_IGDB-{width}x{height}.jpg,21699
 26181,Mountain Sports,https://static-cdn.jtvnw.net/ttv-boxart/26181_IGDB-{width}x{height}.jpg,50971
-578047105,Shooter,https://static-cdn.jtvnw.net/ttv-boxart/578047105-{width}x{height}.jpg,359367
 460350,Adventure Time: The Secret of the Nameless Kingdom,https://static-cdn.jtvnw.net/ttv-boxart/460350_IGDB-{width}x{height}.jpg,8620
 313142,Tower of Saviors,https://static-cdn.jtvnw.net/ttv-boxart/313142_IGDB-{width}x{height}.jpg,22440
-5511,Progress Quest,https://static-cdn.jtvnw.net/ttv-boxart/5511_IGDB-{width}x{height}.jpg,94363
 42328067,Backrooms,https://static-cdn.jtvnw.net/ttv-boxart/42328067-{width}x{height}.jpg,379993
 1174880646,Blade & Sorcery: Nomad,https://static-cdn.jtvnw.net/ttv-boxart/1174880646_IGDB-{width}x{height}.jpg,196375
 510763,Angry Birds Dream Blast,https://static-cdn.jtvnw.net/ttv-boxart/510763_IGDB-{width}x{height}.jpg,114424
@@ -3999,49 +3455,24 @@ category_id,category_name,box_art_url,igdb_id
 493175,Super Mario Run,https://static-cdn.jtvnw.net/ttv-boxart/493175_IGDB-{width}x{height}.jpg,23796
 516606,DJMAX RESPECT V,https://static-cdn.jtvnw.net/ttv-boxart/516606_IGDB-{width}x{height}.jpg,126179
 491189,Scrap Mechanic,https://static-cdn.jtvnw.net/ttv-boxart/491189_IGDB-{width}x{height}.jpg,16611
-509208,Touhou Luna Nights,https://static-cdn.jtvnw.net/ttv-boxart/509208_IGDB-{width}x{height}.jpg,105447
-73272,Real Racing 3,https://static-cdn.jtvnw.net/ttv-boxart/73272_IGDB-{width}x{height}.jpg,22179
 1502494668,Poly Bridge 3,https://static-cdn.jtvnw.net/ttv-boxart/1502494668_IGDB-{width}x{height}.jpg,243400
-502448,Peace and Love,https://static-cdn.jtvnw.net/ttv-boxart/502448-{width}x{height}.jpg,82213
-1578360216,Dogs,https://static-cdn.jtvnw.net/ttv-boxart/1578360216_IGDB-{width}x{height}.jpg,311240
 4671,Aaargh! Condor,https://static-cdn.jtvnw.net/ttv-boxart/4671-{width}x{height}.jpg,71679
 29498,Figment,https://static-cdn.jtvnw.net/ttv-boxart/29498_IGDB-{width}x{height}.jpg,20329
-1062834287,Archipelago,https://static-cdn.jtvnw.net/ttv-boxart/1062834287_IGDB-{width}x{height}.jpg,187171
 425630626,Snooker Blitz,https://static-cdn.jtvnw.net/ttv-boxart/425630626_IGDB-{width}x{height}.jpg,315913
-21495,"Warhammer 40,000: Space Marine",https://static-cdn.jtvnw.net/ttv-boxart/21495_IGDB-{width}x{height}.jpg,578
-636432195,This Bed We Made,https://static-cdn.jtvnw.net/ttv-boxart/636432195_IGDB-{width}x{height}.jpg,218674
 18263,Lifeline,https://static-cdn.jtvnw.net/ttv-boxart/18263_IGDB-{width}x{height}.jpg,19282
 1594576658,AAA Dynamic Scenes,https://static-cdn.jtvnw.net/ttv-boxart/1594576658_IGDB-{width}x{height}.jpg,326907
 1476850343,Sword of the Sea,https://static-cdn.jtvnw.net/ttv-boxart/1476850343_IGDB-{width}x{height}.jpg,250620
-2055262203,GUNDAM BREAKER 4,https://static-cdn.jtvnw.net/ttv-boxart/2055262203_IGDB-{width}x{height}.jpg,287853
-25256,Ōkamiden,https://static-cdn.jtvnw.net/ttv-boxart/25256_IGDB-{width}x{height}.jpg,16618
-2028350281,Shadow Gambit: The Cursed Crew,https://static-cdn.jtvnw.net/ttv-boxart/2028350281_IGDB-{width}x{height}.jpg,233307
 1478052332,Reel Life,https://static-cdn.jtvnw.net/ttv-boxart/1478052332-{width}x{height}.jpg,251963
-1368829066,Into the Flames,https://static-cdn.jtvnw.net/ttv-boxart/1368829066_IGDB-{width}x{height}.jpg,128201
 6043,Hitman: Contracts,https://static-cdn.jtvnw.net/ttv-boxart/6043_IGDB-{width}x{height}.jpg,1049
 503243,Sansar,https://static-cdn.jtvnw.net/ttv-boxart/503243_IGDB-{width}x{height}.jpg,95117
-492828,Dragon Quest Monsters: Joker 3,https://static-cdn.jtvnw.net/ttv-boxart/492828_IGDB-{width}x{height}.jpg,24057
-664363218,Combat Mission: Barbarossa to Berlin,https://static-cdn.jtvnw.net/ttv-boxart/664363218_IGDB-{width}x{height}.jpg,52516
-60384505,Unknown Tapes,https://static-cdn.jtvnw.net/ttv-boxart/60384505_IGDB-{width}x{height}.jpg,286293
 523434393,a,https://static-cdn.jtvnw.net/ttv-boxart/523434393_IGDB-{width}x{height}.jpg,180216
-634101572,Little Nightmares: Enhanced Edition,https://static-cdn.jtvnw.net/ttv-boxart/634101572_IGDB-{width}x{height}.jpg,350903
 332442086,Dawn Apart,https://static-cdn.jtvnw.net/ttv-boxart/332442086_IGDB-{width}x{height}.jpg,231392
-1040463022,Conker: Live & Reloaded,https://static-cdn.jtvnw.net/ttv-boxart/1040463022_IGDB-{width}x{height}.jpg,1425
 1712837864,PANICORE,https://static-cdn.jtvnw.net/ttv-boxart/1712837864_IGDB-{width}x{height}.jpg,277278
-2069473293,Ember Knights,https://static-cdn.jtvnw.net/ttv-boxart/2069473293_IGDB-{width}x{height}.jpg,146609
 509064,Hello Neighbor: Hide and Seek,https://static-cdn.jtvnw.net/ttv-boxart/509064_IGDB-{width}x{height}.jpg,107614
 496738,War of Rights,https://static-cdn.jtvnw.net/ttv-boxart/496738_IGDB-{width}x{height}.jpg,33953
-878337698,World War Legion,https://static-cdn.jtvnw.net/ttv-boxart/878337698_IGDB-{width}x{height}.jpg,365590
 496320,FIFA Mobile,https://static-cdn.jtvnw.net/ttv-boxart/496320_IGDB-{width}x{height}.jpg,56345
-493401,Duke Nukem 3D: 20th Anniversary World Tour,https://static-cdn.jtvnw.net/ttv-boxart/493401_IGDB-{width}x{height}.jpg,23596
-492738,Unravel Two,https://static-cdn.jtvnw.net/ttv-boxart/492738_IGDB-{width}x{height}.jpg,19241
 416015,Hero Siege,https://static-cdn.jtvnw.net/ttv-boxart/416015_IGDB-{width}x{height}.jpg,11708
 381933311,Dungeon Clawler,https://static-cdn.jtvnw.net/ttv-boxart/381933311_IGDB-{width}x{height}.jpg,290897
-25742,Axel & Pixel,https://static-cdn.jtvnw.net/ttv-boxart/25742_IGDB-{width}x{height}.jpg,14845
-4364,Mega Man X7,https://static-cdn.jtvnw.net/ttv-boxart/4364_IGDB-{width}x{height}.jpg,1747
 126837310,Enjoy,https://static-cdn.jtvnw.net/ttv-boxart/126837310_IGDB-{width}x{height}.jpg,197430
-495581,GreedFall,https://static-cdn.jtvnw.net/ttv-boxart/495581_IGDB-{width}x{height}.jpg,27092
-85262762,Super Astro Cat,https://static-cdn.jtvnw.net/ttv-boxart/85262762_IGDB-{width}x{height}.jpg,331521
-478467,Vainglory,https://static-cdn.jtvnw.net/ttv-boxart/478467_IGDB-{width}x{height}.jpg,13174
 9318,Clive Barker's Undying,https://static-cdn.jtvnw.net/ttv-boxart/9318_IGDB-{width}x{height}.jpg,636
 515580,TREPANG²,https://static-cdn.jtvnw.net/ttv-boxart/515580_IGDB-{width}x{height}.jpg,126212

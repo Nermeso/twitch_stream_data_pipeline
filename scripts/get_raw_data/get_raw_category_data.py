@@ -80,8 +80,6 @@ def call_get_top_games_endpoint(headers, raw_category_data):
         else:
             cursor = output["pagination"]["cursor"]
         
-    return raw_category_data
-
 
 
 def main():
@@ -89,21 +87,24 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    # Sometimes calling API leads to connection error as a result of DNS issues
-    # Loop aims to restart process if that happens
-    while True:
-        try:
-            # Calls Twitch's "Get Top Games" endpoint to get currently streamed categories and category data we have not collected yet
-            raw_category_data = {
-                "day_date_id": day_date_id,
-                "time_of_day_id": time_of_day_id,
-                "data": []
-            }
-            raw_category_data = call_get_top_games_endpoint(headers, raw_category_data)
-            break
-        except ConnectionError as e:
-            print(e)
-            continue
+    raw_category_data = {
+                    "day_date_id": day_date_id,
+                    "time_of_day_id": time_of_day_id,
+                    "data": []
+                }
+
+    # Do API calling twice to make sure no category is skipped over
+    for _ in range(0, 2):
+        # Sometimes calling API leads to connection error as a result of DNS issues
+        # Loop aims to restart process if that happens
+        while True:
+            try:
+                # Calls Twitch's "Get Top Games" endpoint to get currently streamed categories and category data we have not collected yet
+                call_get_top_games_endpoint(headers, raw_category_data)
+                break
+            except ConnectionError as e:
+                print(e)
+                continue
     
     # Write the raw category data to json file
     file_path = f"data/twitch_project_raw_layer/raw_categories_data/raw_category_data_{day_date_id}_{time_of_day_id}.json"

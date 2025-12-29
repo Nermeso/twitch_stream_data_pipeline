@@ -65,26 +65,23 @@ def get_category_dim_info():
 
 
 # Adds new category data from processed category data to the official dimension data
+# Also returns dataframe filled with new categories not seen before in original official category dimension data
 def add_new_category_data(processed_category_df, category_dim_df):
     official_category_dim_df = pd.concat([category_dim_df, processed_category_df]).drop_duplicates(subset=["category_id"]).reset_index()
     official_category_dim_df = official_category_dim_df[["category_id", "category_name", "igdb_id"]]
-    additional_categories_df = processed_category_df.merge(
-            category_dim_df,
-            how="left",
-            indicator=True
-        ).query('_merge == "left_only"').drop(columns='_merge')
+    additional_categories = pd.concat([processed_category_df.drop_duplicates(),category_dim_df,category_dim_df]).drop_duplicates(keep=False) 
 
-    return official_category_dim_df, additional_categories_df
+    return official_category_dim_df, additional_categories
+
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
-    day_date_id = "20251228" # testing value
-    time_of_day_id = "2100" # testing value
     processed_category_df = get_processed_category_data(day_date_id, time_of_day_id)
     category_dim_df = get_category_dim_info() # gets current category dimension data
-    official_category_dim_df, additional_categories_df = add_new_category_data(processed_category_df, category_dim_df)
-    print(official_category_dim_df)
+    official_category_dim_df, additional_categories = add_new_category_data(processed_category_df, category_dim_df) # adds new category data to official category dimension file
+    category_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_category_data/official_categories_data.csv"
+    official_category_dim_df.to_csv(category_dim_file_path, index=False) # convert category dim data to CSV
 
 
 if __name__ == "__main__":

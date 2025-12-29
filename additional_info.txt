@@ -1,0 +1,18 @@
+-2 and 13 minute = updateCategories, insertDatatoDB
+-1 and 14 minute = processCategoryWeights
+0 minute = collectStreamData
+4 minute = updateUser, insertDatatoDB
+7 minute = updateCategoryGenres, insertDatatoDB (every hour or so)
+9 minute = updateCategoryGameModes, insertDatatoDB
+12 minute = validateToken (every hour), insertDatatoDB2
+
+Users that are banned will not show up on get users endpoint
+Accounts are constantly getting banned
+if they show up on get streams end point, minutes later, they might not show up on get users endpoint cuz they are banned
+
+
+DETAIL:  Key (stream_id)=(316814621685) already exists.
+
+
+
+

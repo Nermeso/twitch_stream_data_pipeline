@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from igdb.wrapper import IGDBWrapper
 import os
 from pathlib import Path
@@ -7,8 +8,8 @@ repo_root = str(Path(__file__).parents[2])
 
 ################# SUMMARY #################
 '''
-    This script generates a CSV file to be
-    inserted into the genre dimension table.
+    This script generates a JSON file to be
+    of available genres from the IGDB API.
 '''
 
 ########## Low-level functions ##########
@@ -17,7 +18,6 @@ repo_root = str(Path(__file__).parents[2])
 def byte_to_json(byte_array):
     my_json = byte_array.decode('utf8').replace("'", '"')
     output = json.loads(my_json)
-    # output = json.dumps(output, indent=4, sort_keys=True)
 
     return output
 
@@ -41,31 +41,27 @@ def get_IGDB_genre_data(wrapper):
             )
     output = byte_to_json(byte_array)
 
-    print(json.dumps(output, indent=4))
-
     return output
 
 
-# Converts API call's json output to csv for dimension table
-def json_to_csv(data):
-    genre_dimension_path = repo_root + "/data/dimension_tables/genre_dimension.csv"
-
-    with open(genre_dimension_path, 'w') as f:
-        f.write('genre_id,genre_name\n')
-        for genre in data:
-            genre_id = genre["id"]
-            genre_name = genre["name"]
-            line = f"{genre_id},{genre_name}\n"
-            f.write(line)
-        f.write('NA,Not Available')
-
-    return
-
-
 def main():
-    wrapper = make_wrapper()
+    wrapper = make_wrapper() # Makes IGDB wrapper to interact with IGDB API
     json_data = get_IGDB_genre_data(wrapper)
-    json_to_csv(json_data)
+
+    year = str(datetime.today().year)
+    month = str(datetime.today().month)
+    day = str(datetime.today().day)
+    day_date_id = year+month+day
+
+    raw_genre_data = {
+        "day_date_id": day_date_id,
+        "data": json_data
+    }
+
+    # Write the raw genre data to json file
+    file_path = f"data/twitch_project_raw_layer/raw_genres_data/raw_genres_data_{day_date_id}.json"
+    with open(file_path, 'w') as json_file:
+        json.dump(raw_genre_data, json_file, indent=4)
 
 
 if __name__ == "__main__":

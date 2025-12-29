@@ -60,11 +60,12 @@ CREATE TABLE "languages" (
 );
 
 CREATE TABLE "streams" (
-  "stream_id" varchar PRIMARY KEY,
+  "stream_id" varchar,
   "date_day_id" varchar(8) REFERENCES day_dates(day_date_id),
   "time_of_day_id" varchar(4) REFERENCES time_of_day(time_of_day_id),
-  "user_id" varchar REFERENCES users(user_id),
+  "user_id" varchar NOT NULL,
   "category_id" varchar REFERENCES categories(category_id),
-  "language_id" varchar REFERENCES languages(language_id),
-  "viewer_count" int NOT NULL
+  "language_id" varchar NOT NULL,
+  "viewer_count" int,
+  PRIMARY KEY (stream_id, date_day_id, time_of_day_id)
 );

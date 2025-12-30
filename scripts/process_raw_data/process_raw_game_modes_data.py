@@ -6,7 +6,7 @@ import time
 
 ################################# SUMMARY #################################
 '''
-    This script processes the raw genre data by converting it into a 
+    This script processes the raw game mode data by converting it into a 
     CSV file.
 '''
 ###########################################################################
@@ -44,18 +44,18 @@ def get_time_of_day_id():
 
 
 def main():
-    raw_genre_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_genres_data/raw_genres_data.json"
+    raw_game_mode_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_game_modes_data/raw_game_modes_data.json"
 
     # Access raw category data
-    with open(raw_genre_data_path, 'r') as f:
-        genre_data = json.load(f)
+    with open(raw_game_mode_data_path, 'r') as f:
+        game_mode_data = json.load(f)
 
-    genre_df = pd.DataFrame(genre_data["data"]).drop_duplicates() # convert to dataframe
-    genre_df = genre_df.rename(columns = {"id": "genre_id", "name": "genre_name"}) # rename columns
+    game_mode_df = pd.DataFrame(game_mode_data["data"]).drop_duplicates() # convert to dataframe
+    game_mode_df = game_mode_df.rename(columns = {"id": "game_mode_id", "name": "game_mode_name"}) # rename columns
 
     # Upload CSV to processed layer
-    processed_genre_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_genres_data/processed_genre_data.csv"
-    genre_df.to_csv(processed_genre_file_path, index=False)
+    processed_game_mode_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_game_modes_data/processed_game_modes_data.csv"
+    game_mode_df.to_csv(processed_game_mode_file_path, index=False)
 
 
 

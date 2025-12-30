@@ -56,7 +56,7 @@ def main():
     }
 
     # Write the raw game mode data to json file
-    file_path = f"data/twitch_project_raw_layer/raw_game_modes_data/raw_game_modes_data_{day_date_id}.json"
+    file_path = f"data/twitch_project_raw_layer/raw_game_modes_data/raw_game_modes_data.json"
     with open(file_path, 'w') as json_file:
         json.dump(raw_game_mode_data, json_file, indent=4)
 

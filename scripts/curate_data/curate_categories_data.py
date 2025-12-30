@@ -45,7 +45,7 @@ def get_time_of_day_id():
 
 # Gets recent processed category data
 def get_processed_category_data(day_date_id, time_of_day_id):
-    data_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/processed_category_data_{day_date_id}_{time_of_day_id}.csv"
+    data_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"
     processed_category_df = pd.read_csv(data_path, keep_default_na=False)
 
     return processed_category_df
@@ -53,10 +53,10 @@ def get_processed_category_data(day_date_id, time_of_day_id):
 
 # Gets the current category dimension data
 def get_category_dim_info():
-    category_dim_path = repo_root + "/data/twitch_project_curated_layer/curated_category_data/official_categories_data.csv"
+    category_dim_path = repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv"
     try:
         category_dim_df = pd.read_csv(category_dim_path, keep_default_na = False)
-    except FileNotFoundError:
+    except FileNotFoundError: # create new categories file if it does not exist already
         with open(category_dim_path, 'w') as f:
             f.write("category_id,igdb_id,category_name")
         category_dim_df = pd.read_csv(category_dim_path, keep_default_na = False)
@@ -64,14 +64,14 @@ def get_category_dim_info():
     return category_dim_df
 
 
-# Adds new category data from processed category data to the official dimension data
-# Also returns dataframe filled with new categories not seen before in original official category dimension data
+# Adds new category data from processed category data to the curated dimension data
+# Also returns dataframe filled with new categories not seen before in original curated category dimension data
 def add_new_category_data(processed_category_df, category_dim_df):
-    official_category_dim_df = pd.concat([category_dim_df, processed_category_df]).drop_duplicates(subset=["category_id"]).reset_index()
-    official_category_dim_df = official_category_dim_df[["category_id", "category_name", "igdb_id"]]
+    curated_category_dim_df = pd.concat([category_dim_df, processed_category_df]).drop_duplicates(subset=["category_id"]).reset_index()
+    curated_category_dim_df = curated_category_dim_df[["category_id", "category_name", "igdb_id"]]
     additional_categories = pd.concat([processed_category_df.drop_duplicates(),category_dim_df,category_dim_df]).drop_duplicates(keep=False) 
 
-    return official_category_dim_df, additional_categories
+    return curated_category_dim_df, additional_categories
 
 
 def main():
@@ -79,9 +79,9 @@ def main():
     time_of_day_id = get_time_of_day_id()
     processed_category_df = get_processed_category_data(day_date_id, time_of_day_id)
     category_dim_df = get_category_dim_info() # gets current category dimension data
-    official_category_dim_df, additional_categories = add_new_category_data(processed_category_df, category_dim_df) # adds new category data to official category dimension file
-    category_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_category_data/official_categories_data.csv"
-    official_category_dim_df.to_csv(category_dim_file_path, index=False) # convert category dim data to CSV
+    curated_category_dim_df, additional_categories = add_new_category_data(processed_category_df, category_dim_df) # adds new category data to curated category dimension file
+    category_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv"
+    curated_category_dim_df.to_csv(category_dim_file_path, index=False) # convert category dim data to CSV
 
 
 if __name__ == "__main__":

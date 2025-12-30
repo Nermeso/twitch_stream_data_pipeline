@@ -107,7 +107,7 @@ def main():
                 continue
     
     # Write the raw category data to json file
-    file_path = f"data/twitch_project_raw_layer/raw_categories_data/raw_category_data_{day_date_id}_{time_of_day_id}.json"
+    file_path = f"data/twitch_project_raw_layer/raw_categories_data/raw_categories_data_{day_date_id}_{time_of_day_id}.json"
     with open(file_path, 'w') as json_file:
         json.dump(raw_category_data, json_file, indent=4)
 

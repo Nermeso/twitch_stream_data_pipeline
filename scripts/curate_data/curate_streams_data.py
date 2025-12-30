@@ -19,14 +19,14 @@ pd.options.mode.chained_assignment = None  # default='warn'
 def main():
     # Actual lambda function implementation of this will have the day date id and 
     # time of day info passed to it
-    day_date_id = "20251230"
-    time_of_day_id = "1215"
+    day_date_id = "20251229"
+    time_of_day_id = "1745"
 
     processed_data_path = repo_root + f"/data/twitch_project_processed_layer/processed_streams_data/{day_date_id}/processed_streams_data_{day_date_id}_{time_of_day_id}.csv"
     processed_stream_df = pd.read_csv(processed_data_path)
 
     # Limit columns to only relevant ones
-    curated_stream_df = processed_stream_df[["id", "user_id","user_name", "game_id", "language", "viewer_count"]]
+    curated_stream_df = processed_stream_df[["id", "user_id", "game_id", "language", "viewer_count"]]
 
     # Rename columns to ones established in data model
     curated_stream_df = curated_stream_df.rename(columns={

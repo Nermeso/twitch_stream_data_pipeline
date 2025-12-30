@@ -1,28 +1,15 @@
-raw layer
-- get raw category data -> raw category data
-- get raw stream data -> raw stream data
-- get raw user data -> raw user data
-- get raw genre bridge data
+-2 and 13 minute = updateCategories, insertDatatoDB
+-1 and 14 minute = processCategoryWeights
+0 minute = collectStreamData
+4 minute = updateUser, insertDatatoDB
+7 minute = updateCategoryGenres, insertDatatoDB (every hour or so)
+9 minute = updateCategoryGameModes, insertDatatoDB
+12 minute = validateToken (every hour), insertDatatoDB2
+
+Users that are banned will not show up on get users endpoint
+Accounts are constantly getting banned
+if they show up on get streams end point, minutes later, they might not show up on get users endpoint cuz they are banned
 
 
-processed layer
-- process raw category data -> processed category data
-- process raw stream data -> processed stream data
-- process raw user data -> processed user data
-
-
-curated layer
-- updated category data -> official category data
-- curate stream data -> official stream data
-- curate user data -> official user data
-
-
-other data
-- get category popularity data -> recent category popularity data
-
-
-outside
-- process category weights -> SQS messages
-- insert data to db -> postgresql db
 
 

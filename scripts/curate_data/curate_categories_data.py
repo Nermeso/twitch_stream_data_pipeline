@@ -45,7 +45,7 @@ def get_time_of_day_id():
 
 # Gets recent processed category data
 def get_processed_category_data(day_date_id, time_of_day_id):
-    data_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"
+    data_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"
     processed_category_df = pd.read_csv(data_path, keep_default_na=False)
     processed_category_df = processed_category_df[["category_id", "category_name", "igdb_id"]]
 
@@ -73,12 +73,8 @@ def add_new_category_data(processed_category_df, category_dim_df):
     curated_category_dim_df = curated_category_dim_df[["category_id", "category_name", "igdb_id"]]
 
     # New categories added to dimension data
-
-    # additional_categories = pd.concat([processed_category_df.drop_duplicates(),category_dim_df,category_dim_df]).drop_duplicates(keep=False) 
-
-    # Find rows that are only in df1 but not in df2
     merged_df = pd.merge(processed_category_df, category_dim_df, how='outer', indicator=True)
-    additional_categories = merged_df[merged_df['_merge'] == 'left_only']
+    additional_categories = merged_df[merged_df['_merge'] == 'left_only'][["category_id", "category_name", "igdb_id"]]
 
     return curated_category_dim_df, additional_categories
 
@@ -86,6 +82,10 @@ def add_new_category_data(processed_category_df, category_dim_df):
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
+
+    day_date_id = "20251230"
+    time_of_day_id = "1315"
+
     processed_category_df = get_processed_category_data(day_date_id, time_of_day_id)
     category_dim_df = get_category_dim_info() # gets current category dimension data
 

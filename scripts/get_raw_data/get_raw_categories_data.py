@@ -107,8 +107,9 @@ def main():
                 continue
     
     # Write the raw category data to json file
-    file_path = f"data/twitch_project_raw_layer/raw_categories_data/raw_categories_data_{day_date_id}_{time_of_day_id}.json"
-    with open(file_path, 'w') as json_file:
+    output_file_path = Path(repo_root + f"/data/twitch_project_raw_layer/raw_categories_data/{day_date_id}/raw_categories_data_{day_date_id}_{time_of_day_id}.json")
+    output_file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_file_path, 'w') as json_file:
         json.dump(raw_category_data, json_file, indent=4)
 
 

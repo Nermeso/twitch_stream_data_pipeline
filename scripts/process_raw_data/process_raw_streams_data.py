@@ -3,11 +3,13 @@ from datetime import datetime
 from pathlib import Path
 import json
 import time
+import os
 
 ################################# SUMMARY #################################
 '''
-    This script processes the raw stream data by converting it into a 
-    CSV file.
+    This script processes the raw stream data by combining the JSON files
+    into one big CSV file. Slight modifications will be made to columns
+    and some values.
 '''
 ###########################################################################
 
@@ -58,50 +60,46 @@ def process_raw_stream_data(raw_stream_data, processed_stream_data_dict):
         processed_stream_data_dict["language"].append(stream["language"])
         processed_stream_data_dict["thumbnail_url"].append(stream["thumbnail_url"])
         processed_stream_data_dict["is_mature"].append(stream["is_mature"])
-    
-    processed_stream_df = pd.DataFrame(processed_stream_data_dict)
-
-    return processed_stream_df
-
 
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20251229" # test value
-    time_of_day_id = "1115" # test value
-
-    raw_category_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_streams_data/raw_stream_data_{day_date_id}_{time_of_day_id}.json"
-
-    # Access raw category data
-    with open(raw_category_data_path, 'r') as f:
-        raw_stream_data = json.load(f)
+    day_date_id = "20251230" # test value
+    time_of_day_id = "1215" # test value
 
     processed_stream_data_dict = {
-        "id": [],
-        "user_id": [],
-        "user_login": [],
-        "user_name": [],
-        "game_id": [],
-        "game_name": [],
-        "title": [],
-        "viewer_count": [],
-        "started_at": [],
-        "language": [],
-        "thumbnail_url": [],
-        "is_mature": []
-    }
+            "id": [],
+            "user_id": [],
+            "user_login": [],
+            "user_name": [],
+            "game_id": [],
+            "game_name": [],
+            "title": [],
+            "viewer_count": [],
+            "started_at": [],
+            "language": [],
+            "thumbnail_url": [],
+            "is_mature": []
+        }
 
-    # Convert raw stream json to dataframe and make slight modifications
-    processed_stream_df = process_raw_stream_data(raw_stream_data, processed_stream_data_dict)    
+    # Reads all raw stream files of a certain time period and adds it to data dictinoary
+    stream_data_directory = repo_root + f"/data/twitch_project_raw_layer/raw_streams_data/{day_date_id}_{time_of_day_id}/"
+    for data_file_name in os.listdir(stream_data_directory):
+        raw_stream_data_path = stream_data_directory + data_file_name
+        
+         # Access raw stream data
+        with open(raw_stream_data_path, 'r') as f:
+            raw_stream_data = json.load(f)
+            process_raw_stream_data(raw_stream_data, processed_stream_data_dict)    
 
-    print(processed_stream_df)
+    # Drop duplicate streams
+    processed_stream_df = pd.DataFrame(processed_stream_data_dict).drop_duplicates(subset=["id"], keep="first")
 
-    # # Upload CSV to processed layer
-    # processed_category_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/processed_category_data_{day_date_id}_{time_of_day_id}.csv"
-    # category_df.to_csv(processed_category_file_path, index=False)
-
+    # Upload CSV to processed layer
+    processed_category_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_streams_data/{day_date_id}/processed_streams_data_{day_date_id}_{time_of_day_id}.csv"
+    processed_stream_df.to_csv(processed_category_file_path, index=False)
 
 
 if __name__ == "__main__":

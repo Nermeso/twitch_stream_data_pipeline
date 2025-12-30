@@ -47,7 +47,7 @@ def get_time_of_day_id():
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
-    raw_category_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_categories_data/raw_categories_data_{day_date_id}_{time_of_day_id}.json"
+    raw_category_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_categories_data/{day_date_id}/raw_categories_data_{day_date_id}_{time_of_day_id}.json"
 
     # Access raw category data
     with open(raw_category_data_path, 'r') as f:
@@ -61,7 +61,9 @@ def main():
     category_df["box_art_url"] = category_df["box_art_url"].replace("", "NA")
 
     # Upload CSV to processed layer
-    processed_category_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"
+    processed_category_file_path = Path(repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv")
+    print(processed_category_file_path.parent)
+    processed_category_file_path.parent.mkdir(parents=True, exist_ok=True)
     category_df.to_csv(processed_category_file_path, index=False)
 
 

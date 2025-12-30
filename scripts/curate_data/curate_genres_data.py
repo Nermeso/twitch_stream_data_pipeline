@@ -1,6 +1,15 @@
 from pathlib import Path
 import pandas as pd
-import os
+
+################ SUMMARY ################
+'''
+    Curates the genres dimension data.
+    Basically limits the columns to
+    just genre_id and genre_name.
+    Adds "NA" as a possible value as well
+'''
+#########################################
+
 
 repo_root = str(Path(__file__).parents[2])
 

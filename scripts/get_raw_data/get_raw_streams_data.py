@@ -52,7 +52,7 @@ def get_time_of_day_id():
 # Expected input would be a batch of SQS messages in JSON format
 # Obtains category data that would later be processed
 def get_categories_to_process():
-    categories_path = repo_root + "/data/sample_data/SQS_batch_event_input/example_SQS_batch_event_input2.json" # there are 3 different versions of this sample SQS input
+    categories_path = repo_root + "/data/sample_data/SQS_batch_event_input/example_SQS_batch_event_input3.json" # there are 3 different versions of this sample SQS input
     categories_to_process = []
     with open(categories_path, 'r') as f:
         message_batch = json.load(f)

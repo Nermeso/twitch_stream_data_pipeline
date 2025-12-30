@@ -66,8 +66,8 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20251230" # test value
-    time_of_day_id = "1215" # test value
+    day_date_id = "20251230"
+    time_of_day_id = "1215"
 
     processed_stream_data_dict = {
             "id": [],
@@ -89,7 +89,7 @@ def main():
     for data_file_name in os.listdir(stream_data_directory):
         raw_stream_data_path = stream_data_directory + data_file_name
         
-         # Access raw stream data
+        # Access raw stream data
         with open(raw_stream_data_path, 'r') as f:
             raw_stream_data = json.load(f)
             process_raw_stream_data(raw_stream_data, processed_stream_data_dict)    
@@ -98,7 +98,8 @@ def main():
     processed_stream_df = pd.DataFrame(processed_stream_data_dict).drop_duplicates(subset=["id"], keep="first")
 
     # Upload CSV to processed layer
-    processed_category_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_streams_data/{day_date_id}/processed_streams_data_{day_date_id}_{time_of_day_id}.csv"
+    processed_category_file_path = Path(repo_root + f"/data/twitch_project_processed_layer/processed_streams_data/{day_date_id}/processed_streams_data_{day_date_id}_{time_of_day_id}.csv")
+    processed_category_file_path.parent.mkdir(parents=True, exist_ok=True)
     processed_stream_df.to_csv(processed_category_file_path, index=False)
 
 

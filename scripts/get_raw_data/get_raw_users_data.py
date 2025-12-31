@@ -48,7 +48,7 @@ def get_day_date_id():
 # MAKE SURE TO CHANGE TO SO IT IS BASED OFF OF WHEN SCRIPT IS EXECUTED
 # Gets time of day id based off of current time of script execution
 def get_time_of_day_id():
-    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv")
+    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})
     cur_date = datetime.today()
     minimum_diff = 1000
     time_of_day_id = ""
@@ -60,7 +60,7 @@ def get_time_of_day_id():
             minimum_diff = diff
             time_of_day_id = row[1]["time_of_day_id"]
 
-    return time_of_day_id
+    return str(time_of_day_id)
 
 
 # Gets user ids that we will potentially call the API to get data on

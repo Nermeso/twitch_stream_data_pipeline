@@ -6,10 +6,9 @@ from pathlib import Path
 import time
 from datetime import datetime
 
-
 ############################## SUMMARY ##############################
 '''
-    This script calls the IGDB API to get raw genre data for
+    This script calls the IGDB API to get raw game_mode data for
     for categories in the category dimension.
 '''
 #####################################################################
@@ -34,7 +33,7 @@ def get_day_date_id():
     date_df = pd.read_csv(date_dim_path)
     current_date = datetime.today()
     day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
-   
+
     return str(day_date_id)
 
 
@@ -55,24 +54,24 @@ def get_time_of_day_id():
     return str(time_of_day_id)
 
 
-# Accesses the genre bridge dimension
-def access_genre_bridge_dimension():
-    genre_bridge_dimension_path = repo_root +  "/data/twitch_project_curated_layer/curated_genre_bridge_data/curated_genre_bridge_data.csv"
+# Accesses the game_mode bridge dimension
+def access_game_mode_bridge_dimension():
+    game_mode_bridge_dimension_path = repo_root +  "/data/twitch_project_curated_layer/curated_game_mode_bridge_data/curated_game_mode_bridge_data.csv"
     try:
-        genre_bridge_df = pd.read_csv(genre_bridge_dimension_path, keep_default_na=False)
+        game_mode_bridge_df = pd.read_csv(game_mode_bridge_dimension_path, keep_default_na=False)
     except FileNotFoundError:
-        with open(genre_bridge_dimension_path, 'w') as f:
-            f.write('category_id,genre_id')
+        with open(game_mode_bridge_dimension_path, 'w') as f:
+            f.write('category_id,game_mode_id')
 
-        genre_bridge_df = pd.read_csv(genre_bridge_dimension_path, keep_default_na=False)
+        game_mode_bridge_df = pd.read_csv(game_mode_bridge_dimension_path, keep_default_na=False)
 
-    return genre_bridge_df
+    return game_mode_bridge_df
 
 
-# Get raw genre data for new categories
-def get_raw_genre_data(wrapper, category_df, genre_bridge_df, raw_category_genre_data_dict):
-    exclude_list = genre_bridge_df["category_id"].tolist()
-    new_category_df = category_df[~category_df["category_id"].isin(exclude_list)].reset_index() # only include categories that we did not get genre data on yet
+# Get raw game_mode data for new categories
+def get_raw_game_mode_data(wrapper, category_df, game_mode_bridge_df, raw_category_game_mode_data_dict):
+    exclude_list = game_mode_bridge_df["category_id"].tolist()
+    new_category_df = category_df[~category_df["category_id"].isin(exclude_list)].reset_index() # only include categories that we did not get game_mode data on yet     
 
     # One API call accepts max 100 IGDB ids
     # To minimize num of calls made, we make one API call per 100 games
@@ -89,23 +88,23 @@ def get_raw_genre_data(wrapper, category_df, genre_bridge_df, raw_category_genre
             igdb_ids_arg = str(igdb_ids_tuple)
             if len(igdb_ids_tuple) == 1:
                 igdb_ids_arg = igdb_ids_arg.replace(',', '')
-            raw_genre_data = get_igdb_genre(wrapper, igdb_ids_arg) # Calls api to get data
-            raw_category_genre_data_dict["data"].extend(raw_genre_data)
+            raw_game_mode_data = get_igdb_game_mode(wrapper, igdb_ids_arg) # Calls api to get data
+            raw_category_game_mode_data_dict["data"].extend(raw_game_mode_data)
             igdb_category_id_temp.clear()
 
 
 
-# Calls IGDB API to get data on up to 100 games' genres
-def get_igdb_genre(wrapper, igdb_ids_arg):
+# Calls IGDB API to get data on up to 100 games' game_modes
+def get_igdb_game_mode(wrapper, igdb_ids_arg):
     byte_array = wrapper.api_request(
                     "games",
-                    f"f name, genres; where id = {igdb_ids_arg}; limit 100;"
+                    f"f name, game_modes; where id = {igdb_ids_arg}; limit 100;"
             )
 
     my_json = byte_array.decode('utf8').replace("'", '"')
-    genre_data = json.loads(my_json)
-            
-    return genre_data
+    game_mode_data = json.loads(my_json)
+
+    return game_mode_data
 
 
 def main():
@@ -117,23 +116,23 @@ def main():
     category_dimension_path = repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv"
     category_df = pd.read_csv(category_dimension_path, keep_default_na=False)
 
-    # Get genre bridge data
-    genre_bridge_df = access_genre_bridge_dimension()
+    # Get game_mode bridge data
+    game_mode_bridge_df = access_game_mode_bridge_dimension()
 
-    raw_category_genre_data_dict = {
+    raw_category_game_mode_data_dict = {
         "day_date_id": day_date_id,
         "time_of_day_id": time_of_day_id,
         "data": []
     }
 
-    # Get new genre data
-    get_raw_genre_data(wrapper, category_df, genre_bridge_df, raw_category_genre_data_dict)
+    # Get new game_mode data
+    get_raw_game_mode_data(wrapper, category_df, game_mode_bridge_df, raw_category_game_mode_data_dict)
 
-    # Write the raw category genre data to json file
-    output_file_path = Path(repo_root + f"/data/twitch_project_raw_layer/raw_genre_bridge_data/{day_date_id}/raw_genre_bridge_data_{day_date_id}_{time_of_day_id}.json")
+    # Write the raw category game_mode data to json file
+    output_file_path = Path(repo_root + f"/data/twitch_project_raw_layer/raw_game_mode_bridge_data/{day_date_id}/raw_game_mode_bridge_data_{day_date_id}_{time_of_day_id}.json")
     output_file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_file_path, 'w') as json_file:
-        json.dump(raw_category_genre_data_dict, json_file, indent=4)
+        json.dump(raw_category_game_mode_data_dict, json_file, indent=4)
 
 
 

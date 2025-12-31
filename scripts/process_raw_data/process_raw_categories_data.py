@@ -62,7 +62,6 @@ def main():
 
     # Upload CSV to processed layer
     processed_category_file_path = Path(repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv")
-    print(processed_category_file_path.parent)
     processed_category_file_path.parent.mkdir(parents=True, exist_ok=True)
     category_df.to_csv(processed_category_file_path, index=False)
 

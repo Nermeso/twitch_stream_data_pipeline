@@ -44,8 +44,8 @@ def get_time_of_day_id():
 
 # Gets category id associated with IGDB ID
 def get_associated_category_id(category_df, igdb_id):
-    category_row = category_df[category_df["igdb_id"] == igdb_id]
-    category_id = str(category_row["category_id"].item())
+    category_row = category_df[category_df["igdb_id"] == str(igdb_id)]
+    category_id = str(category_row["category_id"].iloc[0].item())
     
     return category_id
 
@@ -58,7 +58,7 @@ def main():
     raw_genre_bridge_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_genre_bridge_data/{day_date_id}/raw_genre_bridge_data_{day_date_id}_{time_of_day_id}.json"
 
     # Access category dimension data
-    category_df = pd.read_csv(repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv")
+    category_df = pd.read_csv(repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv", keep_default_na=False)
 
     # Access raw category data
     with open(raw_genre_bridge_data_path, 'r') as f:

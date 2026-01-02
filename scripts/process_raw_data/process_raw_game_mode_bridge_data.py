@@ -45,8 +45,8 @@ def get_time_of_day_id():
 
 # Gets category id associated with IGDB ID
 def get_associated_category_id(category_df, igdb_id):
-    category_row = category_df[category_df["igdb_id"] == igdb_id]
-    category_id = str(category_row["category_id"].item())
+    category_row = category_df[category_df["igdb_id"] == str(igdb_id)]
+    category_id = str(category_row["category_id"].iloc[0].item())
 
     return category_id
 

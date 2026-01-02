@@ -68,7 +68,7 @@ def get_category_dim_info():
 # Adds new category data from processed category data to the curated dimension data
 # Also returns dataframe filled with new categories not seen before in original curated category dimension data
 def add_new_category_data(processed_category_df, category_dim_df):
-    curated_category_dim_df = pd.concat([category_dim_df, processed_category_df]).drop_duplicates(subset=["category_id"]).reset_index()
+    curated_category_dim_df = pd.concat([category_dim_df, processed_category_df]).drop_duplicates(subset=["category_id"], keep="first").reset_index()
     curated_category_dim_df = curated_category_dim_df[["category_id", "category_name", "igdb_id"]]
 
     # New categories added to dimension data

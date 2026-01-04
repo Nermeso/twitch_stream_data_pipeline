@@ -72,15 +72,16 @@ def add_new_category_data(processed_category_df, category_dim_df):
     curated_category_dim_df = curated_category_dim_df[["category_id", "category_name", "igdb_id"]]
 
     # New categories added to dimension data
-    merged_df = pd.merge(processed_category_df, category_dim_df, how='outer', indicator=True)
-    additional_categories = merged_df[merged_df['_merge'] == 'left_only'][["category_id", "category_name", "igdb_id"]]
+    additional_categories_df = pd.concat([curated_category_dim_df.drop_duplicates(), category_dim_df.drop_duplicates()]).drop_duplicates(keep=False).reset_index(drop=True)
 
-    return curated_category_dim_df, additional_categories
+    return curated_category_dim_df, additional_categories_df
 
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
+
+    time_of_day_id = "1545"
 
     processed_category_df = get_processed_category_data(day_date_id, time_of_day_id)
     category_dim_df = get_category_dim_info() # gets current category dimension data

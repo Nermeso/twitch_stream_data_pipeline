@@ -124,7 +124,7 @@ def lambda_handler(event, context):
     # Upload data as JSON to S3
     s3_client.put_object(
             Bucket="twitch-project-raw-layer",
-            Key=f"raw_categories_data/{day_date_id}/raw_category_data_{day_date_id}_{time_of_day_id}.json",
+            Key=f"raw_categories_data/{day_date_id}/raw_categories_data_{day_date_id}_{time_of_day_id}.json",
             Body=json.dumps(raw_category_data, indent=4),
             ContentType='application/json'
         )

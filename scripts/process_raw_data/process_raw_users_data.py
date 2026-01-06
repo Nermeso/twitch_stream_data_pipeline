@@ -55,10 +55,16 @@ def main():
 
     # Access raw user data
     with open(raw_user_data_path, 'r') as f:
-        user_data = json.load(f)
+        raw_user_data = json.load(f)
 
-    # Convert to dataframe
-    user_df = pd.DataFrame(user_data["data"]).drop_duplicates()
+
+    # Convert to dataframe and remove useless columns
+    user_df = pd.DataFrame(raw_user_data["data"]).drop_duplicates()
+    user_df = user_df.drop(columns=["view_count"]) # view count column is depredated
+
+    # Replace empty strings with relevant value
+    user_df["type"] = user_df["type"].replace("", "normal")
+    user_df["broadcaster_type"] = user_df["broadcaster_type"].replace("", "normal")
 
     # Upload CSV to processed layer
     processed_user_file_path = Path(repo_root + f"/data/twitch_project_processed_layer/processed_users_data/{day_date_id}/processed_users_data_{day_date_id}_{time_of_day_id}.csv")

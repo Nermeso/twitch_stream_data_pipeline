@@ -65,13 +65,12 @@ def get_user_dim_info():
 
 # Adds new user data from processed user data to the curated dimension data
 # Also returns dataframe filled with new users not seen before in original curated user dimension data
-def add_new_user_data(processed_user_df, user_dim_df):
-    curated_user_dim_df = pd.concat([user_dim_df, processed_user_df]).drop_duplicates(subset=["user_id"]).reset_index(drop=True)
-
-    # New users added to dimension data
-    merged_df = pd.merge(processed_user_df, user_dim_df, how='outer', indicator=True)
-    additional_users = merged_df[merged_df['_merge'] == 'left_only']
-
+def add_new_user_data(processed_user_df, curated_user_df):
+    curated_user_dim_df = pd.concat([curated_user_df, processed_user_df]).drop_duplicates(subset=["user_id"]).reset_index()
+    curated_user_dim_df["user_id"] = curated_user_dim_df["user_id"].astype(int)
+    curated_user_dim_df = curated_user_dim_df[["user_id", "user_name", "login_name", "broadcaster_type"]]
+    additional_users = processed_user_df
+  
     return curated_user_dim_df, additional_users
 
 
@@ -91,11 +90,11 @@ def main():
         "login": "login_name"
     })
     
-    user_dim_df = get_user_dim_info() # gets current user dimension data
+    curated_user_df = get_user_dim_info() # gets current user dimension data
 
     # Adds new user data to curated user dimension file
     # Additional users should be equivalent to processed_user_df if previous part of data pipeline was correct
-    curated_user_dim_df, additional_users = add_new_user_data(processed_user_df, user_dim_df) 
+    curated_user_dim_df, additional_users = add_new_user_data(processed_user_df, curated_user_df) 
 
 
     user_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_users_data/curated_users_data.csv"

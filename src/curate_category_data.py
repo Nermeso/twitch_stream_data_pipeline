@@ -18,7 +18,7 @@ def get_processed_category_data(s3_client, bucket_name, file_key):
     if status == 200:
         print(f"Successful S3 get_object response for the processed category data. Status - {status}")
         processed_category_df = pd.read_csv(response.get("Body"), keep_default_na = False)
-        processed_category_df[["category_id", "category_name", "igdb_id"]] 
+        processed_category_df = processed_category_df[["category_id", "category_name", "igdb_id"]] 
     else:
         print(f"Unsuccessful S3 get_object response for the category dimension. Status - {status}")
         print(response)

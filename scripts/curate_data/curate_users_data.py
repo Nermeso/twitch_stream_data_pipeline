@@ -69,9 +69,11 @@ def add_new_user_data(processed_user_df, curated_user_df):
     curated_user_dim_df = pd.concat([curated_user_df, processed_user_df]).drop_duplicates(subset=["user_id"]).reset_index()
     curated_user_dim_df["user_id"] = curated_user_dim_df["user_id"].astype(int)
     curated_user_dim_df = curated_user_dim_df[["user_id", "user_name", "login_name", "broadcaster_type"]]
-    additional_users = processed_user_df
-  
-    return curated_user_dim_df, additional_users
+
+    # New users added to dimension data
+    additional_users_df = pd.concat([curated_user_dim_df.drop_duplicates(), user_dim_df.drop_duplicates()]).drop_duplicates(keep=False).reset_index(drop=True)
+    
+    return curated_user_dim_df, additional_users_df
 
 
 def main():

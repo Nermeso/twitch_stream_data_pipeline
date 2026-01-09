@@ -95,9 +95,6 @@ def lambda_handler(event, context):
     day_date_id = get_day_date_id(s3_client)
     time_of_day_id = get_time_of_day_id(s3_client)
 
-    day_date_id = "20260105"
-    time_of_day_id = "1130"
-
     processed_stream_data_dict = {
             "id": [],
             "user_id": [],

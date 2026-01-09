@@ -7,13 +7,6 @@ from zoneinfo import ZoneInfo
 import botocore
 
 
-
-# This script triggers once processed_categories is uploaded
-# First searches for category popularity data in miscellaneous bucket
-# if that does not exist, refer to default weights and use that when creating
-# category group messages
-
-
 ######################### SUMMARY #########################
 '''
     Outputs to SQS messages that contains a group of
@@ -155,9 +148,6 @@ def lambda_handler(event, context):
     day_date_id = get_day_date_id(s3_client)
     time_of_day_id = get_time_of_day_id(s3_client)
 
-    day_date_id = "20260102" # test value
-    time_of_day_id = "1430" # test value
-
     # Get current streamed categories based off of processed_categories file
     curr_streamed_categories_df = get_processed_categories(s3_client, day_date_id, time_of_day_id)
     
@@ -185,7 +175,7 @@ def lambda_handler(event, context):
         merged_df = pd.merge(curr_streamed_categories_df, category_popularity_df, on="category_id", how='left')
         merged_df['num_of_streamers'] = merged_df['num_of_streamers'].replace(np.nan, 1)
         category_groups, wvg = split_categories_into_groups(merged_df)
-        s3_client.delete_object(Bucket="twitch-project-miscellaneous", Key=key)
+        s3_client.delete_object(Bucket="twitch-project-miscellaneous", Key=key) # delete popularity data
     else: # if no recent category popularity data found, use default popularity data
         default_pop_df = get_default_popularity_df(s3_client)
         category_pop_df = pd.concat([curr_streamed_categories_df, default_pop_df], axis=1)
@@ -194,7 +184,7 @@ def lambda_handler(event, context):
 
     # Sends groups of categories as messages to categoryGroupWeights SQS queue
     final_category_groups = [group for group in category_groups if len(group) != 0]
-    # send_SQS_messages(final_category_groups) 
+    send_SQS_messages(final_category_groups) 
 
 
     for group in category_groups:

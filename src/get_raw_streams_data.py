@@ -85,7 +85,7 @@ def delete_SQS_messages(event):
     sqs_client = boto3.client("sqs")
     for message in event["Records"]:
         sqs_client.delete_message(
-                QueueUrl="https://sqs.us-west-1.amazonaws.com/484743883065/categoryGroupWeights",
+                QueueUrl="https://sqs.us-west-2.amazonaws.com/484743883065/category_groups",
                 ReceiptHandle=message["receiptHandle"]
             )
 
@@ -125,6 +125,7 @@ def get_data_from_API(raw_stream_data, category_set, headers):
 
 def lambda_handler(event, context):
     if event:
+        start = time.time()
         func_ID = context.aws_request_id
         headers, s3_client = get_credentials()
         categories_to_process = get_categories(event)
@@ -152,10 +153,13 @@ def lambda_handler(event, context):
         # Upload data as JSON to S3
         s3_client.put_object(
                 Bucket="twitch-project-raw-layer",
-                Key=f"raw_streams_data/{day_date_id}/{time_of_day_id}/raw_streams_data_{day_date_id}_{time_of_day_id}.json",
+                Key=f"raw_streams_data/{day_date_id}/{time_of_day_id}/raw_streams_data_{day_date_id}_{time_of_day_id}_{func_ID}.json",
                 Body=json.dumps(raw_stream_data, indent=4),
                 ContentType='application/json'
             )
+
+        end = time.time()
+        print("Duration: " + str(end - start))
         
         return {
             'statusCode': 200,

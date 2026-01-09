@@ -1,7 +1,7 @@
 import os
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import boto3
 import json
@@ -45,6 +45,7 @@ def get_day_date_id(s3_client):
         print(response)
         exit()
     current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
+    current_date = current_date - timedelta(minutes=3) # Subtract 3 minutes from current time since that time will be associated with most recently collected stream data, this script runs 3 minutes after recent stream data collection
     day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
    
     return str(day_date_id)
@@ -62,6 +63,7 @@ def get_time_of_day_id(s3_client):
         print(response)
         exit()
     cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
+    cur_date = cur_date - timedelta(minutes=3) # Subtract 3 minutes from current time since that time will be associated with most recently collected stream data, this script runs 3 minutes after recent stream data collection
     minimum_diff = 1000
     time_of_day_id = ""
     for row in time_of_day_df.iterrows():
@@ -101,7 +103,7 @@ def get_current_user_dim(s3_client):
         status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
             print(f"Successful S3 get_object response for the curated users data. Status - {status}")
-            current_user_dim_df = pd.read_csv(response.get("Body"), index_col=False)
+            current_user_dim_df = pd.read_csv(response.get("Body"), index_col=False, dtype={"user_id": "string", "user_name": "string", "login_name": "string", "broadcaster_type": "string"})
             current_users = list(set(current_user_dim_df["user_id"].tolist()))
         else:
             print(f"Unsuccessful S3 get_object response for the curated streams data. Status - {status}")  
@@ -142,9 +144,6 @@ def lambda_handler(event, context):
     headers, s3_client = get_credentials()
     day_date_id = get_day_date_id(s3_client)
     time_of_day_id = get_time_of_day_id(s3_client)
-
-    day_date_id = "20260105" # test value
-    time_of_day_id = "1130" # test value
 
     # Gets user IDs from recently collected stream data
     stream_user_list = get_potential_new_users(s3_client, day_date_id, time_of_day_id)

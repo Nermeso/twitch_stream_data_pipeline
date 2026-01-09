@@ -83,7 +83,7 @@ def lambda_handler(event, context):
         index=False
     )
 
-    # Converts new additional ugenreser data to CSV and uploads to temp file which will be uploaded to postgres
+    # Converts new additional genres data to CSV and uploads to temp file which will be uploaded to postgres
     wr.s3.to_csv(
         df=additional_category_genres,
         path=f"s3://twitch-project-miscellaneous/temp_table_data/new_genre_bridge_data.csv",

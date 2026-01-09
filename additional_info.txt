@@ -1,6 +1,18 @@
--2 minute -> getRawCategoryData -> processRawCategoryData -> curateCategoryData -> miscellaneous/newdata -> insertDatatoDB
--1 minute -> createCategoryGroups -> SQS messages -> getRawStreamData -> processRawStreamData -> curateStreamData -> miscellaneous/newdata -> insertDatatoDB
-3 minute -> getRawUserData -> processRawUserData -> curateUserData -> miscellaneous/newdata -> insertDatatoDB
-5 minute -> getRawGenreBridgeData -> processRawGenreBridgeData -> curateGenreBridgeData -> miscellaneous/newdata -> insertDatatoDB
-6 minute -> getRawGameModeBridgeData -> processRawGameModeBridgeData -> curateGameModeBridgeData -> miscellaneous/newdata -> insertDatatoDB
-8 minute -> validateToken
+
+####################################################################
+POSSIBLE NEW ARCHITECTURE
+REFER TO PICTURES ON PAPERS
+#######################################################
+
+getRawCategoryData -> rawcategorydata{time1}.csv -> processRawCategoryData{time1} -> processedcategorydata{time1} -> curateCategoryData ->
+curatedCategoryData{time1} -> insertDatatoDb -> Postgres
+			   -> curatedCategoryData{time1} -> createCategoryGroups -> SQS messages -> getRawStreamData
+
+ISSUES DISCOVERED
+- calling get stream endpoint might lead to weird streams like where user_id is "testdocument" or and language is "testbroadcastlanguage"
+- there is no category id and the stream id is literally a single digit
+- sometimes insertdatatodb fails since foreign key constraint not satisfied where category in stream does not exist in categories
+- this is due to curatecategorydata function ending due to reaching max time allotted due to taking too much time uploading new_categories_data.csv
+- curated_categories.csv was able to be uploaded but not new_categories_data.csv
+- as a result, the lambda function restarted, finding no new categories since curated_categories was updated, so new_categories_data.csv was empty when it shouldn't
+have been

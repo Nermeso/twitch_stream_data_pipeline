@@ -64,8 +64,9 @@ CREATE TABLE "streams" (
   "date_day_id" varchar(8) REFERENCES day_dates(day_date_id),
   "time_of_day_id" varchar(4) REFERENCES time_of_day(time_of_day_id),
   "user_id" varchar NOT NULL,
-  "category_id" varchar REFERENCES categories(category_id),
+  "category_id" varchar NOT NULL,
   "language_id" varchar NOT NULL,
   "viewer_count" int,
+  "hours_watched" float,
   PRIMARY KEY (stream_id, date_day_id, time_of_day_id)
 );

@@ -85,8 +85,8 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20260102" # testing value
-    time_of_day_id = "1545" # testing value
+    day_date_id = "20260111" # testing value
+    time_of_day_id = "1645" # testing value
 
     # Get current streamed categories based off of processed_categories file
     processed_category_data_path = repo_root + f"/data/twitch_project_processed_layer/processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"

@@ -19,7 +19,6 @@ repo_root = str(Path(__file__).parents[2])
 '''
 ####################################################################################
 
-# MAKE SURE to CHANGE IT IN LAMBDA FUNCTION TO REFER TO TIME 12 MINUTES BEFORE
 # Gets current date id based of date when script is executed
 def get_day_date_id():
     # Gets date id
@@ -31,7 +30,6 @@ def get_day_date_id():
     return str(day_date_id)
 
 
-# MAKE SURE to CHANGE IT IN LAMBDA FUNCTION TO REFER TO TIME 12 MINUTES BEFORE
 # Gets time of day id based off of current time of script execution
 def get_time_of_day_id():
     time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})
@@ -108,6 +106,9 @@ def main():
     time_of_day_id = get_time_of_day_id()
     categories_to_process = get_categories_to_process()
     headers = get_credentials()
+
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1715" # test value
 
     raw_stream_data = {
         "day_date_id": day_date_id,

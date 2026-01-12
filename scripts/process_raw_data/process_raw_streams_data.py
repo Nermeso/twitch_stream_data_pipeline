@@ -66,8 +66,8 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20251230"
-    time_of_day_id = "1215"
+    day_date_id = "20260111"
+    time_of_day_id = "1715"
 
     processed_stream_data_dict = {
             "id": [],

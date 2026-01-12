@@ -19,8 +19,8 @@ pd.options.mode.chained_assignment = None  # default='warn'
 def main():
     # Actual lambda function implementation of this will have the day date id and 
     # time of day info passed to it
-    day_date_id = "20251229"
-    time_of_day_id = "1745"
+    day_date_id = "20260111"
+    time_of_day_id = "1715"
 
     processed_data_path = repo_root + f"/data/twitch_project_processed_layer/processed_streams_data/{day_date_id}/processed_streams_data_{day_date_id}_{time_of_day_id}.csv"
     processed_stream_df = pd.read_csv(processed_data_path)

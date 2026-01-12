@@ -52,48 +52,63 @@ def get_processed_category_data(day_date_id, time_of_day_id):
     return processed_category_df
 
 
-# Gets the current category dimension data
-def get_category_dim_info():
-    category_dim_path = repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv"
+# Gets the data for the categories we currently have info on already
+def get_current_categories():
+    data_path = repo_root + "/data/twitch_project_miscellaneous/current_data/current_categories.csv"
     try:
-        category_dim_df = pd.read_csv(category_dim_path, keep_default_na = False)
+        current_category_df = pd.read_csv(data_path, keep_default_na = False)
     except FileNotFoundError: # create new categories file if it does not exist already
-        with open(category_dim_path, 'w') as f:
+        with open(data_path, 'w') as f:
             f.write("category_id,igdb_id,category_name")
-        category_dim_df = pd.read_csv(category_dim_path, keep_default_na = False)
+        current_category_df = pd.read_csv(data_path, keep_default_na = False)
 
-    return category_dim_df
+    return current_category_df
 
 
-# Adds new category data from processed category data to the curated dimension data
-# Also returns dataframe filled with new categories not seen before in original curated category dimension data
-def add_new_category_data(processed_category_df, category_dim_df):
-    curated_category_dim_df = pd.concat([category_dim_df, processed_category_df]).drop_duplicates(subset=["category_id"], keep="first").reset_index()
-    curated_category_dim_df = curated_category_dim_df[["category_id", "category_name", "igdb_id"]]
+# Adds new category data from processed category data to the current category data
+# Also returns dataframe filled with new categories not seen before to the curated layer to be uploaded to postgres
+def add_new_category_data(processed_category_df, current_category_df):
+    new_current_category_df = pd.concat([current_category_df, processed_category_df]).drop_duplicates(subset=["category_id"], keep="first").reset_index()
+    new_current_category_df = new_current_category_df[["category_id", "category_name", "igdb_id"]]
 
-    # New categories added to dimension data
-    additional_categories_df = pd.concat([curated_category_dim_df.drop_duplicates(), category_dim_df.drop_duplicates()]).drop_duplicates(keep=False).reset_index(drop=True)
+    # New additional categories are curated categories
+    additional_categories_df = pd.concat([new_current_category_df.drop_duplicates(), current_category_df.drop_duplicates()]).drop_duplicates(keep=False).reset_index(drop=True)
 
-    return curated_category_dim_df, additional_categories_df
+    return new_current_category_df, additional_categories_df
 
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    time_of_day_id = "1545"
+    # Normally, these values will be passed by the event variable in the lambda function
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1645" # test value
 
+    # Gets recent processed category data
     processed_category_df = get_processed_category_data(day_date_id, time_of_day_id)
-    category_dim_df = get_category_dim_info() # gets current category dimension data
 
-    # adds new category data to curated category dimension file
-    curated_category_dim_df, additional_categories = add_new_category_data(processed_category_df, category_dim_df) 
-    category_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv"
-    curated_category_dim_df.to_csv(category_dim_file_path, index=False) # convert category dim data to CSV
+    # Gets categories we currently already have data for
+    current_category_df = get_current_categories()
+
+    # Curated category data contains new category data to be uploaded to postgres
+    # Current categories is updated
+    current_categories_df, curated_category_dim_df = add_new_category_data(processed_category_df, current_category_df)
+
+    if curated_category_dim_df.empty:
+        print("No new categories added to category dimension data.")
+        exit()
 
     # Converts new additional category data to CSV and uploads to temp file which will be uploaded to postgres
-    additional_categories.to_csv(repo_root + "/data/twitch_project_miscellaneous/temp_table_data/new_categories_data.csv", index=False)
+    curated_category_dim_df_path = Path(repo_root + f"/data/twitch_project_curated_layer/curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv")
+    curated_category_dim_df_path.parent.mkdir(parents=True, exist_ok=True)
+    curated_category_dim_df.to_csv(curated_category_dim_df_path, index=False)
 
+    # Update current categories
+    current_categories_file_path = repo_root + "/data/twitch_project_miscellaneous/current_data/current_categories.csv"
+    current_categories_df.to_csv(current_categories_file_path, index=False) 
+
+   
 
 if __name__ == "__main__":
     main()

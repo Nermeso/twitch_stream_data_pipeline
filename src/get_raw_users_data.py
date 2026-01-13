@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 import boto3
 import json
 import time
+import ast
 
 ################################ SUMMARY ################################
 '''
@@ -33,54 +34,10 @@ def get_credentials():
     return headers, s3_client
 
 
-# Gets current date id based of date when script is executed
-def get_day_date_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_day_dates_data/raw_day_dates_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for date dimension. Status - {status}")
-        date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-    else:
-        print(f"Unsuccessful S3 get_object response for date dimension. Status - {status}")
-        print(response)
-        exit()
-    current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    current_date = current_date - timedelta(minutes=3) # Subtract 3 minutes from current time since that time will be associated with most recently collected stream data, this script runs 3 minutes after recent stream data collection
-    day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
-   
-    return str(day_date_id)
-
-
-# Gets time of day id based off of current time of script execution
-def get_time_of_day_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_time_of_day_data/raw_time_of_day_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for time of day dimension. Status - {status}")
-        time_of_day_df = pd.read_csv(response.get("Body"), keep_default_na=False, dtype={"time_of_day_id": str})
-    else:
-        print(f"Unsuccessful S3 get_object response for time of day dimension. Status - {status}")
-        print(response)
-        exit()
-    cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    cur_date = cur_date - timedelta(minutes=3) # Subtract 3 minutes from current time since that time will be associated with most recently collected stream data, this script runs 3 minutes after recent stream data collection
-    minimum_diff = 1000
-    time_of_day_id = ""
-    for row in time_of_day_df.iterrows():
-        time = row[1]["time_24h"]
-        date_time_compare = datetime(cur_date.year, cur_date.month, cur_date.day, int(time[0:2]), int(time[3:5]))
-        diff = abs((cur_date - date_time_compare).total_seconds())
-        if diff < minimum_diff:
-            minimum_diff = diff
-            time_of_day_id = row[1]["time_of_day_id"]
-
-    return time_of_day_id
-
-
 # Gets user ids that we will potentially call the API to get data on
-def get_potential_new_users(s3_client, day_date_id, time_of_day_id):
+def get_potential_new_users(s3_client, bucket_name, day_date_id, time_of_day_id):
     try:
-        response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key=f"curated_streams_data/{day_date_id}/curated_streams_data_{day_date_id}_{time_of_day_id}.csv")
+        response = s3_client.get_object(Bucket=bucket_name, Key=f"curated_streams_data/{day_date_id}/curated_streams_data_{day_date_id}_{time_of_day_id}.csv")
         status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
             print(f"Successful S3 get_object response for the curated streams data. Status - {status}")
@@ -96,19 +53,20 @@ def get_potential_new_users(s3_client, day_date_id, time_of_day_id):
     return user_list
 
 
-# Reads current user dimension data to get users we have data for already
-def get_current_user_dim(s3_client):
+# Reads the CSV file containing current users we already have data for
+# This is located in the miscellaneous bucket
+def get_current_users(s3_client):
     try:
-        response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key=f"curated_users_data/curated_users_data.csv")
+        response = s3_client.get_object(Bucket="twitch-project-miscellaneous", Key="current_data/current_users.csv")
         status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
-            print(f"Successful S3 get_object response for the curated users data. Status - {status}")
-            current_user_dim_df = pd.read_csv(response.get("Body"), index_col=False, dtype={"user_id": "string", "user_name": "string", "login_name": "string", "broadcaster_type": "string"})
-            current_users = list(set(current_user_dim_df["user_id"].tolist()))
+            print(f"Successful S3 get_object response for the current users data. Status - {status}")
+            current_user_df = pd.read_csv(response.get("Body"), index_col=False, dtype={"user_id": "string"})
+            current_users = list(set(current_user_df["user_id"].tolist()))
         else:
-            print(f"Unsuccessful S3 get_object response for the curated streams data. Status - {status}")  
+            print(f"Unsuccessful S3 get_object response for the current users data. Status - {status}")  
             exit()  
-    except Exception as e: # if curated user data does not exist yet, error will be returned which we will catch
+    except Exception as e: # if current user data does not exist yet, error will be returned which we will catch
         current_users = []
     
     return current_users
@@ -140,16 +98,19 @@ def get_data_from_API(user_list, raw_user_data, headers):
 
 def lambda_handler(event, context):
     start = time.time()
+    event_notification = ast.literal_eval(event["Records"][0]["Sns"]["Message"])
+    curated_streams_bucket_name = event_notification["Records"][0]["s3"]["bucket"]["name"]
+    curated_streams_key = event_notification["Records"][0]["s3"]["object"]["key"]
+    day_date_id = curated_streams_key.split("/")[1]
+    time_of_day_id = curated_streams_key.split("/")[2].split("_")[4][:4]
 
     headers, s3_client = get_credentials()
-    day_date_id = get_day_date_id(s3_client)
-    time_of_day_id = get_time_of_day_id(s3_client)
 
     # Gets user IDs from recently collected stream data
-    stream_user_list = get_potential_new_users(s3_client, day_date_id, time_of_day_id)
+    stream_user_list = get_potential_new_users(s3_client, curated_streams_bucket_name, day_date_id, time_of_day_id)
 
-    # Gets user IDs from user dimension
-    current_user_list = get_current_user_dim(s3_client)
+    # Gets user IDs we have already collected data for
+    current_user_list = get_current_users(s3_client)   
     
     # Gets only users that we have not collected data of yet
     set1 = set(stream_user_list)

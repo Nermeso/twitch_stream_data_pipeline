@@ -99,7 +99,7 @@ def main():
         print("No new categories added to category dimension data.")
         exit()
 
-    # Converts new additional category data to CSV and uploads to temp file which will be uploaded to postgres
+    # Converts new additional category data to CSV and uploads to curated layer which will be uploaded to postgres
     curated_category_dim_df_path = Path(repo_root + f"/data/twitch_project_curated_layer/curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv")
     curated_category_dim_df_path.parent.mkdir(parents=True, exist_ok=True)
     curated_category_dim_df.to_csv(curated_category_dim_df_path, index=False)

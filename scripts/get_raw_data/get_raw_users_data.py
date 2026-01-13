@@ -65,25 +65,20 @@ def get_time_of_day_id():
 
 # Gets user ids that we will potentially call the API to get data on
 def get_potential_new_users(day_date_id, time_of_day_id):
-    # curated_stream_data_path = repo_root + f"/data/twitch_project_curated_layer/curated_streams_data/{day_date_id}/curated_stream_data_{day_date_id}_{time_of_day_id}.csv"
-    ############### CHANGE LATER
-
-    curated_stream_data_path = repo_root + f"/data/sample_data/curated_data/curated_streams_data_20260108_0830.csv"
-
-    ##########################
-    
+    curated_stream_data_path = repo_root + f"/data/twitch_project_curated_layer/curated_streams_data/{day_date_id}/curated_stream_data_{day_date_id}_{time_of_day_id}.csv"
     stream_df = pd.read_csv(curated_stream_data_path, dtype={"user_id": "string"})
     user_list = list(set(stream_df["user_id"].tolist()))
 
     return user_list
 
 
-# Reads current user dimension data to get users we have data for already
-def get_current_user_dim():
-    curated_user_data_path = repo_root + f"/data/twitch_project_curated_layer/curated_users_data/curated_users_data.csv"
+# Reads the CSV file containing current users we already have data for
+# This is located in the miscellaneous bucket
+def get_current_users():
+    current_user_data_path = repo_root + f"/data/twitch_project_miscellaneous/current_data/current_users.csv"
     try:
-        current_user_dim_df = pd.read_csv(curated_user_data_path, index_col=False, dtype={"user_id": "string", "user_name": "string", "login_name": "string", "broadcaster_type": "string"})
-        current_users = list(set(current_user_dim_df["user_id"].tolist()))
+        current_user_df = pd.read_csv(current_user_data_path, index_col=False, dtype={"user_id": "string", "user_name": "string", "login_name": "string", "broadcaster_type": "string"})
+        current_users = list(set(current_user_df["user_id"].tolist()))
     except FileNotFoundError:
         current_users = []
 
@@ -123,14 +118,15 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20251229" # test
-    time_of_day_id = "0830" # test
+    # Actual values will come from lambda function's event which will come from SNS topic
+    day_date_id = "20260111" # test
+    time_of_day_id = "1715" # test
 
     # Gets user IDs from recently collected stream data
     stream_user_list = get_potential_new_users(day_date_id, time_of_day_id)
-     
-    # Gets user IDs from user dimension
-    current_user_list = get_current_user_dim()
+
+    # Gets user IDs we have already collected data for
+    current_user_list = get_current_users()
 
     # Gets only users that we have not collected data of yet
     set1 = set(stream_user_list)

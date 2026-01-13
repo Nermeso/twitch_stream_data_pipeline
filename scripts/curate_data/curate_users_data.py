@@ -63,25 +63,36 @@ def get_user_dim_info():
     return user_dim_df
 
 
-# Adds new user data from processed user data to the curated dimension data
-# Also returns dataframe filled with new users not seen before in original curated user dimension data
-def add_new_user_data(processed_user_df, curated_user_df):
-    curated_user_dim_df = pd.concat([curated_user_df, processed_user_df]).drop_duplicates(subset=["user_id"]).reset_index()
-    curated_user_dim_df["user_id"] = curated_user_dim_df["user_id"].astype(int)
-    curated_user_dim_df = curated_user_dim_df[["user_id", "user_name", "login_name", "broadcaster_type"]]
+# Gets current users we have info for already
+def get_current_users():
+    current_user_path = repo_root + "/data/twitch_project_miscellaneous/current_data/current_users.csv"
+    try:
+        current_user_df = pd.read_csv(current_user_path, keep_default_na = False)
+    except FileNotFoundError: # create new current users file if it does not exist already
+        current_user_df = pd.DataFrame(columns=["user_id", "user_name", "login_name", "broadcaster_type"])
 
-    # New users added to dimension data
-    additional_users_df = pd.concat([curated_user_dim_df.drop_duplicates(), user_dim_df.drop_duplicates()]).drop_duplicates(keep=False).reset_index(drop=True)
-    
-    return curated_user_dim_df, additional_users_df
+    return current_user_df
+
+
+# Adds new user data from processed user data to the current users data
+# Also returns dataframe filled with new users not seen before in to the curated layer to be uploaded to the postgres DB
+def add_new_user_data(processed_user_df, current_user_df):
+    new_current_user_df = pd.concat([current_user_df, processed_user_df]).drop_duplicates(subset=["user_id"], keep="first").reset_index()
+    new_current_user_df = new_current_user_df[["user_id", "user_name", "login_name", "broadcaster_type"]]
+
+    # New additional users not seen before will be uploaded as curated data to curated layer
+    additional_users_df = pd.concat([new_current_user_df.drop_duplicates(), current_user_df.drop_duplicates()]).drop_duplicates(keep=False).reset_index(drop=True)
+
+    return new_current_user_df, additional_users_df
+
 
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20251229" # test value
-    time_of_day_id = "1745" # test value
+    day_date_id = "20260111" # test
+    time_of_day_id = "1715" # test
 
     processed_user_df = get_processed_user_data(day_date_id, time_of_day_id)
     
@@ -91,19 +102,25 @@ def main():
         "display_name": "user_name",
         "login": "login_name"
     })
-    
-    curated_user_df = get_user_dim_info() # gets current user dimension data
 
-    # Adds new user data to curated user dimension file
-    # Additional users should be equivalent to processed_user_df if previous part of data pipeline was correct
-    curated_user_dim_df, additional_users = add_new_user_data(processed_user_df, curated_user_df) 
+    current_users_df = get_current_users()
 
+    # Curated user data contains new user data to be uploaded to postgres
+    # Current users is updated
+    current_users_df, curated_users_df = add_new_user_data(processed_user_df, current_users_df) 
 
-    user_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_users_data/curated_users_data.csv"
-    curated_user_dim_df.to_csv(user_dim_file_path, index=False) # convert user dim data to CSV
+    if curated_users_df.empty:
+        print("No new users added to user dimension data.")
+        exit()
 
-    # Converts new additional user data to CSV and uploads to temp file which will be uploaded to postgres
-    additional_users.to_csv(repo_root + "/data/twitch_project_miscellaneous/temp_table_data/new_users_data.csv", index=False)
+    # Converts new additional user data to CSV and uploads to curated layer which will be uploaded to postgres
+    curated_user_file_path = Path(repo_root + f"/data/twitch_project_curated_layer/curated_users_data/{day_date_id}/curated_users_data_{day_date_id}_{time_of_day_id}.csv")
+    curated_user_file_path.parent.mkdir(parents=True, exist_ok=True)
+    curated_users_df.to_csv(curated_user_file_path, index=False) # convert curated user data to CSV to be uploaded to postgres
+
+    # Updates the current users we have data for already
+    current_users_file_path = repo_root + "/data/twitch_project_miscellaneous/current_data/current_users.csv"
+    current_users_df.to_csv(current_users_file_path, index=False)
 
 
 if __name__ == "__main__":

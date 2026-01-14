@@ -12,7 +12,6 @@ import time
 ###############################################################
 
 
-
 # Gets recent processed genre bridge dimension data and limits it to relevant columns
 def get_processed_genre_bridge_data(s3_client, bucket_name, file_key):
     response = s3_client.get_object(Bucket=bucket_name, Key=file_key)
@@ -20,7 +19,6 @@ def get_processed_genre_bridge_data(s3_client, bucket_name, file_key):
     if status == 200:
         print(f"Successful S3 get_object response for the processed genre bridge data. Status - {status}")
         processed_genre_bridge_df = pd.read_csv(response.get("Body"), keep_default_na = False)
-        processed_genre_bridge_df = processed_genre_bridge_df[["category_id", "genre_id"]]
     else:
         print(f"Unsuccessful S3 get_object response for the genre bridge dimension. Status - {status}")
         print(response)
@@ -66,29 +64,26 @@ def add_new_genre_data(processed_genre_bridge_df, curated_genre_bridge_df):
 def lambda_handler(event, context):
     bucket_name = event["Records"][0]["s3"]["bucket"]["name"]
     file_key = event["Records"][0]["s3"]["object"]["key"]
+    day_date_id = file_key.split("/")[1]
+    time_of_day_id = file_key.split("/")[2].split("_")[5][:4]
 
     s3_client = boto3.client("s3")
 
     # Get processed and curated genre bridge data
     processed_genre_bridge_df = get_processed_genre_bridge_data(s3_client, bucket_name, file_key)
-    curated_genre_bridge_df = get_genre_bridge_dim(s3_client)
 
-    # adds new genre data to curated genre bridge dimension file
-    curated_genre_bridge_dim_df, additional_category_genres = add_new_genre_data(processed_genre_bridge_df, curated_genre_bridge_df) 
+    # Curate processed data to only include relevant data
+    curated_genre_bridge_df = processed_genre_bridge_df[["category_id", "genre_id"]]
+    curated_genre_bridge_df = curated_genre_bridge_df.drop_duplicates(subset=["category_id", "genre_id"]).reset_index(drop=True)
+
 
     # Upload CSV to curated layer in S3
     wr.s3.to_csv(
-        df=curated_genre_bridge_dim_df,
-        path=f"s3://twitch-project-curated-layer/curated_genre_bridge_data/curated_genre_bridge_data.csv",
+        df=curated_genre_bridge_df,
+        path=f"s3://twitch-project-curated-layer/curated_genre_bridge_data/{day_date_id}/curated_genre_bridge_data_{day_date_id}_{time_of_day_id}.csv",
         index=False
     )
 
-    # Converts new additional genres data to CSV and uploads to temp file which will be uploaded to postgres
-    wr.s3.to_csv(
-        df=additional_category_genres,
-        path=f"s3://twitch-project-miscellaneous/temp_table_data/new_genre_bridge_data.csv",
-        index=False
-    )
 
     return {
         'statusCode': 200,

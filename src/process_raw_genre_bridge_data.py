@@ -37,8 +37,12 @@ def lambda_handler(event, context):
         print(f"Error: {status}")
         exit()
 
+    # Get day_date_id and time_of_day_id
+    day_date_id = raw_genre_bridge_data["day_date_id"]
+    time_of_day_id = raw_genre_bridge_data["time_of_day_id"]
+
     # Load in curated category data
-    response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key="curated_categories_data/curated_categories_data.csv")
+    response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key=f"curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv")
     status = response["ResponseMetadata"]["HTTPStatusCode"]
     if status == 200:
         category_df = pd.read_csv(response["Body"], keep_default_na=False)
@@ -65,10 +69,6 @@ def lambda_handler(event, context):
 
     # Convert data to dataframe
     processed_genre_bridge_df = pd.DataFrame(processed_genre_bridge_data_dict)
-
-    # Get day_date_id and time_of_day_id
-    day_date_id = raw_genre_bridge_data["day_date_id"]
-    time_of_day_id = raw_genre_bridge_data["time_of_day_id"]
 
     # Upload CSV to processed layer in S3
     wr.s3.to_csv(

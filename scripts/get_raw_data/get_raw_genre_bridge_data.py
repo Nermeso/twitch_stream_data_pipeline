@@ -55,36 +55,19 @@ def get_time_of_day_id():
     return str(time_of_day_id)
 
 
-# Accesses the genre bridge dimension
-def access_genre_bridge_dimension():
-    genre_bridge_dimension_path = repo_root +  "/data/twitch_project_curated_layer/curated_genre_bridge_data/curated_genre_bridge_data.csv"
-    try:
-        genre_bridge_df = pd.read_csv(genre_bridge_dimension_path, keep_default_na=False)
-    except FileNotFoundError:
-        with open(genre_bridge_dimension_path, 'w') as f:
-            f.write('category_id,genre_id')
-
-        genre_bridge_df = pd.read_csv(genre_bridge_dimension_path, keep_default_na=False)
-
-    return genre_bridge_df
-
-
 # Get raw genre data for new categories
-def get_raw_genre_data(wrapper, category_df, genre_bridge_df, raw_category_genre_data_dict):
-    exclude_list = genre_bridge_df["category_id"].tolist()
-    new_category_df = category_df[~category_df["category_id"].isin(exclude_list)].reset_index() # only include categories that we did not get genre data on yet
-
+def get_raw_category_genre_data(wrapper, curated_categories_df, raw_category_genre_data_dict):
     # One API call accepts max 100 IGDB ids
     # To minimize num of calls made, we make one API call per 100 games
     igdb_category_id_temp = {} # temporarily store what category ids are associated with igdb ids
-    for i, row in new_category_df.iterrows():
+    for i, row in curated_categories_df.iterrows():
         i += 1
         igdb_id = str(row["igdb_id"])
         category_id = str(row["category_id"])
 
         if igdb_id != "NA": # Only consider categories that have an associated IGDB ID
             igdb_category_id_temp[int(float(igdb_id))] = int(float(category_id))
-        if i % 100 == 0 or i == len(new_category_df): # every 100 igdb games or if last one, make api call
+        if i % 100 == 0 or i == len(curated_categories_df): # every 100 igdb games or if last one, make api call
             igdb_ids_tuple = tuple(igdb_category_id_temp.keys())
             igdb_ids_arg = str(igdb_ids_tuple)
             if len(igdb_ids_tuple) == 1:
@@ -113,12 +96,13 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    # Get curated category data
-    category_dimension_path = repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv"
-    category_df = pd.read_csv(category_dimension_path, keep_default_na=False)
+    # Actual values will be provided by event input coming from SNS topic
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1645" # test value
 
-    # Get genre bridge data
-    genre_bridge_df = access_genre_bridge_dimension()
+    # Get curated category data
+    curated_categories_path = repo_root + f"/data/twitch_project_curated_layer/curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv"
+    curated_categories_df = pd.read_csv(curated_categories_path, keep_default_na=False)
 
     raw_category_genre_data_dict = {
         "day_date_id": day_date_id,
@@ -127,7 +111,7 @@ def main():
     }
 
     # Get new genre data
-    get_raw_genre_data(wrapper, category_df, genre_bridge_df, raw_category_genre_data_dict)
+    get_raw_category_genre_data(wrapper, curated_categories_df, raw_category_genre_data_dict)
 
     # Write the raw category genre data to json file
     output_file_path = Path(repo_root + f"/data/twitch_project_raw_layer/raw_genre_bridge_data/{day_date_id}/raw_genre_bridge_data_{day_date_id}_{time_of_day_id}.json")

@@ -5,12 +5,10 @@ from datetime import datetime
 
 ########################### SUMMARY ###########################
 '''
-    Updates the current game mode bridge dimension CSV file. Looks
-    through most recently collected current category game modes
-    and inserts them into current dimension file.
+    Produces curated game_mode_bridge data which only includes
+    columns category_id, igdb_id, and game_mode_id
 '''
 ###############################################################
-
 
 start = time.time()
 repo_root = str(Path(__file__).parents[2])
@@ -29,7 +27,7 @@ def get_day_date_id():
 
 # Gets time of day id based off of current time of script execution
 def get_time_of_day_id():
-    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})
+    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})     
     cur_date = datetime.today()
     minimum_diff = 1000
     time_of_day_id = ""
@@ -44,54 +42,26 @@ def get_time_of_day_id():
     return str(time_of_day_id)
 
 
-# Gets recent processed game_mode bridge dimension data and limits it to relevant columns
-def get_processed_game_mode_bridge_data(day_date_id, time_of_day_id):
-    file_path = repo_root + f"/data/twitch_project_processed_layer/processed_game_mode_bridge_data/{day_date_id}/processed_game_mode_bridge_data_{day_date_id}_{time_of_day_id}.csv"
-    processed_game_mode_bridge_df = pd.read_csv(file_path, keep_default_na = False)
-    processed_game_mode_bridge_df = processed_game_mode_bridge_df[["category_id", "igdb_id", "game_mode_id"]]
-
-    return processed_game_mode_bridge_df
-
-
-# Gets current game_mode bridge dim
-def get_game_mode_bridge_dim():
-    file_path = repo_root + f"/data/twitch_project_curated_layer/curated_game_mode_bridge_data/curated_game_mode_bridge_data.csv"
-    try:
-        game_mode_bridge_dim_df = pd.read_csv(file_path, keep_default_na = False)
-    except FileNotFoundError: # create new game_mode bridge file if it does not exist already
-        with open(file_path, 'w') as f:
-            f.write("category_id,igdb_id,game_mode_id")
-        game_mode_bridge_dim_df = pd.read_csv(file_path, keep_default_na = False, dtype={"igdb_id": int})
-
-    return game_mode_bridge_dim_df
-
-
-# Adds new game_mode data from processed game_mode bridge data to the curated dimension data
-# Also returns dataframe filled with new cateogory game_modes not seen before in original curated game_mode bridge dimension data
-def add_new_game_mode_data(processed_game_mode_bridge_df, curated_game_mode_bridge_df):
-    curated_game_mode_bridge_df = pd.concat([curated_game_mode_bridge_df, processed_game_mode_bridge_df]).drop_duplicates(subset=["category_id", "igdb_id", "game_mode_id"]).reset_index()
-    curated_game_mode_bridge_df["igdb_id"] = curated_game_mode_bridge_df["igdb_id"].astype(int)
-    curated_game_mode_bridge_df = curated_game_mode_bridge_df[["category_id", "igdb_id", "game_mode_id"]]
-    additional_category_game_modes = processed_game_mode_bridge_df
-
-    return curated_game_mode_bridge_df, additional_category_game_modes
-
-
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    processed_game_mode_bridge_df = get_processed_game_mode_bridge_data(day_date_id, time_of_day_id)
-    curated_game_mode_bridge_df = get_game_mode_bridge_dim()
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1645" # test value
 
-    # adds new game_mode data to curated game_mode bridge dimension file
-    curated_game_mode_bridge_dim_df, additional_category_game_modes = add_new_game_mode_data(processed_game_mode_bridge_df, curated_game_mode_bridge_df)
-    game_mode_bridge_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_game_mode_bridge_data/curated_game_mode_bridge_data.csv"
-    curated_game_mode_bridge_dim_df.to_csv(game_mode_bridge_dim_file_path, index=False) # convert game_mode bridge dim data to CSV
+    # Get processed game_mode bridge dataframe
+    file_path = repo_root + f"/data/twitch_project_processed_layer/processed_game_mode_bridge_data/{day_date_id}/processed_game_mode_bridge_data_{day_date_id}_{time_of_day_id}.csv"
+    processed_game_mode_bridge_df = pd.read_csv(file_path, keep_default_na = False)
 
-    # Converts new additional category game_mode data to CSV and uploads to temp file which will be uploaded to postgres
-    additional_category_game_modes.to_csv(repo_root + "/data/twitch_project_miscellaneous/temp_table_data/new_game_mode_bridge_data.csv", index=False)
+    # Curate processed data to only include relevant data
+    curated_game_mode_bridge_df = processed_game_mode_bridge_df[["category_id", "game_mode_id"]]
+    curated_game_mode_bridge_df = curated_game_mode_bridge_df.drop_duplicates(subset=["category_id", "game_mode_id"]).reset_index(drop=True)
+
+    # Convert game_mode bridge data to CSV and upload it
+    game_mode_bridge_dim_file_path = Path(repo_root + f"/data/twitch_project_curated_layer/curated_game_mode_bridge_data/{day_date_id}/curated_game_mode_bridge_data_{day_date_id}_{time_of_day_id}.csv")
+    game_mode_bridge_dim_file_path.parent.mkdir(parents=True, exist_ok=True)
+    curated_game_mode_bridge_df.to_csv(game_mode_bridge_dim_file_path, index=False) # convert game_mode bridge dim data to CSV
 
 
 

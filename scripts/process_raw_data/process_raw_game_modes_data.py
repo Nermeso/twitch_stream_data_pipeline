@@ -4,12 +4,12 @@ from pathlib import Path
 import json
 import time
 
-################################# SUMMARY #################################
+############################ SUMMARY ############################
 '''
-    This script processes the raw game mode data by converting it into a 
-    CSV file.
+    Processes the raw game_mode bridge data. Converts it into
+    tabular format and adds the appropriate category IDs.
 '''
-###########################################################################
+#################################################################
 
 start = time.time()
 repo_root = str(Path(__file__).parents[2])
@@ -21,13 +21,13 @@ def get_day_date_id():
     date_df = pd.read_csv(date_dim_path)
     current_date = datetime.today()
     day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
-   
+
     return str(day_date_id)
 
 
 # Gets time of day id based off of current time of script execution
 def get_time_of_day_id():
-    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})
+    time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})     
     cur_date = datetime.today()
     minimum_diff = 1000
     time_of_day_id = ""
@@ -42,22 +42,65 @@ def get_time_of_day_id():
     return str(time_of_day_id)
 
 
+# Gets category id associated with IGDB ID
+def get_associated_category_id(category_df, igdb_id):
+    category_row = category_df[category_df["igdb_id"] == str(igdb_id)]
+    category_id = str(category_row["category_id"].iloc[0].item())
+
+    return category_id
+
+
 
 def main():
-    raw_game_mode_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_game_modes_data/raw_game_modes_data.json"
+    day_date_id = get_day_date_id()
+    time_of_day_id = get_time_of_day_id()
+
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1645" # test value
+
+    raw_game_mode_bridge_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_game_mode_bridge_data/{day_date_id}/raw_game_mode_bridge_data_{day_date_id}_{time_of_day_id}.json"
+
+    # Access category dimension data
+    curated_categories_path = repo_root + f"/data/twitch_project_curated_layer/curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv"
+    category_df = pd.read_csv(curated_categories_path, keep_default_na=False)
 
     # Access raw category data
-    with open(raw_game_mode_data_path, 'r') as f:
-        game_mode_data = json.load(f)
+    with open(raw_game_mode_bridge_data_path, 'r') as f:
+        game_mode_bridge_data = json.load(f)
 
-    game_mode_df = pd.DataFrame(game_mode_data["data"]).drop_duplicates() # convert to dataframe
-    game_mode_df = game_mode_df.rename(columns = {"id": "game_mode_id", "name": "game_mode_name"}) # rename columns
+    processed_game_mode_bridge_data_dict = {
+        "igdb_id": [],
+        "category_id": [],
+        "game_name": [],
+        "game_mode_id": []
+    }
+
+    # Add game_mode data to processed game_mode bridge data dict
+    for game_info in game_mode_bridge_data["data"]: # some games have no associated game_modes
+        if "game_modes" in game_info.keys():
+            category_id = get_associated_category_id(category_df, game_info["id"])
+            for game_mode_id in game_info["game_modes"]:
+                processed_game_mode_bridge_data_dict["igdb_id"].append(game_info["id"])
+                processed_game_mode_bridge_data_dict["category_id"].append(category_id)
+                processed_game_mode_bridge_data_dict["game_name"].append(game_info["name"])
+                processed_game_mode_bridge_data_dict["game_mode_id"].append(game_mode_id)
+
+    # Convert data to dataframe
+    processed_game_mode_bridge_df = pd.DataFrame(processed_game_mode_bridge_data_dict)
 
     # Upload CSV to processed layer
-    processed_game_mode_file_path = repo_root + f"/data/twitch_project_processed_layer/processed_game_modes_data/processed_game_modes_data.csv"
-    game_mode_df.to_csv(processed_game_mode_file_path, index=False)
+    processed_game_mode_bridge_file_path = Path(repo_root + f"/data/twitch_project_processed_layer/processed_game_mode_bridge_data/{day_date_id}/processed_game_mode_bridge_data_{day_date_id}_{time_of_day_id}.csv")
+    processed_game_mode_bridge_file_path.parent.mkdir(parents=True, exist_ok=True)
+    processed_game_mode_bridge_df.to_csv(processed_game_mode_bridge_file_path, index=False)
+
+
+
 
 
 
 if __name__ == "__main__":
     main()
+
+
+end = time.time()
+print("Duration: " + str(end - start))

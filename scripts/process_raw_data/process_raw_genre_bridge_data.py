@@ -55,10 +55,14 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1645" # test value
+
     raw_genre_bridge_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_genre_bridge_data/{day_date_id}/raw_genre_bridge_data_{day_date_id}_{time_of_day_id}.json"
 
     # Access category dimension data
-    category_df = pd.read_csv(repo_root + "/data/twitch_project_curated_layer/curated_categories_data/curated_categories_data.csv", keep_default_na=False)
+    curated_categories_path = repo_root + f"/data/twitch_project_curated_layer/curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv"
+    category_df = pd.read_csv(curated_categories_path, keep_default_na=False)
 
     # Access raw category data
     with open(raw_genre_bridge_data_path, 'r') as f:

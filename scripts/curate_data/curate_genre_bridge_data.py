@@ -5,9 +5,8 @@ from datetime import datetime
 
 ########################### SUMMARY ###########################
 '''
-    Updates the current genre bridge dimension CSV file. Looks
-    through most recently collected current category genres
-    and inserts them into current dimension file.
+    Produces curated genre_bridge data which only includes
+    columns category_id, igdb_id, and genre_id
 '''
 ###############################################################
 
@@ -43,56 +42,26 @@ def get_time_of_day_id():
     return str(time_of_day_id)
 
 
-# Gets recent processed genre bridge dimension data and limits it to relevant columns
-def get_processed_genre_bridge_data(day_date_id, time_of_day_id):
-    file_path = repo_root + f"/data/twitch_project_processed_layer/processed_genre_bridge_data/{day_date_id}/processed_genre_bridge_data_{day_date_id}_{time_of_day_id}.csv"
-    processed_genre_bridge_df = pd.read_csv(file_path, keep_default_na = False)
-    processed_genre_bridge_df = processed_genre_bridge_df[["category_id", "igdb_id", "genre_id"]]
-
-    return processed_genre_bridge_df
-
-
-# Gets current genre bridge dim
-def get_genre_bridge_dim():
-    file_path = repo_root + f"/data/twitch_project_curated_layer/curated_genre_bridge_data/curated_genre_bridge_data.csv"
-    try:
-        genre_bridge_dim_df = pd.read_csv(file_path, keep_default_na = False)
-    except FileNotFoundError: # create new genre bridge file if it does not exist already
-        with open(file_path, 'w') as f:
-            f.write("category_id,igdb_id,genre_id")
-        genre_bridge_dim_df = pd.read_csv(file_path, keep_default_na = False, dtype={"igdb_id": int})
-
-    return genre_bridge_dim_df
-
-
-# Adds new genre data from processed genre bridge data to the curated dimension data
-# Also returns dataframe filled with new cateogory genres not seen before in original curated genre bridge dimension data
-def add_new_genre_data(processed_genre_bridge_df, curated_genre_bridge_df):
-    curated_genre_bridge_df = pd.concat([curated_genre_bridge_df, processed_genre_bridge_df]).drop_duplicates(subset=["category_id", "igdb_id", "genre_id"]).reset_index()
-    curated_genre_bridge_df["igdb_id"] = curated_genre_bridge_df["igdb_id"].astype(int)
-    curated_genre_bridge_df = curated_genre_bridge_df[["category_id", "igdb_id", "genre_id"]]
-    additional_category_genres = processed_genre_bridge_df
-
-    return curated_genre_bridge_df, additional_category_genres
-
-
 
 def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    processed_genre_bridge_df = get_processed_genre_bridge_data(day_date_id, time_of_day_id)
-    curated_genre_bridge_df = get_genre_bridge_dim()
+    day_date_id = "20260111" # test value
+    time_of_day_id = "1645" # test value
 
-    # adds new genre data to curated genre bridge dimension file
-    curated_genre_bridge_dim_df, additional_category_genres = add_new_genre_data(processed_genre_bridge_df, curated_genre_bridge_df) 
-    genre_bridge_dim_file_path = repo_root + "/data/twitch_project_curated_layer/curated_genre_bridge_data/curated_genre_bridge_data.csv"
-    curated_genre_bridge_dim_df.to_csv(genre_bridge_dim_file_path, index=False) # convert genre bridge dim data to CSV
+    # Get processed genre bridge dataframe
+    file_path = repo_root + f"/data/twitch_project_processed_layer/processed_genre_bridge_data/{day_date_id}/processed_genre_bridge_data_{day_date_id}_{time_of_day_id}.csv"
+    processed_genre_bridge_df = pd.read_csv(file_path, keep_default_na = False)
 
-    # Converts new additional category genre data to CSV and uploads to temp file which will be uploaded to postgres
-    additional_category_genres.to_csv(repo_root + "/data/twitch_project_miscellaneous/temp_table_data/new_genre_bridge_data.csv", index=False)
+    # Curate processed data to only include relevant data
+    curated_genre_bridge_df = processed_genre_bridge_df[["category_id", "genre_id"]]
+    curated_genre_bridge_df = curated_genre_bridge_df.drop_duplicates(subset=["category_id", "genre_id"]).reset_index(drop=True)
 
-
+    # Convert genre bridge data to CSV and upload it
+    genre_bridge_dim_file_path = Path(repo_root + f"/data/twitch_project_curated_layer/curated_genre_bridge_data/{day_date_id}/curated_genre_bridge_data_{day_date_id}_{time_of_day_id}.csv")
+    genre_bridge_dim_file_path.parent.mkdir(parents=True, exist_ok=True)
+    curated_genre_bridge_df.to_csv(genre_bridge_dim_file_path, index=False) # convert genre bridge dim data to CSV
 
 
 

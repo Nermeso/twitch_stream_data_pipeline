@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 import boto3
 import json
 import time
+import ast
 
 ############################## SUMMARY ##############################
 '''
@@ -37,71 +38,10 @@ def get_credentials():
     return headers, s3_client
 
 
-# Gets current date id based of date when script is executed
-def get_day_date_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_day_dates_data/raw_day_dates_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for date dimension. Status - {status}")
-        date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-    else:
-        print(f"Unsuccessful S3 get_object response for date dimension. Status - {status}")
-        print(response)
-        exit()
-    current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
-
-    return str(day_date_id)
-
-
-# Gets time of day id based off of current time of script execution
-def get_time_of_day_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_time_of_day_data/raw_time_of_day_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for time of day dimension. Status - {status}")
-        time_of_day_df = pd.read_csv(response.get("Body"), keep_default_na=False, dtype={"time_of_day_id": str})
-    else:
-        print(f"Unsuccessful S3 get_object response for time of day dimension. Status - {status}")
-        print(response)
-        exit()
-    cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    minimum_diff = 1000
-    time_of_day_id = ""
-    for row in time_of_day_df.iterrows():
-        time = row[1]["time_24h"]
-        date_time_compare = datetime(cur_date.year, cur_date.month, cur_date.day, int(time[0:2]), int(time[3:5]))
-        diff = abs((cur_date - date_time_compare).total_seconds())
-        if diff < minimum_diff:
-            minimum_diff = diff
-            time_of_day_id = row[1]["time_of_day_id"]
-
-    return time_of_day_id
-
-
-
-# Gets the curated game_mode bridge dimension data
-def get_curated_game_mode_bridge_data(s3_client):
-    try:
-        response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key=f"curated_game_mode_bridge_data/curated_game_mode_bridge_data.csv")
-        status = response["ResponseMetadata"]["HTTPStatusCode"]
-        if status == 200:
-            print(f"Successful S3 get_object response for the curated game_mode bridge data. Status - {status}")
-            curated_game_mode_bridge_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-        else:
-            print(f"Unsuccessful S3 get_object response for the curated streams data. Status - {status}")
-            exit()
-    except Exception as e: # if curated game_mode bridge data does not exist yet, error will be returned which we will catch
-        print(e)
-        curated_game_mode_bridge_df = pd.DataFrame(columns=["category_id", "igdb_id", "game_mode_id"])
-
-    return curated_game_mode_bridge_df
-
-
 # Gets the curated game_mode bridge data
-def get_curated_category_data(s3_client):
+def get_curated_category_data(s3_client, bucket_name, obj_key):
     try:
-        response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key=f"curated_categories_data/curated_categories_data.csv")
+        response = s3_client.get_object(Bucket=bucket_name, Key=obj_key)
         status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
             print(f"Successful S3 get_object response for the curated category data. Status - {status}")
@@ -118,21 +58,18 @@ def get_curated_category_data(s3_client):
 
 
 # Get raw game_mode data for new categories
-def get_raw_game_mode_data(wrapper, category_df, game_mode_bridge_df, raw_category_game_mode_data_dict):
-    exclude_list = game_mode_bridge_df["category_id"].tolist()
-    new_category_df = category_df[~category_df["category_id"].isin(exclude_list)].reset_index() # only include categories that we did not get game_mode data on yet
-
+def get_raw_category_game_mode_data(wrapper, curated_categories_df, raw_category_game_mode_data_dict):
     # One API call accepts max 100 IGDB ids
     # To minimize num of calls made, we make one API call per 100 games
     igdb_category_id_temp = {} # temporarily store what category ids are associated with igdb ids
-    for i, row in new_category_df.iterrows():
+    for i, row in curated_categories_df.iterrows():
         i += 1
         igdb_id = str(row["igdb_id"])
         category_id = str(row["category_id"])
 
         if igdb_id != "NA": # Only consider categories that have an associated IGDB ID
             igdb_category_id_temp[int(float(igdb_id))] = int(float(category_id))
-        if i % 100 == 0 or i == len(new_category_df): # every 100 igdb games or if last one, make api call
+        if i % 100 == 0 or i == len(curated_categories_df): # every 100 igdb games or if last one, make api call
             igdb_ids_tuple = tuple(igdb_category_id_temp.keys())
             igdb_ids_arg = str(igdb_ids_tuple)
             if len(igdb_ids_tuple) == 1:
@@ -140,6 +77,8 @@ def get_raw_game_mode_data(wrapper, category_df, game_mode_bridge_df, raw_catego
             raw_game_mode_data = get_igdb_game_mode(wrapper, igdb_ids_arg) # Calls api to get data
             raw_category_game_mode_data_dict["data"].extend(raw_game_mode_data)
             igdb_category_id_temp.clear()
+
+
 
 
 # Calls IGDB API to get data on up to 100 games' game_modes
@@ -151,8 +90,7 @@ def get_igdb_game_mode(wrapper, igdb_ids_arg):
                             f"f name, game_modes; where id = {igdb_ids_arg}; limit 100;"
                     )
             break
-        except Exception as e:
-            print(e)
+        except Exception as e: # If rate limit reached, reset
             time.sleep(5)
             continue
 
@@ -165,17 +103,18 @@ def get_igdb_game_mode(wrapper, igdb_ids_arg):
 
 def lambda_handler(event, context):
     start = time.time()
+    event_notification = ast.literal_eval(event["Records"][0]["Sns"]["Message"])
+    curated_categories_bucket_name = event_notification["Records"][0]["s3"]["bucket"]["name"]
+    curated_categories_key = event_notification["Records"][0]["s3"]["object"]["key"]
+    day_date_id = curated_categories_key.split("/")[1]
+    time_of_day_id = curated_categories_key.split("/")[2].split("_")[4][:4]
+
 
     s3_client = boto3.client("s3")
     wrapper = make_wrapper()
-    day_date_id = get_day_date_id(s3_client)
-    time_of_day_id = get_time_of_day_id(s3_client)
-
-    # Get curated game_mode bridge data
-    curated_game_mode_bridge_df = get_curated_game_mode_bridge_data(s3_client)
 
     # Get curated category data
-    curated_category_df = get_curated_category_data(s3_client)
+    curated_categories_df = get_curated_category_data(s3_client, curated_categories_bucket_name, curated_categories_key)
 
     raw_category_game_mode_data_dict = {
             "day_date_id": day_date_id,
@@ -184,7 +123,7 @@ def lambda_handler(event, context):
         }
 
     # Get new game_mode data
-    get_raw_game_mode_data(wrapper, curated_category_df, curated_game_mode_bridge_df, raw_category_game_mode_data_dict)
+    get_raw_category_game_mode_data(wrapper, curated_categories_df, raw_category_game_mode_data_dict)
 
     # Write the raw category game_mode data to json file
     s3_client.put_object(

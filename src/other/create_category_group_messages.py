@@ -5,6 +5,8 @@ import boto3
 from datetime import datetime
 from zoneinfo import ZoneInfo
 import botocore
+import json
+import ast
 
 
 ######################### SUMMARY #########################
@@ -63,13 +65,12 @@ def get_time_of_day_id(s3_client):
 
 
 # Gets most recently made processed categories df to be used as current streamed categories
-def get_processed_categories(s3_client, day_date_id, time_of_day_id):
+def get_processed_categories(s3_client, bucket_name, file_key):
     try:
-        object_key = f"processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"
-        response = s3_client.get_object(Bucket="twitch-project-processed-layer", Key=object_key)
+        response = s3_client.get_object(Bucket=bucket_name, Key=file_key)
         status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
-            print(f"Successful S3 get_object response for the curated category data. Status - {status}")
+            print(f"Successful S3 get_object response for the processed category data. Status - {status}")
             processed_categories_df = pd.read_csv(response.get("Body"), keep_default_na = False)           
     except Exception as e: # if processed category data does not exist, error will be returned which we will catch
         print(e)
@@ -144,12 +145,16 @@ def send_SQS_messages(category_groups):
 
 
 def lambda_handler(event, context):
+    event_notification = ast.literal_eval(event["Records"][0]["Sns"]["Message"])
+    processed_categories_bucket_name = event_notification["Records"][0]["s3"]["bucket"]["name"]
+    processed_categories_key = event_notification["Records"][0]["s3"]["object"]["key"]
+    day_date_id = processed_categories_key.split("/")[1]
+    time_of_day_id = processed_categories_key.split("/")[2].split("_")[4][:4]
+
     s3_client = boto3.client("s3")
-    day_date_id = get_day_date_id(s3_client)
-    time_of_day_id = get_time_of_day_id(s3_client)
 
     # Get current streamed categories based off of processed_categories file
-    curr_streamed_categories_df = get_processed_categories(s3_client, day_date_id, time_of_day_id)
+    curr_streamed_categories_df = get_processed_categories(s3_client, processed_categories_bucket_name, processed_categories_key)
     
     # Check if popularity data exists or not
     popularity_data_exists = False

@@ -87,8 +87,10 @@ def lambda_handler(event, context):
     current_users_df, curated_users_df = add_new_user_data(processed_user_df, current_users_df) 
 
     if curated_users_df.empty:
-        print("No new users added to user dimension data.")
-        exit()
+        return {
+            'statusCode': 200,
+            'body': "No new user data to be added"
+        }
 
 
     # Converts new additional user data to CSV and uploads to curated layer which will be uploaded to postgres

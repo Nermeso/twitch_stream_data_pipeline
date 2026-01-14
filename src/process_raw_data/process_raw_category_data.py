@@ -41,13 +41,23 @@ def lambda_handler(event, context):
     category_df["box_art_url"] = category_df["box_art_url"].replace("", "NA")
 
     # Upload CSV to processed layer in S3
+    processed_bucket_name = "twitch-project-processed-layer"
+    processed_categories_key = f"processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv"
+    processed_categories_path = f"s3://{processed_bucket_name}/{processed_categories_key}"
     wr.s3.to_csv(
         df=category_df,
-        path=f"s3://twitch-project-processed-layer/processed_categories_data/{day_date_id}/processed_categories_data_{day_date_id}_{time_of_day_id}.csv",
+        path=processed_categories_path,
         index=False
     )
 
+    output_info = {
+        "day_date_id": day_date_id,
+        "time_of_day_id": time_of_day_id,
+        "bucket_name": processed_bucket_name,
+        "file_key": processed_categories_key
+    }
+
     return {
         'statusCode': 200,
-        'body': json.dumps('Successful program end!')
+        'body': json.dumps(output_info)
     }

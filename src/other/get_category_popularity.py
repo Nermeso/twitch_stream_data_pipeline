@@ -4,6 +4,7 @@ import json
 import time
 import boto3
 import awswrangler as wr
+import ast
 
 ################################# SUMMARY #################################
 '''
@@ -28,12 +29,14 @@ def get_curated_stream_data(s3_client, bucket_name, file_key):
 
 def lambda_handler(event, context):
     s3_client = boto3.client("s3")
-    bucket_name = event["Records"][0]["s3"]["bucket"]["name"]
-    file_key = event["Records"][0]["s3"]["object"]["key"]
-    day_date_id = str(file_key[-17:-9])
-    time_of_day_id = str(file_key[-8:-4])
 
-    curated_stream_df = get_curated_stream_data(s3_client, bucket_name, file_key)
+    event_notification = ast.literal_eval(event["Records"][0]["Sns"]["Message"])
+    curated_streams_bucket_name = event_notification["Records"][0]["s3"]["bucket"]["name"]
+    curated_streams_key = event_notification["Records"][0]["s3"]["object"]["key"]
+    day_date_id = curated_streams_key.split("/")[1]
+    time_of_day_id = curated_streams_key.split("/")[2].split("_")[4][:4]
+
+    curated_stream_df = get_curated_stream_data(s3_client, curated_streams_bucket_name, curated_streams_key)
 
     # Transforms it to get number of streamers per category
     category_popularity_df = curated_stream_df.groupby(["category_id"], as_index=False).agg(

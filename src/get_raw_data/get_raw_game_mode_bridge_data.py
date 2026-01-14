@@ -109,7 +109,6 @@ def lambda_handler(event, context):
     day_date_id = curated_categories_key.split("/")[1]
     time_of_day_id = curated_categories_key.split("/")[2].split("_")[4][:4]
 
-
     s3_client = boto3.client("s3")
     wrapper = make_wrapper()
 

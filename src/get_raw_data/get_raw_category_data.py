@@ -1,7 +1,7 @@
 import os
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import boto3
 import json
@@ -31,7 +31,8 @@ def get_credentials():
 
 
 # Gets current date id based of date when script is executed
-def get_day_date_id(s3_client):
+def get_day_date_id(s3_client, current_date):
+    current_date = current_date.astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_day_dates_data/raw_day_dates_data.csv")
     status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
     if status == 200:
@@ -41,14 +42,20 @@ def get_day_date_id(s3_client):
         print(f"Unsuccessful S3 get_object response for date dimension. Status - {status}")
         print(response)
         exit()
-    current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
+        
+    # If later than 23:52, the day will be considered the next day
+    if current_date.hour == 23 and current_date.minute > 52:
+        current_date += timedelta(days=1)
+        day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
+    else:
+        day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
    
     return str(day_date_id)
 
 
 # Gets time of day id based off of current time of script execution
-def get_time_of_day_id(s3_client):
+def get_time_of_day_id(s3_client, current_date):
+    current_date = current_date.astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_time_of_day_data/raw_time_of_day_data.csv")
     status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
     if status == 200:
@@ -58,18 +65,22 @@ def get_time_of_day_id(s3_client):
         print(f"Unsuccessful S3 get_object response for time of day dimension. Status - {status}")
         print(response)
         exit()
-    cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
+
+    # If later than 23:52, next nearest time will be 00:00
+    if current_date.hour == 23 and current_date.minute > 52:
+        return "0000"
+    
     minimum_diff = 1000
     time_of_day_id = ""
     for row in time_of_day_df.iterrows():
         time = row[1]["time_24h"]
-        date_time_compare = datetime(cur_date.year, cur_date.month, cur_date.day, int(time[0:2]), int(time[3:5]))
-        diff = abs((cur_date - date_time_compare).total_seconds())
+        date_time_compare = datetime(current_date.year, current_date.month, current_date.day, int(time[0:2]), int(time[3:5]))
+        diff = abs((current_date - date_time_compare).total_seconds())
         if diff < minimum_diff:
             minimum_diff = diff
             time_of_day_id = row[1]["time_of_day_id"]
 
-    return time_of_day_id
+    return str(time_of_day_id)
 
 
 # Calls the "Get Top Games" Twitch endpoint to get data on currently streamed categories
@@ -106,8 +117,9 @@ def call_get_top_games_endpoint(headers, raw_category_data):
 
 def lambda_handler(event, context):
     headers, s3_client = get_credentials() # gets access token and client id needed to call Twitch API and s3 client
-    day_date_id = get_day_date_id(s3_client)
-    time_of_day_id = get_time_of_day_id(s3_client)
+    todays_date = datetime.today()
+    day_date_id = get_day_date_id(s3_client, todays_date)
+    time_of_day_id = get_time_of_day_id(s3_client, todays_date)
 
     # Calls Twitch's "Get Top Games" endpoint to get currently streamed categories and category data we have not collected yet
     raw_category_data = {

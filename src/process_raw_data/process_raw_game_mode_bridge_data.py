@@ -14,7 +14,7 @@ import time
 # Gets category id associated with IGDB ID
 def get_associated_category_id(category_df, igdb_id):
     category_row = category_df[category_df["igdb_id"] == str(igdb_id)]
-    category_id = str(category_row["category_id"].iloc[0].item())
+    category_id = category_row["category_id"].iloc[0]
 
     return category_id
 
@@ -45,7 +45,13 @@ def lambda_handler(event, context):
     response = s3_client.get_object(Bucket="twitch-project-curated-layer", Key=f"curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv")
     status = response["ResponseMetadata"]["HTTPStatusCode"]
     if status == 200:
-        category_df = pd.read_csv(response["Body"], keep_default_na=False)
+        data_types = {
+            'category_id': str, 
+            'category_name': str,
+            'igdb_id': str
+        }
+        category_df = pd.read_csv(response["Body"], keep_default_na=False, dtype=data_types)
+        category_df = category_df.drop_duplicates(subset=["igdb_id"]).reset_index(drop=True)
     else:
         print(f"Error: {status}")
         exit()

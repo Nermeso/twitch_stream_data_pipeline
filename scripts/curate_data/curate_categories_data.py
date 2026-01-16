@@ -82,8 +82,8 @@ def main():
     time_of_day_id = get_time_of_day_id()
 
     # Normally, these values will be passed by the event variable in the lambda function
-    day_date_id = "20260111" # test value
-    time_of_day_id = "1645" # test value
+    # day_date_id = "20260111" # test value
+    # time_of_day_id = "1645" # test value
 
     # Gets recent processed category data
     processed_category_df = get_processed_category_data(day_date_id, time_of_day_id)

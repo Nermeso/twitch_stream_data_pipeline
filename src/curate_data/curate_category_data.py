@@ -32,7 +32,7 @@ def get_processed_category_data(s3_client, bucket_name, file_key):
 # Gets categories we already have data for
 def get_current_categories(s3_client):
     try:
-        response = s3_client.get_object(Bucket="twitch-project-miscellaneous", Key="current_data/current_categories")
+        response = s3_client.get_object(Bucket="twitch-project-miscellaneous", Key="current_data/current_categories.csv")
         status = response["ResponseMetadata"]["HTTPStatusCode"]
         if status == 200:
             print(f"Successful S3 get_object response for the current category data. Status - {status}")
@@ -66,7 +66,7 @@ def lambda_handler(event, context):
     processed_categories_key = event_notification["Records"][0]["s3"]["object"]["key"]
     day_date_id = processed_categories_key.split("/")[1]
     time_of_day_id = processed_categories_key.split("/")[2].split("_")[4][:4]
-
+    
     s3_client = boto3.client("s3")
 
     # Gets recent processed category data

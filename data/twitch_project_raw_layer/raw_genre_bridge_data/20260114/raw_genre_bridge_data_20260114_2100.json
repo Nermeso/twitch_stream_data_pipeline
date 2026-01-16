@@ -1,0 +1,1537 @@
+{
+    "day_date_id": "20260114",
+    "time_of_day_id": "2100",
+    "data": [
+        {
+            "id": 137,
+            "genres": [
+                12,
+                25,
+                31
+            ],
+            "name": "Star Wars: The Force Unleashed II"
+        },
+        {
+            "id": 307,
+            "genres": [
+                5
+            ],
+            "name": "Counter-Strike: Source"
+        },
+        {
+            "id": 438,
+            "genres": [
+                11,
+                13,
+                15,
+                16,
+                24
+            ],
+            "name": "Rome: Total War"
+        },
+        {
+            "id": 787,
+            "genres": [
+                5,
+                32
+            ],
+            "name": "Serious Sam II"
+        },
+        {
+            "id": 959,
+            "genres": [
+                11,
+                13,
+                15
+            ],
+            "name": "Command & Conquer: Red Alert 3"
+        },
+        {
+            "id": 1161,
+            "genres": [
+                5,
+                8,
+                31
+            ],
+            "name": "Tomb Raider: Legend"
+        },
+        {
+            "id": 1207,
+            "genres": [
+                12
+            ],
+            "name": "Tales of the Abyss"
+        },
+        {
+            "id": 1227,
+            "genres": [
+                12,
+                16,
+                31
+            ],
+            "name": "Xenosaga Episode I: Der Wille zur Macht"
+        },
+        {
+            "id": 1502,
+            "genres": [
+                12,
+                15,
+                16
+            ],
+            "name": "Front Mission 3"
+        },
+        {
+            "id": 1653,
+            "genres": [
+                25,
+                33
+            ],
+            "name": "Streets of Rage 2"
+        },
+        {
+            "id": 1800,
+            "genres": [
+                8,
+                31
+            ],
+            "name": "Sly 3: Honor Among Thieves"
+        },
+        {
+            "id": 1869,
+            "genres": [
+                5
+            ],
+            "name": "Killzone: Mercenary"
+        },
+        {
+            "id": 1939,
+            "genres": [
+                5,
+                12
+            ],
+            "name": "Destiny"
+        },
+        {
+            "id": 1941,
+            "genres": [
+                5,
+                8,
+                31
+            ],
+            "name": "Infamous: Second Son"
+        },
+        {
+            "id": 2177,
+            "genres": [
+                8,
+                10,
+                25,
+                31
+            ],
+            "name": "LEGO City Undercover"
+        },
+        {
+            "id": 3380,
+            "genres": [
+                12,
+                13
+            ],
+            "name": "Harvest Moon: Back to Nature"
+        },
+        {
+            "id": 3507,
+            "genres": [
+                35
+            ],
+            "name": "Goemon: Mononoke Sugoroku"
+        },
+        {
+            "id": 3717,
+            "genres": [
+                8
+            ],
+            "name": "Kirby's Adventure"
+        },
+        {
+            "id": 4011,
+            "genres": [
+                5
+            ],
+            "name": "50 Cent: Bulletproof"
+        },
+        {
+            "id": 5384,
+            "genres": [
+                11,
+                12
+            ],
+            "name": "Eye of the Beholder"
+        },
+        {
+            "id": 5495,
+            "genres": [
+                25
+            ],
+            "name": "Asura's Wrath"
+        },
+        {
+            "id": 5728,
+            "genres": [
+                9,
+                10,
+                15
+            ],
+            "name": "Apex"
+        },
+        {
+            "id": 6866,
+            "genres": [
+                9,
+                15,
+                33
+            ],
+            "name": "Puyo Puyo Tetris"
+        },
+        {
+            "id": 7901,
+            "genres": [
+                8
+            ],
+            "name": "Croc: Legend of the Gobbos"
+        },
+        {
+            "id": 11185,
+            "genres": [
+                13,
+                14
+            ],
+            "name": "Pro Evolution Soccer 2016"
+        },
+        {
+            "id": 12204,
+            "genres": [
+                9,
+                13,
+                32,
+                33
+            ],
+            "name": "Shower With Your Dad Simulator 2015: Do You Still Shower With Your Dad?"
+        },
+        {
+            "id": 18819,
+            "genres": [
+                14
+            ],
+            "name": "NBA 2K17"
+        },
+        {
+            "id": 20061,
+            "genres": [
+                12,
+                35
+            ],
+            "name": "Chain Chronicle"
+        },
+        {
+            "id": 21830,
+            "genres": [
+                15,
+                26,
+                35
+            ],
+            "name": "Catan"
+        },
+        {
+            "id": 23181,
+            "genres": [
+                9,
+                12,
+                31,
+                32
+            ],
+            "name": "OneShot"
+        },
+        {
+            "id": 26564,
+            "genres": [
+                12,
+                15,
+                16,
+                31
+            ],
+            "name": "The Legend of Heroes: Trails of Cold Steel III"
+        },
+        {
+            "id": 27922,
+            "genres": [
+                12
+            ],
+            "name": "Fallout 4 VR"
+        },
+        {
+            "id": 28402,
+            "genres": [
+                8,
+                9,
+                12,
+                31
+            ],
+            "name": "Threads of Fate"
+        },
+        {
+            "id": 44400,
+            "genres": [
+                9
+            ],
+            "name": "Nontan to Issho: Kuru-kuru Puzzle"
+        },
+        {
+            "id": 44619,
+            "name": "Watchmen: The End Is Nigh Complete Experience"
+        },
+        {
+            "id": 55112,
+            "genres": [
+                12,
+                25,
+                31
+            ],
+            "name": "Fist of the North Star: Lost Paradise"
+        },
+        {
+            "id": 56347,
+            "genres": [
+                5,
+                12,
+                15,
+                31
+            ],
+            "name": "PixArk"
+        },
+        {
+            "id": 77267,
+            "genres": [
+                5
+            ],
+            "name": "Call of Duty: Black Ops - Zombies"
+        },
+        {
+            "id": 81147,
+            "genres": [
+                15,
+                25
+            ],
+            "name": "Hyrule Warriors: Definitive Edition"
+        },
+        {
+            "id": 92589,
+            "genres": [
+                31,
+                33
+            ],
+            "name": "Club Penguin"
+        },
+        {
+            "id": 105333,
+            "genres": [
+                7,
+                14,
+                32,
+                33
+            ],
+            "name": "Synth Riders"
+        },
+        {
+            "id": 109577,
+            "genres": [
+                9
+            ],
+            "name": "Puyo Puyo Champions"
+        },
+        {
+            "id": 112185,
+            "genres": [
+                5,
+                8,
+                12,
+                31,
+                32
+            ],
+            "name": "Fury Unleashed"
+        },
+        {
+            "id": 112461,
+            "genres": [
+                15,
+                32
+            ],
+            "name": "Love In Drawing"
+        },
+        {
+            "id": 114286,
+            "genres": [
+                14
+            ],
+            "name": "Madden NFL 20"
+        },
+        {
+            "id": 114684,
+            "genres": [
+                5
+            ],
+            "name": "Splitgate"
+        },
+        {
+            "id": 117309,
+            "genres": [
+                31
+            ],
+            "name": "Remothered: Broken Porcelain"
+        },
+        {
+            "id": 119336,
+            "genres": [
+                31,
+                32,
+                33
+            ],
+            "name": "Pixel Ripped 1995"
+        },
+        {
+            "id": 122981,
+            "genres": [
+                2,
+                9,
+                32
+            ],
+            "name": "One Night at Flumpty's"
+        },
+        {
+            "id": 125009,
+            "genres": [
+                5
+            ],
+            "name": "Halo 2: Anniversary"
+        },
+        {
+            "id": 140793,
+            "genres": [
+                12,
+                31,
+                32
+            ],
+            "name": "Kristala"
+        },
+        {
+            "id": 142076,
+            "genres": [
+                5,
+                13,
+                24,
+                32
+            ],
+            "name": "Cruelty Squad"
+        },
+        {
+            "id": 149149,
+            "genres": [
+                9,
+                32,
+                34
+            ],
+            "name": "Tyrion Cuthbert: Attorney of the Arcane"
+        },
+        {
+            "id": 150241,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Luto"
+        },
+        {
+            "id": 151967,
+            "genres": [
+                8,
+                9
+            ],
+            "name": "Sutte Hakkun"
+        },
+        {
+            "id": 161626,
+            "genres": [
+                13,
+                14,
+                15,
+                32
+            ],
+            "name": "Infinite Tournament Paintball"
+        },
+        {
+            "id": 172403,
+            "genres": [
+                9,
+                24,
+                26,
+                31,
+                32
+            ],
+            "name": "GeoBingo.io"
+        },
+        {
+            "id": 174523,
+            "genres": [
+                12
+            ],
+            "name": "Jujutsu Kaisen: Phantom Parade"
+        },
+        {
+            "id": 178351,
+            "genres": [
+                4,
+                10,
+                15,
+                32,
+                33
+            ],
+            "name": "Crab Game"
+        },
+        {
+            "id": 179433,
+            "name": "Ocean"
+        },
+        {
+            "id": 186001,
+            "genres": [
+                8,
+                31
+            ],
+            "name": "Chameleon Twist 2"
+        },
+        {
+            "id": 187715,
+            "genres": [
+                13,
+                15,
+                31,
+                32
+            ],
+            "name": "The Closing Shift"
+        },
+        {
+            "id": 191468,
+            "genres": [
+                13,
+                32
+            ],
+            "name": "Boom Bears on Stream"
+        },
+        {
+            "id": 194143,
+            "genres": [
+                12,
+                31
+            ],
+            "name": "The Seven Deadly Sins: Origin"
+        },
+        {
+            "id": 198876,
+            "name": "RoboCop"
+        },
+        {
+            "id": 199946,
+            "genres": [
+                10
+            ],
+            "name": "Tuning Club Online"
+        },
+        {
+            "id": 208473,
+            "genres": [
+                12,
+                31,
+                32
+            ],
+            "name": "Dungeons of Sundaria"
+        },
+        {
+            "id": 217321,
+            "genres": [
+                32,
+                33,
+                35
+            ],
+            "name": "Lunars"
+        },
+        {
+            "id": 221740,
+            "genres": [
+                9,
+                33
+            ],
+            "name": "Suika Game"
+        },
+        {
+            "id": 226719,
+            "genres": [
+                13,
+                15,
+                32
+            ],
+            "name": "Plan B: Terraform"
+        },
+        {
+            "id": 238675,
+            "genres": [
+                13,
+                31
+            ],
+            "name": "While We Wait Here"
+        },
+        {
+            "id": 239857,
+            "genres": [
+                5,
+                13,
+                32
+            ],
+            "name": "The Front"
+        },
+        {
+            "id": 258242,
+            "genres": [
+                13,
+                31,
+                32
+            ],
+            "name": "Sky Harvest"
+        },
+        {
+            "id": 268978,
+            "genres": [
+                13,
+                32
+            ],
+            "name": "Purple Place"
+        },
+        {
+            "id": 269243,
+            "genres": [
+                8,
+                12,
+                13,
+                31,
+                32,
+                33
+            ],
+            "name": "Hans"
+        },
+        {
+            "id": 278255,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Digested"
+        },
+        {
+            "id": 279128,
+            "genres": [
+                5,
+                24
+            ],
+            "name": "Into the Radius 2"
+        },
+        {
+            "id": 281785,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Fears to Fathom: Woodbury Getaway"
+        },
+        {
+            "id": 285577,
+            "genres": [
+                13,
+                32
+            ],
+            "name": "ContractVille"
+        },
+        {
+            "id": 293936,
+            "genres": [
+                26,
+                33
+            ],
+            "name": "Foodguessr"
+        },
+        {
+            "id": 299591,
+            "genres": [
+                9,
+                12,
+                15,
+                32
+            ],
+            "name": "The Jackbox Naughty Pack"
+        },
+        {
+            "id": 301222,
+            "genres": [
+                31
+            ],
+            "name": "The Nightmare House"
+        },
+        {
+            "id": 308697,
+            "genres": [
+                5,
+                15,
+                32
+            ],
+            "name": "Orcs Must Die! Deathtrap"
+        },
+        {
+            "id": 310648,
+            "genres": [
+                31
+            ],
+            "name": "Industrial Fear"
+        },
+        {
+            "id": 313123,
+            "genres": [
+                12,
+                13,
+                15,
+                31,
+                32
+            ],
+            "name": "Fairy Tail: Dungeons"
+        },
+        {
+            "id": 318493,
+            "genres": [
+                32
+            ],
+            "name": "Terroro"
+        },
+        {
+            "id": 319863,
+            "genres": [
+                32
+            ],
+            "name": "Second Stellar"
+        },
+        {
+            "id": 319967,
+            "genres": [
+                5,
+                24
+            ],
+            "name": "SWAT Commander"
+        },
+        {
+            "id": 321739,
+            "genres": [
+                31
+            ],
+            "name": "Fatal Frame"
+        },
+        {
+            "id": 322086,
+            "genres": [
+                13
+            ],
+            "name": "Burgie's Cozy Kitchen"
+        },
+        {
+            "id": 332225,
+            "genres": [
+                5,
+                12,
+                31
+            ],
+            "name": "Darkest Days"
+        },
+        {
+            "id": 342566,
+            "genres": [
+                9,
+                13,
+                32,
+                34
+            ],
+            "name": "S.p.l.i.t"
+        },
+        {
+            "id": 344743,
+            "genres": [
+                15,
+                32
+            ],
+            "name": "Goblin Gnome Horn"
+        },
+        {
+            "id": 346366,
+            "genres": [
+                13,
+                31,
+                32
+            ],
+            "name": "Liminal City"
+        },
+        {
+            "id": 347114,
+            "genres": [
+                2
+            ],
+            "name": "Wplace"
+        },
+        {
+            "id": 349156,
+            "genres": [
+                7,
+                32
+            ],
+            "name": "Momo Crash"
+        },
+        {
+            "id": 357276,
+            "genres": [
+                9,
+                12,
+                32
+            ],
+            "name": "Hello Anxiety"
+        },
+        {
+            "id": 367828,
+            "genres": [
+                9,
+                15,
+                32
+            ],
+            "name": "Cinicross"
+        },
+        {
+            "id": 370711,
+            "genres": [
+                12,
+                15,
+                31,
+                32
+            ],
+            "name": "Parasite Mutant"
+        },
+        {
+            "id": 380800,
+            "genres": [
+                9,
+                32
+            ],
+            "name": "Forgot"
+        },
+        {
+            "id": 17,
+            "genres": [
+                12,
+                15,
+                16,
+                24
+            ],
+            "name": "Fallout Tactics: Brotherhood of Steel"
+        },
+        {
+            "id": 784,
+            "genres": [
+                5,
+                13,
+                24
+            ],
+            "name": "MechWarrior 2: 31st Century Combat"
+        },
+        {
+            "id": 816,
+            "genres": [
+                13,
+                14
+            ],
+            "name": "NHL 2004"
+        },
+        {
+            "id": 837,
+            "genres": [
+                8,
+                25,
+                31
+            ],
+            "name": "Prince of Persia: Warrior Within"
+        },
+        {
+            "id": 927,
+            "genres": [
+                5
+            ],
+            "name": "Unreal Tournament 2004"
+        },
+        {
+            "id": 1209,
+            "genres": [
+                12
+            ],
+            "name": "Tales of Vesperia"
+        },
+        {
+            "id": 1720,
+            "genres": [
+                5,
+                8,
+                31
+            ],
+            "name": "Mega Man 7"
+        },
+        {
+            "id": 1983,
+            "genres": [
+                12,
+                31,
+                32
+            ],
+            "name": "Bastion"
+        },
+        {
+            "id": 2065,
+            "genres": [
+                11,
+                13,
+                15,
+                24
+            ],
+            "name": "Plague Inc."
+        },
+        {
+            "id": 2113,
+            "genres": [
+                5
+            ],
+            "name": "Star Wars Battlefront"
+        },
+        {
+            "id": 2268,
+            "genres": [
+                12,
+                25
+            ],
+            "name": "Monster Hunter Tri"
+        },
+        {
+            "id": 2956,
+            "genres": [
+                7,
+                9,
+                32
+            ],
+            "name": "Audiosurf"
+        },
+        {
+            "id": 3462,
+            "genres": [
+                4,
+                12
+            ],
+            "name": "Custom Robo"
+        },
+        {
+            "id": 4174,
+            "genres": [
+                10,
+                14
+            ],
+            "name": "SSX 3"
+        },
+        {
+            "id": 5298,
+            "genres": [
+                4,
+                14
+            ],
+            "name": "WWE SmackDown vs. Raw 2008"
+        },
+        {
+            "id": 5541,
+            "genres": [
+                9,
+                31
+            ],
+            "name": "Sherlock Holmes: Crimes & Punishments"
+        },
+        {
+            "id": 8576,
+            "genres": [
+                12,
+                15,
+                25,
+                31
+            ],
+            "name": "Drakengard 3"
+        },
+        {
+            "id": 8748,
+            "genres": [
+                8,
+                9,
+                32
+            ],
+            "name": "N"
+        },
+        {
+            "id": 9000,
+            "genres": [
+                9,
+                31,
+                32
+            ],
+            "name": "Journey of a Roach"
+        },
+        {
+            "id": 9598,
+            "genres": [
+                13,
+                15,
+                24,
+                32
+            ],
+            "name": "SpyParty"
+        },
+        {
+            "id": 11131,
+            "genres": [
+                8,
+                31
+            ],
+            "name": "ReCore"
+        },
+        {
+            "id": 11364,
+            "genres": [
+                12,
+                31,
+                32
+            ],
+            "name": "Warhammer 40,000: Inquisitor - Martyr"
+        },
+        {
+            "id": 13215,
+            "genres": [
+                11,
+                15
+            ],
+            "name": "Cossacks 3"
+        },
+        {
+            "id": 13559,
+            "genres": [
+                12,
+                25
+            ],
+            "name": "Kamen Rider: Battride War Genesis"
+        },
+        {
+            "id": 18853,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Aragami"
+        },
+        {
+            "id": 21699,
+            "genres": [
+                10,
+                14
+            ],
+            "name": "Need for Speed Most Wanted U"
+        },
+        {
+            "id": 22440,
+            "genres": [
+                9,
+                16,
+                35
+            ],
+            "name": "Tower of Saviors"
+        },
+        {
+            "id": 25951,
+            "genres": [
+                11,
+                13,
+                15,
+                24,
+                32
+            ],
+            "name": "Ultimate General: Civil War"
+        },
+        {
+            "id": 28086,
+            "genres": [
+                13,
+                15
+            ],
+            "name": "Railway Empire"
+        },
+        {
+            "id": 28192,
+            "genres": [
+                7
+            ],
+            "name": "DJMax Respect"
+        },
+        {
+            "id": 35737,
+            "genres": [
+                12
+            ],
+            "name": "Red Stone Online"
+        },
+        {
+            "id": 41877,
+            "genres": [
+                5,
+                8,
+                9,
+                31
+            ],
+            "name": "Uncharted 2: Among Thieves Remastered"
+        },
+        {
+            "id": 47068,
+            "genres": [
+                12,
+                15,
+                31
+            ],
+            "name": "FNaF World"
+        },
+        {
+            "id": 54956,
+            "genres": [
+                12,
+                15,
+                31,
+                32
+            ],
+            "name": "Black Survival"
+        },
+        {
+            "id": 56060,
+            "genres": [
+                5,
+                12,
+                31
+            ],
+            "name": "Shadowgun Legends"
+        },
+        {
+            "id": 69488,
+            "genres": [
+                12,
+                13,
+                15,
+                16,
+                24,
+                32
+            ],
+            "name": "Phantom Brigade"
+        },
+        {
+            "id": 70385,
+            "genres": [
+                5,
+                12,
+                15,
+                32
+            ],
+            "name": "SCP: Secret Laboratory"
+        },
+        {
+            "id": 77523,
+            "name": "Players Unknown Battle Grand"
+        },
+        {
+            "id": 86966,
+            "genres": [
+                12,
+                13,
+                31
+            ],
+            "name": "Avakin Life"
+        },
+        {
+            "id": 90714,
+            "genres": [
+                12,
+                31,
+                32
+            ],
+            "name": "Martha Is Dead"
+        },
+        {
+            "id": 96052,
+            "name": "Twitchbox"
+        },
+        {
+            "id": 101488,
+            "name": "Snow Plow Truck"
+        },
+        {
+            "id": 103266,
+            "genres": [
+                31
+            ],
+            "name": "Twin Mirror"
+        },
+        {
+            "id": 103269,
+            "genres": [
+                4
+            ],
+            "name": "Dead or Alive 6"
+        },
+        {
+            "id": 109152,
+            "genres": [
+                13,
+                15,
+                32
+            ],
+            "name": "TheoTown"
+        },
+        {
+            "id": 115279,
+            "genres": [
+                12,
+                13,
+                31
+            ],
+            "name": "Rune Factory 5"
+        },
+        {
+            "id": 115299,
+            "genres": [
+                12,
+                13,
+                32
+            ],
+            "name": "Ostranauts"
+        },
+        {
+            "id": 115789,
+            "genres": [
+                5,
+                9,
+                13,
+                31,
+                32
+            ],
+            "name": "Boneworks"
+        },
+        {
+            "id": 123603,
+            "genres": [
+                5
+            ],
+            "name": "Contractors"
+        },
+        {
+            "id": 129706,
+            "genres": [
+                15,
+                32
+            ],
+            "name": "Smile"
+        },
+        {
+            "id": 132099,
+            "genres": [
+                12,
+                31,
+                34
+            ],
+            "name": "Heaven Burns Red"
+        },
+        {
+            "id": 132117,
+            "genres": [
+                5,
+                8,
+                32,
+                33
+            ],
+            "name": "Cookies Must Die"
+        },
+        {
+            "id": 132711,
+            "genres": [
+                5,
+                9,
+                32
+            ],
+            "name": "Heartworm"
+        },
+        {
+            "id": 137099,
+            "name": "Video Casino Games"
+        },
+        {
+            "id": 137805,
+            "genres": [
+                13,
+                15,
+                32
+            ],
+            "name": "Kingdoms Reborn"
+        },
+        {
+            "id": 145782,
+            "genres": [
+                8,
+                14,
+                32,
+                33
+            ],
+            "name": "OlliOlli World"
+        },
+        {
+            "id": 150757,
+            "genres": [
+                13,
+                31,
+                32
+            ],
+            "name": "Smelter"
+        },
+        {
+            "id": 152212,
+            "genres": [
+                7,
+                13,
+                33
+            ],
+            "name": "Smash Drums"
+        },
+        {
+            "id": 159116,
+            "genres": [
+                10,
+                13,
+                14
+            ],
+            "name": "Grid Legends"
+        },
+        {
+            "id": 165126,
+            "genres": [
+                5
+            ],
+            "name": "Crysis 2 Remastered"
+        },
+        {
+            "id": 195732,
+            "genres": [
+                9,
+                12,
+                31,
+                32
+            ],
+            "name": "Ib"
+        },
+        {
+            "id": 204354,
+            "genres": [
+                15,
+                31
+            ],
+            "name": "Aliens: Dark Descent"
+        },
+        {
+            "id": 211704,
+            "genres": [
+                13,
+                15,
+                32
+            ],
+            "name": "Hired 2 Die"
+        },
+        {
+            "id": 225590,
+            "genres": [
+                4,
+                13,
+                15,
+                32
+            ],
+            "name": "Your Only Move is Hustle"
+        },
+        {
+            "id": 226376,
+            "genres": [
+                12,
+                15,
+                31
+            ],
+            "name": "Dragonheir: Silent Gods"
+        },
+        {
+            "id": 233872,
+            "genres": [
+                5,
+                13,
+                30,
+                32,
+                33
+            ],
+            "name": "Xenotilt: Hostile Pinball Action"
+        },
+        {
+            "id": 244167,
+            "genres": [
+                4,
+                8,
+                15
+            ],
+            "name": "Bopl Battle"
+        },
+        {
+            "id": 265850,
+            "name": "Bed Wars"
+        },
+        {
+            "id": 265960,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Refind Self: The Personality Test Game"
+        },
+        {
+            "id": 268811,
+            "genres": [
+                10,
+                13,
+                14,
+                32
+            ],
+            "name": "Sledders"
+        },
+        {
+            "id": 286686,
+            "genres": [
+                9
+            ],
+            "name": "Dreams"
+        },
+        {
+            "id": 287250,
+            "genres": [
+                13,
+                31,
+                32
+            ],
+            "name": "Kiteretsu Soudan Dial"
+        },
+        {
+            "id": 295199,
+            "genres": [
+                31
+            ],
+            "name": "Eternal Strands"
+        },
+        {
+            "id": 299582,
+            "genres": [
+                5
+            ],
+            "name": "Alien: Rogue Incursion"
+        },
+        {
+            "id": 312229,
+            "genres": [
+                32
+            ],
+            "name": "Five Nights at Freddy's 3"
+        },
+        {
+            "id": 313812,
+            "genres": [
+                10,
+                14,
+                32,
+                33
+            ],
+            "name": "Lonely Mountains: Snow Riders"
+        },
+        {
+            "id": 315409,
+            "genres": [
+                32
+            ],
+            "name": "Caring & Chilling"
+        },
+        {
+            "id": 317717,
+            "genres": [
+                13,
+                14,
+                33
+            ],
+            "name": "Backyard Baseball '97"
+        },
+        {
+            "id": 331985,
+            "genres": [
+                31
+            ],
+            "name": "Uncursed"
+        },
+        {
+            "id": 342141,
+            "genres": [
+                31,
+                32,
+                34
+            ],
+            "name": "Maline"
+        },
+        {
+            "id": 344436,
+            "name": "Void"
+        },
+        {
+            "id": 364009,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Backrooms Lost Runners"
+        },
+        {
+            "id": 365267,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Obsessed: Night Shift"
+        },
+        {
+            "id": 370307,
+            "genres": [
+                31,
+                32
+            ],
+            "name": "Flee the Fallen"
+        }
+    ]
+}

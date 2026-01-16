@@ -45,8 +45,8 @@ def get_time_of_day_id():
 # Gets category id associated with IGDB ID
 def get_associated_category_id(category_df, igdb_id):
     category_row = category_df[category_df["igdb_id"] == str(igdb_id)]
-    category_id = str(category_row["category_id"].iloc[0].item())
-    
+    category_id = category_row["category_id"].iloc[0]
+
     return category_id
 
 
@@ -55,14 +55,20 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20260111" # test value
-    time_of_day_id = "1645" # test value
+    day_date_id = "20260114" # test value
+    time_of_day_id = "2100" # test value
 
     raw_genre_bridge_data_path = repo_root + f"/data/twitch_project_raw_layer/raw_genre_bridge_data/{day_date_id}/raw_genre_bridge_data_{day_date_id}_{time_of_day_id}.json"
 
     # Access category dimension data
     curated_categories_path = repo_root + f"/data/twitch_project_curated_layer/curated_categories_data/{day_date_id}/curated_categories_data_{day_date_id}_{time_of_day_id}.csv"
-    category_df = pd.read_csv(curated_categories_path, keep_default_na=False)
+    data_types = {
+        'category_id': str, 
+        'category_name': str,
+        'igdb_id': str
+    }
+    category_df = pd.read_csv(curated_categories_path, keep_default_na=False, dtype=data_types)
+    category_df = category_df.drop_duplicates(subset=["igdb_id"]).reset_index(drop=True)
 
     # Access raw category data
     with open(raw_genre_bridge_data_path, 'r') as f:

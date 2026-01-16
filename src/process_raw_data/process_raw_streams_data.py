@@ -70,12 +70,24 @@ def get_stream_data_paths(s3_client, day_date_id, time_of_day_id):
     return data_paths
 
 
+def is_integer(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+
 # Converts the raw stream data in JSON format to a dataframe
 # Removes some data since it wouldn't fit in tabular format
 def process_raw_stream_data(raw_stream_data, processed_stream_data_dict):
     for stream in raw_stream_data["data"]:
-        processed_stream_data_dict["id"].append(stream["id"])
-        processed_stream_data_dict["user_id"].append(stream["user_id"])
+        # Check to see if stream is valid, sometimes there are test streams where stream id and user id are weird
+        if is_integer(stream["id"]) and is_integer(stream["user_id"]):
+            processed_stream_data_dict["id"].append(stream["id"])
+            processed_stream_data_dict["user_id"].append(stream["user_id"])
+        else:
+            continue
         processed_stream_data_dict["user_login"].append(stream["user_login"])
         processed_stream_data_dict["user_name"].append(stream["user_name"])
         processed_stream_data_dict["game_id"].append(stream["game_id"])

@@ -1,7 +1,8 @@
 import os
 import requests
 import pandas as pd
-from datetime import datetime
+from zoneinfo import ZoneInfo
+from datetime import datetime, timedelta
 from pathlib import Path
 import json
 import time
@@ -32,26 +33,37 @@ def get_credentials():
 
 
 # Gets current date id based of date when script is executed
-def get_day_date_id():
+def get_day_date_id(current_date):
+    current_date = current_date.astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     # Gets date id
     date_dim_path = repo_root + "/data/twitch_project_raw_layer/raw_day_dates_data/raw_day_dates_data.csv"
     date_df = pd.read_csv(date_dim_path)
-    current_date = datetime.today()
-    day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
+   
+    # If later than 23:52, the day will be considered the next day
+    if current_date.hour == 23 and current_date.minute > 52:
+        current_date += timedelta(days=1)
+        day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
+    else:
+        day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
    
     return str(day_date_id)
 
 
 # Gets time of day id based off of current time of script execution
-def get_time_of_day_id():
+def get_time_of_day_id(current_date):
+    current_date = current_date.astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
     time_of_day_df = pd.read_csv(repo_root + "/data/twitch_project_raw_layer/raw_time_of_day_data/raw_time_of_day_data.csv", dtype={"time_of_day_id": str})
-    cur_date = datetime.today()
+   
+    # If later than 23:52, next nearest time will be 00:00
+    if current_date.hour == 23 and current_date.minute > 52:
+        return "0000"
+    
     minimum_diff = 1000
     time_of_day_id = ""
     for row in time_of_day_df.iterrows():
         time = row[1]["time_24h"]
-        date_time_compare = datetime(cur_date.year, cur_date.month, cur_date.day, int(time[0:2]), int(time[3:5]))
-        diff = abs((cur_date - date_time_compare).total_seconds())
+        date_time_compare = datetime(current_date.year, current_date.month, current_date.day, int(time[0:2]), int(time[3:5]))
+        diff = abs((current_date - date_time_compare).total_seconds())
         if diff < minimum_diff:
             minimum_diff = diff
             time_of_day_id = row[1]["time_of_day_id"]
@@ -84,8 +96,9 @@ def call_get_top_games_endpoint(headers, raw_category_data):
 
 def main():
     headers = get_credentials() # gets access token and client id needed to call Twitch API
-    day_date_id = get_day_date_id()
-    time_of_day_id = get_time_of_day_id()
+    todays_date = datetime.today()
+    day_date_id = get_day_date_id(todays_date)
+    time_of_day_id = get_time_of_day_id(todays_date)
 
     raw_category_data = {
                     "day_date_id": day_date_id,

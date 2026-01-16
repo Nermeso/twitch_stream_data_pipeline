@@ -71,12 +71,6 @@ def lambda_handler(event, context):
             index=False
         )
 
-    # Upload file as CSV to miscellaneous bucket so data can be inserted into postgres
-    wr.s3.to_csv(
-                df=curated_stream_df,
-                path=f"s3://twitch-project-miscellaneous/temp_table_data/new_streams_data.csv",
-                index=False
-            )
 
     end = time.time()
     print("Duration: " + str(end - start))

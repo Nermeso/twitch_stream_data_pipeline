@@ -38,48 +38,6 @@ def get_categories(event):
     return set(categories_to_process)
 
 
-# Gets current date id based of date when script is executed
-def get_day_date_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_day_dates_data/raw_day_dates_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for date dimension. Status - {status}")
-        date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-    else:
-        print(f"Unsuccessful S3 get_object response for date dimension. Status - {status}")
-        print(response)
-        exit()
-    current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
-   
-    return str(day_date_id)
-
-
-# Gets time of day id based off of current time of script execution
-def get_time_of_day_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_time_of_day_data/raw_time_of_day_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for time of day dimension. Status - {status}")
-        time_of_day_df = pd.read_csv(response.get("Body"), keep_default_na=False, dtype={"time_of_day_id": str})
-    else:
-        print(f"Unsuccessful S3 get_object response for time of day dimension. Status - {status}")
-        print(response)
-        exit()
-    cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    minimum_diff = 1000
-    time_of_day_id = ""
-    for row in time_of_day_df.iterrows():
-        time = row[1]["time_24h"]
-        date_time_compare = datetime(cur_date.year, cur_date.month, cur_date.day, int(time[0:2]), int(time[3:5]))
-        diff = abs((cur_date - date_time_compare).total_seconds())
-        if diff < minimum_diff:
-            minimum_diff = diff
-            time_of_day_id = row[1]["time_of_day_id"]
-
-    return time_of_day_id
-
-
 # Deletes messages in SQS queue so if lambda function fails, it will not be processed
 def delete_SQS_messages(event):
     sqs_client = boto3.client("sqs")
@@ -129,8 +87,8 @@ def lambda_handler(event, context):
         func_ID = context.aws_request_id
         headers, s3_client = get_credentials()
         categories_to_process = get_categories(event)
-        day_date_id = get_day_date_id(s3_client)
-        time_of_day_id = get_time_of_day_id(s3_client)
+        day_date_id = event["Records"][0]["messageAttributes"]["day_date_id"]["stringValue"]
+        time_of_day_id = event["Records"][0]["messageAttributes"]["time_of_day_id"]["stringValue"]
         delete_SQS_messages(event) # deletes messages from SQS queue
 
         raw_stream_data = {

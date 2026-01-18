@@ -44,12 +44,22 @@ def get_time_of_day_id():
     return str(time_of_day_id)
 
 
+# Checks if string can be valid number or not
 def is_integer(s):
     try:
         int(s)
         return True
     except ValueError:
         return False
+
+
+# Process language id depending on the data
+def process_language_id(language_id):
+    if language_id == "":
+        return "notavailable"
+    else:
+        return language_id
+
 
 
 # Converts the raw stream data in JSON format to a dataframe
@@ -69,7 +79,7 @@ def process_raw_stream_data(raw_stream_data, processed_stream_data_dict):
         processed_stream_data_dict["title"].append(stream["title"])
         processed_stream_data_dict["viewer_count"].append(stream["viewer_count"])
         processed_stream_data_dict["started_at"].append(stream["started_at"])
-        processed_stream_data_dict["language"].append(stream["language"])
+        processed_stream_data_dict["language"].append(process_language_id(stream["language"]))
         processed_stream_data_dict["thumbnail_url"].append(stream["thumbnail_url"])
         processed_stream_data_dict["is_mature"].append(stream["is_mature"])
 
@@ -78,8 +88,8 @@ def main():
     day_date_id = get_day_date_id()
     time_of_day_id = get_time_of_day_id()
 
-    day_date_id = "20260111"
-    time_of_day_id = "1715"
+    day_date_id = "20260117"
+    time_of_day_id = "1200"
 
     processed_stream_data_dict = {
             "id": [],

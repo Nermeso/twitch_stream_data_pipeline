@@ -22,48 +22,6 @@ import ast
 ###########################################################
 
 
-# Gets current date id based of date when script is executed
-def get_day_date_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_day_dates_data/raw_day_dates_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for date dimension. Status - {status}")
-        date_df = pd.read_csv(response.get("Body"), keep_default_na=False)
-    else:
-        print(f"Unsuccessful S3 get_object response for date dimension. Status - {status}")
-        print(response)
-        exit()
-    current_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    day_date_id = date_df[date_df["the_date"] == str(current_date.date())].iloc[0, 0]
-   
-    return str(day_date_id)
-
-
-# Gets time of day id based off of current time of script execution
-def get_time_of_day_id(s3_client):
-    response = s3_client.get_object(Bucket="twitch-project-raw-layer", Key="raw_time_of_day_data/raw_time_of_day_data.csv")
-    status = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
-    if status == 200:
-        print(f"Successful S3 get_object response for time of day dimension. Status - {status}")
-        time_of_day_df = pd.read_csv(response.get("Body"), keep_default_na=False, dtype={"time_of_day_id": str})
-    else:
-        print(f"Unsuccessful S3 get_object response for time of day dimension. Status - {status}")
-        print(response)
-        exit()
-    cur_date = datetime.today().astimezone(ZoneInfo("US/Pacific")).replace(tzinfo=None)
-    minimum_diff = 1000
-    time_of_day_id = ""
-    for row in time_of_day_df.iterrows():
-        time = row[1]["time_24h"]
-        date_time_compare = datetime(cur_date.year, cur_date.month, cur_date.day, int(time[0:2]), int(time[3:5]))
-        diff = abs((cur_date - date_time_compare).total_seconds())
-        if diff < minimum_diff:
-            minimum_diff = diff
-            time_of_day_id = row[1]["time_of_day_id"]
-
-    return time_of_day_id
-
-
 # Gets most recently made processed categories df to be used as current streamed categories
 def get_processed_categories(s3_client, bucket_name, file_key):
     try:
@@ -127,14 +85,25 @@ def split_categories_into_groups(weighted_category_df):
 
 
 # Sends each category group as a message
-def send_SQS_messages(category_groups):
+def send_SQS_messages(category_groups, day_date_id, time_of_day_id):
+    date_time_info = {
+        "day_date_id": {
+            "StringValue": day_date_id,
+            "DataType": "String"
+        },
+        "time_of_day_id": {
+            "StringValue": time_of_day_id,
+            "DataType": "String"
+        }
+    }
+
     sqs_client = boto3.client("sqs")
     queue_url = "https://sqs.us-west-2.amazonaws.com/484743883065/category_groups"
     batch_entries = []
     # Each category group will be in one message
     # Loop sends ten messages at a time in a batch
     for i, group in enumerate(category_groups):
-        message = {'Id': 'msg' + str(i+1), 'MessageBody': str(group)}
+        message = {'Id': 'msg' + str(i+1), 'MessageBody': str(group), 'MessageAttributes': date_time_info}
         batch_entries.append(message)
         if (i+1) % 10 == 0 or len(category_groups) == i+1: # every 10th group, we send message batch
             response = sqs_client.send_message_batch(
@@ -189,7 +158,7 @@ def lambda_handler(event, context):
 
     # Sends groups of categories as messages to categoryGroupWeights SQS queue
     final_category_groups = [group for group in category_groups if len(group) != 0]
-    send_SQS_messages(final_category_groups) 
+    send_SQS_messages(final_category_groups, day_date_id, time_of_day_id) 
 
 
     for group in category_groups:

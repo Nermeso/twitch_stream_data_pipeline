@@ -22,6 +22,9 @@ The importance of data architecture became very apparent to me over time as I wo
 I also had to dedicate a significant amount of time researching AWS tools and services. My data pipeline required a lot of components and steps to get data from the APIs to eventually flow to the database where it would be connected to a dashboard for visualizations. For example, if I wanted to process incoming raw data in a S3 bucket, I had to create a S3 trigger or a SNS topic that would trigger a Lambda function to process that data. I also wanted to run multiple Lambda functions that called the Twitch API concurrently. Familiarizing myself with how SQS and Lambda interacted was essential to accomplishing this. Learning how all these AWS services worked and connected was vital for my pipeline to actually work.
 
 ## Contact
-Please feel free to contact me via Linkedin or email.
-Linkedin: https://www.linkedin.com/in/emersonjin/
-Email: emersonjin01@gmail.com
+Please feel free to contact me via Linkedin or email  
+
+Linkedin: https://www.linkedin.com/in/emersonjin/  
+
+Email: emersonjin01@gmail.com  
+

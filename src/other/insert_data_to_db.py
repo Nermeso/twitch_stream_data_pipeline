@@ -5,37 +5,50 @@ import awswrangler as wr
 from sqlalchemy import create_engine
 import psycopg2
 import boto3
+import ast
 
 ########################### SUMMARY ###########################
 '''
     Inserts data into the Postgresql database. Executes when
-    new dimension data is uploaded to temp_table_data folder
-    in miscellaneous bucket.
+    any object that is a CSV is uploaded to the curated layer
 '''
 ###############################################################
 
 
 
 def lambda_handler(event, context):
-    print("Event: ")
-    print(event)
-    print()
-
     if event:
-        bucket_name = event["Records"][0]["s3"]["bucket"]["name"]
-        file_key = event["Records"][0]["s3"]["object"]["key"]
-        region = event["Records"][0]["awsRegion"]
-        start = 'temp_table_data/new_'
-        end = '_data.csv'
-        table_name = file_key[file_key.find(start)+len(start):file_key.rfind(end)]
-        column_list = ""
+        # Event input is slightly different for S3 trigger and SNS trigger
+        try:
+            event_source = event["Records"][0]["eventSource"]
+        except:
+            event_source = event["Records"][0]["EventSource"]
 
-        print()
-        print(bucket_name)
-        print(file_key)
-        print(region)
-        print(table_name)
-        print()
+        # Get curated data info
+        if event_source == "aws:s3": # users, genre_bridge, and game_mode_bridge data
+            bucket_name = event["Records"][0]["s3"]["bucket"]["name"]
+            file_key = event["Records"][0]["s3"]["object"]["key"]
+        elif event_source == "aws:sns": # categories and streams data
+            event_notification = ast.literal_eval(event["Records"][0]["Sns"]["Message"])
+            bucket_name = event_notification["Records"][0]["s3"]["bucket"]["name"]
+            file_key = event_notification["Records"][0]["s3"]["object"]["key"]
+        else:
+            print("Invalid event source.")
+            return {
+                "statusCode": 400,
+                "body": json.dumps("Invalid event source.")
+            }
+
+        # Time info
+        day_date_id = file_key.split("/")[1]
+        time_of_day_id = file_key.split("/")[2][-8:-4] 
+
+        # Table info
+        start = "curated_"
+        end = "_data"
+        table_name = file_key.split(start)[1].split(end)[0]
+        region = "us-west-2"
+        column_list = ""
 
         try:
             conn = psycopg2.connect(
